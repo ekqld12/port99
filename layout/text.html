@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
+        *{margin: 0; padding: 0; }
+        #wrap { }
+        #header {background:url(../site-webstandard/img/header_bg.jpg); ; repeat-x center top;}
+        .header {height: 327px; }
+        .header .header-menu {text-align: right; }
+        .header .header-menu a {font-size: 14px; color: #fff; padding: 10px 0px 10px 13px; display: inline-block; text-transform: capitalize;}
+        .header .header-menu a:hover {color: #666;}
+
+        .header .header-tit {text-align: center; }
+        .header .header-tit h1 {font-size: 28px; padding: 5px 20px 6px 20px; background-color: #4aa8d4; color: #fff; text-transform: uppercase; display: inline-block; margin-top: 40px;}
+        .header .header-tit a {font-size: 18px; color: #fff; background-color: #2698cb; padding: 5px 20px 6px 20px; display: inline-block; margin-top: -5px;}
+
+        .header .header-icon {text-align: center; margin-top: 30px;}
+        .header .header-icon a {display: inline-block; width: 60px; height: 60px; background-image: url(../site-webstandard/img/icon.png);}
+        .header .header-icon a.icon1 {background-position: 0 0;}
+        .header .header-icon a.icon2 {background-position: 0 -60px;}
+        .header .header-icon a.icon3 {background-position: 0 -120px;}
+        .header .header-icon a.icon4 {background-position: 0 -180px;}
+        .header .header-icon {text-align: center; margin-top: 30px;}
+        .header .header-icon a {display: inline-block; width: 60px; height: 60px; background-image: url(../site-webstandard/img/icon.png);}
+        .header .header-icon a.icon1:hover {background-position: -60px 0;}
+        .header .header-icon a.icon2:hover{background-position: -60px -60px;}
+        .header .header-icon a.icon3:hover {background-position: -60px -120px;}
+        .header .header-icon a.icon4:hover {background-position: -60px -180px;}
+        .container {width: 1200px; margin: 0 auto;}
+
+
+        #cont1 {width: 100%; overflow: hidden;}
+        #cont1 .cont1-side {width: 30%; height: 400px; background-color: #5b8440; float: left; }
+        #cont1 .cont1-box1 {width: 70%; height: 200px; background-color: #35750a; float: left;}
+        #cont1 .cont1-box2 {width: 70%; height: 200px; background-color: #214e02; float: left;}
+        #cont2 {width: 100%; overflow: hidden; }
+        #cont2 .cont2-box1 {width: 33.3333%; height: 300px; background-color: #5eef61; float: left;}
+        #cont2 .cont2-box2{width: 33.3333%; height: 300px; background-color: #379d67; float: left;}
+        #cont2 .cont2-box3{width: 33.3333%; height: 300px; background-color: #0cdb6d; float: left;}
+        #cont3 {width: 90%; padding: 5%; background-color: #98eccd; overflow: hidden; }
+        #cont3 > article {width: 21%; height: 200px; margin: 2%; background-color: #066e48; float: left; border-radius: 10px;}
+        #footer {width: 100%; height: 100px; background-color: #59f5bc; float: left;}
+
+
+        @media (max-width:1200px){
+            .container {width: 100%;}
+            #cont2 .cont2-box1 {width: 50%}
+            #cont2 .cont2-box2{width: 50%;}
+            #cont2 .cont2-box3{display: none;}
+
+            #cont3 > article {width: 29.3333%;}
+            #cont3 .cont3-box4 {display: none;}
+        }
+        @media (max-width:780px){
+            #cont2 .cont2-box1 {width: 100%}
+            #cont2 .cont2-box2{width: 100%;}
+            #cont2 .cont2-box3{display: none;}
+        }
+        @media (max-width:480px){
+            #cont3 > article {width: 96%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+             <div class="container">
+                <div class="header">
+                    <div class="header-menu">
+                        <a href="#">Desinger</a>
+                        <a href="#">publisher</a>
+                        <a href="#">youtube</a>
+                    </div>
+                    <div class="header-tit">
+                        <h1>Professional Publisher &amp; Designer</h1><br>
+                        <a href="https://webstoryboy.co.kr">webstoryboy.co.kr</a>
+                    </div>
+                    <div class="header-icon">
+                        <a href="#" class="icon1"><span class="ir_pm">icon1</span></a>
+                        <a href="#" class="icon2"><span class="ir_pm">icon2</span></a>
+                        <a href="#" class="icon3"><span class="ir_pm">icon3</span></a>
+                        <a href="#" class="icon4"><span class="ir_pm">icon4</span></a>
+                    </div>
+                </div>
+             </div>
+            </header>
+    <!-- 섹션  -->
+        <div class="container">
+            <section id="cont1">
+                <article class="cont1-side"></article>
+                <article class="cont1-box1"></article>
+                <article class="cont1-box2"></article>
+            </section>
+            <section id="cont2">
+                <article class="cont2-box1"></article>
+                <article class="cont2-box2"></article>
+                <article class="cont2-box3"></article>
+            </section>
+            <section id=cont3>
+                <article class="cont3-box1"></article>
+                <article class="cont3-box2"></article>
+                <article class="cont3-box3"></article>
+                <article class="cont3-box4"></article>
+            </section>
+            <section id="section"></section>
+            <footer id="footer"></footer>
+            <!--//섹션  -->
+        </div>
+    </div>
+</body>
+</html>

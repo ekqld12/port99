@@ -1,0 +1,15 @@
+/* 리셋 */
+*{margin: 0;padding: 0;}
+a{color: #fff; text-decoration: none;}
+li{list-style: none;}
+img {width: 100%;}
+
+/* 레이아웃 */
+#wrap { }
+.container {width: 1200px;margin: 0 auto; background: #999; }
+#aside { }
+#aside .side { }
+.banner { }
+.content1 { }
+.content2 { }
+.footer { }

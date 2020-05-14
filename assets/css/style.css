@@ -259,73 +259,90 @@
 .gridly {
 	text-align: center; 
 	padding:25px 0; 
-}
-.gridly ul {
+ }
+ .gridly ul {
 	overflow: hidden; 
 	padding-left: 18px; 
 	margin-bottom: 2px;
-}
-.gridly ul.le{
+ }
+ .gridly ul.le{
 	padding-left: 12px; 
-}
-.gridly li {
+ }
+ .gridly li {
 	float: left; 
 	list-style: none;
-}
-.gridly li a {
-	text-decoration: none; 
-	color:#494e51; 
-	display: block; 
-	margin-right: 20px; 
-}
-
-.gridly .webstandard a {
+ }
+ .gridly li a {
 	color: #157ed3;
-	display: block;
-	border-bottom: 3px solid #a5d5fa;
-	margin-right: 20px;
-} 
-.gridly .html5 a {
+	 display: block;
+	  border: 3px solid #a5d5fa;
+	  border-radius: 20px;
+	  margin-right: 20px;
+	  font-size: 18px;
+	  padding: 3px 15px;
+	  transition: all 0.45s;
+  } 
+  .gridly a:hover {
+	  box-shadow: inset 0 0 0 40px #157ed3;
+	  color: #fff;
+  }
+ 
+  .gridly .webstandard a {
+	 color: #157ed3;
+	 display: block;
+	  border: 3px solid #a5d5fa;
+	  border-radius: 20px;
+	  margin-right: 20px;
+	  font-size: 18px;
+	  padding: 3px 15px;
+	  transition: all 0.45s;
+  } 
+  .gridly .webstandard a:hover {
+	  box-shadow: inset 0 0 0 40px #157ed3;
+	  color: #fff;
+  }
+ 
+ .gridly .html5 a {
 	color: #8432c4;
 	display: block;
 	border-bottom: 3px solid #8432c4;
 	margin-right: 20px;
 	
-}
-.gridly .photoshop a {
+ }
+ .gridly .photoshop a {
 	color: #8ccc3d;
 	display: block;
 	border-bottom: 3px solid #8ccc3d;
 	margin-right: 20px;
-}
-.gridly .illustrator a {
+ }
+ .gridly .illustrator a {
 	color: #8ccc3d;
 	display: block;
 	border-bottom: 3px solid #8ccc3d;
 	margin-right: 20px;
-}
-.gridly .javascript a {
+ }
+ .gridly .javascript a {
 	color: #8ccc3d;
 	display: block;
 	border-bottom: 3px solid #8ccc3d;
 	margin-right: 20px;
-}
-.gridly .jquery a {
+ }
+ .gridly .jquery a {
 	color: #8ccc3d;
 	display: block;
 	border-bottom: 3px solid #8ccc3d;
 	margin-right: 20px;
-}
-.gridly .reference a {
+ }
+ .gridly .reference a {
 	color: #8ccc3d;
 	display: block;
 	border-bottom: 3px solid #8ccc3d;
 	margin-right: 20px;
-}
-.photoshop .image-wrap .img-text h5 {
+ }
+ .photoshop .image-wrap .img-text h5 {
 	color: #8ccc3d;
-
-}
+ 
+ }
 
 
 /* 마우스 오버 효과 */

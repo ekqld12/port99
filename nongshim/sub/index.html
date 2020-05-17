@@ -80,12 +80,50 @@
 
     <section id="banner">
         <h2>n.live</h2>
-        <div class="notice">
-            <ul>
-                <li><a href="#"><img src="assets/img/banner01.jpg" alt="기타"></a></li>
-                <li><a href="#"><img src="assets/img/banner02.jpg" alt="기타"></a></li>
-            </ul>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/img/banner01.jpg" alt="기타">
+                    <div class="box">
+                        <a href="#"><img src="assets/img/youtube.png" alt="유투브"></a>
+                        <h3>내 입맛에 찰지게 착!찰비비면,찰송~(카피추,허영지)</h3>
+                    </div>
+                </div>
+            </div>
+            
         </div>
+        
     </section>
+
+     <!-- script -->
+     <script src="assets/js/jquery.min.js"></script>
+     <script src="assets/js/swiper.min.js"></script>
+     <script src="assets/js/custom.js"></script>
+     <script>
+         // <a href="#" class="icon-pause">
+         //    <img src="assets/img/icon-stop.svg" alt="정지"></a>
+         //         <a href="#" class="icon-pause">
+         //             <img src="assets/img/icon-play.svg" alt="시작">
+         //         </a>
+         $(document).ready(function(){
+             $(".swiper-pagination").append("<a href='#' class='icon-pause'><img src='assets/img/icon-pause.svg' alt='정지'></a>")
+ 
+             $(".swiper-pagination a").click(function(e){
+                 e.preventDefault();
+                 //alert("클릭을 했군요~")
+                 if( $(this).attr("class") == 'icon-pause' ){
+                     $(this).children().attr({"src":"assets/img/icon-play.svg","alt":"시작"})
+                     $(this).attr("class","icon-play")
+                     mySwiper.autoplay.stop();
+                     
+                     // alert("있습니다")
+                 }else {
+                     $(this).children().attr({"src":"assets/img/icon-pause.svg","alt":"정지"})
+                     $(this).attr("class","icon-pause")
+                     mySwiper.autoplay.start();
+                 }
+             })
+         })
+     </script>
 </body>
 </html>

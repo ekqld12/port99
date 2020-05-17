@@ -138,42 +138,36 @@
                     </ul>
                 </div>
                 <div class="cont2">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                        </li>
-                        <li >
-                            <p>『#사랑배신혼란』
-                                "매운맛에 빠진게 죄는 아니잖아!!"
-                                완벽했던 그들의 삶 속에 피어난 균열...
-                                짜파게티와 너구리,
-                                그리고 앵그리RtA 그들의 운명은?
-                                -
-                                절찬리 판매중 『라면이 세 개
-                                -
-                                #짜파구리 #라면이세개 #라면의세계 #너구리 #짜파게티 #앵그리RtA #농심 #nongshim
-                            </p>
-                            <span>2020.05.16</span>
-                        </li>
-                    </ul>
-                    <img class="img1" src="assets/img/instagram.svg" alt="인스타그램">
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
-                    <a href="#"><img src="assets/img/banner02.jpg" alt="짜파구리"></a>
+                    <a href="#">
+                        『#사랑배신혼란』
+                        "매운맛에 빠진게 죄는 아니잖아!!"
+                        완벽했던 그들의 삶 속에 피어난 균열...
+                        짜파게티와 너구리,
+                        그리고 앵그리RtA 그들의 운명은?
+                        -
+                        절찬리 판매중 『라면이 세 개
+                        -
+                        #짜파구리 #라면이세개 #라면의세계 #너구리 #짜파게티 #앵그리RtA #농심 #nongshim
+                    <em>2020.05.16</em>
+                    </a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
                 </div>
                 
             </div>
         </div>
     </article>
-    <!-- //nlive-tabe -->
+    <!-- //nlive-tabe -->                   
+
 
     <div class="list">
         <ul>
@@ -184,6 +178,7 @@
     <!-- //list -->
 
     <footer id="footer">
+        <div class="footer">
         <div class="left">
             <ul class="left1">
                 <li>상담접수</li>
@@ -217,6 +212,7 @@
                 </ul>
             </div>
         </div>
+    </div>
     </footer>
     <!-- //footer -->
 
@@ -227,30 +223,34 @@
      <script src="assets/js/swiper.min.js"></script>
      <script src="assets/js/costom.js"></script>
      <script>
-         // <a href="#" class="icon-pause">
-         //    <img src="assets/img/icon-stop.svg" alt="정지"></a>
-         //         <a href="#" class="icon-pause">
-         //             <img src="assets/img/icon-play.svg" alt="시작">
-         //         </a>
-         $(document).ready(function(){
-             $(".swiper-pagination").append("<a href='#' class='icon-pause'><img src='assets/img/icon-pause.svg' alt='정지'></a>")
- 
-             $(".swiper-pagination a").click(function(e){
-                 e.preventDefault();
-                 //alert("클릭을 했군요~")
-                 if( $(this).attr("class") == 'icon-pause' ){
-                     $(this).children().attr({"src":"assets/img/icon-play.svg","alt":"시작"})
-                     $(this).attr("class","icon-play")
-                     mySwiper.autoplay.stop();
-                     
-                     // alert("있습니다")
-                 }else {
-                     $(this).children().attr({"src":"assets/img/icon-pause.svg","alt":"정지"})
-                     $(this).attr("class","icon-pause")
-                     mySwiper.autoplay.start();
-                 }
-             })
-         })
+        let wHeight = $(window).height();         // 브라우저 높이
+        let dHeight = $(document).height();       // 컨텐츠의 높이
+        let hHeight = $("#header").outerHeight(); // 헤더의 높이
+
+        let moveScroll;   //스크롤 값을 감지하기 위한 변수
+        let lastScrollTop = 0;  //스크롤의 마지막 위치의 값
+
+        $(window).scroll(function(){
+        moveScroll = true;
+        });
+
+        setInterval(function(){
+        if(moveScroll){
+            hasScroll();
+            moveScroll = false;
+        }
+        },250)
+
+        function hasScroll(){
+        let wScroll = $(this).scrollTop();
+        
+        if( wScroll > lastScrollTop ){ //스크롤을 내렸을 때
+            $("#header").addClass("on");
+        } else {
+            $("#header").removeClass("on");
+        }
+        lastScrollTop = wScroll
+        }
      </script>
 </body>
 </html>

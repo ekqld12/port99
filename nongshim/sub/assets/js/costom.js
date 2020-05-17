@@ -7,8 +7,10 @@ var mySwiper = new Swiper ('#banner .swiper-container', {
 
   // If we need pagination
   pagination: {
-    el: '#nlive-swiper .swiper-pagination',
+    el: '#banner .swiper-pagination',
     type: 'bullets',
     clickable: true,
 },
+// Navigation arrows
+
 });

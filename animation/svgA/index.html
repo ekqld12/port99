@@ -105,15 +105,164 @@
                 </ul>
             </div>
             <!-- //Intro0 -->
-
+            <style>
+                .svgBox {background: #f4f8fa; padding: 30px;}
+                .svg {width: 160px; height: 160px; background: #ffebee; }
+            </style>
             <!-- Intro1 -->
             <div class="bs-docs-section">
                 <h2 id="intro1" class="page-header">rect</h2>
-                <div class="sBox">
 
+                <h4>속성</h4>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <colgroup>
+                            <col width="30%">
+                            <col width="70%">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>속성</th>
+                                <th>설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>x</td>
+                                <td>사각형의 X좌표 값을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>y</td>
+                                <td>사각형의 Y좌표 값을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>width</td>
+                                <td>사각형의 가로 값을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>height</td>
+                                <td>사각형의 세로 값을 설정합니다</td>
+                            </tr>
+                            <tr>
+                                <td>rx</td>
+                                <td>사각형의 보더 굴곡의 X값을 설정합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>ry</td>
+                                <td>사각형의 보더 굴곡의 Y값을 설정합니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h4>샘플</h4>
+                <div class="svgBox">
+                     <svg class="svg">
+                        <rect fill="#f48fb1" width="100" height="100" x="30" y= "30"/>  <!-- /* 기본이 px구조여서 px를 안적어도 적용됨 */ -->
+                    </svg>
+                    <svg class="svg">
+                        <rect fill="#f48fb1" width="100" height="100" x="30" y= "30" stroke="#880e4f" stroke-width="5"/> 
+                    </svg>
+                    <svg class="svg">
+                        <rect fill="#f48fb1" width="100" height="100" x="30" y= "30" rx="20" ry="20"/> 
+                    </svg>
+                    <svg class="svg">
+                        <rect fill="#f48fb1" width="100" height="100" x="30" y= "30" stroke="#880e4f" stroke-width="5" rx="20" ry="20"/> 
+                    </svg>
                 </div>
             </div>
+<pre class="line-numbers language-markup"><code>&lt;h4&gt;샘플&lt;/h4&gt;
+&lt;div class="svgBox"&gt;
+&lt;svg class="svg"&gt;
+    &lt;rect fill="#f48fb1" width="100" height="100" x="30" y="30" /&gt; &lt;!-- px는 기본단위여서 생략 가능하다 --&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;rect fill="#f48fb1" width="100" height="100" x="30" y="30" stroke="#880e4f" stroke-width="5" /&gt;
+    &lt;!-- stroke = border--&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;rect fill="#f48fb1" width="100" height="100" x="30" y="30" rx="20" ry="20" /&gt; &lt;!-- rx,ry = border-radius --&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;rect fill="#f48fb1" width="100" height="100" x="30" y="30" stroke="#880e4f" stroke-width="5" rx="20" ry="20" /&gt;
+&lt;/svg&gt;
+
+&lt;/div&gt;
+</code></pre>
             <!-- //Intro1 -->
+
+            <!-- Intro2 -->
+            <div class="bs-docs-section">
+                <h2 id="intro2" class="page-header">circle</h2>
+                <h4>샘플</h4>
+                <div class="svgBox">
+                    <svg class="svg">
+                          <circle fill="#f48fb1" r="60" cx="80" cy="80"/> <!-- 원을 만들때는 cx cy가 좌표값 -->
+                    </svg>
+                    <svg class="svg">
+                        <circle fill="#f48fb1" r="60" cx="80" cy="80" stroke = "#880e4f" stroke-width="5"/>
+                    </svg>
+                    <svg class="svg">
+                    <ellipse fill="#f48fb1" rx="60" ry="50" cx="80" cy="80"/> 
+                    </svg>
+                    <svg class="svg">
+                        <ellipse fill="#f48fb1" rx="60" ry="50" cx="80" cy="80" stroke = "#880e4f" stroke-width="5"/>
+                    </svg>
+                </div>
+            </div>
+
+<pre class="line-numbers language-markup"><code>&lt;div class="svgBox"&gt;
+&lt;svg class="svg"&gt;
+        &lt;circle fill="#f48fb1" r="60" cx="80" cy="80"/&gt; &lt;!-- 원을 만들때는 cx cy가 좌표값 --&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;circle fill="#f48fb1" r="60" cx="80" cy="80" stroke = "#880e4f" stroke-width="5"/&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+&lt;ellipse fill="#f48fb1" rx="60" ry="50" cx="80" cy="80"/&gt; 
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+&lt;ellipse fill="#f48fb1" rx="60" ry="50" cx="80" cy="80" stroke = "#880e4f" stroke-width="5"/&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+            <!-- //Intro2 -->
+
+            <!-- Intro3 -->
+            <div class="bs-docs-section">
+                <h2 id="intro3" class="page-header">polygon</h2>
+                <h4>샘플</h4>
+                <div class="svgBox">
+                    <svg class="svg">
+                            <polygon fill="#f48fb1"  points="137,146 8,107 107,15" stroke = "#880e4f" stroke-width="5">
+                    </svg>
+                    <svg class="svg">
+                        <polygon fill="#f48fb1" points="104,145 24,126 17,43 94,12 147,75" stroke = "#880e4f" stroke-width="5"/>
+                    </svg>
+                    <svg class="svg">
+                        <polygon fill="#f48fb1" points="130,130 61,148 12,97 31,29 99,11 148,62" stroke = "#880e4f" stroke-width="5"/>
+                    </svg>
+                    <svg class="svg">
+                        <polygon fill="#f48fb1" points="131,135 85,117 45,144 48,96 10,66 57,54 74,9 100,49 148,51 117,88"/ stroke = "#880e4f" stroke-width="5">
+                    </svg>
+                </div>
+            </div>
+
+<pre class="line-numbers language-markup"><code>&lt;div class="svgBox"&gt;
+&lt;svg class="svg"&gt;
+        &lt;polygon fill="#f48fb1"  points="137,146 8,107 107,15" stroke = "#880e4f" stroke-width="5"&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;polygon fill="#f48fb1" points="104,145 24,126 17,43 94,12 147,75" stroke = "#880e4f" stroke-width="5"/&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;polygon fill="#f48fb1" points="130,130 61,148 12,97 31,29 99,11 148,62" stroke = "#880e4f" stroke-width="5"/&gt;
+&lt;/svg&gt;
+&lt;svg class="svg"&gt;
+    &lt;polygon fill="#f48fb1" points="131,135 85,117 45,144 48,96 10,66 57,54 74,9 100,49 148,51 117,88"/ stroke = "#880e4f" stroke-width="5"&gt;
+&lt;/svg&gt;
+&lt;/div&gt;
+</code></pre>
+            <!-- //Intro3 -->
 
               
             </div>
@@ -124,7 +273,10 @@
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">Animation</a></li>
+                        <li><a href="#intro0">SVG</a></li>
+                        <li><a href="#intro1">rect</a></li>
+                        <li><a href="#intro2">rect</a></li>
+                        <li><a href="#intro3">polygon</a></li>
                     </ul>
                 </div>
             </div>

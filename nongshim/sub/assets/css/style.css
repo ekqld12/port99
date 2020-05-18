@@ -175,21 +175,12 @@
   text-align: center;
   margin-bottom: 30px;
 }
-
-.swiper-container{
-  position: relative;
-}
-.swiper-wrapper .ban {
-}
-.swiper-slide .slide01 .swiper-pagination {
-}
 .ban .slide01 {
   position: relative;
   width: 85%;
   height: 700px;
   background: url(../img/banner01.jpg) no-repeat center;
   background-size: cover;
-  
 }
 
 .ban .slide02 {

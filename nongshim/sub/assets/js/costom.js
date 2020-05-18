@@ -11,6 +11,4 @@ var mySwiper = new Swiper ('#banner .swiper-container', {
     type: 'bullets',
     clickable: true,
 },
-// Navigation arrows
-
 });

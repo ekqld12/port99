@@ -160,6 +160,8 @@
 .header3-rside:hover {
   border-bottom: 2px solid red;
 }
+
+
 /* 베너 */
 .banner {
   padding-top: 80px;
@@ -175,7 +177,11 @@
 }
 
 .swiper-container{
-
+  position: relative;
+}
+.swiper-wrapper .ban {
+}
+.swiper-slide .slide01 .swiper-pagination {
 }
 .ban .slide01 {
   position: relative;
@@ -183,25 +189,19 @@
   height: 700px;
   background: url(../img/banner01.jpg) no-repeat center;
   background-size: cover;
+  
 }
-/* .ban .slide01:before {
-  width: 6px; height: 6px;
-  content: '';
-  position: absolute; top: 90%; left: 8%;
-  background-color: #fff;
-  border: 0 solid #fff;
-  border-radius: 50%;
-} */
+
 .ban .slide02 {
   width: 85%;
   height: 700px;
   background: url(../img/banner02.jpg) no-repeat center;
   background-size: cover;
-  
 }
 .ban .slide01 img {
   position: absolute; top: 8%; left: 3%;
   width: 46px; height: 46px;
+  
 }
 .ban .slide01 p {
   padding-top: 120px;
@@ -211,6 +211,7 @@
   padding-left: 40px;
   background-color: rgba(0,0,0,0.4);
   height: 100vh;
+
 }
 
 .ban .slide02 img {

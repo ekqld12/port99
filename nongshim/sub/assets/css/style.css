@@ -19,10 +19,34 @@
   font-weight: bold;
   color: #999999;
   cursor: pointer;
+  position: relative;
 }
-.header1 ul li.active1 {
+.header1 ul li span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px; left: 52%;
+  width: 0px;
+  height: 0;
+  border-top: 2px solid #96c11f;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+.header1 ul li:nth-child(2) span::before {
+  border-top:2px solid red;
+}
+.header1 ul li:nth-child(3) span::before {
+  border-top:2px solid orange;
+}
+.header1 ul li:last-child span::before {
+  border-top:2px solid skyblue;
+}
+
+.header1 ul li:hover span::before {
+  width: 150px;    
+}
+.header1 ul li:hover {
   color: black;
-  border-bottom: 3px solid #94be1f;
 }
 .header2 {
   display: flex;
@@ -36,6 +60,9 @@
 .header2 .h-menu {
   padding: 25px 130px;
 }
+.h-menu li::before {
+  
+}
 .header2 .h-menu li {
   display: inline;
   font-size: 19px;
@@ -43,12 +70,37 @@
   cursor: pointer;
   font-weight: bold;
   box-sizing: border-box;    
+  position: relative;
 }
-.header2 .h-menu li:hover {
-  border-bottom: 3px solid red;
+.header2 ul li span::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -1px; left: 50%;
+  width: 0px;
+  height: 0;
+  border-top: 2px solid red;
+  transform: translateX(-50%);
+  transition: all 0.3s;
 }
-.header2 .h-menu li.active2 {
-  border-bottom: 3px solid red;
+.header2 ul li:nth-child(2) span::before {
+  border-top:2px solid red;
+}
+.header2 ul li:nth-child(2):hover span::before {
+  width: 105px;
+}
+.header2 ul li:nth-child(3) span::before {
+  border-top:2px solid red;
+}
+.header2 ul li:nth-child(3):hover span::before {
+  width: 70px;
+}
+.header2 ul li:last-child span::before {
+  border-top:2px solid red;
+}
+
+.header2 ul li:hover span::before {
+  width: 70px;    
 }
 .header2 .h-menu li:last-child {
   border: solid 1px;
@@ -105,7 +157,9 @@
 .header3 .header3-rside i{
  color: #666666;
 }
-
+.header3-rside:hover {
+  border-bottom: 2px solid red;
+}
 /* 베너 */
 .banner {
   padding-top: 80px;
@@ -264,25 +318,108 @@ position: relative;
   background-color: #e6001e;
   border-radius: 50%;
 }
-.cont2 {
+
+/* 이미지 부분 */
+.cont2{
+  margin: 0 auto;
+  width: 1200px; height: 100%;
   position: relative;
   display: grid;
   grid-template-columns: repeat(3,4fr);
   grid-gap: 20px;
-  margin-bottom: 20px;
 }
-.cont2 a {
-  width: 386px; height: 300px;
-  background: url(../img/ddr.jpg) no-repeat center center ;
-  background-size: cover;
+.cont2 .simg1 {}
+.cont2 .simg1 img {
+  width: 46px; height: 46px;
 }
-.cont2 a:hover {
-  background: #000;
+.stxt {
+  padding-bottom: 50px;
+  position: relative;
+  width: 383px; height: 383px;
 }
-.cont2 a span {
+.stxt img{
+  width: 100%;
+  height: 100%;
 }
+.stxt p{
+  position: absolute; top: 0; left: 0;  
 
-
+}
+.stxt time{
+  position: absolute; top: 30px; left: 0;  
+}
+.stxt .stxts{
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtsss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtsssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtsssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtssssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtsssssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtssssssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtsssssssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+.stxt .stxtssssssssssss {
+  width: 46px; height: 46px;
+  position: absolute; top: 0; left: 0;
+  padding-left: 20px;
+  padding-top: 20px;
+}
 /* list */
 .list {
   position: absolute;

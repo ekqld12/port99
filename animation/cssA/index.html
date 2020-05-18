@@ -440,9 +440,191 @@ on <a href="https://codepen.io">CodePen</a>.</span>
                     <div class="circle26">circle26</div>
                 </div>
             </div>
-<pre class="line-numbers language-css"><code>
+<pre class="line-numbers language-css"><code>.sBox.s7{height: 500px;}
+.sBox.s7 > div.running {animation: move2 3s 10 ease; animation-play-state : running;}
+.sBox.s7 > div.paused {animation: move2 3s 10 ease; animation-play-state : paused;}
 </code></pre>
             <!-- //Intro8 -->
+            <style>
+                .sBox.s8 > div {display: inline-block;}
+                .sBox.s8 > div.bounce {animation: bounce 1s 10 ease;}
+                .sBox.s8 > div.rubberBand {animation: rubberBand 1s 10 ease;}
+                .sBox.s8 > div.shakeY {animation: shakeY 1s 10 ease;}
+                .sBox.s8 > div.headShake {animation: headShake 1s 10 ease;}
+                .sBox.s8 > div.swing {animation: swing 1s 10 ease;}
+                .sBox.s8 > div.tada {animation: tada 1s 10 ease;}
+                .sBox.s8 > div.wobble {animation: wobble 1s 10 ease;}
+
+                @keyframes bounce {
+                    from,60%,75%,90%,to {animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);}
+                    0% {
+                        opacity: 0;
+                        transform: translate3d(-3000px, 0, 0) scaleX(3);
+                    }
+                    60% {
+                        opacity: 1;
+                        transform: translate3d(25px, 0, 0) scaleX(1);
+                    }
+                    75% {
+                        transform: translate3d(-10px, 0, 0) scaleX(0.98);
+                    }
+                    90% {
+                        transform: translate3d(5px, 0, 0) scaleX(0.995);
+                    }
+                    to {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+                @keyframes rubberBand {
+            from {transform: scale3d(1, 1, 1);}
+            30% {transform: scale3d(1.25, 0.75, 1);}
+            40% {transform: scale3d(0.75, 1.25, 1);}
+            50% {transform: scale3d(1.15, 0.85, 1);}
+            65% {transform: scale3d(0.95, 1.05, 1);}
+            75% {transform: scale3d(1.05, 0.95, 1);}
+            to {transform: scale3d(1, 1, 1);}
+            }
+            @keyframes shakeY {
+            from,to {transform: translate3d(0, 0, 0);}
+            10%,30%,50%,70%,90% {transform: translate3d(0, -10px, 0);}
+            20%,40%,60%,80% {transform: translate3d(0, 10px, 0);}
+            }
+            @keyframes headShake {
+            0% {transform: translateX(0);}
+            6.5% {transform: translateX(-6px) rotateY(-9deg);}
+            18.5% {transform: translateX(5px) rotateY(7deg);}
+            31.5% {transform: translateX(-3px) rotateY(-5deg);}
+            43.5% {transform: translateX(2px) rotateY(3deg);}
+            50% {transform: translateX(0);}
+            }
+            @keyframes swing {
+            20% {transform: rotate3d(0, 0, 1, 15deg);}
+            40% {transform: rotate3d(0, 0, 1, -10deg);}
+            60% {transform: rotate3d(0, 0, 1, 5deg);}
+            80% {transform: rotate3d(0, 0, 1, -5deg);}
+            to {transform: rotate3d(0, 0, 1, 0deg);}
+            }
+            @keyframes tada {
+            from {transform: scale3d(1, 1, 1);}
+            10%,20% {transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);}
+            30%,50%,70%,90% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);}
+
+            40%,60%,80% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
+            to {transform: scale3d(1, 1, 1);}
+            }
+            @keyframes wobble {
+            from {transform: translate3d(0, 0, 0);}
+            15% {transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+            30% {transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+            45% {transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);}
+            60% {transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+            75% {transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+            to {transform: translate3d(0, 0, 0);}
+            }
+                        
+            </style>
+
+             <!-- Intro9 -->
+             <div class="bs-docs-section">
+                <h2 id="intro9" class="page-header">Animation-bounce
+                    <span class="btn">bounce</span>
+                    <span class="btn">rubberBand</span>
+                    <span class="btn">shakeY</span>
+                    <span class="btn">headShake</span>
+                    <span class="btn">swing</span>
+                    <span class="btn">tada</span>
+                    <span class="btn">wobble</span>
+                </h2>
+                <div class="sBox s8">
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                    <div class="circle27">circle27</div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>.sBox.s8 > div {display: inline-block;}
+.sBox.s8 > div.bounce {animation: bounce 1s 10 ease;}
+.sBox.s8 > div.rubberBand {animation: rubberBand 1s 10 ease;}
+.sBox.s8 > div.shakeY {animation: shakeY 1s 10 ease;}
+.sBox.s8 > div.headShake {animation: headShake 1s 10 ease;}
+.sBox.s8 > div.swing {animation: swing 1s 10 ease;}
+.sBox.s8 > div.tada {animation: tada 1s 10 ease;}
+.sBox.s8 > div.wobble {animation: wobble 1s 10 ease;}
+
+@keyframes bounce {
+    from,60%,75%,90%,to {animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);}
+    0% {
+        opacity: 0;
+        transform: translate3d(-3000px, 0, 0) scaleX(3);
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(25px, 0, 0) scaleX(1);
+    }
+    75% {
+        transform: translate3d(-10px, 0, 0) scaleX(0.98);
+    }
+    90% {
+        transform: translate3d(5px, 0, 0) scaleX(0.995);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes rubberBand {
+from {transform: scale3d(1, 1, 1);}
+30% {transform: scale3d(1.25, 0.75, 1);}
+40% {transform: scale3d(0.75, 1.25, 1);}
+50% {transform: scale3d(1.15, 0.85, 1);}
+65% {transform: scale3d(0.95, 1.05, 1);}
+75% {transform: scale3d(1.05, 0.95, 1);}
+to {transform: scale3d(1, 1, 1);}
+}
+@keyframes shakeY {
+from,to {transform: translate3d(0, 0, 0);}
+10%,30%,50%,70%,90% {transform: translate3d(0, -10px, 0);}
+20%,40%,60%,80% {transform: translate3d(0, 10px, 0);}
+}
+@keyframes headShake {
+0% {transform: translateX(0);}
+6.5% {transform: translateX(-6px) rotateY(-9deg);}
+18.5% {transform: translateX(5px) rotateY(7deg);}
+31.5% {transform: translateX(-3px) rotateY(-5deg);}
+43.5% {transform: translateX(2px) rotateY(3deg);}
+50% {transform: translateX(0);}
+}
+@keyframes swing {
+20% {transform: rotate3d(0, 0, 1, 15deg);}
+40% {transform: rotate3d(0, 0, 1, -10deg);}
+60% {transform: rotate3d(0, 0, 1, 5deg);}
+80% {transform: rotate3d(0, 0, 1, -5deg);}
+to {transform: rotate3d(0, 0, 1, 0deg);}
+}
+@keyframes tada {
+from {transform: scale3d(1, 1, 1);}
+10%,20% {transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);}
+30%,50%,70%,90% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);}
+
+40%,60%,80% {transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);}
+to {transform: scale3d(1, 1, 1);}
+}
+@keyframes wobble {
+from {transform: translate3d(0, 0, 0);}
+15% {transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);}
+30% {transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);}
+45% {transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);}
+60% {transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);}
+75% {transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);}
+to {transform: translate3d(0, 0, 0);}
+}
+</code></pre>
+            <!-- //Intro9 -->
 
 
 
@@ -463,6 +645,7 @@ on <a href="https://codepen.io">CodePen</a>.</span>
                         <li><a href="#intro6">Animation-direction</a></li>
                         <li><a href="#intro7">Animation-iteration-count</a></li>
                         <li><a href="#intro8">Animation-play-state</a></li>
+                        <li><a href="#intro9">Animation-bounce</a></li>
                     </ul>
                 </div>
             </div>
@@ -526,6 +709,10 @@ on <a href="https://codepen.io">CodePen</a>.</span>
         $("#intro8 > span").click(function(){
             let tx = $(this).text();
             $(".sBox.s7 > div").removeClass().addClass(tx);
+        })
+        $("#intro9 > span").click(function(){
+            let tx = $(this).text();
+            $(".sBox.s8 > div").removeClass().addClass(tx);
         })
     </script>
 </body>

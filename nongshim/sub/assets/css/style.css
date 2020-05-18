@@ -28,18 +28,18 @@
   bottom: -1px; left: 52%;
   width: 0px;
   height: 0;
-  border-top: 2px solid #96c11f;
+  border-top: 4px solid #96c11f;
   transform: translateX(-50%);
   transition: all 0.3s;
 }
 .header1 ul li:nth-child(2) span::before {
-  border-top:2px solid red;
+  border-top: 4px solid red;
 }
 .header1 ul li:nth-child(3) span::before {
-  border-top:2px solid orange;
+  border-top: 4px solid orange;
 }
 .header1 ul li:last-child span::before {
-  border-top:2px solid skyblue;
+  border-top: 4px solid skyblue;
 }
 
 .header1 ul li:hover span::before {
@@ -333,21 +333,52 @@ position: relative;
   width: 46px; height: 46px;
 }
 .stxt {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
   position: relative;
   width: 383px; height: 383px;
+}
+.stxt:hover .stxtsss {
+  background-color: rgba(0,0,0,0.8);
+  width: 95%; height: 95%;
+  display: inline-block;
+} 
+.stxtsss {
+  display: none;
 }
 .stxt img{
   width: 100%;
   height: 100%;
 }
+.stxt h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  position: absolute; top:0; left: 0;
+  padding: 60px 40px 50px;
+}
 .stxt p{
-  position: absolute; top: 0; left: 0;  
+  color: #fff;
+  max-width: 300px;
+  max-height: 140px;
+  overflow: hidden;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+  position: absolute; top: 0; left: 0;
+  padding: 100px 40px 50px;
+}
+.stxt time {
+  position: absolute; left: 0; bottom: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #999;
+  padding: 42px;
+}
+.stxt .pp {
+  display: none;
+}
 
-}
-.stxt time{
-  position: absolute; top: 30px; left: 0;  
-}
 .stxt .stxts{
   width: 46px; height: 46px;
   position: absolute; top: 0; left: 0;
@@ -420,6 +451,22 @@ position: relative;
   padding-left: 20px;
   padding-top: 20px;
 }
+
+/*cont3 */
+.cont3{
+  margin: 0 auto;
+  width: 1200px; height: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3,4fr);
+  grid-gap: 20px;
+}
+.cont3 .simg1 {}
+.cont3 .simg1 img {
+  width: 46px; height: 46px;
+}
+
+
 /* list */
 .list {
   position: absolute;

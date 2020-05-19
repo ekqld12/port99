@@ -112,11 +112,15 @@
   margin-right: 60px;
 }
 .header2 .h-side li {
+  position: relative;
   display: inline-block;
   font-size: 25px;
   font-weight: 100;
   padding: 24px 15px;
   cursor: pointer;
+}
+.header2 .h-side li i {
+  position: relative;
 }
 .header2 .h-side li:nth-child(3){
   position: relative;
@@ -125,6 +129,22 @@
   font-size: 13px;
   position: absolute; top: 30px; right: 22px;
 }
+.header2 .h-side li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 23px; left: 50%; 
+  width: 2px;
+  height: 0;
+  border-top: 2px solid red;
+  transform: translateX(-50%);
+  transition: all 0.3s;
+}
+.header2 .h-side li:hover i{
+  width: 100%;
+}
+
+
 .header3 {
   display: flex;
   justify-content: space-between;

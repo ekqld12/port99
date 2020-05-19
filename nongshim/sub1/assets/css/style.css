@@ -358,7 +358,7 @@ padding-left: 55px;
 .tfooter li::before {
   content: '';
   position: absolute;
-  bottom: -600px; left: 190px;
+  bottom: -590px; left: 190px;
   display: block;
   width: 1145px;
   height: 1px;

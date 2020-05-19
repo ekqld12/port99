@@ -53,11 +53,12 @@
 .header .nav li.live a {
   padding: 4px 20px 6px 20px;
   display: inline-block;
-  border: 1px solid #fff;
+  border: 1px solid line;
   border-radius: 20px;
+  color: #fff;
   
 }
-.header .nav li.live a
+
 /* radial-gradient(-90deg, #ff0000, #00ae00); */
 
 .header .nav li a span {
@@ -65,9 +66,16 @@
   line-height: 28px;
   font-weight: 600;
   color: #fff;
-  font-size: 28px;
+  font-size: 16px;
   position: relative;
 }
+.header .nav .live em {
+  color: #fff;
+}
+.header .nav .live em:hover {
+  color: #000;
+}
+
 .header .nav li span::before {
   content: '';
   display: block;
@@ -84,6 +92,10 @@
 
 .header .nav li:hover span::before {
   width: 100%;
+  color: #000;
+}
+.header .nav ul li span:hover {
+  color: #000;
 }
 
 

@@ -60,9 +60,6 @@
 .header2 .h-menu {
   padding: 25px 130px;
 }
-.h-menu li::before {
-  
-}
 .header2 .h-menu li {
   display: inline;
   font-size: 19px;

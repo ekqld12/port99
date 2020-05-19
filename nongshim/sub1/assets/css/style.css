@@ -139,6 +139,19 @@
   padding: 15px 60px;
   border-bottom: 1px solid #ccc;
 }
+.header3:hover {
+  background-color: #fff;
+  transition: 0.5s;
+}
+.header3-ful .header3-first:hover {
+  color: #000;
+  transition: 0.5s;
+}
+.header3-first:hover{
+  background-color: #fff;
+  transition: 0.5s;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
 .header3 li {
   display: inline-block;
   padding-left: 15px;
@@ -270,9 +283,23 @@ position: relative;
   color: #999999;
 }
 .row {
-  width: 1140px;
+  position: relative;
+  width: 1000px;
+}
+.row input {
+  position: absolute; top: 95px; left: 80%;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 338px;
+  padding: 0 0 12px 0;
+  font-size: 16px;
+}
+.row i {
+  position: absolute; top: 100px; left: 111%;
+  font-size: 20px;
 }
 .row p {
+  width: 1140px;
   padding-bottom: 20px;
   font-size: 16px;
   color: #666666;
@@ -364,8 +391,52 @@ padding-left: 55px;
   height: 1px;
   background: #ccc
 }
-
-
+.container .table4 {
+  position: absolute; bottom: -750px; left: 45%;
+  font-size: 16px;
+}
+.table4 .prev i {
+  padding: 15px;
+  color: #000;
+  font-size: 23px;
+  line-height: 54px;
+}
+.page_num a {
+  display: inline-block;
+  width: 54px;
+  height: 54px;
+  font-size: 30px;
+  text-align: center;
+}
+.active{
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.table4 .next i {
+  padding: 15px;
+  color: #000;
+  font-size: 23px;
+  line-height: 54px;
+}
+/* 이미지 슬라이드 */
+#img-slide {
+  position: relative;
+  width: 100%;
+  padding: 60px 0 100px 0;
+  background: #f2f1de;
+/* box-sizing: border-box; */
+}
+.swiper-slide img {
+  width: 100%;
+  
+}
+.swiper-slide span {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+}
 
 
 
@@ -376,7 +447,6 @@ padding-left: 55px;
   overflow: hidden;
   padding: 10px 0;
   color: #666;
-  margin-top: 250px;
 }
 .footer {
   width: 1200px;

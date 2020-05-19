@@ -56,7 +56,6 @@
   border: 1px solid #fff;
   border-radius: 20px;
   color: #fff;
-  
 }
 
 /* radial-gradient(-90deg, #ff0000, #00ae00); */
@@ -949,7 +948,7 @@
 .footer-down .fd2 ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: (1fr);/* [4]; */
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }

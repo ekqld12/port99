@@ -211,7 +211,6 @@
                     position: absolute;
                     width: 50px; height: 50px; background: green;
                     border-radius: 50%;
-                    
                 }
             </style>
 
@@ -221,11 +220,30 @@
                 <h4>animation <span class="btn btn1">Start</span></h4>
                 <div class="well">
                     <div class="box">
-                        <div class="circle"></div>
+                        <div class="circle circle1"></div>
                     </div>
                 </div>
             </div>
             <!-- //Intro3 -->
+
+             <!-- Intro4 -->
+             <div class="bs-docs-section">
+                <h2 id="intro4" class="page-header">timing-function</h2>
+                <h4 class="btn2">animation 
+                    <button class="btn">easeInCubic</button>
+                    <button class="btn">easeInOutQuart</button>
+                    <button class="btn">easeInOutBack</button>
+                    <button class="btn">easeInOutBounce</button>
+                    <button class="btn">easeOutElastic</button>
+                    <button class="btn">easeInCirc</button>
+                </h4>
+                <div class="well">
+                    <div class="box">
+                        <div class="circle circle2"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Intro4 -->
               
             </div>
             <!-- //col-md-9 -->
@@ -237,7 +255,8 @@
                     <ul class="nav bs-sidenav">
                         <li><a href="#intro1">Jquery Animation</a></li>
                         <li><a href="#intro2">Jquery Animation</a></li>
-                        <li><a href="#intro3">Jquery Animation</a></li>
+                        <li><a href="#intro3">timing-function</a></li>
+                        <li><a href="#intro4">Jquery Animation</a></li>
                     </ul>
                 </div>
             </div>
@@ -267,13 +286,25 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="../../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../../assets/js/jquery-ui-1.12.1.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/prism.js"></script>
     <script>
         //버튼을 클릭하면 원의 백그라운드 색을 빨간색으로 변경해주세요~
         $(".btn1").click(function(){
-            $(".circle").animate({ left: "95%"},1000).animate({top: "80%"},1000).animate({left: "0%"},1000).animate({top: "0%"},1000)
+            $(".circle1").animate({ left: "95%"},1000).animate({top: "80%"},1000).animate({left: "0%"},1000).animate({top: "0%"},1000)
+        })
+
+        //두번째 버튼을 클릭했을때 클릭한 글씨를 출력해 주세요.
+        $(".btn2 > button").click(function(){
+            let easing = $(this).text();
+            // alert(easing);
+            $(".circle2").animate({ left: "95%"},1000,easing)
+            .animate({top: "80%"},1000,easing)
+            .animate({left: "0%"},1000,easing)
+            .animate({top: "0%"},1000,easing)
+            
         })
     </script>
 </body>

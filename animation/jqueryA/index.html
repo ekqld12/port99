@@ -623,41 +623,41 @@ function out(){
 
 
         //속성, 애니메이션(2바퀴), --> 무한 움직이기 --> 10분 뒤에 사라지게
-        $(".btn9").click(function () {
-            loop();
+        $(".btn9 > button").click(function(){
+            looop();
+            setTimeout(hide, 600000);   
         });
 
-        function loop() {
+        function looop(){
             $(".circle9 > div")
                 .animate({
                     left: leftWidth,
                     borderRadius: "0%",
-                    opacity: 0.5
-                }, 1000)
+                    opacity: 2
+                }, 1000,"easeInOutBounce")
                 .animate({
                     top: "80%",
                     borderRadius: "50%",
                     opacity: 1,
                     width: "200px",
                     height: "200px"
-                }, 1000, )
+                }, 1000, "easeInOutBounce")
                 .animate({
                     left: "00%",
                     borderRadius: "0%",
                     opacity: 0.2,
                     width: "50px",
                     height: "50px"
-                }, 1000)
+                }, 1000,"easeInOutBounce")
                 .animate({
                     top: 0,
                     borderRadius: "50%",
                     opacity: 1
-                }, 1000, loop)
-                setTimeout(out, 600000);
-
+                }, 1000, looop);
+                // .delay(2000)
         }
 
-        function out() {
+        function hide() {
             $(".circle9 > div").hide();
         }
 

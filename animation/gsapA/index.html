@@ -251,6 +251,7 @@ $(".btn5").click(function(){
         .to(".box5 .circle1",{duration: 1, top: "80%", scale:"0.5", ease: "power3.out"})
         .to(".box5 .circle1",{duration: 1, left: "0%", scale:"2.5", ease: "power3.out"})
         .to(".box5 .circle1",{duration: 1, top: "0%", scale:"1", ease: "power3.out"})
+        .repeat(2)
 })
 </code></pre>
             <!-- //Intro5 -->
@@ -321,7 +322,7 @@ $(".btn5").click(function(){
         })
         $(".btn2").click(function(){
             // $(".box1 > div").animate({left : "90%"},1000)
-            gsap.from(".box2 .circle1", 3, {left : "90%"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+            gsap.from(".box2 .circle1", 3, {left : "90%"}) 
             gsap.from(".box2 .circle2", 3, {left : "90%", borderRadius: "0%"})
             gsap.from(".box2 .circle3", 3, {left : "90%", rotationY: "1000deg"})
             gsap.from(".box2 .circle4", 3, {left : "90%", rotationX: "1000deg"})
@@ -333,7 +334,7 @@ $(".btn5").click(function(){
         })
         $(".btn3").click(function(){
             // $(".box1 > div").animate({left : "90%"},1000)
-            gsap.to(".box3 .circle1", {duration: 2, left : "90%", rotationY: "300deg", ease: "power1.out"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+            gsap.to(".box3 .circle1", {duration: 2, left : "90%", rotationY: "300deg", ease: "power1.out"}) 
             gsap.to(".box3 .circle2", {duration: 2, left : "90%", rotationY: "310deg", ease: "power2.out"})
             gsap.to(".box3 .circle3", {duration: 2, left : "90%", rotationY: "320deg", ease: "power3.out"})
             gsap.to(".box3 .circle4", {duration: 2, left : "90%", rotationY: "330deg", ease: "power4.out"})
@@ -358,6 +359,7 @@ $(".btn5").click(function(){
               .to(".box5 .circle1",{duration: 1, top: "80%", scale:"0.5", ease: "power3.out"})
               .to(".box5 .circle1",{duration: 1, left: "0%", scale:"2.5", ease: "power3.out"})
               .to(".box5 .circle1",{duration: 1, top: "0%", scale:"1", ease: "power3.out"})
+              .repeat(2)
         })
     </script>
 </body>

@@ -15,14 +15,14 @@
     <link href="../../assets/css/prism.css" rel="stylesheet">
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+    <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="../../assets/ico/favicon_114.png">
     <link rel="icon" href="../../assets/ico/icon.png">
     <link rel="icon" href="../../assets/ico/favicon_57.png" sizes="16x16">
     <link rel="icon" href="../../assets/ico/favicon_72.png" sizes="32x32">
     <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="48x48">
     <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="64x64">
-    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128">
+    <link rel="icon" href="../../assets/ico/favicon_114.png" sizes="128x128"> -->
 
     <!-- Facebook meta tags -->
     <meta property="og:type" content="article" />
@@ -91,143 +91,169 @@
 
             <div class="col-md-9" role="main">
                
-               <!-- Intro1 -->
-               <div class="bs-docs-section">
-                <h2 id="intro1" class="page-header">Animation</h2>
-
-                <h3 class="pt30">Animation</h3>
-                <p class="bs-callout bs-callout-info">
-                    animation : name | duration | timing-fuction | delay | iteration | direction | fill-mode | play-state
+               <!-- Intro0 -->
+                <div class="bs-docs-section">
+                <h2 id="intro0" class="page-header">GSAP</h2>
+                <p>웹 브라우저에서 애니메이션을 구현하기 위한 자바스크립 라이브러리입니다. 
+                    기존 CSS Animation이나 jquery Animation보다 탁월한 퍼포먼스를 발휘할 수 있도록
+                    최적화된 애니메이션 전용 라이브러리입니다.
                 </p>
-                <div class="table-reponsive">
-                    <table class="table table-bordered table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>종류</th>
-                                <th>예시</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>animation-name</td>
-                                <td>@keyframe에 지정된 이름을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-duration</td>
-                                <td>애니메이션이 실행되는 시간을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-timing-function</td>
-                                <td>애니메이션 키프레임 움직임을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-delay</td>
-                                <td>애니메이션이 시작되기 전까지 시간을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-iteration</td>
-                                <td>애니메이션 반복 횟수를 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-derection</td>
-                                <td>애니메이션 방향을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-fill-mode</td>
-                                <td>애니메이션 끝나고 난 뒤 어떤 값을 적용할지 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>animation-play-state</td>
-                                <td>애니메이션 실행 상태를 설정합니다.</td>
-                            </tr>
-                        </tbody>
-                    </table>
                 </div>
-
-                <h3 class="pt30">Transition</h3>
-                <p class="bs-callout bs-callout-info">
-                    transition : property | duration | timing-fuction | delay
-                </p>
-                <div class="table-reponsive">
-                    <table class="table table-bordered table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>종류</th>
-                                <th>예시</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>transition-property</td>
-                                <td>트렌지션을 적용할 CSS 속성 대상을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>transition-druation</td>
-                                <td>트렌지션 작동시간을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>transition-timing-function</td>
-                                <td>트렌지션 움직임 효과를 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>transition-delay</td>
-                                <td>트렌지션이 시작되기 전까지 시간을 설정합니다.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h3 class="pt30">Timing-fuction</h3>
-                <div class="table-reponsive">
-                    <table class="table table-bordered table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th>종류</th>
-                                <th>예시</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>linear</td>
-                                <td>일정한 간격으로 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>ease</td>
-                                <td>처음에는 서서히 가속하고 마지막 부분에서 급격히 감속합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>ease-in</td>
-                                <td>처음에는 천천히 시작하고 마지막에 가속합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>ease-out</td>
-                                <td>처음에는 최대 속도로 시작하고 마지막에 감속합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>ease-in-out</td>
-                                <td>처음에는 제로 속도로 시작하고, 중간 지점에서 최고 속도로 움직이고, 마지막 부분에서 서서히 감속합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>step-start</td>
-                                <td>애니메이션을 시작점에서 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>step-end</td>
-                                <td>애니메이션을 끝점에서 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>steps(int, start/end)</td>
-                                <td>애니메이션을 단계별을 설정합니다.</td>
-                            </tr>
-                            <tr>
-                                <td>cubic-bezier(n,n,n,n)</td>
-                                <td>버지니아 곡선 값을 만들어서 설정합니다.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- //Intro0 -->
+                <style>
+                    .circle {
+                        width: 60px; height: 60px; border-radius: 50%;
+                        text-align: center; line-height: 60px;
+                        font-size: 12px; color: #fff;
+                        background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+                        margin-bottom: 10px;
+                        position: relative;
+                    }
+                </style>
+            <!-- Intro1 -->
+            <div class="bs-docs-section">
+                <h2 id="intro1" class="page-header">이동하기(to)</h2>
+                <h4>animation <button class="btn btn1">Start</button></h4>
+                <div class="well">
+                    <div class="box1">
+                        <div class="circle circle1">box</div>
+                        <div class="circle circle2">box</div>
+                        <div class="circle circle3">box</div>
+                        <div class="circle circle4">box</div>
+                        <div class="circle circle5">box</div>
+                        <div class="circle circle6">box</div>
+                        <div class="circle circle7">box</div>
+                        <div class="circle circle8">box</div>
+                        <div class="circle circle9">box</div>
+                    </div>
                 </div>
             </div>
+<pre class="line-numbers language-css"><code>$(".btn1").click(function(){
+// $(".box1 > div").animate({left : "90%"},1000)
+gsap.to(".box1 .circle1", 3, {left : "90%"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+gsap.to(".box1 .circle2", 3, {left : "90%", borderRadius: "0%"})
+gsap.to(".box1 .circle3", 3, {left : "90%", rotationY: "1000deg"})
+gsap.to(".box1 .circle4", 3, {left : "90%", rotationX: "1000deg"})
+gsap.to(".box1 .circle5", 3, {left : "90%", backgroundImage: "linear-gradient(to right, #fa709a 0%, #fee140 100%)"})
+gsap.to(".box1 .circle6", 3, {left : "90%", scale:"3", rotationY: "300deg"})
+gsap.to(".box1 .circle7", 3, {left : "90%", scale:"3", rotation: "1300deg"})
+gsap.to(".box1 .circle8", 3, {left : "90%", scale:"4"})
+gsap.to(".box1 .circle9", 3, {left : "90%", skewY:"150deg"})
+})
+</code></pre>
             <!-- //Intro1 -->
+
+             <!-- Intro2 -->
+             <div class="bs-docs-section">
+                <h2 id="intro2" class="page-header">이동하기(from)</h2>
+                <h4>animation <button class="btn btn2">Start</button></h4>
+                <div class="well">
+                    <div class="box2">
+                        <div class="circle circle1">box</div>
+                        <div class="circle circle2">box</div>
+                        <div class="circle circle3">box</div>
+                        <div class="circle circle4">box</div>
+                        <div class="circle circle5">box</div>
+                        <div class="circle circle6">box</div>
+                        <div class="circle circle7">box</div>
+                        <div class="circle circle8">box</div>
+                        <div class="circle circle9">box</div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>$(".btn2").click(function(){
+// $(".box1 > div").animate({left : "90%"},1000)
+gsap.from(".box2 .circle1", 3, {left : "90%"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+gsap.from(".box2 .circle2", 3, {left : "90%", borderRadius: "0%"})
+gsap.from(".box2 .circle3", 3, {left : "90%", rotationY: "1000deg"})
+gsap.from(".box2 .circle4", 3, {left : "90%", rotationX: "1000deg"})
+gsap.from(".box2 .circle5", 3, {left : "90%", backgroundImage: "linear-gradient(to right, #fa709a 0%, #fee140 100%)"})
+gsap.from(".box2 .circle6", 3, {left : "90%", scale:"3", rotationY: "300deg"})
+gsap.from(".box2 .circle7", 3, {left : "90%", scale:"3", rotation: "1300deg"})
+gsap.from(".box2 .circle8", 3, {left : "90%", scale:"2"})
+gsap.from(".box2 .circle9", 3, {left : "90%", skewY:"150deg"})
+})
+</code></pre>
+            <!-- //Intro2 -->
+
+            <!-- Intro3 -->
+            <div class="bs-docs-section">
+                <h2 id="intro3" class="page-header">이동하기(easing)</h2>
+                <h4>animation <button class="btn btn3">Start</button></h4>
+                <div class="well">
+                    <div class="box3">
+                        <div class="circle circle1">box</div>
+                        <div class="circle circle2">box</div>
+                        <div class="circle circle3">box</div>
+                        <div class="circle circle4">box</div>
+                        <div class="circle circle5">box</div>
+                        <div class="circle circle6">box</div>
+                        <div class="circle circle7">box</div>
+                        <div class="circle circle8">box</div>
+                        <div class="circle circle9">box</div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>$(".btn3").click(function(){
+// $(".box1 > div").animate({left : "90%"},1000)
+gsap.to(".box3 .circle1", {duration: 2, left : "90%", rotationY: "300deg", ease: "power1.out"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+gsap.to(".box3 .circle2", {duration: 2, left : "90%", rotationY: "310deg", ease: "power2.out"})
+gsap.to(".box3 .circle3", {duration: 2, left : "90%", rotationY: "320deg", ease: "power3.out"})
+gsap.to(".box3 .circle4", {duration: 2, left : "90%", rotationY: "330deg", ease: "power4.out"})
+gsap.to(".box3 .circle5", {duration: 2, left : "90%", rotationY: "340deg", ease: "back.out(1.7)"})
+gsap.to(".box3 .circle6", {duration: 2, left : "90%", rotationY: "350deg", ease: "elastic.out(1, 0.3)"})
+gsap.to(".box3 .circle7", {duration: 2, left : "90%", rotationY: "360deg", ease: "bounce.out"})
+gsap.to(".box3 .circle8", {duration: 2, left : "90%", rotationY: "370deg", ease: "slow(0.7, 0.7, false)"})
+gsap.to(".box3 .circle9", {duration: 2, left : "90%", rotationY: "380deg", ease: "steps(12)"})
+})
+</code></pre>
+            <!-- //Intro3 -->
+
+            <!-- Intro4 -->
+            <div class="bs-docs-section">
+                <h2 id="intro4" class="page-header">반복하기</h2>
+                <h4>animation <button class="btn btn4">Start</button></h4>
+                <div class="well">
+                    <div class="box4">
+                        <div class="circle circle1">box</div>
+                        <div class="circle circle2">box</div>
+                        <div class="circle circle3">box</div>
+                        <div class="circle circle4">box</div>
+                        <div class="circle circle5">box</div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code> $(".btn4").click(function(){
+gsap.to(".box4 .circle1", {duration: 1, repeat:1, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+gsap.to(".box4 .circle2", {duration: 1, repeat:2, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+gsap.to(".box4 .circle3", {duration: 1, repeat:3, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+gsap.to(".box4 .circle4", {duration: 1, repeat:4, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+gsap.to(".box4 .circle5", {duration: 1, repeat:-1, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+})
+</code></pre>
+            <!-- //Intro4 -->
+
+            <!-- Intro5 -->
+            <div class="bs-docs-section">
+                <h2 id="intro5" class="page-header">Timeline</h2>
+                <h4>animation <button class="btn btn5">Start</button></h4>
+                <div class="well">
+                    <div class="box5">
+                        <div class="circle circle1">box</div>
+                    </div>
+                </div>
+            </div>
+<pre class="line-numbers language-css"><code>//타임라인 3번만 움직이기
+$(".box5").css("height","400px")
+$(".btn5").click(function(){
+    let tl =new TimelineMax()
+    tl.to(".box5 .circle1",{duration: 1, left: "90%", scale:"1", ease: "power3.out"})
+        .to(".box5 .circle1",{duration: 1, top: "80%", scale:"0.5", ease: "power3.out"})
+        .to(".box5 .circle1",{duration: 1, left: "0%", scale:"2.5", ease: "power3.out"})
+        .to(".box5 .circle1",{duration: 1, top: "0%", scale:"1", ease: "power3.out"})
+})
+</code></pre>
+            <!-- //Intro5 -->
 
               
             </div>
@@ -238,7 +264,12 @@
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">Animation</a></li>
+                        <li><a href="#intro0">GSAP</a></li>
+                        <li><a href="#intro1">이동하기(to)</a></li>
+                        <li><a href="#intro2">이동하기(from)</a></li>
+                        <li><a href="#intro3">이동하기(easing)</a></li>
+                        <li><a href="#intro4">반복하기</a></li>
+                        <li><a href="#intro5">Timeline</a></li>
                     </ul>
                 </div>
             </div>
@@ -271,6 +302,64 @@
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/docs.min.js"></script>
     <script src="../../assets/js/prism.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script> -->
+
+    <script>
+        $(".btn1").click(function(){
+            // $(".box1 > div").animate({left : "90%"},1000)
+            gsap.to(".box1 .circle1", 3, {left : "90%"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+            gsap.to(".box1 .circle2", 3, {left : "90%", borderRadius: "0%"})
+            gsap.to(".box1 .circle3", 3, {left : "90%", rotationY: "1000deg"})
+            gsap.to(".box1 .circle4", 3, {left : "90%", rotationX: "1000deg"})
+            gsap.to(".box1 .circle5", 3, {left : "90%", backgroundImage: "linear-gradient(to right, #fa709a 0%, #fee140 100%)"})
+            gsap.to(".box1 .circle6", 3, {left : "90%", scale:"3", rotationY: "300deg"})
+            gsap.to(".box1 .circle7", 3, {left : "90%", scale:"3", rotation: "1300deg"})
+            gsap.to(".box1 .circle8", 3, {left : "90%", scale:"4"})
+            gsap.to(".box1 .circle9", 3, {left : "90%", skewY:"150deg"})
+        })
+        $(".btn2").click(function(){
+            // $(".box1 > div").animate({left : "90%"},1000)
+            gsap.from(".box2 .circle1", 3, {left : "90%"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+            gsap.from(".box2 .circle2", 3, {left : "90%", borderRadius: "0%"})
+            gsap.from(".box2 .circle3", 3, {left : "90%", rotationY: "1000deg"})
+            gsap.from(".box2 .circle4", 3, {left : "90%", rotationX: "1000deg"})
+            gsap.from(".box2 .circle5", 3, {left : "90%", backgroundImage: "linear-gradient(to right, #fa709a 0%, #fee140 100%)"})
+            gsap.from(".box2 .circle6", 3, {left : "90%", scale:"3", rotationY: "300deg"})
+            gsap.from(".box2 .circle7", 3, {left : "90%", scale:"3", rotation: "1300deg"})
+            gsap.from(".box2 .circle8", 3, {left : "90%", scale:"2"})
+            gsap.from(".box2 .circle9", 3, {left : "90%", skewY:"150deg"})
+        })
+        $(".btn3").click(function(){
+            // $(".box1 > div").animate({left : "90%"},1000)
+            gsap.to(".box3 .circle1", {duration: 2, left : "90%", rotationY: "300deg", ease: "power1.out"})  /* to : 이동하다  2버전은 TweenMax이고 3버전은 gsap로 쓴다 */
+            gsap.to(".box3 .circle2", {duration: 2, left : "90%", rotationY: "310deg", ease: "power2.out"})
+            gsap.to(".box3 .circle3", {duration: 2, left : "90%", rotationY: "320deg", ease: "power3.out"})
+            gsap.to(".box3 .circle4", {duration: 2, left : "90%", rotationY: "330deg", ease: "power4.out"})
+            gsap.to(".box3 .circle5", {duration: 2, left : "90%", rotationY: "340deg", ease: "back.out(1.7)"})
+            gsap.to(".box3 .circle6", {duration: 2, left : "90%", rotationY: "350deg", ease: "elastic.out(1, 0.3)"})
+            gsap.to(".box3 .circle7", {duration: 2, left : "90%", rotationY: "360deg", ease: "bounce.out"})
+            gsap.to(".box3 .circle8", {duration: 2, left : "90%", rotationY: "370deg", ease: "slow(0.7, 0.7, false)"})
+            gsap.to(".box3 .circle9", {duration: 2, left : "90%", rotationY: "380deg", ease: "steps(12)"})
+        })
+        $(".btn4").click(function(){
+            gsap.to(".box4 .circle1", {duration: 1, repeat:1, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+            gsap.to(".box4 .circle2", {duration: 1, repeat:2, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+            gsap.to(".box4 .circle3", {duration: 1, repeat:3, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+            gsap.to(".box4 .circle4", {duration: 1, repeat:4, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+            gsap.to(".box4 .circle5", {duration: 1, repeat:-1, yoyo:true, left: "90%", rotation: "720deg", ease: "power4.out"})
+        })
+        //타임라인 3번만 움직이기
+        $(".box5").css("height","400px")
+        $(".btn5").click(function(){
+            let tl =new TimelineMax()
+            tl.to(".box5 .circle1",{duration: 1, left: "90%", scale:"1", ease: "power3.out"})
+              .to(".box5 .circle1",{duration: 1, top: "80%", scale:"0.5", ease: "power3.out"})
+              .to(".box5 .circle1",{duration: 1, left: "0%", scale:"2.5", ease: "power3.out"})
+              .to(".box5 .circle1",{duration: 1, top: "0%", scale:"1", ease: "power3.out"})
+        })
+    </script>
 </body>
 
 </html>

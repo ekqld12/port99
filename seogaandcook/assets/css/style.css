@@ -36,7 +36,7 @@
 }
 .menus .on {
     color: #fff;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 .menus .topmeau {
 
@@ -53,27 +53,59 @@
 .header .area .menus a:last-child {
     margin-right: 0;
 }
-.submenu {
+
+/* submenu */
+.submenuwrap {
     width: 100%; 
-    height: 60px;
+    height: 100vh;
     border-top: 1px solid #333333;
     position: absolute;
     top: 80px;
     left: 0;
-    background-color: rgba(0,0,0,0.8);
-    text-align: center;
+    background-color: rgba(0,0,0,0.9);
+    
 }
-.submenu a {
-    display: inline-block;
-    line-height: 60px;
-    margin-right: 60px;
-    font-size: 18px;
-    color: #858384;
-    font-weight: 400;
+.submenu {
+    text-align: center;
+    position: relative;
 }
 .submenu a:last-child {
     margin-right: 0;
 }
+
+
+.submenu .title {
+    display: inline-block;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.submenu .title a {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    margin-left: 40px;
+    line-height: 1.7;
+}
+.submenu .content {
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 0 160px 0 200px; 
+    display: flex;
+    justify-content: space-around;
+}
+.submenu .content ul{
+    font-size: 18px;
+    color: #999;
+}
+
+
+
+
+
+
+
+
+
 
 /* sidemenu */
 .sidemenu {}

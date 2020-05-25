@@ -79,7 +79,7 @@
         </div>
     </header>
     <!-- //header -->
-    
+<main id="contents">
     <section id="banner">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -340,7 +340,7 @@
     </section>
     <!-- //story  -->
 
-    <div id="world">
+    <section id="world">
         <h2>함께해서 더 아름다운 세상,<br>농심이 만들어갑니다.</h2>
         <div class="world">
             <div>
@@ -363,10 +363,10 @@
             </div>
         </div>
         <a href="#" class="world-btn">지속가능경영</a>
-    </div>
+    </section>
     <!-- //world -->
 
-    <div id="brand">
+    <section id="brand">
         <h2>모두의 일상에 즐거움을 선서합니다.</h2>
         <div class="mbrand">
             <h3>best brand</h3>
@@ -402,9 +402,9 @@
             </div>
         </div>
         <a href="#" class="brand-btn">브랜드관</a>
-    </div>
+    </section>
     <!-- //brand  -->
-
+</main>
     <footer id="footer">
         <div class="footer">
           <ul id="footer-top">
@@ -453,7 +453,6 @@
         </div>
       </footer>
 
-     <img class="img1" src="assets/img/instagram.svg" alt="인스타그램">
     <!-- script -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
@@ -465,6 +464,18 @@
         //             <img src="assets/img/icon-play.svg" alt="시작">
         //         </a>
         $(document).ready(function(){
+
+
+            $(window).scroll(function(){
+                const scrollTop = $(window).scrollTop() + $(window).height()/2;
+
+                $("#contents > section").each(function(){
+                    if(scrollTop > $(this).offset().top){
+                        $(this).addClass("show");
+                    }
+                });
+            })
+
             $(".swiper-pagination").append("<a href='#' class='icon-pause'><img src='assets/img/icon-pause.svg' alt='정지'></a>")
 
             $(".swiper-pagination a").click(function(e){

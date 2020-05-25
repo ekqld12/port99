@@ -455,6 +455,45 @@ function out(){
                     </div>
                 </div>
             </div>
+<pre class="line-numbers language-css"><code>//속성, 애니메이션(2바퀴), --> 무한 움직이기 --> 10분 뒤에 사라지게
+$(".btn9 > button").click(function(){
+    looop();
+    setTimeout(hide, 600000);   
+});
+
+function looop(){
+    $(".circle9 > div")
+        .animate({
+            left: leftWidth,
+            borderRadius: "50%",
+            opacity: 2
+        }, 1000,"easeInOutBounce")
+        .animate({
+            top: "80%",
+            borderRadius: "0%",
+            opacity: 1,
+            width: "250px",
+            height: "250px"
+        }, 1000, "easeInOutBounce")
+        .animate({
+            left: "00%",
+            borderRadius: "50%",
+            opacity: 0.2,
+            width: "50px",
+            height: "50px"
+        }, 1000,"easeInOutBounce")
+        .animate({
+            top: 0,
+            borderRadius: "0%",
+            opacity: 1
+        }, 1000, looop);
+        // .delay(2000)
+}
+
+function hide() {
+    $(".circle9 > div").hide();
+}
+</code></pre>
             <!-- //Intro11 -->
               
             </div>

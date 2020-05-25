@@ -587,29 +587,29 @@
   opacity: 0;
 }
 
-#world .show h2 {
+#world.show h2 {
   opacity: 1;
 }
 
-#world .show .world div:nth-child(1) {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
-#world .show .world div:nth-child(2) {
+#world.show .world div:nth-child(1) {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-#world .show .world div:nth-child(3) {
+#world.show .world div:nth-child(2) {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
-#world .show .world-btn {
+#world.show .world div:nth-child(3) {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#world.show .world-btn {
   -webkit-animation: bounceInLeft 0.6s 1.4s forwards;
           animation: bounceInLeft 0.6s 1.4s forwards;
 }

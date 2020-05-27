@@ -6,6 +6,13 @@
     <title>Parallax01</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
+         @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        @font-face { 
+            font-family: 'GmarketSansMedium'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
         *{margin: 0; padding: 0; box-sizing: border-box;}
         li {list-style: none;}
         a {text-decoration: none; color: #fff; font-family: 'Lato', sans-serif;}
@@ -14,6 +21,38 @@
             color: #fff;
             font-family: 'Lato', sans-serif;
         }
+
+        .title {
+            position: fixed;
+            right: 0; 
+            top: 0; 
+            z-index: 1000;
+            padding: 20px;
+            font-family: 'GmarketSansMedium';
+            text-align: right;
+
+        }
+        .title h1 {
+            margin-bottom: 10px;
+        }
+        .title p {
+            font-size: 18px;
+        }
+        .title ul {
+            font-family: 'Abel';
+        }
+        .title li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .title li a{
+            font-size: 16px;
+        }
+        .title li.active a {
+            border-bottom: 1px dashed #fff;
+        }
+
+
         #wrap h1 {
             font-size: 135px;
             padding: 60px;
@@ -95,6 +134,25 @@
     </style>
 </head>
 <body>
+
+    
+    <div class="title">
+        <h1>Parallax01</h1>
+        <p>레이아웃 1</p>
+        <ul>
+            <li class="active"><a href="Parallax01.html">Parallax01</a></li>
+            <li><a href="Parallax02.html">Parallax02</a></li>
+            <li><a href="Parallax03.html">Parallax03</a></li>
+            <li><a href="Parallax04.html">Parallax04</a></li>
+            <li><a href="Parallax05.html">Parallax05</a></li>
+            <li><a href="Parallax06.html">Parallax06</a></li>
+            <li><a href="Parallax07.html">Parallax07</a></li>
+            <li><a href="Parallax08.html">Parallax08</a></li>
+        </ul>
+    </div>
+
+
+    <!-- parallax -->
     <section id="wrap">
         <h1>Parallax <em>Scrolling</em></h1>
         <div class="contents">

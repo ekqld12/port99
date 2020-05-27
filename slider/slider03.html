@@ -114,11 +114,11 @@
         setInterval(function(){
             
             //만약에 4이상이 되면 = 0으로
-            // if(currentIndex < 4) {
-            //     currentIndex++
-            // } else {
-            //     currentIndex = 0;
-            // }
+            if(currentIndex < 4) {
+                currentIndex++
+            } else {
+                currentIndex = 0;
+            }
             //위에 if문 한번에 쓰기
             currentIndex < 4 ? currentIndex++ : currentIndex = 0;       //삼항 연산자
 

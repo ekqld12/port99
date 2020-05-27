@@ -7,6 +7,13 @@
     <title>parallax03</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
+          @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        @font-face { 
+            font-family: 'GmarketSansMedium'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
         * {
             margin: 0;
             padding: 0;
@@ -39,6 +46,38 @@
             background-color: var(--color-bg);
             font-family: var(--font-family);
             color: var(--color-title);
+        }
+
+        .title {
+            position: fixed;
+            right: 0; 
+            top: 0; 
+            z-index: 1000;
+            padding: 20px;
+            font-family: 'GmarketSansMedium';
+            text-align: right;
+
+        }
+        .title h1 {
+            margin-bottom: 10px;
+            
+            
+        }
+        .title p {
+            font-size: 18px;
+        }
+        .title ul {
+            font-family: 'Abel';
+        }
+        .title li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .title li a{
+            font-size: 16px;
+        }
+        .title li.active a {
+            border-bottom: 1px dashed #fff;
         }
 
         #wrap h1 {
@@ -178,7 +217,7 @@
 
         /* info */
         .info {
-            position: fixed; top: 20px; right: 20px;
+            position: fixed; right: 20px; bottom: 20px;
             background: rgba(255,255,255,0.4);
             color: #000;
             padding: 10px;
@@ -199,7 +238,23 @@
 </head>
 
 <body>
+    <!-- title -->
+    <div class="title">
+        <h1>Parallax03</h1>
+        <p>jquery 페럴럭스 효과</p>
+        <ul>
+            <li ><a href="Parallax01.html">Parallax01</a></li>
+            <li><a href="Parallax02.html">Parallax02</a></li>
+            <li class="active"><a href="Parallax03.html">Parallax03</a></li>
+            <li><a href="Parallax04.html">Parallax04</a></li>
+            <li><a href="Parallax05.html">Parallax05</a></li>
+            <li><a href="Parallax06.html">Parallax06</a></li>
+            <li><a href="Parallax07.html">Parallax07</a></li>
+            <li><a href="Parallax08.html">Parallax08</a></li>
+        </ul>
+    </div>
 
+    <!-- info -->
     <div class="info">
         <span>scrollTop() : <strong class="scrollTop">0</strong>px</span><br>
         <span>#section1 offset : <strong class="s1OT">0</strong>px</span><br>
@@ -212,6 +267,8 @@
         <span>#section8 offset : <strong class="s8OT">0</strong>px</span><br>
         <span>#section9 offset : <strong class="s9OT">0</strong>px</span><br>
     </div>
+
+    <!-- parallax -->
     <section id="wrap">
         <h1>Parallax <em>Scrolling</em></h1>
         <div class="contents">

@@ -218,7 +218,7 @@
   .swiper-pagination-custom,
   .swiper-container-horizontal > .swiper-pagination-bullets {
     bottom: 40px;
-    left: 0;
+    left: 6px;
     width: 100%;
   }
   /* Bullets */

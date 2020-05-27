@@ -120,17 +120,53 @@
                 <a href="#" class="marrow move">
                     <div class="con">
                         <img src="assets/icons/main_v_arrow.png" alt="마우스">
-                        <!-- <img src="assets/icons/main_v_dot.png" class="con1" alt="마우스"> -->
+                    </div>
+                    <div class="con1">
+                        <img src="assets/icons/main_v_dot.png" alt="마우스">
                     </div>
                 </a>
             </div>
         </section>
         <!-- //banner -->
+
+
+        <section class="contentwrap">
+            <div class="content-header">
+                <div class="content-title">
+                    <div class="en1">Create a person's story</div>
+                    <div class="en2"> S&S는 사람과 공간이 함께 어울릴 수 있도록 더 풍요롭고 더 맛있는 기회와 가치를 제공합니다.</div>
+                    <div class="tabmenu">
+                        <a href="#" class="t1 active"></a>
+                        <a href="#" class="t2"></a>
+                        <a href="#" class="t3"></a>
+                        <a href="#" class="t4"></a>
+                    </div>
+                    <div class="story">
+                        <div class="slide1">
+
+                        </div>
+                        <div class="slide2">
+
+                        </div>
+                        <div class="slide3">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
     </div>
 
      <!-- script -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+         $(".tabmenu > a").click(function (e) {
+            e.preventDefault();
+            $(this).addClass("active").siblings().removeClass("active");
+        })
+    </script>
 </body>
 </html>

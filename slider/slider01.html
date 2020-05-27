@@ -13,19 +13,18 @@
             font-weight: normal; 
             font-style: normal; 
         }
-        * {margin: 0; padding: 0; box-sizing: 0;}
-        a {text-decoration: none; color: #666;}
-        img {width: 100%;}
-
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        a {text-decoration: none; color: #fff;}
+        img {width: 100%; vertical-align: top;}
+        ul {padding: 10px 20px;}
         body {
             background: url(img/so01.jpg) no-repeat center center;
             background-size: cover;
-            font-family: 'Abel','Black Han Sans', sans-serif;
+            font-family: 'Abel', 'GmarketSansMedium';
             color: #fff;
             height: 100vh;
-
-            }
-        body::before{
+        }
+        body::before {
             content: '';
             position: absolute; left: 0; top: 0;
             width: 100%; height: 100vh;
@@ -35,6 +34,20 @@
         .info {
             position: absolute; left: 0; top: 0; z-index: 1000;
             padding: 20px;
+        }
+        .info h1 {
+            margin-bottom: 10px;
+        }
+        .info2 {
+            position: absolute; right: 0; top: 0; z-index: 1000;
+            padding: 20px;
+        }
+        .info2 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .info2 li.active a {
+            border-bottom: 1px dashed #fff;
         }
 
         /* slide */
@@ -60,6 +73,19 @@
     <div class="info">
         <h1>Image Slider01</h1>
         <p>페이드 효과 이미지 슬라이드</p>
+    </div>
+
+    <div class="info2">
+        <ul>
+            <li class="active"><a href="slider01.html">Slider01</a></li>
+            <li><a href="slider02.html">Slider02</a></li>
+            <li><a href="slider03.html">Slider03</a></li>
+            <li><a href="slider04.html">Slider04</a></li>
+            <li><a href="slider05.html">Slider05</a></li>
+            <li><a href="slider06.html">Slider06</a></li>
+            <li><a href="slider07.html">Slider07</a></li>
+            <li><a href="slider08.html">Slider08</a></li>
+        </ul>
     </div>
     
     <div class="slide-wrap">

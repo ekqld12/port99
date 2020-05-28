@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax04</title>
+    <title>parallax05</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
@@ -62,6 +62,7 @@
         }
         .title p {
             font-size: 18px;
+            padding: 0 0 20px 0;
         }
         .title ul {
             font-family: 'Abel';
@@ -105,6 +106,7 @@
             width: var(--image-width);
             max-width: 90vw;
             margin: 30vh 0 40vh;
+            will-change: transform;
         }
 
         .content-item-imgWrap {
@@ -113,17 +115,18 @@
             width: var(--width);
             padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
             overflow: hidden;
-            background: #ccc;
+            will-change: transform;
         }
 
         .content-item-img {
-            position: absolute;
-            top: 0;
             width: var(--width);
-            --overflow: 40px;
+            --overflow: 60px;
+            position: absolute;
+            top: calc( -2 * var(--overflow));
             height: calc(100% + (2 * var(--overflow)));
             background-size: cover;
             background-position: 50% 0;
+            will-change: transform;
         }
 
         .content-item:nth-child(even) {
@@ -169,6 +172,8 @@
             margin-right: -3vh;
             z-index: 100;
             position: relative;
+            transition: transfrom 0.5s cubic-bezier(1, 0.18, 0, 1.21);
+            will-change: transfrom;
         }
 
         .content-item:nth-child(even) .content-item-desc {
@@ -215,7 +220,7 @@
 
         /* info */
         .info {
-            position: fixed; top: 20px; right: 20px;
+            position: fixed; right: 20px; bottom: 20px;
             background: rgba(255,255,255,0.4);
             color: #000;
             padding: 10px;
@@ -225,17 +230,22 @@
             font-style: normal;
             font-family: 'Abel';
         }
-        .contents > section {
+        /* .contents > section {
             opacity: 0; transform: translateY(10vh);
             transition: all 0.6s ease;
         }
         .contents > section.show {
             opacity: 1; transform: translateY(0);
-        }
+        } */
     </style>
 </head>
 
 <body>
+
+    <!-- info -->
+    <div class="info">
+        <div>scrollTop() :<span class="scrollTop">0</span>px</div>
+    </div>
 
     <!-- title -->
     <div class="title">
@@ -331,8 +341,63 @@
             </section>
         </div>
     </section>
+
+    <!-- script -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script>
-       
+       $(window).scroll(function(){
+           let scrollTop = $(window).scrollTop();
+
+           $(".scrollTop").text(scrollTop)
+
+           $("#wrap h1").css({transform: "translateX("+scrollTop+"px)"})
+
+            
+           
+
+           let offset1 = (scrollTop - $("#section1").offset().top)
+           let offset2 = (scrollTop - $("#section2").offset().top)
+           let offset3 = (scrollTop - $("#section3").offset().top)
+           let offset4 = (scrollTop - $("#section4").offset().top)
+           let offset5 = (scrollTop - $("#section5").offset().top)
+           let offset6 = (scrollTop - $("#section6").offset().top)
+           let offset7 = (scrollTop - $("#section7").offset().top)
+           let offset8 = (scrollTop - $("#section8").offset().top)
+           let offset9 = (scrollTop - $("#section9").offset().top)
+
+
+
+
+        //    $("#section1 .content-item-desc").css({ transform: "translateX("+ offset1+"px)"})
+        //    $("#section2 .content-item-desc").css({ transform: "translateX("+ offset2+"px)"})
+        //    $("#section3 .content-item-desc").css({ transform: "translateX("+ offset3+"px)"})
+        //    $("#section4 .content-item-desc").css({ transform: "translateX("+ offset4+"px)"})
+        //    $("#section5 .content-item-desc").css({ transform: "translateX("+ offset5+"px)"})
+        //    $("#section6 .content-item-desc").css({ transform: "translateX("+ offset6+"px)"})
+        //    $("#section7 .content-item-desc").css({ transform: "translateX("+ offset7+"px)"})
+        //    $("#section8 .content-item-desc").css({ transform: "translateX("+ offset8+"px)"})
+        //    $("#section9 .content-item-desc").css({ transform: "translateX("+ offset9+"px)"})
+
+
+        $(".content-item").each(function(){
+            let offset1 = (scrollTop - $(this).offset().top)*0.1
+            let offset2 = (scrollTop - $(this).offset().top)*0.2
+            let offset3 = (scrollTop - $(this).offset().top)*0.3
+            let offset4 = (scrollTop - $(this).offset().top)*0.2
+                $(this).find(".content-item-desc").css({"transform":"translateY("+ -offset2+"px)"});
+                $(this).find(".content-item-num").css({"transform":"translateY("+ offset1+"px)"});
+                $(this).find(".content-item-img").css({"transform":"translateY("+ offset4+"px)"});
+              })  
+
+    //        for(let i=1; i<=9; i++){
+    //             let offset = (scrollTop - $("#section"+i).offset().top)
+    //             $("#section"+i+" .content-item-desc").css({transform : "translateX("+offset+i+"px)"});
+    //         }
+       })
+
+
+
     </script>
 </body>
 

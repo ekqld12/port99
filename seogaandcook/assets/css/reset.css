@@ -35,6 +35,13 @@ video {width: 100%;}
 /* 폰트 스타일 초기화*/
 em {font-style: normal;}
 
+/* 폰트 초기화*/
+body, input, textarea, select, button, table {
+        font-family: 'Maven Pro', sans-serif;
+        color: #222; font-size: 13px; line-height: 1.5;
+}
+
+
 /* IR 효과*/
 /*의미있는 이미지의 대체 텍스트를 제공하는 경우*/
 .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;} 
@@ -43,7 +50,111 @@ em {font-style: normal;}
 .ir_so {overflow: hidden; position: absolute; width: 0; height: 0; line-height: 0; text-indent: -9999px;}
 
 
+/*@import url('https://fonts.googleapis.com/css?family=Maven+Pro'); */
 
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Nanum Barun Gothic UltraLight'), local('Nanum Barun Gothic-UltraLight'), local('NanumBarunGothic UltraLight');
+  src: url(./NanumBarunGothicUltraLight.eot);
+  src: url(./NanumBarunGothicUltraLight.eot?#iefix) format('embedded-opentype'),
+       url(./NanumBarunGothicUltraLight.woff) format('woff'),
+       url(./NanumBarunGothicUltraLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Nanum Barun Gothic Light'), local('Nanum Barun Gothic-Light'), local('NanumBarunGothic Light');
+  src: url(./NanumBarunGothicLight.eot);
+  src: url(./NanumBarunGothicLight.eot?#iefix) format('embedded-opentype'),
+       url(./NanumBarunGothicLight.woff) format('woff'),
+       url(./NanumBarunGothicLight.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Nanum Barun Gothic Regular'), local('Nanum Barun Gothic-Regular'), local('NanumBarunGothic Regular');
+  src: url(./NanumBarunGothic.eot);
+  src: url(./NanumBarunGothic.eot?#iefix) format('embedded-opentype'),
+       url(./NanumBarunGothic.woff) format('woff'),
+       url(./NanumBarunGothic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Barun Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Nanum Barun Gothic Bold'), local('Nanum Barun Gothic-Bold'), local('NanumBarunGothic Bold');
+  src: url(./NanumBarunGothicBold.eot);
+  src: url(./NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+       url(./NanumBarunGothicBold.woff) format('woff'),
+       url(./NanumBarunGothicBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'ygpstit';
+  src: url(./ygpstit.eot);
+  src: url(./ygpstit.eot?#iefix) format('embedded-opentype'),
+       url(./ygpstit.ttf) format('truetype');
+}
+
+/* maven-pro-regular - latin */
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./maven-pro-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Maven Pro Regular'), local('MavenPro-Regular'),
+       url('./maven-pro-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./maven-pro-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./maven-pro-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./maven-pro-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./maven-pro-v11-latin-regular.svg#MavenPro') format('svg'); /* Legacy iOS */
+}
+/* maven-pro-500 - latin */
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./maven-pro-v11-latin-500.eot'); /* IE9 Compat Modes */
+  src: local('Maven Pro Medium'), local('MavenPro-Medium'),
+       url('./maven-pro-v11-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./maven-pro-v11-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./maven-pro-v11-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('./maven-pro-v11-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./maven-pro-v11-latin-500.svg#MavenPro') format('svg'); /* Legacy iOS */
+}
+/* maven-pro-700 - latin */
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./maven-pro-v11-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Maven Pro Bold'), local('MavenPro-Bold'),
+       url('./maven-pro-v11-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./maven-pro-v11-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./maven-pro-v11-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('./maven-pro-v11-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./maven-pro-v11-latin-700.svg#MavenPro') format('svg'); /* Legacy iOS */
+}
+/* maven-pro-900 - latin */
+@font-face {
+  font-family: 'Maven Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: url('./maven-pro-v11-latin-900.eot'); /* IE9 Compat Modes */
+  src: local('Maven Pro Black'), local('MavenPro-Black'),
+       url('./maven-pro-v11-latin-900.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./maven-pro-v11-latin-900.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./maven-pro-v11-latin-900.woff') format('woff'), /* Modern Browsers */
+       url('./maven-pro-v11-latin-900.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./maven-pro-v11-latin-900.svg#MavenPro') format('svg'); /* Legacy iOS */
+}
 
 
 

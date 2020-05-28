@@ -1,4 +1,7 @@
-@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;669;700;800;900&display=swap');
+body {
+    font-family: 'Maven Pro', sans-serif;
+}
 /* 헤더 */
 .wrap {
 }
@@ -9,17 +12,25 @@
     top: 0;
     z-index: 1000;
     min-width: 1100px;
-    background: #000;
-    transition: background 3s;
-}
-.header .bgs {
-    background: rgba(0,0,0,0.8)
 }
 .header .area {
     width: 100%; 
     height: 100%;
     position: relative;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeInDown 3s ;
 }
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .wrap .area img {
     position: absolute;
     left: 30px;
@@ -33,6 +44,9 @@
     margin: auto;
     padding-top: 31px;
     position: relative;
+}
+.menus a .topmeau {
+    color: #fff;
 }
 .menus .on {
     color: #fff;
@@ -100,23 +114,216 @@
 
 
 
-
-
-
-
-
-
-
 /* sidemenu */
-.sidemenu {}
-.area .sidemenu {
-  
+.sidemenu {
+    
+}
+.side {
 }
 .sidemenu a {
   
 }
-.sidemenu .simenu img{
-    position: absolute; top: 34%; left: 1850px;
+.area .side img{
+    position: absolute; left: 96%; top: 26px;
     width: 40px; height: 30px;
     
+}
+
+/* banner */
+#banner {
+    position: relative;
+    width: 100%;
+    
+}
+.swiper-container {}
+.swiper-wrapper {
+    width: 100%; height: 100vh;
+    transition: transform 1s cubic-bezier(1, 0.265, 0, 1.225) 0s;
+}
+.swiper-slide {}
+.swiper-slide img{
+    width: 100%; height: 800px;
+}
+
+
+/* 글씨 부분 */
+.main_visual {
+    transition-timing-function: ease;
+}
+.main_visual .on {
+    width: 100%;
+    height: 100%;
+}   
+.main_visual .vamtitle {
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 1200px;
+}
+.vamt-align {
+    position: absolute; top: -1000%; left: 11%;
+    top: 35%;
+    z-index: 1000;
+}
+.vamtitle .tit1{
+    color: #fff;
+    font-size: 80px;
+    height: 80px;
+    font-weight: 400;
+    font-family: 'Maven Pro';
+}
+.vamtitle .tit2{
+    display: inline-block;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 700;
+    margin-top: 20px;
+    font-family: 'Maven Pro';
+}
+.vamtitle .tit3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+.tit {
+    animation: fadeInDown 3s ;
+    /* animation-name: fadeInDown; */
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 마우스 이미지 */
+.marrow {
+    z-index: 1;
+    position: absolute;
+    left: 50%; bottom: 12%;
+    animation: mainItem 2s ease-in-out infinite alternate;
+}
+.marrow .con {
+    position: relative;
+    height: 130px;
+}
+.con img {
+    vertical-align: middle;
+    width: 22px; height: 130px;
+}
+.con1 img {
+    position: absolute; left: 46%; top: 48%;
+    width: 2px; height: 4px;
+}
+@keyframes mainItem {
+    0% {
+        transform: translate(0,-10px);
+    }
+    90% {
+        transform: translate(0,125%);
+    }
+    100% {
+        transform: translate(0, 200%);
+        opacity: 0;
+    }
+}
+
+/* content-wrap */
+.contentwrap {
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    background: #fff;
+}
+.content-header{}
+.content-title{
+    text-transform: uppercase;
+    color: #222;
+    text-align: center;
+
+}
+.content-title .en1{
+    font-family: 'Maven Pro', sans-serif;
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 400px;
+}
+.content-title .en2{
+    font-family: 'ygpstit', sans-serif;
+    font-size: 18px;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 48px;
+    font-weight: 300;
+}
+
+/* content tabmenu */
+.tabmenu {
+    width: 100%; height: 90px;
+    border-top: 1px solid #e6e6e6;
+}
+.tabmenu a {
+    width: 300px;
+    display: inline-block;
+    height: 81px;
+    text-align: right;
+}
+.tabmenu .active {
+    border-top: 2px solid #000;
+}
+.tabmenu a::after {
+    content: '|';
+    color: #dfdfdf;
+    font-size: 20px;
+    line-height: 81px;
+    font-weight: 300px;
+}
+.tabmenu a:last-child::after {
+    content: '|';
+    color: #fff;
+    font-size: 20px;
+    line-height: 81px;
+    font-weight: 300px;
+}
+.tabmenu a:nth-child(1) {
+    background-image: url(../icons/m_tab01_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.tabmenu a:nth-child(2) {
+    background-image: url(../icons/m_tab02_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.tabmenu a:nth-child(3) {
+    background-image: url(../icons/m_tab03_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.tabmenu a:nth-child(4) {
+    background-image: url(../icons/m_tab04_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a:link, a:visited {
+    color: #000;
+}
+
+
+
+
+/* 이미지 부분 */
+.story {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1200px; height: 600px;
+    background: #000;
+}
+.story .slide1 {
+    width: 960px; height: 600px;
+    background-image: url(../icons/main_story_v0301.png);
 }

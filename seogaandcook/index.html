@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko" class="fp-enabled no-touch" style="overflow: hidden; height: 100%;">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
     <!-- 웹폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;669;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body style="overflow: hidden; height: 100%;" class="fp-viewing-anchor1" >
+<body>
     <div class="wrap">
         <div class="header bgs" style="position: fixed;">
             <div class="header area">
@@ -111,6 +111,16 @@
             </div>
             <div class="btn-quick"></div>
 
+            <div class="pagination" >
+                <div class="vertical-align contv" id="menu">
+                <a href="#anchor1" class="active"    data-menuanchor="anchor1"></a>
+                <a href="#anchor2" class=""  data-menuanchor="anchor2"></a>
+                <a href="#anchor3" class=""  data-menuanchor="anchor3"></a>
+                <a href="#anchor4" class=""  data-menuanchor="anchor4"></a>
+                <a href="#anchor5" class=""  data-menuanchor="anchor5"></a>
+                </div>
+            </div>
+
             <div class="main_visual on">
                 <div class="vamtitle vamt-align">
                     <div class="tit1 tit">where the</div>
@@ -141,27 +151,102 @@
                         <a href="#" class="t3"></a>
                         <a href="#" class="t4"></a>
                     </div>
-                    <div class="story">
-                        <div class="slide1">
-
-                        </div>
-                        <div class="slide2">
-
-                        </div>
-                        <div class="slide3">
-
+                    <div class="story time5">
+                        <div class="caroufredsel_wrapper">
+                            <div class="sarea">
+                                <div class="items" alt="토끼정" style="width: 1920px;">
+                                    <div class="s1">
+                                        <div class="zoomimg">
+                                            <div class="align">
+                                                <div class="ent1">brand</div>
+                                                <div class="ent2">토끼정 당신과 나의 마음이 함께 머무르는 곳</div>
+                                            </div>                                     
+                                        </div>
+                                    </div>
+                                    <div class="s2">
+                                        <div class="zoomimg">
+                                            <div class="align">
+                                                <div class="ent3">MENU</div>
+                                                <div class="ent4">일식과 한식의조화로 한국인의 입맛을 재해석 하다</div>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                    <div class="s3">
+                                        <div class="zoomimg">
+                                            <div class="align">
+                                                <div class="ent5">CONCEPT</div>
+                                                <div class="ent6">아름다운 분위기에 맛을 더하다</div>
+                                            </div>   
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="items" alt="서앤쿡" style="width: 1920px;"></div>
+                                <div class="items" alt="소싯적" style="width: 1920px;"></div>
+                                <div class="items" alt="숨쉬는 두부" style="width: 1920px;"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
+        <!-- //contentwrap -->
+
+        <section class="contwrap2">
+            <div class="title1">
+                <div class="title2">
+                    <div class="title3">
+                        <div class="tit">
+                            <div class="titimg"></div>
+                        </div>
+                        <div class="tit4">
+                            <h2>S&S STORY</h2>
+                            <p class="span">OUR TIME<br>IN THE SAME TIME</p>
+                            <p class="span1">우리는 그때 그곳에서처럼 당신을 기다립니다.<br>맛있는 음식,다정하게 내이름을 부르는 사람,마주보며 웃는 당신이 있는 곳<br>이곳은S&S입니다.</p>
+                            <a href="#"><img src="assets/img/view_more.jpg" alt="버튼"></a>
+                        </div>
+                        <div class="tit5">
+                            <img src="assets/icons/main_ourbg_icn.png" alt="꽃">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //contwrap2 -->
+
+
+        <section class="contwrap3">
+            <div class="title4">
+                <div class="title5">
+                    <div class="tltle6">
+                        <div class="tit_1">
+                            <div class="tit_img"></div>
+                        </div>
+                        <div class="tit6">
+                            <h2>PEOPLE</h2>
+                            <p class="span2">PEOPLE &<br>S&S</p>
+                            <p class="span3">경험과 열정, 문화와 음식,생각의 반전까지S&S는<br>맛있는 한 그릇,행복한 시간을 만들기 위해 열정을 다합니다.<br>경험과 문화 그 사이에 열정을 다하는 사람이 있습니다.</p>
+                            <a href="#"><img src="assets/img/view_more.jpg" alt="버튼"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <!-- //contwrap3 -->
+
+         <section class="joy" style="height: 507px;">
+             <div class="joy1" style="height: 507px;">
+                 <div class="joybody">
+                     <div class="joytitle"></div>
+                 </div>
+             </div>
+         </section>
     </div>
 
      <!-- script -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="assets/js/fullpage.js"></script>
     <script>
          $(".tabmenu > a").click(function (e) {
             e.preventDefault();
@@ -169,77 +254,59 @@
         })
     </script>
 
-<!-- <script>
-    $(document).ready(function(){
-    
-     ff = $(document).scrollTop();
-    
-        if(ff <100){
-        $(".header").addClass("bgs");
-        }else{
-        $(".header").addClass("bgs");
-        }
-    
-        /// 267
-        if(ff > 11 ){
-    
-        $(".header").css("position", "fixed");
-        $(".header").css("top", 0);
-    
-        }else{
-        $(".header").css("position", "fixed");
-        }
-    
-    
-    
-         $(window).scroll(function(){
-         ff = $(document).scrollTop();
-        if(ff <100){
-        $(".header").addClass("bgs");
-        }else{
-        $(".header").addClass("bgs");
-        }
-    
-        if(ff > 11 ){
-         $(".header").css("position", "fixed");
-        $(".header").css("top", 0);
-    
-        }else{
-        $(".header").css("position", "fixed");
-        }
-    
+
+
+     <!-- <script>
+        let wHeight = $(window).height(); // 브라우저 높이
+        let dHeight = $(document).height(); // 컨텐츠의 높이
+        let hHeight = $("#header").outerHeight(); // 헤더의 높이
+
+        let moveScroll; //스크롤 값을 감지하기 위한 변수
+        let lastScrollTop = 0; //스크롤의 마지막 위치의 값
+
+        $(window).scroll(function () {
+            moveScroll = true;
         });
-    
-    
-        //$(".panel").click(function(){
-            //if($(".fixmenu").is(":visible")){
-                //$(".fixmenu").fadeOut();
-                //$(".head").removeClass("bgs_fix");
-            //}else {
-                //$(".fixmenu").fadeIn();
-                //$(".head").addClass("bgs_fix");
-            //}
-        //});
-    
-        $(".topmenu").click(function(){
-            //if($(".fixmenu").is(":visible")){
-                //$(".fixmenu").fadeOut();
-                //$(".head").removeClass("bgs_fix");
-            //}else {
-                //$(".fixmenu").fadeIn();
-                //$(".head").addClass("bgs_fix");
-            //}
-    
-    
-    
-                //$(".fixbg").fadeIn();
-                //// $("body").append(divs);
-    
-                //$(".fixfull").removeClass("  fadeOut");
-                //$(".fixfull").addClass("animated bounceInDown");
-                //$(".fixfull").show();
-        });
-     });
+
+        setInterval(function () {
+            if (moveScroll) {
+                hasScroll();
+                moveScroll = false;
+            }
+        }, 250)
+
+        function hasScroll() {
+            let wScroll = $(this).scrollTop();
+
+            if (wScroll > lastScrollTop) { //스크롤을 내렸을 때
+                $("#header").addClass("on");
+            } else {
+                $("#header").removeClass("on");
+            }
+            lastScrollTop = wScroll
+        }
+        function hasScroll(){
+          let wScroll = $(this).scrollTop();
+          
+          if( wScroll > lastScrollTop ){ //스크롤을 내렸을 때
+            $("#header").addClass("on");
+          } else {
+           if( wScroll + wHeight < dHeight){ //스크롤을 올렸을 때
+            $("#header").removeClass("on").addClass("off");
+            $("#header .header1").css("display","none");
+             }
+           }if($("#banner .box").offset().top > $(window).scrollTop()){
+               $("#header").removeClass("off")
+               $("#header .header1").css("display","block");
+           }
+          lastScrollTop = wScroll
+        };
+       
+
+ 
     </script> -->
+
+
+
 </body>
 </html>

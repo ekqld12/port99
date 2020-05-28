@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="fp-enabled no-touch" style="overflow: hidden; height: 100%;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,7 @@
     <!-- 웹폰트 -->
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;669;700;800;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="overflow: hidden; height: 100%;" class="fp-viewing-anchor1" >
     <div class="wrap">
         <div class="header bgs" style="position: fixed;">
             <div class="header area">
@@ -117,7 +117,7 @@
                     <div class="tit2 tit">tasty story begins</div>
                     <div class="tit3 tit">맛있는 이야기가 시작되는 곳</div>
                 </div>
-                <a href="#" class="marrow move">
+                <a href=".contentwrap" class="marrow move">
                     <div class="con">
                         <img src="assets/icons/main_v_arrow.png" alt="마우스">
                     </div>
@@ -168,5 +168,78 @@
             $(this).addClass("active").siblings().removeClass("active");
         })
     </script>
+
+<!-- <script>
+    $(document).ready(function(){
+    
+     ff = $(document).scrollTop();
+    
+        if(ff <100){
+        $(".header").addClass("bgs");
+        }else{
+        $(".header").addClass("bgs");
+        }
+    
+        /// 267
+        if(ff > 11 ){
+    
+        $(".header").css("position", "fixed");
+        $(".header").css("top", 0);
+    
+        }else{
+        $(".header").css("position", "fixed");
+        }
+    
+    
+    
+         $(window).scroll(function(){
+         ff = $(document).scrollTop();
+        if(ff <100){
+        $(".header").addClass("bgs");
+        }else{
+        $(".header").addClass("bgs");
+        }
+    
+        if(ff > 11 ){
+         $(".header").css("position", "fixed");
+        $(".header").css("top", 0);
+    
+        }else{
+        $(".header").css("position", "fixed");
+        }
+    
+        });
+    
+    
+        //$(".panel").click(function(){
+            //if($(".fixmenu").is(":visible")){
+                //$(".fixmenu").fadeOut();
+                //$(".head").removeClass("bgs_fix");
+            //}else {
+                //$(".fixmenu").fadeIn();
+                //$(".head").addClass("bgs_fix");
+            //}
+        //});
+    
+        $(".topmenu").click(function(){
+            //if($(".fixmenu").is(":visible")){
+                //$(".fixmenu").fadeOut();
+                //$(".head").removeClass("bgs_fix");
+            //}else {
+                //$(".fixmenu").fadeIn();
+                //$(".head").addClass("bgs_fix");
+            //}
+    
+    
+    
+                //$(".fixbg").fadeIn();
+                //// $("body").append(divs);
+    
+                //$(".fixfull").removeClass("  fadeOut");
+                //$(".fixfull").addClass("animated bounceInDown");
+                //$(".fixfull").show();
+        });
+     });
+    </script> -->
 </body>
 </html>

@@ -135,14 +135,17 @@ body {
     width: 100%;
     
 }
-.swiper-container {}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
 .swiper-wrapper {
     width: 100%; height: 100vh;
     transition: transform 1s cubic-bezier(1, 0.265, 0, 1.225) 0s;
 }
 .swiper-slide {}
 .swiper-slide img{
-    width: 100%; height: 800px;
+    width: 100%; height: 100%;
 }
 
 

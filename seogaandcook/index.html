@@ -30,7 +30,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;669;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- 팝업창 알림 -->
+<!-- 헤더 팝업창 알림 -->
 <div id="submenuwrap">
     <ul class="submenu">
          <li class="title">
@@ -73,6 +73,17 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
      </a>
  </div>
     
+
+ <!-- 사이드 메뉴 만들기 -->
+ <div id="slidemenu">
+     <div class="slidemenu sidmenu">
+         <a href="#banner" class="active1"></a>
+         <a href="#contentwrap"></a>
+         <a href="#contwrap2"></a>
+         <a href="#contwrap3"></a>
+         <a href="#joy"></a>
+     </div>
+ </div>
 
 
     <div class="wrap">
@@ -191,7 +202,7 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
         </section>
         <!-- //contentwrap -->
 
-        <section class="contwrap2">
+        <section id="contwrap2">
             <div class="title1">
                 <div class="title2">
                     <div class="title3">
@@ -214,7 +225,7 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
         <!-- //contwrap2 -->
 
 
-        <section class="contwrap3">
+        <section id="contwrap3">
             <div class="title4">
                 <div class="title5">
                     <div class="tltle6">
@@ -233,13 +244,13 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
         </section>
          <!-- //contwrap3 -->
 
-         <section class="joy">
+         <section id="joy">
              <div class="joy1">
                  <div class="joybody">
                      <div class="joytitle">
                          <h2>we<br>share<br>joy</h2>
                      </div>
-                     <div class="joytitle1">
+                     <div class="joytitle1 ddd">
 
                      </div>
                      <div class="joytitle2">
@@ -270,8 +281,11 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
              </div>
          </section>
          <!-- //joy -->
+        </div>
+        <!-- //wrap -->
 
-         <section class="footer">
+
+         <footer id="footer">
              <div class="center1">
                  <ul class="footerhed">
                      <li><a href="#"><img src="assets/icons/footer1.png" alt="연결고리"> 브랜드 제휴 문의</a></li>
@@ -286,10 +300,9 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
                      <li class="footerbottom">Copyright (c) <span></span> 2013 (주) 에스앤에스컴퍼니 All Rights reserved.</li>
                  </ul>
              </div>
-         </section>
+         </footer>
          <!-- //footer -->
-    </div>
-    <!-- //wrap -->
+
 
 
 
@@ -305,6 +318,48 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
             $(this).addClass("active").siblings().removeClass("active");
         })
     </script>
+    <!-- //cont이미지 탭메뉴 -->
+
+    <script>
+       let dot = $("#slidemenu > div > a")
+       let cont = $(".wrap > section")
+
+       dot.click(function(e){
+        e.preventDefault();
+        let target = $(this)
+        let index = target.index();
+        let section = cont.eq(index);
+        let ottset = section.offset().top;
+        
+        $("html, body").animate({scrollTop : ottset}, 600)
+        });
+
+        $(window).scroll(function(){
+        let wScroll = $(this).scrollTop() + $(window).height()/2;
+        // let wScrolle = 
+        if(wScroll >= cont.eq(0).offset().top ){
+            dot.eq(0).addClass("active1").siblings().removeClass("active1");
+        }
+        
+        if(wScroll >= cont.eq(1).offset().top){
+            dot.eq(1).addClass("active1").siblings().removeClass("active1");
+        }
+        
+        if(wScroll >= cont.eq(2).offset().top){
+            dot.eq(2).addClass("active1").siblings().removeClass("active1");
+        }
+        
+        if(wScroll >= cont.eq(3).offset().top){
+            dot.eq(3).addClass("active1").siblings().removeClass("active1");
+        }
+        
+        if(wScroll >= cont.eq(4).offset().top){
+            dot.eq(4).addClass("active1").siblings().removeClass("active1");
+        }
+    });
+        </script>
+    <!-- //사이드 메뉴  -->
+
 
     <script>
         $(".side img").click(function(){
@@ -314,11 +369,6 @@ s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/>
         $(".close").click(function(){
             $("#submenuwrap").delay(300).animate({top : "-300vh"},1000,"easeInOutCirc")
         })
-    </script>
-    <script>
-        var scroll = function(){
-            
-        }
     </script>
 
      <!-- <script>

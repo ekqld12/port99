@@ -2,6 +2,125 @@
 body {
     font-family: 'Maven Pro', sans-serif;
 }
+/* 헤더 팝업 창 */
+#slidemenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    width: 32px;
+    height: 180px;
+    margin: auto;
+    font-size: 1.2em;
+    z-index: 10;
+    text-align: center;
+}
+#slidemenu .sidmenu {
+    width: 32px;
+    height: auto;
+    padding: 10px 0;
+    background-color: rgba(51,51,51,0.5);
+    border-radius: 20px;
+}
+.slidemenu {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#slidemenu a.active1 {
+    width: 10px;
+    height: 10px;
+    background: url(../icons/page_on.png) center center no-repeat;
+}
+#slidemenu a {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: url(../icons/page_off.png) center center no-repeat;
+}
+
+
+
+
+
+
+
+
+/* submenu */
+#submenuwrap {
+    width: 100%; 
+    height: 100vh;
+    border-top: 1px solid #333333;
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    z-index: 300;
+}
+.submenu {
+    padding-top: 150px;
+    width: 100%; height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.9);
+    align-items: flex-start;
+    z-index: 300;
+}
+
+.submenu .title {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.submenu .title a {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.7;
+    padding: 20px;
+}
+.submenu .title span:hover {
+    border-bottom: 2px solid #fff;
+}
+.submenu .title .sub{
+    color: #999999;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 0;
+    text-transform: uppercase;
+}
+.submenu .title span{
+    color:#fff;
+}
+.submenu .content {
+
+}
+.submenu .content ul{
+    font-size: 18px;
+    color: #999;
+}
+#submenuwrap .close {
+    z-index: 300;
+    position: absolute; top: 25px; right: 35px;
+}
+#submenuwrap .close svg {
+    width: 40px; height: 40px; fill: #fff;
+    vertical-align: top;
+}
+
+
+
+/* 사이드 메뉴 만들기 */
+
+
 /* 헤더 */
 .wrap {
   
@@ -69,71 +188,6 @@ body {
     margin-right: 0;
 }
 
-/* submenu */
-#submenuwrap {
-    width: 100%; 
-    height: 100vh;
-    border-top: 1px solid #333333;
-    position: absolute;
-    top: -100vh;
-    left: 0;
-    z-index: 300;
-}
-.submenu {
-    padding-top: 150px;
-    width: 100%; height: 100vh;
-    text-align: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0,0,0,0.9);
-    align-items: flex-start;
-    z-index: 300;
-}
-
-.submenu .title {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-transform: uppercase;
-    padding-bottom: 20px;
-}
-.submenu .title a {
-    color: #fff;
-    font-size: 38px;
-    font-weight: 700;
-    line-height: 1.7;
-    padding: 20px;
-}
-.submenu .title span:hover {
-    border-bottom: 2px solid #fff;
-}
-.submenu .title .sub{
-    color: #999999;
-    font-size: 26px;
-    font-weight: 500;
-    line-height: 1.7;
-    padding: 0;
-    text-transform: uppercase;
-}
-.submenu .title span{
-    color:#fff;
-}
-.submenu .content {
-
-}
-.submenu .content ul{
-    font-size: 18px;
-    color: #999;
-}
-#submenuwrap .close {
-    z-index: 300;
-    position: absolute; top: 25px; right: 35px;
-}
-#submenuwrap .close svg {
-    width: 40px; height: 40px; fill: #fff;
-    vertical-align: top;
-}
 
 
 /* sidemenu */
@@ -273,7 +327,7 @@ body {
 }
 .content-title .en1{
     font-family: 'Maven Pro', sans-serif;
-    margin-top: 50px;
+    margin-top: 100px;
     font-size: 50px;
     font-weight: 400px;
 }
@@ -481,7 +535,7 @@ a:link, a:visited {
 }
 
 /* contwrap2 */
-.contwrap2 {
+#contwrap2 {
   display: table;
   table-layout: fixed;
   width: 100%;
@@ -563,8 +617,8 @@ a:link, a:visited {
 
 
 /* contwrap3 */
-.contwrap3 {
-    padding-top: 100px;
+#contwrap3 {
+    padding-top: 80px;
     display: table;
     table-layout: fixed;
     width: 100%;
@@ -581,7 +635,6 @@ a:link, a:visited {
       height: 100%;
       background-image: url(../icons/main_pebg.png);
       position: relative;
-      padding-top: 1%;
   }
   
   .title6 {
@@ -642,9 +695,9 @@ a:link, a:visited {
   }
 
     /* joy*/
-    .joy {
+    #joy {
         width: 100%;
-        height: 900px;
+        height: 1000px;
         background-image: url(../icons/bg_joy.png);
         background-repeat: no-repeat;
         background-position: 270px 230px;
@@ -737,7 +790,7 @@ a:link, a:visited {
     }
 
     /* footer */
-    .footer {
+    #footer {
         font-family: 'Nanum Barun Gothic';
         width: 100%; height: 250px;
     }

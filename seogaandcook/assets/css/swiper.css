@@ -171,6 +171,7 @@
   }
   .swiper-button-prev,
   .swiper-container-rtl .swiper-button-next {
+    display: none;
     left: 50px;
     right: auto;
   }
@@ -180,6 +181,7 @@
   }
   .swiper-button-next,
   .swiper-container-rtl .swiper-button-prev {
+    display: none;
     right: 50px;
     left: auto;
   }

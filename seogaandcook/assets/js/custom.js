@@ -14,7 +14,7 @@ var mySwiper = new Swiper ('#banner .swiper-container', {
       prevEl: '.swiper-button-prev',
     },
     autoplay: {
-        delay: 5000,
+        delay: 3000,
       }
   })
 

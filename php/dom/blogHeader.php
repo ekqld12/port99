@@ -19,4 +19,3 @@
                     <a class="btn btn-sm btn-outline-secondary mr-2" href="#">로그인</a>
                 </div>
             </div>
-        </header>

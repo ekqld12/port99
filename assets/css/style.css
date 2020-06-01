@@ -213,7 +213,7 @@
 ================================================== */
 
 #contents_tit {
-	background-color: #fff;
+	/* background-color: #fff; */
 	text-align: center; 
 	height: 90px;
 	
@@ -221,9 +221,12 @@
 #contents_tit p {
 	padding:35px 0; 
 	font-family: 'Gaegu', cursive; font-size: 40px;
+	/* background-image: linear-gradient(to bottom, #f43b47 0%, #453a94 100%); */
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	font-size:	50px;
+	font-weight: bold;
+	color: #000;
 }
 
 
@@ -273,9 +276,10 @@
 	list-style: none;
  }
  .gridly li a {
-	color: #157ed3;
+	 font-weight: bold;
+	color: #fff;
 	 display: block;
-	  border: 3px solid #a5d5fa;
+	  border: 3px solid #92caf8;
 	  border-radius: 20px;
 	  margin-right: 20px;
 	  font-size: 18px;
@@ -283,12 +287,13 @@
 	  transition: all 0.45s;
   } 
   .gridly a:hover {
-	  box-shadow: inset 0 0 0 40px #157ed3;
+	  box-shadow: inset 0 0 0 40px #92caf8 ;
 	  color: #fff;
   }
  
   .gridly .webstandard a {
-	 color: #157ed3;
+	font-weight: bold;	
+	 color: #fff;
 	 display: block;
 	  border: 3px solid #a5d5fa;
 	  border-radius: 20px;

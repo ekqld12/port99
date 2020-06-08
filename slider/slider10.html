@@ -14,6 +14,10 @@
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
 
+        body {
+            cursor: none;
+        }
+
         #nav {
             position: fixed; left: 0; top: 0; 
             width: 100%; 
@@ -253,7 +257,40 @@
             transform: rotate(45deg);
             transform-origin: right;
         }
+        
+        /* cursor */
+        .cursor {
+           position: absolute;
+           width: 10px; height: 10px;
+           background: #000;
+           border-radius: 50%;
+           z-index: 1000;
+           user-select: none;
+           pointer-events: none;
+           transform: scale(1);
+           transition: transform 0.3s ease-in-out, opacity  0.2s ease-in-out;
+        }
+        .cursor.active {
+           opacity: 5;
+           transform: scale(0);
+        }
+        .cursor-follower {
+            position: absolute;
+            width: 30px; height: 30px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.6s ease-in-out, opacity 0.2s ease-in-out;
+        }
+        .cursor-follower.active {
+            opacity: 7;
+            transform: scale(4);
+        }
     </style>
+
+
+  
 </head>
 <body>
     <nav id="nav">
@@ -370,6 +407,11 @@
         </div>
     </section>
 
+     <!-- cursor -->
+     <div class="cursor"></div>
+     <div class="cursor-follower"></div>
+    
+
 
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -477,6 +519,35 @@
         $("#nav .ham .bar").click(function(){
             $(this).toggleClass("on")
         });
+    </script>
+
+
+    <script>
+        // pageX,pageY 좌표값 알기
+        window.addEventListener("mousemove",event => {
+            document.querySelector(".pageX").innerHTML = event.pageX
+            document.querySelector(".pageY").innerHTML = event.pageY
+
+            let x = event.pageX -15+"px";
+            let y = event.pageY -15+"px";
+
+            document.querySelector(".cursor").style.cssText = "left: "+x+"; top:"+y;
+            document.querySelector(".cursor-follower").style.cssText = "left: "+x+"; top:"+y;
+
+            //자바스크립으로 오버했을시 효과주기
+            document.querySelectorAll("a").forEach(elem => {
+        elem.addEventListener("mouseenter", () => {
+            document.querySelector(".cursor").classList.add("active");
+            document.querySelector(".cursor-follower").classList.add("active");
+        });
+        elem.addEventListener("mouseleave", () => {
+            document.querySelector(".cursor").classList.remove("active");
+            document.querySelector(".cursor-follower").classList.remove("active");
+        });
+        })
+
+
+        })
     </script>
 </body>
 </html>

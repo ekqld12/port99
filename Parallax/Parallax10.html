@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax07</title>
+    <title>parallax10</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
@@ -40,8 +40,8 @@
             --color-link: #000;
             --color-bg: #111;
             --font-family: 'lato', sans-serif;
-            --aspect-ratio: 36/17;
-            --image-width-max: 550px;
+            --aspect-ratio: 32/16;
+            --image-width-max: 500px;
 
             background-color: var(--color-bg);
             font-family: var(--font-family);
@@ -62,18 +62,17 @@
         }
         .title p {
             font-size: 18px;
-            padding: 0 0 20px 0;
+           
         }
         .title ul {
-            font-family: 'Abel';
+            padding: 20px 0;
+            font-family: "Abel";
         }
         .title li {
             list-style: none;
             margin-bottom: 5px;
         }
-        .title li a{
-            font-size: 16px;
-        }
+
         .title li.active a {
             border-bottom: 1px dashed #fff;
         }
@@ -88,6 +87,8 @@
             /*  rem 루트만 바꾸면 다바뀜 */
             text-transform: uppercase;
             font-weight: 700;
+            will-change: transform;
+
         }
 
         #wrap h1 em {
@@ -105,7 +106,8 @@
             --image-width: calc(var(--image-width-max)*var(--aspect-ratio));
             width: var(--image-width);
             max-width: 90vw;
-            margin: 30vh 0 40vh;
+            margin: 0 0 50vh;
+            padding-top: 20vh;
             will-change: transform;
         }
 
@@ -137,9 +139,13 @@
             font-size: 20vw;
             font-weight: 100;
             position: absolute;
-            right: -8vw;
-            top: -25vh;
+            right: -5vw;
+            top: -3vh;
             opacity: 0.04;
+            z-index: -1;
+            will-change: transform;
+
+            
         }
 
         .content-item:nth-child(even) .content-item-num {
@@ -182,7 +188,7 @@
             margin-left: 3vw;
         }
 
-        #section1 .content-item-img {
+        /* #section1 .content-item-img {
             background-image: url(img/so01.jpg);
         }
 
@@ -216,7 +222,7 @@
 
         #section9 .content-item-img {
             background-image: url(img/so09.jpg);
-        }
+        } */
 
         /* info */
         .info {
@@ -230,13 +236,32 @@
             font-style: normal;
             font-family: 'Abel';
         }
-        /* .contents > section {
-            opacity: 0; transform: translateY(10vh);
-            transition: all 0.6s ease;
+        #nav { 
+            position: fixed;
+            left: 50%; top: 40px; z-index: 1000;
+            transform: translateX(-50%);
+            font-family: 'Abel';
         }
-        .contents > section.show {
-            opacity: 1; transform: translateY(0);
-        } */
+        #nav li {
+            display: inline;
+        }
+        #nav li a {
+            display: inline-block;
+            padding: 10px;
+            color: #fff;
+            font-size: 16px;
+        }
+        
+        .top a{
+            margin: 50px 200px 50px 50px; background: #fff;
+            padding: 20px;
+            border-radius: 30%;
+            color: #000;
+            font-size: 20px;
+            display: inline-block;
+            
+
+        }
     </style>
 </head>
 
@@ -249,8 +274,8 @@
 
     <!-- title -->
     <div class="title">
-        <h1>Parallax07</h1>
-        <p>이질감 효과(javascript)</p>
+        <h1>Parallax10</h1>
+        <p>링크 효과</p>
         <ul>
             <li><a href="Parallax01.html">Parallax01</a></li>
             <li><a href="Parallax02.html">Parallax02</a></li>
@@ -258,154 +283,172 @@
             <li><a href="Parallax04.html">Parallax04</a></li>
             <li><a href="Parallax05.html">Parallax05</a></li>
             <li><a href="Parallax06.html">Parallax06</a></li>
-            <li class="active"><a href="Parallax07.html">Parallax07</a></li>
+            <li><a href="Parallax07.html">Parallax07</a></li>
             <li><a href="Parallax08.html">Parallax08</a></li>
             <li><a href="Parallax09.html">Parallax09</a></li>
-            <li><a href="Parallax10.html">Parallax10</a></li>
+            <li class="active"><a href="Parallax10.html">Parallax10</a></li>
         </ul>
     </div>
 
     <!-- parallax -->
+    <div id="nav">
+        <ul>
+            <li><a href="#section1">s1</a></li>
+            <li><a href="#section2">s2</a></li>
+            <li><a href="#section3">s3</a></li>
+            <li><a href="#section4">s4</a></li>
+            <li><a href="#section5">s5</a></li>
+            <li><a href="#section6">s6</a></li>
+            <li><a href="#section7">s7</a></li>
+            <li><a href="#section8">s8</a></li>
+            <li><a href="#section9">s9</a></li>
+        </ul>
+    </div>
+
+
+
     <section id="wrap">
         <h1>Parallax <em>Scrolling</em></h1>
         <div class="contents">
             <section id="section1" class="content-item">
                 <span class="content-item-num">01</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section2">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so01.jpg" alt="이미지1">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc"  data-delay="500" aria-label="소신 패기? 그게 다 고집이고 객기일뿐이야">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section2" class="content-item">
                 <span class="content-item-num">02</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section3">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so02.jpg" alt="이미지2">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section3" class="content-item">
                 <span class="content-item-num">03</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section4">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so03.jpg" alt="이미지3">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc" data-delay="500">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section4" class="content-item">
                 <span class="content-item-num">04</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section5">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so04.jpg" alt="이미지4">
+                    </div>
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
             <section id="section5" class="content-item">
                 <span class="content-item-num">05</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section6">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so05.jpg" alt="이미지5">
+                    </div>
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
             <section id="section6" class="content-item">
                 <span class="content-item-num">06</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section7">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so06.jpg" alt="이미지6">
+                    </div>
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
             <section id="section7" class="content-item">
                 <span class="content-item-num">07</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section8">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so07.jpg" alt="이미지7">
+                    </div>
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
             <section id="section8" class="content-item">
                 <span class="content-item-num">08</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section9">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so08.jpg" alt="이미지8">
+                    </div>
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
             <section id="section9" class="content-item">
                 <span class="content-item-num">09</span>
-                <h2 class="content-item-title">Basic Coding</h2>
+                <h2 class="content-item-title"><a href="#section1">Next Section</a></h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img">
+                        <img src="img/so09.jpg" alt="이미지9">
+                    </div>
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
         </div>
     </section>
 
+    <div class="top"><a href="#wrap">Top</a></div>
+
     <!-- script -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-        //제이쿼리
-        // let scrollTop = $(window).scrollTop()
+        // nav 버튼을 클릭하면 모든 글씨를 빨간색으로 변경해주세요 jquery
+        // $("#nav").click(function(){
+        //     $("*").css("color","red")
+        // })
 
-        // function scroll(){
-        //     const newScrollTop = $(window).scrollTop()
-        //     const different = newScrollTop - scrollTop
+        // a 태그 선택(href="#") jquery 선생님 예제
+        // $("a[href^='#']").click(function(e){
+        //     e.preventDefault()
+        //     let target = $(this).attr("href")
+        //     let offset = $(target).offset().top
+        //     //alert(target)
+        //     $("html,body").animate({ scrollTop : offset },600,"easeInOutExpo")
+        // })
 
-        //     console.log("scrollTop" + scrollTop)
-        //     console.log("newScrollTop : "+ newScrollTop)
-        //     console.log("different :" + different)
-
-        //     $(".content-item-desc").css({"transform":"skewY("+different+"deg)"})
-            
-        //     scrollTop = newScrollTop
-        //     requestAnimationFrame(scroll)   //일정한 시간동안 반복적 함수
-        // }
-        // scroll()
-
-        //javascript
-        let pageYOffset = window.pageYOffset //최신버전(버전 신경쓰면서)
-        const scroll = () => {
-            const newPageYOffset = window.pageYOffset
-            const different = newPageYOffset - pageYOffset
-            
-
-            // console.log("pageYOffset" + pageYOffset)
-            // console.log("newPageYOffset : "+ newPageYOffset)
-            // console.log("different :" + different)
-            //$(".content-item-desc").css({"transform":"skewY("+different+"deg)"})
-            let target = document.querySelectorAll(".content-item-imgWrap")
-            // target.style.transform = "rotate("+different+"deg)"
-            // target.forEach(box => {                                             //index, element,array를 가져올수있음
-            //     box.style.transform = "rotate("+ different * 0.02+"deg)"
-            // })    
-
-            //gsap
-            // gsap.to(".content-item-img",{duration: 0.3, ease:Power3.ease, rotation:different})
-            gsap.to(".content-item-img",{duration: 0.3, ease:Power3.ease, skewY:different * 0.2})
-            gsap.to(".content-item-desc",{duration: 0.3, ease:Power2.out, skewY: -different * 0.3})
-
-            pageYOffset = newPageYOffset
-            requestAnimationFrame(scroll)
-        }
-        scroll ()
-        //일정한 시간 동안 함수를 실행
-       
-        // setInterval(render, 1000)
-        let num = 0
-        function render(){
-            $(".content-item-num").text(num)
-            num++
-            // setInterval(render, 1000)
-            requestAnimationFrame(render)
-        }
-        render()
         
+
+            //      $("a[href^='#']").click(function(e){
+            //     e.preventDefault();
+            //     let target = $(this).attr("href");
+            // //     // alert(target);
+            //     $("html, body").animate({scrollTop: $(target).offset().top}, 600, "easeInOutExpo");
+            //     });
+
+        document.querySelectorAll("a[href^='#']").forEach(elem => {
+            elem.addEventListener("click", e =>{
+                e.preventDefault()
+                document.querySelector(elem.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
     </script>
+    
     
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>parallax07</title>
+    <title>parallax09</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <style>
          @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
@@ -40,8 +40,8 @@
             --color-link: #000;
             --color-bg: #111;
             --font-family: 'lato', sans-serif;
-            --aspect-ratio: 36/17;
-            --image-width-max: 550px;
+            --aspect-ratio: 32/16;
+            --image-width-max: 500px;
 
             background-color: var(--color-bg);
             font-family: var(--font-family);
@@ -182,7 +182,7 @@
             margin-left: 3vw;
         }
 
-        #section1 .content-item-img {
+        /* #section1 .content-item-img {
             background-image: url(img/so01.jpg);
         }
 
@@ -216,7 +216,7 @@
 
         #section9 .content-item-img {
             background-image: url(img/so09.jpg);
-        }
+        } */
 
         /* info */
         .info {
@@ -230,13 +230,90 @@
             font-style: normal;
             font-family: 'Abel';
         }
-        /* .contents > section {
-            opacity: 0; transform: translateY(10vh);
-            transition: all 0.6s ease;
+
+        /* reveal */
+        .reveal span,
+        .reveal img{
+            opacity: 0;
         }
-        .contents > section.show {
-            opacity: 1; transform: translateY(0);
-        } */
+        .reveal.show span,
+        .reveal.show img { animation: text 0.1s 1.1s forwards;}
+
+        @keyframes text {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        .reveal.show::before,
+        .reveal.show::after {
+            content: '';
+            position: absolute;
+            /* width: 100%; */  
+            height: 100%;
+            z-index: 10;
+        }
+        .reveal.show::before {
+            background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);;
+        }
+        .reveal.show::after {
+            background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+            animation-delay: .5s;
+        }
+        .reveal.reveal-ltr.show::before {
+            animation: revealLTR 1.8s ease-in-out;
+        }
+        .reveal.reveal-ltr.show::after {
+            animation: revealLTR 1s .6s ease-in-out;
+            animation-delay: .5s;
+        }
+
+        .reveal.reveal-rtl.show::before {
+            animation: revealRTL 1.8s ease-in
+        } 
+        .reveal.reveal-rtl.show::after {
+            animation: revealRTL 1.8s .6s ease-out;
+            animation-delay: .5s;
+        }
+
+        .reveal.reveal-ttb.show::before {
+            animation: revealTTB 1.8s ease-in-out;
+        }
+        .reveal.reveal-ttb.show::after {
+            animation: revealTTB 1.8s .6s ease-out;
+            animation-delay: .5s;
+        }
+
+
+        .reveal.reveal-btt.show::before {
+            animation: revealBTT 1.8s ease-in-out;
+        }
+        .reveal.reveal-btt.show::after {
+            animation: revealBTT 1.8s .6s ease-out;
+            animation-delay: .5s;
+        }
+
+
+        @keyframes revealLTR {
+            0% {width: 0; left: 0;}
+            65% {width: 100%; left: 0;}
+            100% {width: 0; left: 100%;}
+        }
+
+        @keyframes revealRTL {
+            0% {width: 0; left: 100%;}
+            65% {width: 100%; left: 0;}
+            100% {width: 0; left: 0;}
+        }
+
+        @keyframes revealTTB {
+            0% {width: 100%; height: 0; top: 0%; left: 0; }
+            65% {width: 100%; height: 100%; top: 0; left: 0; }
+            100% {width: 100%; height: 0; top: 100%; left: 0;} 
+        }
+        @keyframes revealBTT {
+            0% {width: 100%; height: 0; bottom: 0%; left: 0; }
+            65% {width: 100%; height: 100%; bottom: 0; left: 0; }
+            100% {width: 100%; height: 0; bottom: 100%; left: 0;} 
+        }
     </style>
 </head>
 
@@ -249,8 +326,8 @@
 
     <!-- title -->
     <div class="title">
-        <h1>Parallax07</h1>
-        <p>이질감 효과(javascript)</p>
+        <h1>Parallax09</h1>
+        <p>Reveal 효과</p>
         <ul>
             <li><a href="Parallax01.html">Parallax01</a></li>
             <li><a href="Parallax02.html">Parallax02</a></li>
@@ -258,9 +335,9 @@
             <li><a href="Parallax04.html">Parallax04</a></li>
             <li><a href="Parallax05.html">Parallax05</a></li>
             <li><a href="Parallax06.html">Parallax06</a></li>
-            <li class="active"><a href="Parallax07.html">Parallax07</a></li>
+            <li><a href="Parallax07.html">Parallax07</a></li>
             <li><a href="Parallax08.html">Parallax08</a></li>
-            <li><a href="Parallax09.html">Parallax09</a></li>
+            <li class="active"><a href="Parallax09.html">Parallax09</a></li>
             <li><a href="Parallax10.html">Parallax10</a></li>
         </ul>
     </div>
@@ -273,73 +350,111 @@
                 <span class="content-item-num">01</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-ltr" data-delay="100">
+                        <img src="img/so01.jpg" alt="이미지1">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-ltr"  data-delay="500" aria-label="소신 패기? 그게 다 고집이고 객기일뿐이야">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section2" class="content-item">
                 <span class="content-item-num">02</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-rtl" data-delay="100">
+                        <img src="img/so02.jpg" alt="이미지2">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-rtl">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section3" class="content-item">
                 <span class="content-item-num">03</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-ttb" data-delay="100">
+                        <img src="img/so03.jpg" alt="이미지3">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-ttb" data-delay="500">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section4" class="content-item">
                 <span class="content-item-num">04</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-btt"  data-delay="100">
+                        <img src="img/so04.jpg" alt="이미지4">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-btt" data-delay="500">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+
+                   </p>
             </section>
             <section id="section5" class="content-item">
                 <span class="content-item-num">05</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-ltr">
+                        <img src="img/so05.jpg" alt="이미지5">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-ltr">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section6" class="content-item">
                 <span class="content-item-num">06</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-rtl">
+                        <img src="img/so06.jpg" alt="이미지6">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-rtl">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section7" class="content-item">
                 <span class="content-item-num">07</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-ttb">
+                        <img src="img/so07.jpg" alt="이미지7">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-ttb">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+
+                   </p>
             </section>
             <section id="section8" class="content-item">
                 <span class="content-item-num">08</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-btt">
+                        <img src="img/so08.jpg" alt="이미지8">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-btt">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
             <section id="section9" class="content-item">
                 <span class="content-item-num">09</span>
                 <h2 class="content-item-title">Basic Coding</h2>
                 <figure class="content-item-imgWrap">
-                    <div class="content-item-img"></div>
+                    <div class="content-item-img reveal reveal-btt">
+                        <img src="img/so09.jpg" alt="이미지9">
+                    </div>
                 </figure>
-                <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
+                <p class="content-item-desc reveal reveal-btt">
+                   <span>소신 패기? 그게 다 고집이고 객기일뿐이야</span> 
+                </p>
             </section>
         </div>
     </section>
@@ -349,63 +464,20 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-        //제이쿼리
-        // let scrollTop = $(window).scrollTop()
 
-        // function scroll(){
-        //     const newScrollTop = $(window).scrollTop()
-        //     const different = newScrollTop - scrollTop
-
-        //     console.log("scrollTop" + scrollTop)
-        //     console.log("newScrollTop : "+ newScrollTop)
-        //     console.log("different :" + different)
-
-        //     $(".content-item-desc").css({"transform":"skewY("+different+"deg)"})
-            
-        //     scrollTop = newScrollTop
-        //     requestAnimationFrame(scroll)   //일정한 시간동안 반복적 함수
-        // }
-        // scroll()
-
-        //javascript
-        let pageYOffset = window.pageYOffset //최신버전(버전 신경쓰면서)
-        const scroll = () => {
-            const newPageYOffset = window.pageYOffset
-            const different = newPageYOffset - pageYOffset
-            
-
-            // console.log("pageYOffset" + pageYOffset)
-            // console.log("newPageYOffset : "+ newPageYOffset)
-            // console.log("different :" + different)
-            //$(".content-item-desc").css({"transform":"skewY("+different+"deg)"})
-            let target = document.querySelectorAll(".content-item-imgWrap")
-            // target.style.transform = "rotate("+different+"deg)"
-            // target.forEach(box => {                                             //index, element,array를 가져올수있음
-            //     box.style.transform = "rotate("+ different * 0.02+"deg)"
-            // })    
-
-            //gsap
-            // gsap.to(".content-item-img",{duration: 0.3, ease:Power3.ease, rotation:different})
-            gsap.to(".content-item-img",{duration: 0.3, ease:Power3.ease, skewY:different * 0.2})
-            gsap.to(".content-item-desc",{duration: 0.3, ease:Power2.out, skewY: -different * 0.3})
-
-            pageYOffset = newPageYOffset
-            requestAnimationFrame(scroll)
-        }
-        scroll ()
-        //일정한 시간 동안 함수를 실행
-       
-        // setInterval(render, 1000)
-        let num = 0
-        function render(){
-            $(".content-item-num").text(num)
-            num++
-            // setInterval(render, 1000)
-            requestAnimationFrame(render)
-        }
-        render()
-        
+        $(window).scroll(function(){
+            $(".reveal").each(function(){
+                if( $(window).scrollTop() + $(window).height()/2 > $(this).offset().top){
+                    $(this).delay( $(this).data("delay")).queue(function(){                     //애니메이션은 .queue()에 저장됨
+                        $(this).addClass("show")
+                    })
+                }else {
+                    $(this).removeClass("show")
+                }
+            })
+        })
     </script>
+    
     
 </body>
 

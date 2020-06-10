@@ -238,6 +238,284 @@
             opacity: 1; transform: translateY(0);
         } */
     </style>
+
+    <!-- modal style -->
+    <style>
+        .infor2 {
+            position: fixed;
+            left: 0; 
+            bottom: 0; z-index: 1000; 
+            padding: 20px;}
+        .infor2 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px}
+        .infor2 .modal {
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .infor2 .modal.show {
+            top: 0;
+        }
+        .infor2 .modal .close {
+            position: absolute; right: 10px; top: 20px;
+        }
+    </style>
+
+    <!-- PrismJS -->
+    <style>
+        /* PrismJS 1.20.0
+        https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript&plugins=line-numbers */
+        /**
+        * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
+        * Based on https://github.com/chriskempson/tomorrow-theme
+        * @author Rose Pritchard
+        */
+
+
+        .code-editor:before,
+        .code-editor:after,
+        .code-editor span.control:before,
+        .code-editor span.after:after {
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            z-index: 1;
+            transition: all .5s ease-in-out;
+        }
+        
+        .code-editor {
+            box-sizing: border-box;
+            width: 60vw; 
+            text-align: left;
+            background-color: #2d2d2d;
+            border-radius: 0 0 5px 5px;
+            transition: all .5s ease-in-out;
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .code-editor h3 {
+            color: #222;
+            padding-top: 6px; 
+            text-align: center;
+            top: 0px;
+            width: 100%;
+            height: 30px;
+            background-color: #fafafa;
+            border-radius: 5px 5px 0 0;
+            position: sticky;
+            left: 0;
+            font-size: 14px;
+        }
+        
+        .code-editor span.control:before {
+            content: '';
+            top: 9px;
+            left: 0;
+            z-index: 2;
+            padding: 6px;
+            border-radius: 20px;
+            -moz-border-radius: 20px;
+            -o-border-radius: 20px;
+            -webkit-border-radius: 20px;
+        }
+        
+        .code-editor span.control:nth-child(1):before {
+            margin-left: 15px;
+            background-color: #df6963;
+            
+        }
+        
+        .code-editor span.control:nth-child(2):before {
+            margin-left: 35px;
+            background-color: #f5e18a;
+        }
+        .code-editor span.control:nth-child(3):before {
+            margin-left: 55px;
+            background-color: #97c38a;
+        }
+        .code-editor .code {
+            height: 60vh;
+            overflow: auto;
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+        color: #ccc;
+        background: none;
+        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+        font-size: 1em;
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-break: normal;
+        word-wrap: normal;
+        line-height: 1.5;
+
+        -moz-tab-size: 4;
+        -o-tab-size: 4;
+        tab-size: 4;
+
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+
+        }
+
+        /* Code blocks */
+        pre[class*="language-"] {
+            padding: 1em;
+        }
+
+        :not(pre) > code[class*="language-"],
+        pre[class*="language-"] {
+        background: #2d2d2d;
+        }
+
+        /* Inline code */
+        :not(pre) > code[class*="language-"] {
+        padding: .1em;
+        border-radius: .3em;
+        white-space: normal;
+        }
+
+        .token.comment,
+        .token.block-comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+        color: #999;
+        }
+
+        .token.punctuation {
+        color: #ccc;
+        }
+
+        .token.tag,
+        .token.attr-name,
+        .token.namespace,
+        .token.deleted {
+        color: #e2777a;
+        }
+
+        .token.function-name {
+        color: #6196cc;
+        }
+
+        .token.boolean,
+        .token.number,
+        .token.function {
+        color: #f08d49;
+        }
+
+        .token.property,
+        .token.class-name,
+        .token.constant,
+        .token.symbol {
+        color: #f8c555;
+        }
+
+        .token.selector,
+        .token.important,
+        .token.atrule,
+        .token.keyword,
+        .token.builtin {
+        color: #cc99cd;
+        }
+
+        .token.string,
+        .token.char,
+        .token.attr-value,
+        .token.regex,
+        .token.variable {
+        color: #7ec699;
+        }
+
+        .token.operator,
+        .token.entity,
+        .token.url {
+        color: #67cdcc;
+        }
+
+        .token.important,
+        .token.bold {
+        font-weight: bold;
+        }
+        .token.italic {
+        font-style: italic;
+        }
+
+        .token.entity {
+        cursor: help;
+        }
+
+        .token.inserted {
+        color: green;
+        }
+
+        pre[class*="language-"].line-numbers {
+        position: relative;
+        padding-left: 3.8em;
+        counter-reset: linenumber;
+        }
+
+        pre[class*="language-"].line-numbers > code {
+        position: relative;
+        white-space: inherit;
+        }
+
+        .line-numbers .line-numbers-rows {
+        position: absolute;
+        pointer-events: none;
+        top: 0;
+        font-size: 100%;
+        left: -3.8em;
+        width: 3em; /* works for line-numbers below 1000 lines */
+        letter-spacing: -1px;
+        border-right: 1px solid #999;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        }
+
+        .line-numbers-rows > span {
+            display: block;
+            counter-increment: linenumber;
+        }
+
+            .line-numbers-rows > span:before {
+                content: counter(linenumber);
+                color: #999;
+                display: block;
+                padding-right: 0.8em;
+                text-align: right;
+            }
+        ::-webkit-scrollbar {
+            width: 10px;  /* 세로축 스크롤바 길이 */
+            height: 10px;  /* 가로축 스크롤바 길이 */
+        }
+        ::-webkit-scrollbar-track {
+            background-color: lightblue;
+        }
+        ::-webkit-scrollbar-track-piece {
+            background-color: gray;
+        }
+        ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: black;
+        }
+        ::-webkit-resizer {
+            background-color: green;
+        }
+    </style>
+
+    <link rel="stylesheet" href="../assets/js/prism.js">
 </head>
 
 <body>
@@ -341,6 +619,84 @@
                 </figure>
                 <p class="content-item-desc">소신 패기? 그게 다 고집이고 객기일뿐이야</p>
             </section>
+            <div class="infor2">
+                <a href="#" class="view">코드 보기</a>
+                <!-- modal -->
+                <div class="modal">
+                    <div class="code-editor">
+                        <h3>Script Editor
+                            <span class="control"></span>
+                            <span class="control"></span>
+                            <span class="control"></span>
+                        </h3>
+                        <div class="code">
+<pre class="line-numbers"><code class="language-js">window.addEventListener("scroll", () => {
+let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) + screen.height/2;
+document.querySelector(".pageYOffset").textContent = pageYOffset
+
+
+document.querySelectorAll(".content-item").forEach(elem => {
+console.log(elem.childNodes[7])
+let target = elem.childNodes[7];
+let offset = (pageYOffset - elem.offsetTop) * 0.2;
+target.style.transform = "translateY("+ offset +"px)"
+})
+})
+//    $(window).scroll(function(){
+//        let scrollTop = $(window).scrollTop() + $(window).height()/2
+//        $(".scrollTop").text(scrollTop)
+
+//        $(".content-item").each(function(){
+//             let offset1 = (scrollTop - $(this).offset().top)*0.1
+
+
+//    let offset1 = (scrollTop - $("#section1").offset().top)
+//    let offset2 = (scrollTop - $("#section2").offset().top)
+//    let offset3 = (scrollTop - $("#section3").offset().top)
+//    let offset4 = (scrollTop - $("#section4").offset().top)
+//    let offset5 = (scrollTop - $("#section5").offset().top)
+//    let offset6 = (scrollTop - $("#section6").offset().top)
+//    let offset7 = (scrollTop - $("#section7").offset().top)
+//    let offset8 = (scrollTop - $("#section8").offset().top)
+//    let offset9 = (scrollTop - $("#section9").offset().top)
+//    $(this).find(".content-item-desc").css({"transform":"translateY("+ -offset2+"px)"});
+
+
+
+//    $("#section1 .content-item-desc").css({ transform: "translateX("+ offset1+"px)"})
+//    $("#section2 .content-item-desc").css({ transform: "translateX("+ offset2+"px)"})
+//    $("#section3 .content-item-desc").css({ transform: "translateX("+ offset3+"px)"})
+//    $("#section4 .content-item-desc").css({ transform: "translateX("+ offset4+"px)"})
+//    $("#section5 .content-item-desc").css({ transform: "translateX("+ offset5+"px)"})
+//    $("#section6 .content-item-desc").css({ transform: "translateX("+ offset6+"px)"})
+//    $("#section7 .content-item-desc").css({ transform: "translateX("+ offset7+"px)"})
+//    $("#section8 .content-item-desc").css({ transform: "translateX("+ offset8+"px)"})
+//    $("#section9 .content-item-desc").css({ transform: "translateX("+ offset9+"px)"})
+
+
+// $(".content-item").each(function(){
+//         let offset1 = (scrollTop - $(this).offset().top)*0.1
+//         let offset2 = (scrollTop - $(this).offset().top)*0.2
+//         let offset3 = (scrollTop - $(this).offset().top)*0.3
+//         let offset4 = (scrollTop - $(this).offset().top)*0.2
+
+
+//         $(this).find(".content-item-desc").css({"transform":"translateY("+ -offset2+"px)"});
+//         $(this).find(".content-item-num").css({"transform":"translateY("+ offset1+"px)"});
+//         $(this).find(".content-item-img").css({"transform":"translateY("+ offset4+"px)"});
+//       })  
+
+//        for(let i=1; i<=9; i++){
+//             let offset = (scrollTop - $("#section"+i).offset().top)
+//             $("#section"+i+" .content-item-desc").css({transform : "translateX("+offset+i+"px)"});
+//         }
+</code></pre>
+                        </div>
+        
+                    </div>
+                    <a class="close">Close</a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -348,11 +704,6 @@
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script>
-
-        
-
-
-
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) + screen.height/2;
             document.querySelector(".pageYOffset").textContent = pageYOffset
@@ -365,13 +716,6 @@
                 target.style.transform = "translateY("+ offset +"px)"
             })
         })
-
-      
-
-
-
-
-
     //    $(window).scroll(function(){
     //        let scrollTop = $(window).scrollTop() + $(window).height()/2
     //        $(".scrollTop").text(scrollTop)
@@ -420,11 +764,18 @@
     //             let offset = (scrollTop - $("#section"+i).offset().top)
     //             $("#section"+i+" .content-item-desc").css({transform : "translateX("+offset+i+"px)"});
     //         }
-   
-
-
-
     </script>
+
+     <!-- modal -->
+     <script>
+        // 모달
+        $(".infor2 a").click(function(){
+           $(".infor2 .modal").addClass("show");
+       });
+       $(".infor2 .close").click(function(){
+           $(".infor2 .modal").removeClass("show");
+       });
+   </script>     
 </body>
 
 </html>

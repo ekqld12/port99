@@ -237,6 +237,268 @@
         .contents > section.show {
             opacity: 1; transform: translateY(0);
         } */
+        #section1 .content-item-desc span {
+            opacity: 0;
+            transform: translateY(70px);
+            transition: all 0.44s ease;
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        #section1 .content-item-desc span.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #section2 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease;
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        #section2 .content-item-desc span.show {
+            opacity: 1;
+            animation: flipInY 1s;
+        }
+
+        @keyframes flipInY {
+            from {
+                transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+                animation-timing-function: ease-in;
+                opacity: 0;
+            }
+
+            40% {
+                transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+                animation-timing-function: ease-in;
+            }
+
+            60% {
+                transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+                opacity: 1;
+            }
+
+            80% {
+                transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            }
+
+            to {
+                transform: perspective(400px);
+            }
+        }
+
+        #section3 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease;
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        #section3 .content-item-desc span.show {
+            opacity: 1;
+            animation: bounceInDown 1s;
+        }
+
+        @keyframes bounceInDown {
+
+            from,
+            60%,
+            75%,
+            90%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            0% {
+                opacity: 0;
+                transform: translate3d(0, -3000px, 0) scaleY(3);
+            }
+
+            60% {
+                opacity: 1;
+                transform: translate3d(0, 25px, 0) scaleY(0.9);
+            }
+
+            75% {
+                transform: translate3d(0, -10px, 0) scaleY(0.95);
+            }
+
+            90% {
+                transform: translate3d(0, 5px, 0) scaleY(0.985);
+            }
+
+            to {
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        #section4 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease;
+            display: inline-block;
+            min-width: 20px;
+        }
+
+        #section4 .content-item-desc span.show {
+            opacity: 1;
+            animation: rollIn 1s;
+        }
+        @keyframes rollIn {
+        from {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+        }
+
+
+                #section5 .content-item-desc span{
+                    opacity: 0;
+                    transition: all 0.44s ease;
+                    display: inline-block;
+                    min-width: 20px;
+                }
+                
+                #section5 .content-item-desc span.show{
+                    opacity: 1;
+                    animation: jackInTheBox 1s;
+                }
+
+                @keyframes jackInTheBox {
+        from {
+            opacity: 0;
+            transform: scale(0.1) rotate(30deg);
+            transform-origin: center bottom;
+        }
+
+        50% {
+            transform: rotate(-10deg);
+        }
+
+        70% {
+            transform: rotate(3deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+        }
+                
+
+
+                #section6 .content-item-desc span{
+                    opacity: 0;
+                    transition: all 0.44s ease;
+                    display: inline-block;
+                    min-width: 20px;
+                }
+                
+                #section6 .content-item-desc span.show{
+                    opacity: 1;
+                    animation: zoomInLeft 1s;
+                }
+
+                @keyframes zoomInLeft {
+        from {
+            opacity: 0;
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+
+        60% {
+            opacity: 1;
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        }
+        }
+
+        #section7 .content-item-desc span{
+            opacity: 0;
+            transition: all 0.44s ease;
+            display: inline-block;
+            min-width: 20px;
+        }
+        
+        #section7 .content-item-desc span.show{
+            opacity: 1;
+            animation: zoomInRight 1s;
+        }
+
+        @keyframes zoomInRight {
+        from {
+            opacity: 0;
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+
+        60% {
+            opacity: 1;
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        }
+        }
+        #section8 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease;
+            display: inline-block;      /* 인라인은 translate가 적용 되지 않음 */
+            min-width: 20px;            /* 띄어쓰기가 없어져서 적용 시킴 */    
+        } 
+        #section8 .content-item-desc span.show {
+            opacity: 1;
+            animation: rollIn 1s;
+        }
+        @keyframes rollIn {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+                transform: translate3d(-100%, 0, 0) rotate3d(0, 0, 1, -120deg);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+        #section9 .content-item-desc span {
+            opacity: 0;
+            transition: all 0.44s ease;
+            display: inline-block;      /* 인라인은 translate가 적용 되지 않음 */
+            min-width: 20px;            /* 띄어쓰기가 없어져서 적용 시킴 */    
+        } 
+        #section9 .content-item-desc span.show {
+            opacity: 1;
+            animation: lightSpeedInRight 1s;
+        }
+        @keyframes lightSpeedInRight {
+            from {
+                -webkit-transform: translate3d(100%, 0, 0) skewX(-30deg);
+                transform: translate3d(100%, 0, 0) skewX(-30deg);
+                opacity: 0;
+            }
+
+            60% {
+                -webkit-transform: skewX(20deg);
+                transform: skewX(20deg);
+                opacity: 1;
+            }
+
+            80% {
+                -webkit-transform: skewX(-5deg);
+                transform: skewX(-5deg);
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
     </style>
 </head>
 
@@ -349,61 +611,115 @@
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/gsap.min.js"></script>
     <script>
-        //제이쿼리
-        // let scrollTop = $(window).scrollTop()
+        let txt = $("#section1 .content-item-desc").text();
+        let split = txt.split("").join("</span><span aira-hidden ='true'>");
+        split = "<span aira-hidden ='true'>" + split + "</span>";
+    
 
-        // function scroll(){
-        //     const newScrollTop = $(window).scrollTop()
-        //     const different = newScrollTop - scrollTop
-
-        //     console.log("scrollTop" + scrollTop)
-        //     console.log("newScrollTop : "+ newScrollTop)
-        //     console.log("different :" + different)
-
-        //     $(".content-item-desc").css({"transform":"skewY("+different+"deg)"})
-            
-        //     scrollTop = newScrollTop
-        //     requestAnimationFrame(scroll)   //일정한 시간동안 반복적 함수
+        //한번에
+        // for(i=1; i<10; i++){
+        //     $("#section"+i+" .content-item-desc").html(split).attr("aria-label", txt);
         // }
-        // scroll()
+        $(".content-item-desc").each(function(){
+            let txt = $(this).text();
+            let split = txt.split("").join("</span><span aria-hidden='true'>")
+                split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label",txt);
+        });
 
-        //javascript
-        let pageYOffset = window.pageYOffset //최신버전(버전 신경쓰면서)
-        const scroll = () => {
-            const newPageYOffset = window.pageYOffset
-            const different = newPageYOffset - pageYOffset
-            
+        //자바로 한번에
 
-            // console.log("pageYOffset" + pageYOffset)
-            // console.log("newPageYOffset : "+ newPageYOffset)
-            // console.log("different :" + different)
-            //$(".content-item-desc").css({"transform":"skewY("+different+"deg)"})
-            let target = document.querySelectorAll(".content-item-imgWrap")
-            // target.style.transform = "rotate("+different+"deg)"
-            // target.forEach(box => {                                             //index, element,array를 가져올수있음
-            //     box.style.transform = "rotate("+ different * 0.02+"deg)"
-            // })    
 
-            //gsap
-            // gsap.to(".content-item-img",{duration: 0.3, ease:Power3.ease, rotation:different})
-            gsap.to(".content-item-img",{duration: 0.3, ease:Power3.ease, skewY:different * 0.2})
-            gsap.to(".content-item-desc",{duration: 0.3, ease:Power2.out, skewY: -different * 0.3})
+        //Parallax Effect
+        $(window).scroll(function(){
+            // if( $(window).scrollTop() > $("#section1").offset().top){
+            //     $("#section1 .content-item-desc").addClass("show");
+            // }else {
+            //     $("#section1 .content-item-desc").removeClass("show");
+            // }
 
-            pageYOffset = newPageYOffset
-            requestAnimationFrame(scroll)
-        }
-        scroll ()
-        //일정한 시간 동안 함수를 실행
-       
-        // setInterval(render, 1000)
-        let num = 0
-        function render(){
-            $(".content-item-num").text(num)
-            num++
-            // setInterval(render, 1000)
-            requestAnimationFrame(render)
-        }
-        render()
+
+            // $(".content-item").each(function(){
+            //     if( $(window).scrollTop() > $(this).offset().top){
+            //     $(this).find(".content-item-desc").addClass("show");
+            // }else {
+            //     $(this).find(".content-item-desc").removeClass("show");
+            // }
+            // });
+
+            if( $(window).scrollTop() > $("#section1").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section1 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section1 .content-item-desc span").eq(index).addClass("show");
+                    },100 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section2").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section2 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section2 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section3").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section3 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section3 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section4").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section4 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section4 .content-item-desc span").eq(index).addClass("show");
+                    },50 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section5").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section5 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section5 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section6").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section6 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section6 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section7").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section7 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section7 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section8").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section8 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section8 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+            if( $(window).scrollTop() > $("#section9").offset().top){       //화면에 섹션이 보이기 시작할 때
+                $("#section9 .content-item-desc span").each(function(index){
+                    // console.log(index)
+                    setInterval(function(){
+                        $("#section9 .content-item-desc span").eq(index).addClass("show");
+                    },10 * index);
+                });
+            }
+        });
         
     </script>
     

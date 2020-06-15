@@ -18,7 +18,7 @@
          ul {padding: 10px 20px;}
          
          body {
-            background: url(https://images.unsplash.com/photo-1591804258403-dd4d54e76335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat center center;
+            background: url(../Parallax/img/su11.jpg) no-repeat center center;
             background-size: cover;
             font-family: 'Abel', 'GmarketSansMedium';
             color: #fff;
@@ -32,7 +32,7 @@
              content: '';
              position: absolute; left: 0; top: 0;
              width: 100%; height: 100vh;
-             background: rgba(24, 25, 26, 0.8);
+             background: rgba(255,255,255,0.2);
              z-index: -1;
          }
          .info {
@@ -179,12 +179,12 @@
               <div class="line">
                 <div class="left">
                     <div class="spanWrap">
-                        <span class="spanSlow">보는 것이 믿는 것이다.</span>
+                        <span class="spanFast">보는 것이 믿는 것이다.</span>
                     </div>
                 </div>
                 <div class="right">
                     <div class="spanWrap">
-                      <span class="spanSlow">보는 것이 믿는 것이다.</span>
+                      <span class="spanFast">보는 것이 믿는 것이다.</span>
                     </div>
                 </div>
             </div>
@@ -203,12 +203,12 @@
             <div class="line">
                 <div class="left">
                     <div class="spanWrap">
-                        <span class="spanSlow">지나간 고통은 쾌락이다.</span>
+                        <span class="spanFast">지나간 고통은 쾌락이다.</span>
                     </div>
                 </div>
                 <div class="right">
                     <div class="spanWrap">
-                      <span class="spanSlow">지나간 고통은 쾌락이다.</span>
+                      <span class="spanFast">지나간 고통은 쾌락이다.</span>
                     </div>
                 </div>
             </div>
@@ -226,7 +226,17 @@
     <script src="../assets/js/prism.js"></script>
 
     <script>
-     
+        const spanSlow = document.querySelectorAll("spanSlow")
+        const spanFast = document.querySelectorAll("spanFast")
+
+        window.addEventListener("mousemove",mouseMove)
+
+        function mouseMove(e){
+            let speedSlow =e.pageX
+            spanSlow.forEach((span) => {
+                span.style.transform = `translate(${speedSlow}px)`
+            })
+        }
     </script>
 
 

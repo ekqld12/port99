@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect03</title>
+    <title>Mouse Effect07</title>
     <link rel="stylesheet" href="../assets/css/prism.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
@@ -18,7 +18,7 @@
          ul {padding: 10px 20px;}
          
          body {
-            background: url(../Parallax/img/mouse01.jpg) no-repeat center center;
+            background: url(https://images.unsplash.com/photo-1591804258403-dd4d54e76335?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60) no-repeat center center;
             background-size: cover;
             font-family: 'Abel', 'GmarketSansMedium';
             color: #fff;
@@ -32,7 +32,7 @@
              content: '';
              position: absolute; left: 0; top: 0;
              width: 100%; height: 100vh;
-             background: rgba(26, 1, 1, 0.5);
+             background: rgba(49, 49, 51, 0.8);
              z-index: -1;
          }
          .info {
@@ -67,9 +67,9 @@
 
         /* 모달창 예제 */
         .infor4 {position: absolute; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
-        .infor4 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px}
+        .infor4 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px; margin-left: 10px;}
         .infor4 .modal {
-            background: rgba(0,0,0,0.8);
+            background: rgba(19, 5, 51, 0.8);
             width: 100%;
             height: 100vh;
             margin: 0;
@@ -86,99 +86,61 @@
         .infor4 .modal .close {
             position: absolute; right: 10px; top: 20px;
         }
-
         .contents {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%; height: 100vh;
         flex-direction: column;
-        }
-        .contents p {
-            text-align: center;
-            max-width: 70vw;
-            font-size: 3vw;
-            font-family: 'MapoFlowerIsland';
-            color : #fff
-
-        }
-        .contents p a {
-            text-decoration: none; color: orange;
-            font-weight: bold;
-            border-bottom: 2px dashed orange;
-            }
-        .contents .font1 {
-            text-decoration: none; color: red;
-            font-weight: bold;
-            border-bottom: 2px dashed red;
-        }
-        .contents .font2 {
-            text-decoration: none; color: blueviolet;
-            font-weight: bold;
-            border-bottom: 2px dashed blueviolet;
-        }
-            
-        .cursor {
+    }
+    .cursor{
             position: absolute;
-            width: 10px; height: 10px;
-            background: #fff;
+            width:200px; height:200px;
             border-radius: 50%;
-            z-index: 1000;
+            z-index:-1;
             user-select: none;
             pointer-events: none;
-            transform: scale(1);
-            transition: transform 0.3s ease-in-out;
-            /* mix-blend-mode: normal;
-            mix-blend-mode: multiply;
-            mix-blend-mode: screen;
-            mix-blend-mode: overlay;
-            mix-blend-mode: darken;
-            mix-blend-mode: lighten;
-            mix-blend-mode: color-dodge;
-            mix-blend-mode: color-burn;
-            mix-blend-mode: hard-light;
-            mix-blend-mode: soft-light; */
-            mix-blend-mode: difference;
-            /* mix-blend-mode: exclusion;
-            mix-blend-mode: hue;
-            mix-blend-mode: saturation;
-            mix-blend-mode: color;
-            mix-blend-mode: luminosity; */
+            background: #fff;
+            background: url(http://static.pexels.com/wp-content/uploads/2014/07/darkness-dawn-dusk-2073.jpg) no-repeat center center fixed;
         }
-        .cursor.active {
-           transform: scale(13);
-        }
-    </style>
+
+
+    .contents p {
+        max-width: 70vw;
+        font-size: 5vw;
+        font-family: 'S-CoreDream-7ExtraBold';
+        color: rgba(255,255,255,0.9);
+        text-align: center;
+
+    }
+    .contents p a {
+        text-decoration: none; color: orange;
+        border-bottom: 2px dashed orange;
+    }
+    </style> 
+    
 
     <link rel="stylesheet" href="../assets/css/prism.css">
 </head>
 <body>
     <div class="info">
-        <h1>Mouse Effect03</h1>
-        <p>마우스 따라다니기</p>
-        <ul>
-            <li>GSAP</li>
-        </ul>
+        <h1>Mouse Effect07</h1>
     </div>
 
     <div class="info2">
         <ul>
             <li><a href="mouse01.html">Mouse01</a></li>
             <li><a href="mouse02.html">Mouse02</a></li>
-            <li  class="active"><a href="mouse03.html">Mouse03</a></li>
+            <li><a href="mouse03.html">Mouse03</a></li>
             <li><a href="mouse04.html">Mouse04</a></li>
             <li><a href="mouse05.html">Mouse05</a></li>
             <li><a href="mouse06.html">Mouse06</a></li>
-            <li><a href="mouse07.html">Mouse07</a></li>
+            <li  class="active"><a href="mouse07.html">Mouse07</a></li>
             <li><a href="mouse08.html">Mouse08</a></li>
         </ul>
     </div>
 
-    <div class="info3">
-        <li>pageX : <span class="pageX">0</span> </li>
-        <li>pageY : <span class="pageY">0</span> </li>
-    </div>
-
+    
     <div class="infor4">
         <a href="#" class="view">코드 보기</a>
         <!-- modal -->
@@ -190,18 +152,15 @@
                     <span class="control"></span>
                 </h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">$(window).mousemove(function(e){
-gsap.to(".cursor",{duration: .5,left: e.pageX -5 ,top: e.pageY -5})
-});
+<pre class="line-numbers"><code class="language-js">const cursor = document.querySelector(".cursor")
+//원의 크기를 구해서 반지름 값을 변수화
+let width = cursor.offsetWidth;
+let rect = cursor.getBoundingClientRect()
 
-document.querySelectorAll("a").forEach(elem => {
-elem.addEventListener("mouseenter", () => {
-document.querySelector(".cursor").classList.add("active");
-});
-elem.addEventListener("mouseleave", () => {
-document.querySelector(".cursor").classList.remove("active");
-});
-});
+
+document.addEventListener("mousemove",function(e){
+gsap.to(cursor, 0.3, {left: e.pageX - rect.width/2, top: e.pageY - rect.height/2})
+})
 </code></pre>
                 </div>
 
@@ -210,28 +169,12 @@ document.querySelector(".cursor").classList.remove("active");
         </div>
     </div>
 
-
-    
-
-   
     <!-- contents -->
     <div class="cursor"></div>
+    <div class="cursor-follower"></div>
     <div class="contents">
-       <p>When money speaks,<a>slow</a> pace at first.</p>
-       <p>Life's not all gloom and despondency <a class="font1">your capacity</a></p>
-       <p>Life is full of ups and downs <a class="font2">Life</a>is too</p>
-   </div>
-        <!-- <p>
-            여러 상황을 거치면서 <span>웹 퍼블리셔</span>를 알아 본 결과, 기획자 못지않게 전반적으로 폭넓은 지식을 갖추고 있어야 하는 직군임을 깨달았다. 
-            기획자의 의도를 알기 위해 기획에 대한 이해도가 필요하고, 디자이너의 디자인을 보고 소통하려면 디자인의 기본적인 지식도 필요하다. 
-            그리고 사이트에 필요한 기능이나 데이터를 추가하기 위해 개발적인 지식도 필요하다.
-            이는 실무를 진행하다 보면 자연스럽게 쌓이는 것들이지만, 개인적인 공부를 게을리하게 되면 협업하기가 쉽지 않고,
-            결국 그저 그런 작업자가 되기 쉽다. 즉, <span class="span1">꾸준히 발전하고자 하는 마인드</span>가 가장 중요하다.
-        </p> -->
+        <p>코딩.. 푸딩 먹고싶다.</p>
     </div>
-
-
-  
 
 
 
@@ -240,31 +183,29 @@ document.querySelector(".cursor").classList.remove("active");
     <script src="../Parallax/js/jquery-ui.min.js"></script>
     <script src="../Parallax/js/gsap.min.js"></script>
     <script src="../assets/js/prism.js"></script>
+
     <script>
-        $(window).mousemove(function(e){
-            gsap.to(".cursor",{duration: .5,left: e.pageX -5 ,top: e.pageY -5})
-        });
+       const cursor = document.querySelector(".cursor")
 
-        document.querySelectorAll("a").forEach(elem => {
-            elem.addEventListener("mouseenter", () => {
-                document.querySelector(".cursor").classList.add("active");
-            });
-            elem.addEventListener("mouseleave", () => {
-                document.querySelector(".cursor").classList.remove("active");
-            });
-        });
+       //원의 크기를 구해서 반지름 값을 변수화
+        let width = cursor.offsetWidth;
+        let rect = cursor.getBoundingClientRect()
 
+
+        document.addEventListener("mousemove",function(e){
+        gsap.to(cursor, 0.3, {left: e.pageX - rect.width/2, top: e.pageY - rect.height/2})
+       })
+    </script>
+
+
+    <script>
            // 모달
-           $(".infor4 a").click(function(){
+         $(".infor4 .view").click(function(){
             $(".infor4 .modal").addClass("show");
         });
         $(".infor4 .close").click(function(){
             $(".infor4 .modal").removeClass("show");
         });
     </script>
-
-
-
-
 </body>
 </html>

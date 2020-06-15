@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax12</title>
+    <style>
+        @font-face { font-family: 'Recipekorea'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff') 
+        format('woff'); font-weight: normal; font-style: normal; }
+
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        .pageYOffset {
+            position: fixed;
+            left: 10px; top: 10px; width: 2.3vw; height: 4.4vh;
+            background: rgba(0,0,0,0.6);
+            text-align: center; line-height: 40px;
+            color: #fff;
+            }
+        #section1 {height: 5000px; background: #724998}
+        #section1 h1{
+            font-size: 5vw; color: #fff;
+            position: fixed; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Recipekorea';
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pageYOffset">0</div>
+    <section id="contents">
+        <div id="section1" 
+            data-0="background-color : rgb(72,49,98)"
+            data-1000="background-color : rgb(72,49,98)"
+            data-2000="background-color : rgb(72,49,98)"
+            data-3000="background-color : rgb(85,18,68)"    
+        >
+            <h1 
+            data-0="transform: translate(-50%, -50%)  rotate(0deg) scale(1)"
+            data-1000="transform: translate(-250%, -50%)  rotate(0deg) scale(1)"
+            data-2000="transform: translate(-50%, -50%) rotate(0deg) scale(1)"
+            data-3000="transform: translate(-50%, -50%) rotate(360deg) scale(10)" 
+            >포트폴리오 입니다.</h1>
+        </div>
+        <!-- //section1-->
+        <div id="section2"></div>   <!-- //section2-->
+        <div id="section3"></div>   <!-- //section3-->
+        <div id="section4"></div>   <!-- //section4-->
+        <div id="section5"></div>   <!-- //section5-->
+        <div id="section6"></div>   <!-- //section6-->
+    </section>
+    <!-- //contents -->
+
+    <script src="js/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        window.addEventListener("scroll", () => {
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop)
+            document.querySelector(".pageYOffset").textContent = pageYOffset
+        })
+    </script>
+</body>
+</html>

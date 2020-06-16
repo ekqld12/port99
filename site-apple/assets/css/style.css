@@ -1,9 +1,9 @@
 /* wrap */
+
 .wrap {
     max-width: 1000px; margin: 0 auto;
-    height: 100vh;
-    height: 100vh;
-    background: #888;
+    height: 100%;
+    background: #ebebeb;
 }
 
 /* header */
@@ -35,7 +35,6 @@
     font-weight: normal;
     font-size: 12px;
     line-height: 20px;
-    color: #ccc;
 }
 .row .header-title {
     position: relative;
@@ -44,32 +43,34 @@
     font-weight: 600;
     font-size: 32px;
     line-height: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 16px;
+    padding-bottom: 24px;
 }
 .row .header-id {
     font-family: SF Pro Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 20px;
     line-height: 20px;
 }
 #header .row .header-id span {
     position: absolute;
-    top: 43%; left: 92%;
+    top: 49%; left: 92%;
     z-index: 1;
     font-family: SF Pro Display;
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 20px;
     color: #ebebeb;
 }
 .header-id span::before {
     content: '';
-    width: 30px; height: 30px;
+    width: 36px;
+    height: 36px;
     position: absolute;
-    top: 50%; left: 50%;
+    top: 68%; left: 50%;
     transform: translate(-50%,-50%);
     border-radius: 50%;
     background: linear-gradient(228.69deg, #C5B4B4 8.76%, rgba(255, 255, 255, 0) 97.7%), #C4C4C4;
@@ -87,8 +88,6 @@
 /* recentMusic */
 #recentMusic {
     padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
 }
 .row-title{
     display: flex;
@@ -124,26 +123,29 @@
     font-size: 13px;
     line-height: 20px;
 }
-.next-title::before{
-    content: '';
-    width: 18px;
-    height: 18px;
-    background: #a09a9a;
-    position: absolute;
-    top: 11%;left: 76%;
-    border-radius: 50%;
+.next-tit {
+    position: relative;
 }
 .next-tit .next-id span {
     font-family: "SF Pro Text";
     font-style: normal;
     font-weight: bold;
-    font-size: 0.2vw;
+    font-size: 6px;
     line-height: 20px;
     position: absolute;
-    top: 82%; left: 38%;
-    color: #ffffff;
-    
+    top: 7%; left: 28%;
+    color: #fff;
 }
+.next-id::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: #a09a9a;
+    position: absolute;
+    top: 13%;left: 28%;
+    border-radius: 50%;
+}
+
 .next-title1 {
     font-family: "SF Pro Text";
     font-style: normal;

@@ -114,6 +114,7 @@
     .textWrap .line .right {width: 50vw; transform: skew(0deg, 15deg); overflow: hidden;}
     .textWrap .line .right .spanWrap {width: 100vw; text-align: center; transform: translate(-50vw);}
     .textWrap .line .right .spanWrap span {font-size: 6vw;}
+    .textWrap span {display: inline-block;}
     </style> 
     
 
@@ -149,7 +150,34 @@
                     <span class="control"></span>
                 </h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">
+<pre class="line-numbers"><code class="language-js">// javascript
+// const spanSlow = document.querySelectorAll(".spanSlow");
+// const spanFast = document.querySelectorAll(".spanFast");
+
+
+// window.addEventListener("mousemove", mouseMove);
+// function mouseMove(e){
+//     let postion = (e.pageX / (window.innerWidth / 2)) * 100
+//     //console.log(speedSlow) 
+//     spanSlow.forEach((span) => {
+//         span.style.transform = `translate(${postion}px)`;
+//     })
+//     spanFast.forEach((span) => {
+//         span.style.transform = `translate(${-postion}px)`;
+//     })
+// }
+
+// jQuery
+let x = $(".spanSlow")
+let y = $(".spanFast")
+
+
+$(window).mousemove(function(e){
+    let z = e.pageX / window.innerWidth / 2 * 500
+    //console.log()
+    $(".spanSlow").css({"transform" : "translate("+ z +"px)"})
+    $(".spanFast").css({"transform" : "translate("+ -z +"px)"})
+})
 </code></pre>
                 </div>
 
@@ -226,18 +254,37 @@
     <script src="../assets/js/prism.js"></script>
 
     <script>
-        const spanSlow = document.querySelectorAll("spanSlow")
-        const spanFast = document.querySelectorAll("spanFast")
+        // javascript
+        // const spanSlow = document.querySelectorAll(".spanSlow");
+        // const spanFast = document.querySelectorAll(".spanFast");
+        
 
-        window.addEventListener("mousemove",mouseMove)
+        // window.addEventListener("mousemove", mouseMove);
+        // function mouseMove(e){
+        //     let postion = (e.pageX / (window.innerWidth / 2)) * 100
+        //     //console.log(speedSlow) 
+        //     spanSlow.forEach((span) => {
+        //         span.style.transform = `translate(${postion}px)`;
+        //     })
+        //     spanFast.forEach((span) => {
+        //         span.style.transform = `translate(${-postion}px)`;
+        //     })
+        // }
 
-        function mouseMove(e){
-            let speedSlow =e.pageX
-            spanSlow.forEach((span) => {
-                span.style.transform = `translate(${speedSlow}px)`
-            })
-        }
+        // jQuery
+        let x = $(".spanSlow")
+        let y = $(".spanFast")
+
+
+        $(window).mousemove(function(e){
+            let z = e.pageX / window.innerWidth / 2 * 500
+            //console.log()
+            $(".spanSlow").css({"transform" : "translate("+ z +"px)"})
+            $(".spanFast").css({"transform" : "translate("+ -z +"px)"})
+        })
+
     </script>
+
 
 
     <script>

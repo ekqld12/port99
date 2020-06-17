@@ -3,7 +3,7 @@
 .wrap {
     max-width: 1000px; margin: 0 auto;
     height: 100%;
-    background: #ebebeb;
+    background: #e6c5c5;
 }
 
 /* header */
@@ -45,6 +45,7 @@
     line-height: 20px;
     padding-top: 16px;
     padding-bottom: 24px;
+    border-bottom: 1px solid #EBEBEB;
 }
 .row .header-id {
     font-family: SF Pro Display;
@@ -78,20 +79,23 @@
 }
 /* banner */
 .banner {}
-.banner .banner-title{font-family: "SF Pro Text";}
+.banner .banner-title{font-family: "SF Pro Text"; padding-top: 15px;}
 .banner .banner-title .bt-stit{font-size: 12px; line-height: 29px; color:#DA5e7C;}
 .banner .banner-title .bt-tit{font-size: 22px; line-height: 34px;}
 .banner .banner-title .bt-desc{font-size: 22px; line-height: 34px; color: #818181; font-weight: 100;}
 
-.banner img{width: 100%; padding-top: 10px;}
+.banner img{width: 100%; padding-top: 10px; padding-bottom: 16px;}
 
 /* recentMusic */
 #recentMusic {
+    position: relative;
     padding-top: 20px;
 }
 .row-title{
     display: flex;
     justify-content: space-between;
+    border-top: 1px solid #ebebeb;
+    padding-top: 19px;
 }
 .row-title .Music-title{
     font-family: "SF Pro Text";

@@ -1,117 +1,76 @@
-/* wrap */
-
-.wrap {
-    max-width: 1000px; margin: 0 auto;
-    height: 100%;
-    background: #e6c5c5;
-}
-
-/* header */
-#header {
-    position: relative;
-}
-#header img{
-    width: 100%;
-}
-
-
 /* container */
-.container {
-    max-width: 1000px; margin: 0 auto;
-}
+.container {max-width: 1000px; margin: 0 auto;}
 
 /* row */
-.row {
-    position: relative; margin: 0 20px;
-}
+.row {position: relative; margin: 0 20px;}
 
-#header .container {
-
-}
-#header .container .row{}
-.row .header-data {
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: normal;
+/* header */
+#header .header-data {
+    font-family: "SF Pro Display";
+    font-weight: 600;
     font-size: 12px;
-    line-height: 20px;
+    padding-top: 30px;
+    display: block;
+    color: #a8a8a8;
 }
-.row .header-title {
-    position: relative;
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: 600;
+#header .header-title {
+    font-family: "SF Pro Display";
+    font-weight: bold;
     font-size: 32px;
-    line-height: 20px;
-    padding-top: 16px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid #EBEBEB;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px; 
+    margin-bottom: 15px;
 }
-.row .header-id {
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 20px;
-}
-#header .row .header-id span {
-    position: absolute;
-    top: 49%; left: 92%;
-    z-index: 1;
-    font-family: SF Pro Display;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 20px;
-    color: #ebebeb;
-}
-.header-id span::before {
-    content: '';
-    width: 36px;
-    height: 36px;
-    position: absolute;
-    top: 68%; left: 50%;
-    transform: translate(-50%,-50%);
+#header .header-id {
+    font-family: "SF Pro Display";
+    position: absolute; right: 0; bottom: 10px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    background: linear-gradient(228.69deg, #C5B4B4 8.76%, rgba(255, 255, 255, 0) 97.7%), #C4C4C4;
-    z-index: -1;
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: linear-gradient(149.16deg, #A4A9B5 10.18%, rgba(164, 169, 181, 0) 81.31%), #C4C4C4;
 }
-/* banner */
-.banner {}
-.banner .banner-title{font-family: "SF Pro Text"; padding-top: 15px;}
-.banner .banner-title .bt-stit{font-size: 12px; line-height: 29px; color:#DA5e7C;}
-.banner .banner-title .bt-tit{font-size: 22px; line-height: 34px;}
-.banner .banner-title .bt-desc{font-size: 22px; line-height: 34px; color: #818181; font-weight: 100;}
 
-.banner img{width: 100%; padding-top: 10px; padding-bottom: 16px;}
+
+/* banner */
+
+.banner-title .bt-stit{color: #da5e7c; font-size: 12px; line-height: 1.67; font-family: "SF Pro Display"; }
+.banner-title .bt-tit{font-size: 22px; padding-bottom: 5px; font-family: "SF Pro Display";}
+.banner-title .bt-desc{font-size: 22px; font-weight: 300; color: #818181; margin-bottom: 10px; font-family: "SF Pro Display";}
 
 /* recentMusic */
 #recentMusic {
+    padding: 10px 0;
+    margin-top: 40px;
+    overflow: hidden;
+    overflow: hidden;
     position: relative;
-    padding-top: 20px;
 }
 .row-title{
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #ebebeb;
-    padding-top: 19px;
+    border-top: 1px solid #EBEBEB;
 }
 .row-title .Music-title{
-    font-family: "SF Pro Text";
-    font-style: normal;
-    font-weight: 600;
+    font-family: "SF Pro Display";
     font-size: 20px;
-    line-height: 20px;
+    font-weight: bold;
+    padding-top: 20px; 
 }
 .row-title .Music-stit{
-    font-family: "SF Pro Text";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 20px;
+    font-family: "SF Pro Display";
+    font-size: 20px; 
+    font-weight: bold; 
+    padding-top: 20px;
     color: #da5e7c;
 }
+
 #next .nextimg { 
     padding-top: 10px;
     display: flex;
@@ -120,7 +79,6 @@
 #next .nextimg .img1 {width: 49%;}
 #next .nextimg .img2 {width: 49%;}
 .next-title {
-    position: relative;
     font-family: "SF Pro Text";
     font-style: normal;
     font-weight: 600;

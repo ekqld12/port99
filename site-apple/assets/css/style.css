@@ -79,7 +79,7 @@
 #next .nextimg .img1 {width: 49%;}
 #next .nextimg .img2 {width: 49%;}
 .next-title {
-    font-family: "SF Pro Text";
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
@@ -89,7 +89,7 @@
     position: relative;
 }
 .next-tit .next-id span {
-    font-family: "SF Pro Text";
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: bold;
     font-size: 6px;
@@ -109,14 +109,14 @@
 }
 
 .next-title1 {
-    font-family: "SF Pro Text";
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
     line-height: 20px;
 }
 .next-stit {
-    font-family: "SF Pro Text";
+    font-family: "SF Pro Display";
     font-style: normal;
     font-weight: normal;
     font-size: 13px;

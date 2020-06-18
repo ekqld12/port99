@@ -104,7 +104,7 @@
             padding-top: 0.1vw;
             font-family: "Roboto";
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
             font-weight: 700;
             overflow: hidden;
             /* white-space: nowrap; */
@@ -114,8 +114,8 @@
             /* display: inline-block; */
             transform: translate(350px, 150px);
             opacity: 0;
-            transform-origin: bottom top;
-            transition: all 1s ease ;
+            transform-origin: bottom left;
+            transition: all 1.5s ease ;
            
         }
         .slide-img .slide.active .stext h2 span{
@@ -136,8 +136,8 @@
 
 
 
-        .slide-img .slide .simg {position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 100%;}
-        .slide-img .slide .simg img {max-width: 500px; display: block; position: relative; margin: 0 auto; transform: scale(0.4); opacity: 0;}
+        .slide-img .slide .simg {position: absolute; left: 35%; top: 30%;}
+        .slide-img .slide .simg img {max-width: 500px;position: relative; margin: 0 auto; transform: scale(0.4); opacity: 0;}
         .slide-img .slide.active .simg img {animation: scale1 1s ease-in-out forwards; opacity: 1;} 
 
         @keyframes scale1 {
@@ -555,12 +555,12 @@
         });
 
         
-        const sImg = $(".simg")
+        const sImg = $(".slide-img")
 
         $(window).on("mousemove",mouseMove )
 
         function mouseMove(e){
-            let postion = (e.pageX- ($(".slide").width()/2))*0.1;
+            let postion = (e.pageX- ($(".slide-img").width()/2))*0.1;
 
 
         sImg.css({"transform":"translate("+postion+"px)"})

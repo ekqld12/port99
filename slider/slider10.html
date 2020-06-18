@@ -555,6 +555,16 @@
         });
 
         
+        const sImg = $(".simg")
+
+        $(window).on("mousemove",mouseMove )
+
+        function mouseMove(e){
+            let postion = (e.pageX- ($(".slide").width()/2))*0.1;
+
+
+        sImg.css({"transform":"translate("+postion+"px)"})
+        }        
     </script>
 
 

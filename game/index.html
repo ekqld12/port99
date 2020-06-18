@@ -36,6 +36,10 @@
             position: relative;
             perspective: 1000px;
         }
+        .card>div {
+            transform-style: preserve-3d;
+        }
+
         main .card img {
             width: 100%; 
             vertical-align: top;
@@ -190,6 +194,9 @@
         .btn-sound.is-playing::before {
             display: none;
         }
+        .info .text strong{
+            color: rgb(255, 38, 0);
+        }
        
 
 
@@ -204,6 +211,29 @@
             color:red;
             /* background: url(img/vltwkrnr.jpg); */
         }
+
+
+         /* 모달창 예제 */
+        .infor4 {position: absolute; left: 0; bottom: 0; z-index: 1000; padding: 20px;}
+        .infor4 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px; margin-left: 10px;}
+        .infor4 .modal {
+            background: rgba(19, 5, 51, 0.8);
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            text-align: left;
+            transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .infor4 .modal.show {
+            top: 0;
+        }
+        .infor4 .modal .close {
+            position: absolute; right: 10px; top: 20px;
+        }
        
 
 
@@ -217,7 +247,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            background: rgba(218, 80, 80,0.1);
+            background-color: rgba(218, 80, 80,0.96);
             display: none;
         }
         .success.is-visible {
@@ -246,26 +276,47 @@
             background-color: #923c14;
         }
     </style>
+
+     <link rel="stylesheet" href="../assets/css/prism.css">
 </head>
 <body>
 
     <div class="info">
-        <button class="btn-sound">
-            <audio src="music/chd.wav"></audio>
-        </button>
-        <audio id="theme-song" src="music/Satin Danger.mp3" loop="loop" autoplay></audio>
+        <button class="btn-sound"></button>
+        <audio id="theme-song" src="music/bonus_game-up.mp3" loop="loop"></audio>
         <div class="score">
-            <div class="turns">기회 : <span>2</span></div>
+            <div class="turns">기회 : <span>4</span></div>
             <div class="attempts">코인 : <span>0</span></div>
             <div class="wins">우승 : <span>0</span></div>
         </div>
-        <p class="text">카드 뒤집기 게임</p>
+        <p class="text">카드 뒤집기 게임 <br> <strong>※주의 : 임산부나 심장이 약하신분은 주의 하시기 바랍니다.</strong></p>
     </div>
 
     <div class="info2">
         <h1>맞추면... 살려줄께...</h1>
     </div>
 
+    <div class="infor4">
+        <a href="#" class="view">코드 보기</a>
+        <!-- modal -->
+        <div class="modal">
+            <div class="code-editor">
+                <h3>Script Editor
+                    <span class="control"></span>
+                    <span class="control"></span>
+                    <span class="control"></span>
+                </h3>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">
+</code></pre>
+                </div>
+
+            </div>
+            <a class="close">Close</a>
+        </div>
+    </div>
+
+    
 
     <main>
 
@@ -346,21 +397,22 @@
         </div>
     </main>
 
-
     <div class="success">
+        <img src="img/rnltls.jpg" alt="귀신">
         <h2 class="success-message">생각보다...잘하네</h2>
         <div class="score bg">
-            <div class="turns">기회 : <span>2</span></div>
+            <div class="turns">기회 : <span>4</span></div>
             <div class="attempts">코인 : <span>0</span></div>
             <div class="wins">우승 : <span>0</span></div>
         </div>
         <button class="btn-continue">다시...시도할테냐..??</button>
     </div>
     <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="../assets/js/prism.js"></script>
     <script>
         const $board = $('main'),               //$표시가 붙은건 선택자 구별해주기 위해
                 $card = $('.card'),
-                $btnsound = $('.btn-sound'),
+                $btnSound = $('.btn-sound'),
                 $themeSongEl = $('#theme-song')[0],
                 $turns = $('.turns span'),
                 $attempts = $('.attempts span'),
@@ -377,16 +429,17 @@
                 lastTurnClass ='last-turn'
                 timeoutLength = 900;
                
-
                 let sound= [
-                    'music/chd.wav',
-                    '음악',
-                    '음악'
+                    'music/gyrhkdma.wav',
+                    'music/rhdvh2-1.mp3',
+                    'music/gyrhkdma.wav.',
+                    'music/rhdvh6.mp3'
                 ],
                 soundMatch = new Audio(sound[0]),
                 soundNoMatch = new Audio(sound[1]),
                 soundSuccess = new Audio(sound[2]),
-                turnsCount = 2,     //기회 횟수 2
+                soundSuccesst = new Audio(sound[3]),
+                turnsCount = 4,     //기회 횟수 2
                 attemptsCount = 0,  //코인 횟수
                 winsCount = 0,      //우승 횟수
                 card1, card2, msg;
@@ -395,11 +448,11 @@
                 //시작하자마자 카드 섞어주기
                 shuffleCards()
                 // 음악 아이콘을 클릭했을 때 음악이 나오고 또 클릭했을때 정지
-                $btnsound.on('click',function(){
+                $btnSound.on('click',function(){
                     $(this).toggleClass(playSoundClass)
                     if($(this).hasClass(playSoundClass)){
                         $themeSongEl.play()
-                    }else {
+                    }else { 
                         $themeSongEl.pause()
                     }
                 })
@@ -421,13 +474,13 @@
 
                     // 만약에 카드1과 카드2가 같다면
                     if(card1 == card2){
-                        if($btnsound.hasClass(playSoundClass)){
+                        if($btnSound.hasClass(playSoundClass)){
                             soundMatch.play()
                         }
                         selectedCards.attr(dataMatch,true).removeClass(selectedClass)
                     }else {
                         //카드가 맞지 않으면 원래 상태로 되돌림
-                        if($btnsound.hasClass(playSoundClass)){
+                        if($btnSound.hasClass(playSoundClass)){
                             soundNoMatch.play()
                         }
                         setTimeout(function(){
@@ -438,6 +491,7 @@
 
                         //카운트 기회가 없을 때(주의)
                         if(turnsCount === 1){
+                            soundSuccesst.play()
                             setTimeout(function(){
                                 $turns.addClass(lastTurnClass)
                             }, timeoutLength) 
@@ -446,7 +500,7 @@
                         //카운트 기회가 완전히 없을 때(시도+1),카운트는=> 2
                         if(turnsCount <= 0){
                                 setTimeout(function(){
-                                    turnsCount = 2;     //기회를 2번 복구
+                                    turnsCount = 5;     //기회를 2번 복구
                                     $turns.removeClass(lastTurnClass).html(turnsCount)  //주의표시 삭제, 카운트 표시
                                     $card.attr(dataMatch,false) //모든 카드 초기화
                                     attemptsCount +=1
@@ -458,12 +512,12 @@
                    //완성했을때
                    //dataMatch가 true이면서 갯수가 전체 카드 갯수랑 같을 때
                    if($('['+ dataMatch + '="true"]').length == $card.length){
-
+                    soundSuccess.play()
                     setTimeout(() =>{
                         $success.addClass(visibleClass);
                             winsCount += 1
                             $wins.html(winsCount)
-                            }, timeoutLength + 200)
+                            }, timeoutLength + 300)
                    
                    //시도 횟수에 따른 메세지
                    switch(true){
@@ -556,5 +610,15 @@
                 // alert(number)    //1,2
     </script>
 
+
+    <script>
+        // 모달
+            $(".infor4 .view").click(function(){
+            $(".infor4 .modal").addClass("show");
+        });
+        $(".infor4 .close").click(function(){
+            $(".infor4 .modal").removeClass("show");
+        });
+    </script>
 </body> 
 </html>

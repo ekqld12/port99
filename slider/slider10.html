@@ -546,54 +546,53 @@
             gsap.to(follower, 0.8, {left: e.pageX - 15, top: e.pageY -15 })
         });
 
-        $("a").hover(function(){
-            cursor.addClass("active");
-            follower.addClass("active");
-        }, function(){
-            cursor.removeClass("active");
-            follower.removeClass("active");
-        });
+            // 마우스 이미지 오버 움직임 효과
+            let x =0,
+                y =0; 
+                $(".slide-img").mousemove(function(e){
+                gsap.to(".cursor",{duration: .2,left: e.pageX -10 ,top: e.pageY -10})                
+                //좌표값 중앙을 0으로 초기화
+                //x = 컨텐츠 박스의 width()/2 + 왼쪽의 여백값
+                //y = 컨텐츠 박스의 height()/2 + 위쪽의 여백값
 
+                // let x = $("move-image").width()/2
+                // let y = $("move-image").position().left
+
+                
+                x = e.clientX - ($(".slide-img").width()/2 + $(".slide-img").position().left)
+                y = e.clientY - ($(".slide-img").height()/2 + $(".slide-img").position().top)
+                console.log(x)
+                console.log(y)
+                $(".simg").attr({"style":"transform: translate("+ x /30+"px,"+ y/30 +"px)"})
+           })
         
-        const sImg = $(".slide-img")
-
-        $(window).on("mousemove",mouseMove )
-
-        function mouseMove(e){
-            let postion = (e.pageX- ($(".slide-img").width()/2))*0.1;
-
-
-        sImg.css({"transform":"translate("+postion+"px)"})
-        }        
     </script>
 
 
 
     <!-- <script>
         // pageX,pageY 좌표값 알기
-        window.addEventListener("mousemove",event => {
-            document.querySelector(".pageX").innerHTML = event.pageX
-            document.querySelector(".pageY").innerHTML = event.pageY
+            window.addEventListener("mousemove",event => {
+                document.querySelector(".pageX").innerHTML = event.pageX
+                document.querySelector(".pageY").innerHTML = event.pageY
 
-            let x = event.pageX -15+"px";
-            let y = event.pageY -15+"px";
+                let x = event.pageX -15+"px";
+                let y = event.pageY -15+"px";
 
-            document.querySelector(".cursor").style.cssText = "left: "+x+"; top:"+y;
-            document.querySelector(".cursor-follower").style.cssText = "left: "+x+"; top:"+y;
+                document.querySelector(".cursor").style.cssText = "left: "+x+"; top:"+y;
+                document.querySelector(".cursor-follower").style.cssText = "left: "+x+"; top:"+y;
 
-            //자바스크립으로 오버했을시 효과주기
-            document.querySelectorAll("a").forEach(elem => {
-        elem.addEventListener("mouseenter", () => {
-            document.querySelector(".cursor").classList.add("active");
-            document.querySelector(".cursor-follower").classList.add("active");
-        });
-        elem.addEventListener("mouseleave", () => {
-            document.querySelector(".cursor").classList.remove("active");
-            document.querySelector(".cursor-follower").classList.remove("active");
-        });
-        })
-
-
+                //자바스크립으로 오버했을시 효과주기
+                document.querySelectorAll("a").forEach(elem => {
+            elem.addEventListener("mouseenter", () => {
+                document.querySelector(".cursor").classList.add("active");
+                document.querySelector(".cursor-follower").classList.add("active");
+            });
+            elem.addEventListener("mouseleave", () => {
+                document.querySelector(".cursor").classList.remove("active");
+                document.querySelector(".cursor-follower").classList.remove("active");
+            });
+            })
         })
     </script> -->
 </body>

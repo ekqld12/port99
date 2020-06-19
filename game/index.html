@@ -557,22 +557,23 @@
 
 
               //카드 셔플
-              function shuffleCards(){
-                let cards = $board.children()
+              function shuffleCards() {
+                let cards = $board.children();
+                    while (cards.length) {
+                        $board.append(cards.splice(Math.floor(Math.random() * cards.length), 1)[0])
+                    }
+                    $card.each(function (index) {
+                        setTimeout(() => {
+                            $(this).addClass(selectedClass);
+                        }, timeoutLength + 100 * index);
+                    });
 
-                while (cards.length){
-                    $board.append(cards.splice(Math.floor(Math.random() * cards.length),0.5)[0])
+                    setTimeout(() => {
+                        $card.removeClass(selectedClass);
+                    }, 5000);
+
                 }
-                $card.each(function(index){
-                    setTimeout(()=>{
-                        $(this).addClass(selectedClass)
-                    }, timeoutLength + 100 *index)
-                })
 
-                setTimeout(()=>{
-                    $card.removeClass(selectedClass)
-                }, 5000)
-            }
                 // for(let i=0; i<cards.length; i++){
                 //     let arr = []
                 //     let random = cards.splice(Math.floor(Math.random() * cards.length),1)[0]   //0~17까지 랜덤

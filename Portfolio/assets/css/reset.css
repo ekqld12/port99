@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {font-size: 13px; color: #222; font-weight: normal;}
 li,ol,yl,menu{list-style:none;}
 
 /* 이미지 초기화*/
-img {border: 0 none; vertical-align: top; width: 100%; }
+img {max-width: 100%; vertical-align: middle; display: inline-block;}
 svg {width: 100%;}
 video {width: 100%;}
 

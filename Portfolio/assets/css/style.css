@@ -1,9 +1,14 @@
 /* body */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;}
 body {
     margin: 0;
     min-height: 100%;
     color: #333;
     font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 5vw;
 }
 
@@ -37,7 +42,7 @@ body {
     align-items: flex-start;
 }
 .header {
-    margin-top: 60px;
+    margin-top: 90px;
     margin-left: 60px;
 }
 .hed {
@@ -48,7 +53,239 @@ body {
     width: 100px;
     max-width: 100px;
 }
-img {
+/* heaer rigth */
+.header-right {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100px;
+    margin-top: 60px;
+    margin-right: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+.nav-active-line-01{
+    position: absolute;
+    left: 0%;
+    top: 10px;
+    right: auto;
+    bottom: auto;
+    width: 0px;
+    height: 2px;
+    background-color: #8cff00;
+}
+.nav-active-line-02{
+    position: absolute;
+    left: 0%;
+    top: 50px;
+    right: auto;
+    bottom: auto;
+    width: 0px;
+    height: 2px;
+    background-color: #8cff00;
+}
+.nav-active-line-03{
+    position: absolute;
+    left: 0%;
+    top: 90px;
+    right: auto;
+    bottom: auto;
+    width: 0px;
+    height: 2px;
+    background-color: #8cff00;
+}
+.nav-active-line-04{
+    position: absolute;
+    left: 0%;
+    top: 130px;
+    right: auto;
+    bottom: auto;
+    width: 0px;
+    height: 2px;
+    background-color: #8cff00;
+}
+.nav-active-line-05{
+    position: absolute;
+    left: 0%;
+    top: 170px;
+    right: auto;
+    bottom: auto;
+    width: 0px;
+    height: 2px;
+    background-color: #8cff00;
+}
+
+.nav-link{
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #222534;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+/* bottom-light w-inline-block */
+.bottom-light{
+    position: fixed;
+    left: auto;
+    top: auto;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.w-inline-block {
+    max-width: 100%;
+}
+.bottom-image {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+}
+.bottom-image img {
+    max-width: 100%;
     vertical-align: middle;
-    display: inline-block;
+    /* display: inline-block; */
+}
+.bottom-image1 {
+    width: 50%;
+    padding-left: 10px;
+}
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    /* display: inline-block; */
+}
+
+/* banner */
+.banner {
+    position: relative;
+    width: 100vw;
+    height: 100vw;
+}
+.banner-img {
+    position: absolute;
+    left: 55vw;
+    top: -4vw;
+    right: auto;
+    bottom: auto;
+    z-index: 6;
+    width: 20vw;
+}
+.banner-paint {
+    position: absolute;
+    left: 58vw;
+    top: -0vw;
+    right: auto;
+    bottom: auto;
+    z-index: 4;
+    overflow: hidden;
+    width: 30vw;
+    opacity: 1;
+}
+.paint {
+    position: static;
+    left: 61vw;
+    top: -39vw;
+    right: auto;
+    bottom: auto;
+    z-index: 4;
+    width: 25vw;
+    margin-top: -35vw;
+    opacity: 1
+}
+/* banner img */
+.p1 {
+    position: absolute;
+    left: 35vw;
+    top: 24vw;
+    right: auto;
+    bottom: auto;
+    z-index: 12;
+    width: 35vw;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+.p2 {
+    position: absolute;
+    left: 66vw;
+    top: 53vw;
+    right: auto;
+    bottom: auto;
+    z-index: 3;
+    width: 32vw;
+    -webkit-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    transform: rotate(5deg);
+
+}
+.p3 {
+    position: absolute;
+    left: 29vw;
+    top: 65vw;
+    right: auto;
+    bottom: auto;
+    z-index: 3;
+    width: 45vw;
+    -webkit-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+/* banner-text */
+.banner-text {
+    position: absolute;
+    left: 20vw;
+    top: 33vw;
+    right: auto;
+    bottom: auto;
+}
+.banner-tet {
+    font-family: Poppins, sans-serif;
+    font-style: normal;
+    color: #222534;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.text-span {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.banner-line {
+    width: 110px;
+    height: 1px;
+    margin-top: 20px;
+    background: #222534;
 }

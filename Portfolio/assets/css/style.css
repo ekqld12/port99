@@ -13,6 +13,13 @@ body {
     font-family: 'S-CoreDream-2ExtraLight';
     font-size: 5vw;
 }
+/* img */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
 /* w-inline-block */
 .w-inline-block {
     max-width: 100%;
@@ -179,6 +186,9 @@ img {
     align-items: center;
     cursor: pointer;
 }
+.bottom-light.on svg {
+    stroke: #fff;
+}
 .w-inline-block {
     max-width: 100%;
 }
@@ -186,7 +196,9 @@ img {
     position: absolute;
     width: 120px;
     height: 120px;
+    z-index: 10000;
 }
+
 .bottom-image img {
     max-width: 100%;
     vertical-align: middle;
@@ -196,12 +208,6 @@ img {
     width: 50%;
     padding-left: 10px;
 }
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    /* display: inline-block; */
-}
-
 /* banner */
 .banner {
     position: relative;
@@ -254,6 +260,10 @@ img {
     -ms-transform: rotate(0deg);
     transform: rotate(0deg);
 }
+
+
+
+
 .p2 {
     position: absolute;
     left: 66vw;
@@ -320,6 +330,7 @@ img {
     overflow: hidden;
     padding-top: 10vw;
     height: 130vh;
+    margin-bottom: 20vw;
 }
 .about-img {
     position: absolute;
@@ -411,5 +422,14 @@ img {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #222542;
+}
 
+/* work */
+#work {
+    background-color: #222534;
+    background-image: url(https://uploads-ssl.webflow.com/5eba19302c27d10056fc52f8/5ebb86a16641ade824ccfac3_BGRepeatNoise.png);
+    background-position: 0px 0px;
+    background-size: 60px;
+    height: 100vh;
+    z-index: -1;
 }

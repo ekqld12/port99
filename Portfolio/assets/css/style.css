@@ -1,15 +1,22 @@
 /* body */
+@font-face { font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal; }
 *{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;}
 body {
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh;
     color: #333;
     font-family: 'Poppins', sans-serif;
     font-family: 'Montserrat', sans-serif;
+    font-family: 'S-CoreDream-2ExtraLight';
     font-size: 5vw;
+}
+/* w-inline-block */
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block;
 }
 
 .body-light {
@@ -20,7 +27,7 @@ body {
 }
 
 /* header */
-#header {
+#header-light {
     position: fixed;
     left: 0%;
     top: 0%;
@@ -40,21 +47,31 @@ body {
     -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start;
+    transition: top 0.5s ease-in-out 
 }
-.header {
-    margin-top: 90px;
+#header-light.on {
+    top: -20vw;
+}
+.logo {
+    margin-top: 60px;
     margin-left: 60px;
 }
-.hed {
-    max-width: 100%;
-    display: inline-block;
+a {
+    background-color: transparent;
 }
 .logo-image {
     width: 100px;
     max-width: 100px;
 }
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
 /* heaer rigth */
-.header-right {
+.navigation {
     position: relative;
     display: -webkit-box;
     display: -webkit-flex;
@@ -83,6 +100,7 @@ body {
     height: 2px;
     background-color: #8cff00;
 }
+
 .nav-active-line-02{
     position: absolute;
     left: 0%;
@@ -125,6 +143,7 @@ body {
 }
 
 .nav-link{
+    position: relative;
     margin-top: 20px;
     font-family: 'Poppins', sans-serif;
     color: #222534;
@@ -133,6 +152,7 @@ body {
     text-decoration: none;
     font-size: 1vw;
 }
+
 
 /* bottom-light w-inline-block */
 .bottom-light{
@@ -219,6 +239,8 @@ img {
     margin-top: -35vw;
     opacity: 1
 }
+
+
 /* banner img */
 .p1 {
     position: absolute;
@@ -257,19 +279,21 @@ img {
     -ms-transform: rotate(-7deg);
     transform: rotate(-7deg);
 }
+
+
 /* banner-text */
 .banner-text {
     position: absolute;
-    left: 20vw;
+    left: 15vw;
     top: 33vw;
     right: auto;
     bottom: auto;
 }
 .banner-tet {
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     color: #222534;
-    font-size: 40px;
+    font-size: 2.2vw;
     line-height: 49px;
     font-weight: 800;
     letter-spacing: 0.1em;
@@ -278,14 +302,114 @@ img {
 .text-span {
     font-style: normal;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 2.2vw;
     line-height: 49px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 .banner-line {
-    width: 110px;
+    width: 6vw;
     height: 1px;
     margin-top: 20px;
     background: #222534;
+}
+
+/* about */
+#banner-about {
+    position: relative;
+    overflow: hidden;
+    padding-top: 10vw;
+    height: 130vh;
+}
+.about-img {
+    position: absolute;
+    left: auto;
+    top: 67vh;
+    right: -20vw;
+    bottom: auto;
+    z-index: 10;
+    width: 72vw;
+}
+
+.about-left {
+    position: absolute;
+    left: -1vw;
+    top: 55vh;
+    right: auto;
+    bottom: auto;
+    z-index: 14;
+    width: 45vw;
+    opacity: 0.85;
+}
+.about-left1 {
+    position: absolute;
+    left: -1vw;
+    top: 55vh;
+    right: auto;
+    bottom: auto;
+    z-index: 11;
+    width: 45vw;
+}
+
+.about-mainimg {
+    position: absolute;
+    left: 0vw;
+    top: 48vh;
+    right: auto;
+    bottom: auto;
+    z-index: 15;
+    width: 25vw;
+}
+.about-mainimg1 {
+    position: absolute;
+    left: 10vw;
+    top: 70vh;
+    right: auto;
+    bottom: auto;
+    z-index: 12;
+    width: 30vw;
+}
+.about-text {
+    position: absolute;
+    bottom: 2vw; left: 0;
+    padding-right: -20vw;
+    padding-left: 44.5vw;
+}
+.about-tet {
+    font-family: 'S-CoreDream-2ExtraLight';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.3vw;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #222542;
+}
+.about-line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 5vw;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+.abt-line {
+    width: 7vw;
+    height: 0.3vh;
+    margin-right: 2vw;
+    background-color : #222542;
+}
+.abt-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3vw;
+    line-height: 37px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #222542;
+
 }

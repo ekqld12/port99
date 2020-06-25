@@ -430,6 +430,52 @@ img {
     background-image: url(https://uploads-ssl.webflow.com/5eba19302c27d10056fc52f8/5ebb86a16641ade824ccfac3_BGRepeatNoise.png);
     background-position: 0px 0px;
     background-size: 60px;
+    width: 100vw;
     height: 100vh;
     z-index: -1;
+    position: relative;
+    overflow: hidden;
+}
+.work-img {
+    position: absolute;
+    left: 72vw;
+    top: -8vw;
+    right: auto;
+    bottom: auto;
+    z-index: -1;
+    width: 20vw;
+}
+.work-pnt img {
+    transform: rotate(-180deg);
+}
+.work-pnt {
+    width: 80vw;
+    position: absolute;
+    left: 46vw;
+    top: 23vw;
+    z-index: -2;
+    overflow: hidden;
+}
+.work-line {
+    margin-top: 33vw;
+    margin-left: 20vw;
+    
+}
+.work-line1 {
+    width: 2vw;
+    height: 0.3vh;
+    margin-right: 2vw;
+    margin-bottom: 0.4vw;
+    background-color : #58941b;
+}
+.work-text {
+    color: #fff;
+    font-size: 2vw;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.work-text1 {
+    color: #fff;
+    font-size: 2vw;
+    text-transform: uppercase;
 }

@@ -304,18 +304,14 @@ img {
     font-style: normal;
     color: #222534;
     font-size: 2.2vw;
-    line-height: 49px;
+    line-height: 3vw;
     font-weight: 800;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 .text-span {
-    font-style: normal;
     font-weight: 300;
-    font-size: 2.2vw;
-    line-height: 49px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+
 }
 .banner-line {
     width: 6vw;
@@ -355,7 +351,7 @@ img {
 .about-left1 {
     position: absolute;
     left: -1vw;
-    top: 55vh;
+    top: 70vh;
     right: auto;
     bottom: auto;
     z-index: 11;
@@ -391,7 +387,7 @@ img {
     font-style: normal;
     font-weight: 200;
     font-size: 1.3vw;
-    line-height: 30px;
+    line-height: 2vw;
     letter-spacing: 0.05em;
     color: #222542;
 }
@@ -426,15 +422,22 @@ img {
 
 /* work */
 #work {
-    background-color: #222534;
-    background-image: url(https://uploads-ssl.webflow.com/5eba19302c27d10056fc52f8/5ebb86a16641ade824ccfac3_BGRepeatNoise.png);
-    background-position: 0px 0px;
-    background-size: 60px;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
     position: relative;
     overflow: hidden;
+    height: 100%;
+}
+
+.workqorud {
+    position: absolute;
+    top: 0;bottom: 0;
+    left: auto;
+    right: auto;
+    width: 100vw;
+    background-color: #222534;
+    background-image: url(../img/main.png);
+    background-position: 0px 0px;
+    background-size: 60px;
+    z-index: -1;
 }
 .work-img {
     position: absolute;
@@ -442,8 +445,9 @@ img {
     top: -8vw;
     right: auto;
     bottom: auto;
-    z-index: -1;
+    z-index: 0;
     width: 20vw;
+    height: 20vw;
 }
 .work-pnt img {
     transform: rotate(-180deg);
@@ -451,31 +455,66 @@ img {
 .work-pnt {
     width: 80vw;
     position: absolute;
-    left: 46vw;
+    left: 50vw;
     top: 23vw;
-    z-index: -2;
-    overflow: hidden;
+    z-index: -1;
 }
 .work-line {
     margin-top: 33vw;
-    margin-left: 20vw;
-    
+    margin-left: 16vw;
 }
 .work-line1 {
     width: 2vw;
     height: 0.3vh;
-    margin-right: 2vw;
     margin-bottom: 0.4vw;
     background-color : #58941b;
 }
 .work-text {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
     color: #fff;
-    font-size: 2vw;
+    font-size: 1.8vw;
+    line-height: 2.3vw;
     text-transform: uppercase;
     text-decoration: none;
+    letter-spacing: 0.09em;
 }
 .work-text1 {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
     color: #fff;
-    font-size: 2vw;
+    font-size: 1.8vw;
     text-transform: uppercase;
+    font-weight: 200;
+    letter-spacing: 0.09em;
+    line-height: 2.3vw;
+}
+.work-image-block-01 {
+    position: fixed;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20vw;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+.work-image-site-01 {
+    overflow: hidden;
+    min-width: 75vw;
+}
+.work-image-site-01 img {
+    margin-top: 30vw;
+}
+.work-image-site-02 {
+    min-width: 75vw;
+}
+.work-image-site-02 img {
+    position: absolute;
+    bottom: -7vw; left: 48vw;
+    right: auto; top: auto;
 }

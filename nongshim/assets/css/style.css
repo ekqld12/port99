@@ -1049,7 +1049,7 @@
 .footer-down .fd2 ul {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
+  -ms-grid-columns: (1fr)(4);
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
@@ -1057,4 +1057,3 @@
 .footer-down .fd2 li {
   display: inline-block;
 }
-/*# sourceMappingURL=style.css.map */

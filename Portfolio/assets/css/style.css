@@ -779,7 +779,11 @@ form {
         height: 81%;
         background: #202124;
     }
+    .language-html {
+        color: #fff;
+    }
     .title-bar .htmlTap {
+        font-size: 0.8vw;
         width: 12.5vw;
         
     }
@@ -827,7 +831,7 @@ form {
         top: 5vw; left: -3.8vw;
         z-index: 20;
         /* width: 885px; height: 460px; 원래크기. 반응형때문에 잠시 주석 */
-        width: 46.094vw; height: 27vw;
+        width: 56.094vw; height: 33vw;
         background: #272822; 
         overflow: auto;
     }
@@ -1046,7 +1050,7 @@ form {
     
     .form1 {
         position: absolute;
-        right: 2vw; left: auto;
+        right: -3vw; left: auto;
         top: auto; bottom: auto;
         width: 30vw;
         height: 30vw;
@@ -1127,8 +1131,8 @@ form {
       
       .container {
         position: absolute;
-        top: 0;
-        left: -24vw;
+        top: 10vw;
+        left: -30vw;
         right: 0;
         bottom: 0;
         width: 100vw;
@@ -1153,8 +1157,8 @@ form {
         position: absolute;
         bottom: 17vw; left: 5vw;
         right: auto; top: auto;
-        width: 46.563vw;
-        height: 34.5vw;
+        width: 56.563vw;
+        height: 39.5vw;
         /* height: 547px; */
         background: #35363A;
         border-radius: 1vw;
@@ -1211,6 +1215,7 @@ form {
         background: #555657;
     }
     .title-bar1 .htmlTap1 {
+        font-size: 0.8vw;
         width: 12.5vw;
     }
     .title-bar1 .htmlTap1 a {
@@ -1231,7 +1236,7 @@ form {
         top: 5vw; left: -3.8vw;
         z-index: 20;
         /* width: 885px; height: 460px; 원래크기. 반응형때문에 잠시 주석 */
-        width: 46.094vw; height: 27vw;
+        width: 56.094vw; height: 33vw;
         background: #272822; 
         overflow: auto;
     }

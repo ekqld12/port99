@@ -36,8 +36,10 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/prism1.css">
 </head>
-<body class="body-light" >
+<body class="body-light" style="overflow-x:hidden" >
     <div id="header-light" style="  opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
             <a href="#" aria-current="page" class="logo w-inline-block w--current">
                 <img src="assets/img/loog.png" alt="메인 로고" class="logo-image">
@@ -240,7 +242,7 @@
         <img class="work-block-image-site-01" src="assets/img/workimg1.jpg" alt="웹표준 사이트">
         <img class="work-block-image-site-02" src="assets/img/workimg1-1.jpg" alt="웹표준 사이트">
 
-        <a href="#" class="work-site-block w-inline-block">
+        <a href="https://ekqld12.github.io/port99/site-webstandard/index.html" class="work-site-block w-inline-block">
             <div class="work-site-line1"></div>
             <div class="work-site-text">webstandard view</div>
         </a>
@@ -267,11 +269,7 @@
             <form class="form">
                 <label class="label1">
                     <input type="radio" name="radio" checked/>
-                    <span class="span1">웹표준이란?</span>
-                </label>
-                <label class="label1">
-                    <input type="radio" name="radio"/>
-                    <span class="span1">웹접근성이란?</span>
+                    <span class="span1">탭메뉴란?</span>
                 </label>
                 <label class="label1">
                     <input type="radio" name="radio"/>
@@ -302,7 +300,18 @@
                     <div class="tap htmlTap">
                         <a class="active target" href="#">Webstandard Site</a>
                         <div class="code-content">
-<pre class="line-numbers"><code class="language-html">
+<pre class="line-numbers"><code class="language-js">//탭메뉴
+var $tab_list = $(".tab_menu");
+
+$tab_list.find("ul ul").hide();
+$tab_list.find("li.active > ul").show();
+
+function tabMenu(e){
+e.preventDefault();
+var $this = $(this);
+$this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+}
+$tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
 </code></pre>
                         </div>
                     </div>
@@ -362,7 +371,7 @@
     <div class="work-block-02">
         <img class="work-block-image-site-03" src="assets/img/workimg2.jpg" alt="반응형사이트">
 
-        <a href="#" class="work-site-block1 w-inline-block">
+        <a href="https://ekqld12.github.io/port99/site-responsive/index.html" class="work-site-block1 w-inline-block">
             <div class="work-site-line2"></div>
             <div class="work-site-text">responsive view</div>
         </a>
@@ -491,6 +500,7 @@
 
 
     <script src="assets/js/jquery.min_1.12.4.js"></script>
+    <script src="../assets/js/prism.js"></script>
     <!-- script -->
     <!-- 화면 스크롤시 해더 매뉴창 사라졌다 나오게 하기 -->
     <script>

@@ -520,7 +520,7 @@ img {
 
 
 
-.work-site-line {
+.work-site-block {
     position: absolute;
     left: 78vw;
     top: 56vw;
@@ -555,6 +555,9 @@ img {
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
+
+
+/* work-block-text */
 .work-block-text {
     background-color: #222534;
     position: relative;
@@ -631,7 +634,7 @@ form {
             flex-direction: column;
   }
   
-  label {
+  .label1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -647,17 +650,17 @@ form {
     font-size: 1.3vw;
   }
   
-  label input {
+  .label1 input {
     position: absolute;
     left: -9999px;
   }
   
-  label input:checked + span:before {
+  .label1 input:checked + .span1:before {
     -webkit-box-shadow: inset 0 0 0 0.1000em #fff;
             box-shadow: inset 0 0 0 0.1000em #fff;
   }
   
-  label span {
+  .label1 .span1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -671,7 +674,7 @@ form {
   }
 
   
-  label span:before {
+  .label1 .span1:before {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -877,7 +880,7 @@ form {
         align-items: center;
         /* width: 84%; */
         width: 55vw;
-        height: 2vw;
+        height: 2.5vw;
         background: #35363A;
         color: #fff;
     }
@@ -891,7 +894,7 @@ form {
     }
     .option-bar .address-box .address .address-target {
         position: absolute;
-        top: 0.35vw; left: 2vw;
+        top: 0.60vw; left: 2vw;
         display: none;
         font-size: 0.8vw;
     }
@@ -899,7 +902,7 @@ form {
         display: block;
     }
     .option-bar .address-box .address span {
-        padding: 0 13px 0 14px;
+        width: 2vw;
     }
     .option-bar .dot-box {
         display: flex;
@@ -916,3 +919,408 @@ form {
     }
 
     
+    /* work-block-02 */
+    .work-block-02 {
+        background-color: #222534;
+        position: relative;
+        width: 100vw;
+        height: 80vw;
+    }
+    .work-block-image-site-03 {
+        position: absolute;
+        right: 0; top: 0;
+        left: auto; bottom: auto;
+        padding-top: 20vw;
+        z-index: 1;
+        overflow: hidden;
+        width: 63vw;
+    }
+    
+    /* work-block-line1 */
+   .work-site-block1 {
+        position: absolute;
+        left: 25.5vw;
+        top: auto;
+        right: auto;
+        bottom: 18.8vw;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        width: 20vw;
+   }
+   .work-site-line2 {
+    width: 0.1vw;
+    height: 2vh;
+    margin-right: 1vw;
+    background: #58941B;
+   }
+
+   /* work-block-text1 */
+   .work-block-right-text {
+        background-color: #222534;
+        position: relative;
+        width: 100vw;
+        height: 50vw;
+   }
+   .work-block-right-text2 {
+        position: absolute;
+        top: 7vw; left: 55vw;
+        right: auto; bottom: auto;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 4vw;
+        text-transform: uppercase;
+        line-height: 10vw;
+        letter-spacing: 0.02em;
+   }
+   .work-site-text3 {
+        position: absolute;
+        left: 40.8vw;
+        top: 14vw;
+        right: auto;
+        bottom: auto;
+
+   }
+   .work-site-text-line1 {
+        width: 3.8vw;
+        height: 2px;
+        background: #58941B;
+        margin-top: 4vw;
+        -webkit-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+        margin-left: 25.5vw;
+   }
+   .work-site-text4 {
+        margin-top: 4vw;
+        width: 30vw;
+        color: #fff;
+        font-family: 'S-CoreDream-2ExtraLight';
+        font-style: normal;
+        font-weight: 200;
+        font-size: 1.3vw;
+        line-height: 2.2vw;
+        letter-spacing: 0.05em;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        text-align: right;
+   }
+
+    /* work-block-script1 */
+    .work-block-script1 {
+        background-color: #222534;
+        position: relative;
+        width: 100vw;
+        height: 60vw;
+    }
+    .container1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 10vw;
+        bottom: 0;
+        width: 100vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 20px;
+      }
+    
+    .form1 {
+        position: absolute;
+        right: 2vw; left: auto;
+        top: auto; bottom: auto;
+        width: 30vw;
+        height: 30vw;
+    }
+
+    form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+      .label2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 0.375em;
+        color: #fff;
+        font-family: 'S-CoreDream-2ExtraLight';
+        font-style: normal;
+        font-weight: 200;
+        letter-spacing: 0.05em;
+        font-size: 1.3vw;
+      }
+      
+      .label2 input {
+        position: absolute;
+        left: -9999px;
+      }
+      
+      .label2 input:checked + .span2::before {
+        -webkit-box-shadow: inset 0 0 0 0.1000em #fff;
+                box-shadow: inset 0 0 0 0.1000em #fff;
+      }
+      
+      .label2 .span2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 0.375em 0.75em 0.375em 0.375em;
+        border-radius: 99em;
+        -webkit-transition: 0.25s ease;
+        transition: 0.25s ease;
+      }
+      .span2 {
+          padding-right: 10vw;
+      }
+      
+      .label2 .span2::before {
+        position: absolute;
+        left: 14vw; top: auto;
+        bottom: auto; right: auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+        content: "";
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 20%;
+        margin-right: 1.5vw;
+        -webkit-transition: 0.25s ease;
+        transition: 0.25s ease;
+        -webkit-box-shadow: inset 0 0 0 0.125em #fff;
+                box-shadow: inset 0 0 0 0.125em #fff;
+      }
+      
+      .container {
+        position: absolute;
+        top: 0;
+        left: -24vw;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 20px;
+      }
+
+      /* chromebox1 */
+      .chromebox1 {
+        width: 100vw;
+        height: 60vw;
+      }
+      .chromebox1 .chromewrap1 {
+        position: absolute;
+        bottom: 17vw; left: 5vw;
+        right: auto; top: auto;
+        width: 46.563vw;
+        height: 34.5vw;
+        /* height: 547px; */
+        background: #35363A;
+        border-radius: 1vw;
+    }
+    .menu-bar1 {
+        position: relative;
+        font-family: "SF Pro Display";
+        font-weight: 300;
+        font-size: 0.6vw;
+        display: flex;
+        width: 100%;
+        height: 2.5vw;
+        /* height: 42px; */
+        border-radius: 5px 5px 0px 0px;
+        background: #555657;
+    }
+    .menu-bar1 .circle-bar1 {
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        /* padding: 0 13px; */
+        padding: 0 0.677vw;
+        width: 10vw;
+        height: 100%;
+        background: #555657;
+        border-radius: 5px 0px 0px 0px;
+    }
+    .circle-bar1 .red1 {
+        margin-right: 0.4vw;
+        width: 0.6vw; height: 0.6vw;
+        border-radius: 50%;
+        background: #ED6A5F;
+    }
+    .circle-bar1 .yellow1 {
+        margin-right: 0.4vw;
+        width: 0.6vw; height: 0.6vw;
+        border-radius: 50%;
+        background: #F6BF4F;
+    }
+    .circle-bar1 .green1 {
+        width: 0.6vw; height: 0.6vw;
+        border-radius: 50%;
+        background: #63C654;
+    }
+    .menu-bar1 .title-bar1 {
+        position: absolute;
+        top: 0.5vw; left: 4vw;
+        z-index: 20;
+        display: flex;
+        /* width: 88%; */
+        /* width: 42.5vw; */
+        /* height: 100%; */
+        height: 81%;
+        background: #555657;
+    }
+    .title-bar1 .htmlTap1 {
+        width: 12.5vw;
+    }
+    .title-bar1 .htmlTap1 a {
+        display: flex;
+        justify-content: center;
+        line-height: 2vw;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        background: #35363A;
+        border-radius: 10px 10px 0 0;
+    }
+    .title-bar1 .tap1 a.active {
+        background: #35363A;
+    }
+    .title-bar1 > div .code-content1 {
+        position: absolute; 
+        top: 5vw; left: -3.8vw;
+        z-index: 20;
+        /* width: 885px; height: 460px; 원래크기. 반응형때문에 잠시 주석 */
+        width: 46.094vw; height: 27vw;
+        background: #272822; 
+        overflow: auto;
+    }
+
+    .menu-content1 {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        /* border-bottom: 1px solid black; */
+    }
+    .menu-content1 .option-bar1 {
+        font-family: "SF Pro Display";
+        font-weight: 300;
+        display: flex;
+        width: 100%;
+        /* height: 8%; */
+        height: 2vw;
+    }
+    .arrow-box1 {
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        box-sizing: border-box;
+        width: 6vw;
+        height: 2vw;
+        /* background: #35363A; */
+    }
+    .option-bar1 .arrowL1 {
+        width: 1vw;
+        height: 0.7vw;
+        margin-right: 0.8vw;
+    }
+    .option-bar1 .arrowL svg {}
+    .option-bar1 .arrowR1 {
+        width: 1vw;
+        height: 0.7vw;
+        margin-right: 0.8vw;
+    }
+    .option-bar1 .arrowR1 svg {}
+    .option-bar1 .redo1 {
+        width: 1vw;
+        height: 0.7vw
+    }
+    .option-bar .redo svg {}
+
+    .option-bar1 .address-box1 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 84%; */
+        width: 55vw;
+        height: 2.5vw;
+        background: #35363A;
+        color: #fff;
+    }
+    .option-bar1 .address-box1 .address1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 1.5vw;
+        background: #857F7F;
+        border-radius: 30px;
+    }
+    .option-bar1 .address-box1 .address1 .address-target1 {
+        position: absolute;
+        top: 0.60vw; left: 2vw;
+        display: none;
+        font-size: 0.8vw;
+    }
+    .option-bar1 .address-box1 .address1 .address-target1.show1 {
+        display: block;
+    }
+    .option-bar1 .address-box1 .address1 span {
+        position: absolute; left: 0vw; top: 0.6vw;
+        bottom: auto; right: auto;
+        width: 2vw;
+        height: 1vw;
+    }
+    .option-bar1 .dot-box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 4%; */
+        width: 3vw;
+        height: 1.5vw;
+        background: #35363A;
+    }
+    .option-bar1 .dot-box1 .dot1 {
+        width: 0.4vw;
+        height: 0.4vw;
+    }

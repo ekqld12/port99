@@ -923,7 +923,17 @@ form {
         display: block;
     }
     .option-bar .address-box .address span {
+        position: absolute;
+        top: 0.8vw;
+        left: 0.8vw;
+        bottom: auto;
+        right: auto;
         width: 2vw;
+        height: 2vw;
+    }
+    .option-bar .address-box .address span svg {
+        width: 0.8vw;
+        height: 0.8vw;
     }
     .option-bar .dot-box {
         display: flex;
@@ -1346,10 +1356,16 @@ form {
         display: block;
     }
     .option-bar1 .address-box1 .address1 span {
-        position: absolute; left: 0vw; top: 0.6vw;
+        position: absolute; 
+        left: 0.7vw;
+        top: 0.8vw;
         bottom: auto; right: auto;
-        width: 2vw;
+        width: 2.5vw;
         height: 1vw;
+    }
+    .option-bar1 .address-box1 .address1 span svg {
+        width: 0.8vw;
+        height: 0.8vw;
     }
     .option-bar1 .dot-box1 {
         display: flex;
@@ -1406,4 +1422,61 @@ form {
         -ms-transform: rotate(-90deg);
         transform: rotate(-90deg);
         width: 20vw;
+    }
+
+    /* title-bar2 */
+    .title-bar1 .htmlTap1 a .chormeboximg {
+        width: 1vw;
+        height: 1vw;
+        position: absolute;
+        top: 0.5vw;
+        left: 1.5vw;
+        bottom: auto;
+        right: auto;
+    }
+    /* work-site-text5 */
+    .work-site-block7  {
+        position: absolute;
+        left: 80vw;
+        top: 57.8vw;
+        right: auto;
+        bottom: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 5vw;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        text-decoration: none;
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+    }
+
+
+    /* script */
+    #script {
+        position: relative;
+        width: 100vw;
+        height: 50vw;
+        background-color: #eaeaea;
+        background-position: 0 0;
+        background-size: 4vw;
+        overflow: hidden;
+    }
+    .script-img {
+        position: absolute;
+        top: 12vw; left: 18vw;
+        right: auto; bottom: auto;
+        z-index: 1;
+    }
+    .script-pant {
+        position: absolute;
+        top: 20vw; left: -10vw;
+    }
+    .script-pant img {
+        width: 80%;
     }

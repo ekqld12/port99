@@ -5,7 +5,7 @@ body, div, ul, li, ol, dl, dt, h1, h2, h3, h4, h5, h6, input, fieldset, legend, 
 
 /* a 링크 초기화 */
 a {color: #222; text-decoration: none;}
-a:hover {color:#000;}
+/* a:hover {color:#000;} */
 
 /*  clearfix */
 .clearfix::before, .clearfix::after {
@@ -25,7 +25,7 @@ fieldset {border: 0 none;}
 h1, h2, h3, h4, h5, h6 {font-size: 13px; color: #222; font-weight: normal;}
 
 /* 블릿기호 초기화*/
-li,ol,yl,menu{list-style:none;}
+li,ol,menu{list-style:none;}
 
 /* 이미지 초기화*/
 img {max-width: 100%; vertical-align: middle; display: inline-block;}

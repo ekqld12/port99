@@ -1,0 +1,128 @@
+body {
+    background: #eaeaea url(../img/main.png);;
+}
+
+/* layout */
+#contents {}
+#section1 {width: 100%; overflow: hidden;}
+#section2 {height: 2000px;}
+#section3 {}
+#section4 {}
+#section5 {}
+#section6 {}
+
+/* scroll */
+.scroll {
+    position: fixed; left: 20px; bottom: 20px;
+    width: 40px; height: 40px; 
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 40px;
+}
+
+/* header */
+#header { }
+#header h1 {
+    position: absolute;
+    left: 3vw; top: 3vw;
+    width: 100px;
+}
+#header #nav {
+    position: absolute;
+    right: 3vw; top: 3vw;
+}
+#header #nav li {
+    text-align: right;
+}
+#header #nav li a {
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #222534;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1vw;
+    display: inline-block;
+}
+
+
+
+/* sec1 */
+.sec1 {}
+
+.sec1 .bg {
+    position: absolute; 
+    right: 10%; top: 0vh;
+    width: 30vw;
+}
+.sec1 .sTitle {
+    padding: 60vh 0 10vw 15vw;
+    position: relative;
+    display: inline-block;
+}
+.sec1 .sTitle strong {
+    display: block;
+    color: #222534;
+    font-size: 2.2vw;
+    line-height: 3.2vw;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+.sec1 .sTitle strong:last-child {
+    font-weight: 200;
+    position: relative;
+}
+
+.sec1 .sTitle strong:last-child::after {
+    content: '';
+    width: 5vw; height: 1px;
+    background: #222534;
+    position: absolute; 
+    bottom: -1.5vw; left: 0;
+}
+
+.sec1 .sImg {}
+.sec1 .sImg h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28vw;
+    color: #222542;
+    font-weight: 800;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    position: absolute; 
+    right: 15%; top: -60vh;
+    z-index: 100;
+}
+.sec1 .sImg figure {
+    width: 450px;
+    position: absolute;
+}
+
+.sec1 .sImg .intro1 {left: 40vw; top: 40vh; z-index: 110; transform: rotate(-30deg)}
+.sec1 .sImg .intro2 {right: 10vw; top: 80vh; z-index: 90; transform: rotate(30deg)}
+.sec1 .sImg .intro3 {left: 40vw; top: 140vh; z-index: 110; transform: rotate(-25deg)}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

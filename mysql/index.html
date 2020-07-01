@@ -321,7 +321,7 @@
 
                     <h4>테이블 삭제</h4>
                     <p class="bs-callout bs-callout-info">
-                        drop 테이블 명
+                        DROP TABLE 테이블 명
                     </p>
 
                     <h4>테이블 초기화하기</h4>
@@ -432,21 +432,10 @@
                     <p class="bs-callout bs-callout-info">
                         SELECT 필드명 FROM 테이블명;
                     </p>
-                    
-
+                
                     <h5>모든 데이터 불러오기</h5>
                     <p class="bs-callout bs-callout-info">
                        SELECT * FROM 테이블명;
-                    </p>
-                    
-                    <h5>LIMIT</h5>
-                    <p class="bs-callout bs-callout-info">
-                        SELECT 필드명 FROM 테이블명 LIMIT 불러올 수;
-                    </p>
-                    
-                    <h5>LIMIT 값 2개를 적용하는 방법</h5>
-                    <p class="bs-callout bs-callout-info">
-                        SELECT 필드명 FROM 테이블명 LIMIT 불러올 순번, 불러올 개수;
                     </p>
 
                     <p class="well">
@@ -458,21 +447,25 @@
                         SELECT * FROM myMember WHERE email LIKE 'web%';<br>
                         SELECT * FROM myMember WHERE myMemberID &gt;= 1 AND myMemberID &lt;= 5;<br>
                         SELECT * FROM myMember WHERE uname LIKE '김%' OR uname LiKE '이%';<br>
-                        
-                        SELECT * FROM myMember LIMIT 3;
-                        SELECT * FROM schoolRecord ORDER BY english DESC LIMIT 4;
-                        SELECT * FROM myMember LIMIT 3,3;
-                        
                     </p>
 
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my004.png" alt="">
-                    <br><br>
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my005.png" alt="">
-                    <br><br>
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my006.png" alt="">
-                    <br><br>
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my013.png.png" alt="">
+                    <h5 class="pt20">LIMIT</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 LIMIT 불러올 수
+                    </p>
+                    <p class="well">
+                        SELECT * FROM myMember LIMIT 3;<br>
+                        SELECT * FROM schoolRecord ORDER BY english DESC LIMIT 4;
+                    </p>
 
+                    <p class="bs-callout bs callout-info">
+                        첫번째 페이지에서 작동하는 쿼리문
+                        SELECT * FROM myMember LIMIT 2;
+                        두번째 페이지에서 작동하는 쿼리문
+                        SELECT * FROM myMember LIMIT 2,2;
+                        세번째 페이지에서 작동하는 쿼리문
+                        SELECT * FROM myMember LIMIT 4,2;
+                    </p>
                 </div>
                 <!-- //Introduction -->
 
@@ -511,7 +504,7 @@
                         myMemberID int unsigned comment '리뷰를 작성한 회원번호',<br>
                         content tinytext comment '리뷰 내용',<br>
                         regTime datetime not null comment '회원가입 시간',<br>
-                        primary key(prodReviewID))charset=utf8 comment='상품 리뷰';<br>
+                        primary key(prodReviewID))charset=utf8 comment='상품 리뷰';<br><br>
 
                         INSERT INTO prodReview(myMemberID, content, regTime)<br>
                         VALUES(2, '이 신발 너무 편하고 좋네요', now());<br><br>
@@ -583,55 +576,7 @@
                             </tbody>
                         </table>
                     </div>
-                    
-                    <h5 class="pt20">그룹별 집계</h5>
-                    <p class="bs-callout bs-callout-info">
-                        SELECT 필드명 FROM 테이블명 GROUP BY 필드명
-                    </p>
-                    
-                    <h5 class="pt20">ORDER BY</h5>
-                    <p class="bs-callout bs-callout-info">
-                        SELECT 필드명 FROM 테이블명 ORDER BY 정렬 기준이 될 필드명 DESC 또는 ASC;
-                    </p>
-                    
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-striped">
-                            <thead>
-                                <tr>
-                                    <th>종류</th>
-                                    <th>설명</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>content(필드명)</td>
-                                    <td>레코드의 개수를 표시(null인 경우는 포함하지 않음)</td>
-                                </tr>
-                                <tr>
-                                    <td>content(*)</td>
-                                    <td>레코드의 개수를 표시(null인 포함)</td>
-                                </tr>
-                                <tr>
-                                    <td>sum(필드명)</td>
-                                    <td>필드 값의 합계를 표시</td>
-                                </tr>
-                                <tr>
-                                    <td>avg(필드명)</td>
-                                    <td>필드 값의 평균을 표시</td>
-                                </tr>
-                                <tr>
-                                    <td>max(필드명)</td>
-                                    <td>필드 값의 최대값을 표시</td>
-                                </tr>
-                                <tr>
-                                    <td>min(필드명)</td>
-                                    <td>필드 값의 최소값을 표시</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    
+                                        
         
 
                     <p class="well">
@@ -652,7 +597,7 @@
                         INSERT INTO schoolRecord(class, english, math, science, japanese, coding) VALUES(2, 90, 86, 100, 70, 100);<br>
                         INSERT INTO schoolRecord(class, english, math, science, japanese, coding) VALUES(3, 80, 50, 60, 20, 100);<br>
                         INSERT INTO schoolRecord(class, english, math, science, japanese, coding) VALUES(3, 100, 80, 70, 20, 80);<br>
-                        INSERT INTO schoolRecord(class, english, math, science, japanese, coding) VALUES(4, 100, 100, 100, 30, 40);<br><br>
+                        INSERT INTO schoolRecord(class, english, math, science, japanese, coding) VALUES(4, 100, 100, 100, 30, 40);<br>
                     </p>
                     
                     <p class="well">
@@ -662,24 +607,30 @@
                         SELECT avg(math) FROM schoolRecord WHERE studentID &gt;= 1 AND studentID &lt;= 5;<br>
                         SELECT min(math) FROM schoolRecord;<br><br>
                     </p>
-                    
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my010.png" alt=""><br><br>
-                    
+
+                    <h5 class="pt20">그룹별 집계</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 GROUP BY 필드명
+                    </p>
+
                     <p class="well">
                         SELECT class, avg(english) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class;<br>
                         SELECT class, sum(math) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class HAVING sum(math) &gt;= 150;<br>
                     </p>
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my011.png" alt=""><br><br>
+                    
+                    <h5 class="pt20">ORDER BY</h5>
+                    <p class="bs-callout bs-callout-info">
+                        SELECT 필드명 FROM 테이블명 ORDER BY 정렬 기준이 될 필드명 DESC 또는 ASC;
+                    </p>
                     
                     <p class="well">
                         //개인별 영어점수를 오름차순, 내림차순으로 표시<br>
                         SELECT studentID, english FROM schoolRecord ORDER BY english DESC;<br>
-                        SELECT studentID, english FROM schoolRecord ORDER BY english ASC;<br><br>
+                        SELECT studentID, english FROM schoolRecord ORDER BY english ASC;<br>
                         
                         //반별 수학 점수를 높은 순에서 낮은 순으로 표시<br>
-                        SELECT class, sum(math) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class ORDER BY sum(math) DESC;<br><br>
+                        SELECT class, sum(math) FROM schoolRecord WHERE class IN(1,2,3,4) GROUP BY class ORDER BY sum(math) DESC;<br>
                     </p>
-                    <img class="img" src="http://richclub8.dothome.co.kr/mysql/img/my012.png" alt=""><br><br>
                     
                    
                 </div>

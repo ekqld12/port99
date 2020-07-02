@@ -1150,7 +1150,7 @@ form {
                 box-shadow: inset 0 0 0 0.125em #fff;
       }
       
-      .container {
+      /* .container {
         position: absolute;
         top: 10vw;
         left: -30vw;
@@ -1167,7 +1167,7 @@ form {
             -ms-flex-align: center;
                 align-items: center;
         padding: 20px;
-      }
+      } */
 
       /* chromebox1 */
       .chromebox1 {

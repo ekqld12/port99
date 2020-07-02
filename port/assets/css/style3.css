@@ -13,9 +13,6 @@ body {
 #section3 {width: 100%; height: 100%; overflow: hidden;}
 #section4 {}
 
-
-
-
 /* scroll */
 .scroll {
     position: fixed; left: 20px; bottom: 20px;
@@ -1915,9 +1912,76 @@ body {
 }
 
 /* script */
-#script {
-
+#script { 
+    position: fixed;
+    left: 0vw; top: 0vw;
+    width: 100%; 
+    z-index: 1000;
+    height: 51vw;
 }
 #script #section4 {
+    position: relative;
+}
+#script #section4 .script {
+    position: absolute;
+    top: 13vw;
+    left: 10vw;
+}
+#script #section4 .script h1{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20vw;
+    line-height: 2.2vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #222542;
+}
+#section4 .scriptimg {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 10vw;
+    top: -20vw;
+    width: 20vw;
+    z-index: -100;
+}
+#section4 .script-title {
+    display: inline-block;
+    position: absolute;
+    top: 35vw; right: 10vw;
+}
+#section4 .script-title em {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.6vw;
+    line-height: 2.2vw;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #222542;
 
 }
+#section4 .script-title h2 strong{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 1.6vw;
+    line-height: 2.2vw;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #222542;
+}
+#section4 .script-title1 {
+    position: fixed;
+    top: 0; left: 100vw;
+}
+
+
+

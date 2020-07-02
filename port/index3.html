@@ -771,16 +771,59 @@ border-right: 1px solid #dbdbdb; box-sizing: border-box;
     </div>
     <!-- work -->
     
-    <div id="script">
+    <div id="script"
+       data-16300="top: 100vw; left: 0vw;"
+       data-17400="top: 0vw; left: 0vw;"
+       data-19000="top: 0vw; left: -100vw;"
+       
+    >
         <div id="section4">
             <div class="script">
                 <h1>script</h1>
             </div>
+            <div class="scriptimg">
+                <figure>
+                    <img src="assets/img/paint-v.png" alt="">
+                </figure>
+            </div>
+
+            <div class="script-title">
+                <h2>
+                    <em>jquery &</em>
+                    <em>javascript</em>
+                    <strong>parallax</strong>
+                    <strong>image slider</strong>
+                    <strong>mouse effect</strong>
+                    <strong>Game</strong>
+                </h2>
+            </div>
+
+            <div class="script-title1"
+            data-17900="top: 0vw; left: 100vw;"
+            data-20000="top: 0vw; left: 0vw;"
+            >
+                <h2>
+                    <em>jquery &</em>
+                    <em>javascript</em>
+                    <strong>parallax</strong>
+                    <strong>image slider</strong>
+                    <strong>mouse effect</strong>
+                    <strong>Game</strong>
+                </h2>
+            </div>
+
+            
         </div>
     </div>
 
 
 
+    <!-- 13100
+    13900
+     -->
+    
+    
+    
 
 
 
@@ -800,8 +843,9 @@ border-right: 1px solid #dbdbdb; box-sizing: border-box;
         
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+            let floor = Math.floor(pageYOffset);
 
-            document.querySelector(".scroll").textContent = pageYOffset;
+            document.querySelector(".scroll").textContent = floor;
         });
 
         // let roadLength = $("#section4").width();  //전체 가로값

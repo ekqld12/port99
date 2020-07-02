@@ -772,7 +772,11 @@ border-right: 1px solid #dbdbdb; box-sizing: border-box;
     <!-- work -->
     
     <div id="script">
-        <div id="section4"></div>
+        <div id="section4">
+            <div class="script">
+                <h1>script</h1>
+            </div>
+        </div>
     </div>
 
 
@@ -799,6 +803,15 @@ border-right: 1px solid #dbdbdb; box-sizing: border-box;
 
             document.querySelector(".scroll").textContent = pageYOffset;
         });
+
+        // let roadLength = $("#section4").width();  //전체 가로값
+        // $("#script").css("height", roadLength);      //전체 세로 값에 전체 가로 값(roadLength)을 할당
+
+        // $(window).scroll(function(){
+        //     let wScroll = $(window).scrollTop()
+
+        //     $("#section4").css({"transform" : "translateX(-"+wScroll+"px)"})
+        // })
     </script>
 </body>
 </html>

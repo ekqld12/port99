@@ -1,4 +1,155 @@
-<h2>디자인 가이드 구성</h2>
-<div class="well">
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="zzekqls">
+    <meta name="description" content="포트폴리오 사이트입니다. 잘부탁 드립니다">
+    <meta name="keywords" content="나에 대해 더욱 알고 싶다면!">
     
-</div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    
+    <!-- webfont -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="scroll">0</div>
+   
+    <header id="header">
+        <h1><img src="assets/img/loog.png" alt=""></h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="#">about.</a></li>
+                <li><a href="#">work.</a></li>
+                <li><a href="#">script.</a></li>
+                <li><a href="#">animation.</a></li>
+                <li><a href="#">contact.</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+   
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <div class="bg"><img src="assets/img/paint-v.png" alt=""></div>
+                
+                <div class="sTitle">
+                    <h3>
+                        <strong>data</strong> 
+                        <strong>driven</strong> 
+                        <strong>publisher</strong>
+                    </h3>
+                </div>
+                <div class="sImg">
+                    <h2 
+                        data-0 = "top: -60vh"
+                        data-2000 = "top: -20vh">
+                    >portfolio</h2>
+                    <figure class="intro1" 
+                        data-0 = "transform: rotate(-30deg)"
+                        data-2000 = "transform: rotate(-20deg)">
+                        <img src="https://uploads-ssl.webflow.com/5eba19302c27d10056fc52f8/5ebf0ed28f2499e42a94de84_polaroid1.png" alt="">
+                    </figure>
+                    <figure  class="intro2"
+                        data-0 = "transform: rotate(30deg)"
+                        data-2000 = "transform: rotate(20deg)">
+                        <img src="https://uploads-ssl.webflow.com/5eba19302c27d10056fc52f8/5ebf0ed28f2499e42a94de84_polaroid1.png" alt="">
+                    </figure>
+                    <figure  class="intro3"
+                        data-0 = "transform: rotate(-25deg)"
+                        data-2000 = "transform: rotate(-5deg)">
+                        <img src="https://uploads-ssl.webflow.com/5eba19302c27d10056fc52f8/5ebf0ed28f2499e42a94de84_polaroid1.png" alt="">
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+        
+        <section id="section2">
+            <div class="sec2">
+                
+                <div class="site-wrap">
+                    <div class="site">
+                        <h3>webstandard</h3>
+                        <div class="code-intro">
+                            <div class="left">
+                                <div class="move-img">
+                                    <img  src="assets/img/workimg1.jpg" alt="웹표준 사이트">
+                                </div>
+                            </div>
+                            <div class="right">
+                                <p>웹표준 지침서를 준수한 사이트입니다. 대체 텍스트를 사용하여, 모든 사용자의 접근성을 고려했습니다. 아코디언메뉴, 탭메뉴 등을 jQuery로 코딩하여 만들었습니다. slick, light box 제이쿼리 플러그인을 사용하여 배너와 이미지에 동적 효과를 주었습니다.</p>
+                                <div class="btn">
+                                    <a href="#">Site View</a>
+                                    <a href="#">Figma View</a>
+                                </div>
+                            </div>
+                            <div class="side">
+                                <img  src="assets/img/workimg1-1.jpg" alt="웹표준 사이트">
+                            </div>
+                        </div>
+                        <div class="code-view">
+                            <div class="container">
+                                <div class="cv-left"></div>
+                                <div class="cv-right">
+                                    <ul>
+                                        <li>웹표준이란?</li>
+                                        <li>웹접근성이란?</li>
+                                        <li>웹접근성이란1?</li>
+                                        <li>웹접근성이란2?</li>
+                                        <li>웹접근성이란3?</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //site -->
+                    <div class="site"></div>
+                    <div class="site"></div>
+                    <div class="site"></div>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+        <section id="section3"></section><!-- //section1 -->
+        <section id="section4"></section><!-- //section1 -->
+        <section id="section5"></section><!-- //section1 -->
+        <section id="section6"></section><!-- //section1 -->
+    </div>
+    <!-- //contents -->
+    
+    
+    <!-- script -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/skrollr.min.js"></script>
+    <script>
+        //skrollr
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: 'linear'
+        });
+        
+        window.addEventListener("scroll", () => {
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+            document.querySelector(".scroll").textContent = pageYOffset;
+        });
+    </script>
+
+</body>
+</html>
+
+ 
+  
+   
+    
+    
+     
+      <!-- https://www.willrust.co/ -->  

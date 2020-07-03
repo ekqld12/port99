@@ -26,6 +26,10 @@ body {
 }
 
 /* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+}
 #header h1 {
     position: absolute;
     left: 3vw; top: 3vw;
@@ -815,10 +819,16 @@ body {
     right: 0; top: 0vw;
     width: 63vw;
 }
+#work-site1 .work-site04 {
+    position: absolute;
+    left: 14vw;
+    top: 30vw;
+    width: 28vw;
+}
 #work-site1 .work-respon {
     position: absolute;
-    left: 22.5vw;
-    bottom: 21.3vw;
+    left: 0vw;
+    bottom: 17.7vw;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -1552,10 +1562,16 @@ body {
     top: 0vw;
     width: 58vw;
 }
+#work-seog .work-seog02 {
+    position: absolute;
+    left: 20vw;
+    top: 20vw;
+    width: 28vw;
+}
 #work-seog .work-seog-block {
     position: absolute;
-    left: 27.5vw;
-    bottom: 23.3vw;
+    left: 5.5vw;
+    bottom: 17.3vw;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -1916,8 +1932,10 @@ body {
     position: fixed;
     left: 0vw; top: 0vw;
     width: 100%; 
-    z-index: 1000;
+    z-index: -1000;
     height: 51vw;
+    background-image: url(../img/main.png);
+    background-color: rgb(234, 234, 234);
 }
 #script #section4 {
     position: relative;
@@ -1978,10 +1996,16 @@ body {
     text-transform: uppercase;
     color: #222542;
 }
+
 #section4 .script-title1 {
-    position: fixed;
-    top: 0; left: 100vw;
+    position: absolute;
+    top: 0; left: 0;
 }
 
+#section4 .script-title1 figure {
+    position: absolute;
+    top: -100vw; left: 100vw;
+    width: 50vw;
+}
 
 

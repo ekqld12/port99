@@ -216,6 +216,28 @@ body {
 }
 
 
+/* contents */
+#contents {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background-color:rgb(34, 37, 66);
+}
+#section3 .work {
+    position: absolute;
+    top: 0; right: 0;
+}
+#section3 .work h2 {
+    
+    color: #fff;
+}
+
+
+
+
+
+
+
 
 
 
@@ -236,6 +258,7 @@ body {
 
 
 /* 미디어 쿼리 */
+
 /* 어바웃 이미지 및 페인트 이미지 */
 @media (max-width: 920px){
     #section2 .aboutimg1 {
@@ -252,6 +275,7 @@ body {
     #section2 .sec3 {
         left: -10vw;
         top: 16vh;
+    }
 }
 @media (max-width: 500px){
     #section2 h3 {
@@ -296,7 +320,6 @@ body {
    
 }
 
-
 @media (max-width: 430px){
     .paint1 .sTitle {
         padding: 30vh 0 10vw  12vw;
@@ -332,5 +355,7 @@ body {
         margin-top: -25vw;
     }
 }
+
+
 
 

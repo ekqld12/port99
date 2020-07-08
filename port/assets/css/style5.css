@@ -8,9 +8,9 @@ body {
 /* layout */
 #header {} 
 #main {}
-#section1 {width: 100%; padding-bottom: 10vw; overflow: hidden; height: 145vw;}
-#section2 {width: 100%; height: 100%; overflow: hidden;}
-#section3 {width: 100%; height: 100%; overflow: hidden; background: rgb(34, 37, 66);}
+#section1 {width: 100%; padding-bottom: 10vw;  height: 145vw;}
+#section2 {width: 100%; height: 100%; }
+#section3 {width: 100%; height: 100%;  background: rgb(34, 37, 66);}
 #section4 {}
 
 /* scroll */
@@ -296,7 +296,7 @@ body {
 #section3 .sec2 {
     width: 100vw;
     height: 480vw;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 #section3 .site-wrap {
     position: relative;

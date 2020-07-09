@@ -932,14 +932,10 @@ transition:800ms ease all;
     position: relative;
     width: 100vw;
     height: 50vw;
-    display: inline-block;
 }
 #section3 .cv-left-res {
     width: 50%;
-}
-#section3 .cv-left-res .wrapper1-wrap {
-    position: absolute;
-    
+    position: relative;
 }
 #section3 .cv-left-res .wrapper1 {
     margin: 150px auto;
@@ -947,11 +943,11 @@ transition:800ms ease all;
     width: 100%;
     position: relative;
 }
-#section3 .cv-left-res .wrapper1 h2 {
+#section3 .cv-left-res .res-title h2 {
     width: 21vw;
     position: absolute;
-    top: -6vw;
-    left: 69vw;
+    top: 0vw;
+    left: 0vw;
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -964,25 +960,17 @@ transition:800ms ease all;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* chromebox1 */
+#section3 .cv-right-res {
+    position: relative;
+    width: 50%;
+}
 #section3 .cv-right-res .chromebox1 {
 
 }
 #section3 .cv-right-res .chromebox1 .chromewrap1 {
     position: absolute;
-    top: 5%;
+    top: 19%;
     left: 10%;
     width: 46.563vw;
     height: 34.5vw;
@@ -1070,9 +1058,7 @@ transition:800ms ease all;
     z-index: 20;
     /* width: 885px; height: 460px; 원래크기. 반응형때문에 잠시 주석 */
     width: 46.094vw;
-    height: 28.6vw;
-    border-bottom-right-radius: 3%;
-    border-bottom-left-radius: 3%;
+    height: 28vw;
 
     background: #272822; 
     overflow: auto;
@@ -1173,3 +1159,7 @@ transition:800ms ease all;
     height: 0.4vw;
 }
 /* chromebox */
+
+
+
+

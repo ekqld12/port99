@@ -282,20 +282,20 @@ pre[class*="language-"].line-numbers > code {
       }
 
       
-/* ::-webkit-scrollbar {
+/* .chromebox::-webkit-scrollbar {
     width: 10px; 
     height: 10px;  
 }
-::-webkit-scrollbar-track {
+.chromebox::-webkit-scrollbar-track {
     background-color: lightblue;
 }
-::-webkit-scrollbar-track-piece {
-    background-color: gray;
+.chromebox::-webkit-scrollbar-track-piece {
+   background-color: gray;
 }
-::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    background-color: black;
+.chromebox::-webkit-scrollbar-thumb {
+    border-radius: 1vw;
+    background-color: #35363A;
 }
-::-webkit-resizer {
+.chromebox::-webkit-resizer {
     background-color: green;
 } */

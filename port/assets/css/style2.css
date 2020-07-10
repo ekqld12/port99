@@ -1,15 +1,23 @@
+@font-face { 
+    font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal; 
+}
+
+
 body {
     background: #eaeaea url(../img/main.png);;
 }
 
 /* layout */
 #contents {}
-#section1 {width: 100%; overflow: hidden;}
-#section2 {height: 2000px;}
+#section1 {height: 5000px; width: 100%; overflow: hidden;}
+#section2 {height: 5000px; background: #ccc;}
 #section3 {}
 #section4 {}
 #section5 {}
 #section6 {}
+
+/* container */
+.container {width: 1400px; margin: 0 auto;}
 
 /* scroll */
 .scroll {
@@ -111,6 +119,143 @@ body {
 
 
 
+.sec2 {padding: 30vh 0; background: rgb(34, 37, 66);}
+
+
+
+
+
+/* site-wrap */
+.site-wrap {}
+.site {margin-bottom: 40vh;}
+.site .site-view {display: flex; position: relative;}
+.site .site-view .sv-left {width: 50%;}
+.site .site-view .sv-left figure {}
+.site .site-view .sv-right {
+    width: 50%; padding: 6vw 9vw 4vw 4vw;
+    box-sizing: border-box;
+}
+.site .site-view .sv-side {
+    width: 30vw;
+    position: absolute; bottom: -5vw; left: 40vw;
+}
+.site .site-coding {margin-top: 20vh;}
+.site .site-coding .sc-wrap {display: flex; justify-content: space-between;}
+.site .site-coding .sc-wrap .sc-left {width: 25%;}
+.site .site-coding .sc-wrap .sc-right {width: 70%;}
+
+.site .site-h3 {
+    color: #fff; font-size: 4vw; 
+    text-align: right;
+    font-family: "Poppins", sans-serif; 
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.site .site-h4 {
+    color: #fff; font-size: 2.5vw; 
+    line-height: 1;
+    font-family: "Poppins", sans-serif; 
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.site .site-desc {
+    color: #fff; 
+    font-family: 'S-CoreDream-2ExtraLight'; 
+    font-size: 1.2vw;
+    position: relative;
+    padding-top: 3vw;
+}
+.site .site-desc::before {
+    content: '';
+    position: absolute; left: 0; top: 0;
+    width: 100px; height: 1px;
+    background: #1AAB8A;
+}
+.site .site-desc2 {
+    color: #fff; 
+    font-family: 'S-CoreDream-2ExtraLight'; 
+    font-size: 1.1vw;
+    position: relative;
+    padding-top: 2vw;
+    margin-top: 2vw;
+    margin-bottom: 3vw;
+}
+.site .site-desc2::before {
+    content: '';
+    position: absolute; left: 0; top: 0;
+    width: 100px; height: 1px;
+    background: #1AAB8A;
+}
+.site .site-btn a {
+    display: inline-block; background: #1AAB8A;
+    color: #fff;
+    font-size: 18px; 
+    padding: 10px 40px;
+    margin-right: 5px;
+    font-family: "Poppins", sans-serif; 
+    text-transform: uppercase;
+    margin-top: 2vw;
+    font-weight: 300;
+}
+.site .site-btn2 a {
+    display: inline-block; background: #1AAB8A;
+    color: #fff;
+    font-size: 18px; 
+    padding: 8px 20px;
+    margin-right: 5px;
+    font-family: 'S-CoreDream-2ExtraLight'; 
+    text-transform: uppercase;
+    margin-top: 8px;
+    font-weight: 300;
+}
+.site .site-list {
+    color: #fff;
+    font-family: 'S-CoreDream-2ExtraLight'; 
+}
+
+
+.site:nth-child(even) .site-view {flex-direction: row-reverse;}
+.site:nth-child(even) .site-view .sv-left h3 {text-align: left;}
+
+
+.site .editor .editor-tab {
+    height: 40px; background: #21252B; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    display: flex;
+}
+.site .editor .editor-tab .dot {padding: 14px 55px 14px 14px;}
+.site .editor .editor-tab .dot span {
+    display: block;
+    background: #FFB83D; width: 12px; height: 12px; border-radius: 50%;
+    position: relative;
+}
+.site .editor .editor-tab .dot span::before {
+    content: '';
+    background: #FF4A4A; width: 12px; height: 12px; border-radius: 50%;
+    position: absolute; left: 20px;
+}
+.site .editor .editor-tab .dot span::after {
+    content: ''; 
+    background: #00C543; width: 12px; height: 12px; border-radius: 50%;
+    position: absolute; left: 40px;
+}
+.site .editor .editor-tab .menu {overflow: hidden;}
+.site .editor .editor-tab .menu li {float: left;}
+.site .editor .editor-tab .menu li a {
+    display: block; background: #21252B; color: #8E9093; padding: 11px 32px;
+    font-family: "Poppins", sans-serif;
+}
+.site .editor .editor-tab .menu li.active a {background: #383E4A;  color: #fff;}
+.site .editor .editor-tab .theme {
+    color: #8E9093; margin-left: auto;
+    padding: 11px 32px;
+}
+.site .editor .editor-code {
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    height: 500px; background: #282C34;
+}
 
 
 
@@ -119,6 +264,16 @@ body {
 
 
 
+
+@media (max-width:1400px){
+    .container {width: 100%;}
+    .row {padding: 0 3%;}
+
+}
+
+@media (max-width:700px){
+    .row {padding: 0 20px;}
+}
 
 
 

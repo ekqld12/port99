@@ -213,8 +213,21 @@
                                                     <div class="tap htmlTap">
                                                         <a class="active target"><img src="assets/img/chormeboximg.png" alt="크롬"> Webstandard Site</a>
                                                         <div class="code-content">
-                                                            <pre class="line-numbers"><code class="language-js">
-                                                            </code></pre>
+<pre class="line-numbers"><code class="language-js">//탭메뉴
+//탭 방식으로 화면을 전환하는 인터페이스를 말합니다.
+
+var $tab_list = $(".tab_menu");
+
+$tab_list.find("ul ul").hide();
+$tab_list.find("li.active > ul").show();
+
+function tabMenu(e){
+e.preventDefault();
+var $this = $(this);
+$this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
+}
+$tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+</code></pre>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -272,6 +285,7 @@
                         </div>
                         <!-- //code-view -->
 
+                        
                         <!-- right-site -->
                         <div class="right-site">
                             <div class="right-site-wrap">
@@ -303,12 +317,11 @@
                                 <!-- //code-intro1 -->
                             </div>
                             <!-- //right-site-wrap -->
-                           
                             <!-- code-view -->
-                            <div class="code-view-rigth1">
+                            <div class="code-view-rigth">
                                 <div class="container">
                                     <div class="cv-right-res">
-                                        <!-- chromebox1  -->
+                                        <!-- chromebox  -->
                                         <div class="chromebox1">
                                             <div class="chromewrap1">
                                                 <div class="menu-bar1">
@@ -375,17 +388,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- //chromebox1 -->
+                                        <!-- //chromebox -->
                                     </div>
                                     <div class="cv-left-res">
-                                        <div class="res-title">
-                                            <h2> code view </h2>
-                                        </div>
-                                    
+                                        <h3>code view</h3>
+                                        <div class="container1">
+                                            <div class="button button-1">Neon</div>
+                                            <div class="button button-1">Neon</div>
+                                            <div class="button button-1">Neon</div>
+                                            <div class="button button-1">Neon</div>
+                                            <div class="button button-1">Neon</div>
+                                            <div class="button button-1">Neon</div>
+                                          </div>
                                     </div>
                                 </div>
                             </div>
                         <!-- //code-view -->
+                          
                         </div>
                         <!-- //right-site -->
 

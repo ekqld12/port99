@@ -348,25 +348,31 @@
                                 <div class="tab-menu">
                                     <ul>
                                         <li class="active"><a href="#">공지사항1</a>
-                                            <ul>
-                                                <li><a href="#">첫번쨰 공지사항1 목록입니다.</a></li>
-                                                <li><a href="#">첫번쨰 공지사항1 목록입니다.</a></li>
-                                                <li><a href="#">첫번쨰 공지사항1 목록입니다.</a></li>
-                                            </ul>
+                                            <div class="tab-cont">
+                                                <ul>
+                                                    <li><a href="#">첫번쨰 공지사항1 목록입니다.</a></li>
+                                                    <li><a href="#">첫번쨰 공지사항1 목록입니다.</a></li>
+                                                    <li><a href="#">첫번쨰 공지사항1 목록입니다.</a></li>
+                                                </ul>
+                                            </div>
                                         </li>
                                         <li><a href="#">공지사항2</a>
-                                            <ul style="display: none">
-                                                <li><a href="#">두번쨰공지사항2 목록입니다.</a></li>
-                                                <li><a href="#">두번쨰공지사항2 목록입니다.</a></li>
-                                                <li><a href="#">두번쨰공지사항2 목록입니다.</a></li>
-                                            </ul>
+                                            <div class="tab-cont">
+                                                <ul>
+                                                    <li><a href="#">두번쨰공지사항2 목록입니다.</a></li>
+                                                    <li><a href="#">두번쨰공지사항2 목록입니다.</a></li>
+                                                    <li><a href="#">두번쨰공지사항2 목록입니다.</a></li>
+                                                </ul>
+                                            </div>
                                         </li>
                                         <li><a href="#">공지사항3</a>
-                                            <ul style="display: none">
-                                                <li><a href="#">세번쨰 공지사항3 목록입니다.</a></li>
-                                                <li><a href="#">세번쨰 공지사항3 목록입니다.</a></li>
-                                                <li><a href="#">세번쨰 공지사항3 목록입니다.</a></li>
-                                            </ul>
+                                            <div class="tab-cont">
+                                                <ul>
+                                                    <li><a href="#">세번쨰 공지사항3 목록입니다.</a></li>
+                                                    <li><a href="#">세번쨰 공지사항3 목록입니다.</a></li>
+                                                    <li><a href="#">세번쨰 공지사항3 목록입니다.</a></li>
+                                                </ul>
+                                            </div>  
                                         </li>
                                     </ul>
                                 </div>
@@ -502,17 +508,20 @@
         });
         
         //탭메뉴
-        var $tab_list = $(".tab_menu");
+        let tabBtn = $(".tab-menu > ul > li");
+        let tabCont = $(".tab-cont");
+        tabCont.hide().eq(0).show();
 
-        $tab_list.find("ul ul").hide();
-        $tab_list.find("li.active > ul").show();
-
-        function tabMenu(e){
-            e.preventDefault();
-            var $this = $(this);
-            $this.next("ul").show().parent("li").addClass("active").siblings("li").removeClass("active").find(">ul").hide();
-        }
-        $tab_list.find("ul>li>a").click(tabMenu).focus(tabMenu);
+        tabBtn.click(function(e){
+        e.preventDefault();
+        let target = $(this);         //버튼의 타켓을 변수에 저장
+        let index = target.index();   //버튼의 순서를 변수에 저장
+        // alert(index);
+        tabBtn.removeClass("active"); //버튼의 클래스를 삭제
+        target.addClass("active");    //타켓 버튼의 클래스를 추가
+        tabCont.css("display","none");
+        tabCont.eq(index).css("display","block");
+        });
 
         //배너
         $(".ban").slick({

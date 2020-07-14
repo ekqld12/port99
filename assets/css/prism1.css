@@ -151,7 +151,7 @@ pre[class*="language-"] {
 
 /* Code blocks */
 pre[class*="language-"] {
-    padding: 1em;
+    /* padding: 1em; */
 }
 
 :not(pre) > code[class*="language-"],
@@ -282,7 +282,7 @@ pre[class*="language-"].line-numbers > code {
       }
 
       
-/* .chromebox::-webkit-scrollbar {
+.chromebox::-webkit-scrollbar {
     width: 10px; 
     height: 10px;  
 }
@@ -298,4 +298,4 @@ pre[class*="language-"].line-numbers > code {
 }
 .chromebox::-webkit-resizer {
     background-color: green;
-} */
+}

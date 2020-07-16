@@ -2,7 +2,7 @@
 body {
     font-family: 'Maven Pro', sans-serif;
 }
-/* 헤더 팝업 창 */
+/* 사이드 닷 메뉴 */
 #slidemenu {
     position: fixed;
     top: 0;
@@ -45,7 +45,7 @@ body {
 
 
 
-/* submenu */
+/* 헤더 팝업창 */
 #submenuwrap {
     width: 100%; 
     height: 100vh;

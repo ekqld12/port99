@@ -595,16 +595,1705 @@ $('.slider').slick({
 jsText2.push(`script.js가 사용되지 않았습니다.`)
 
 
+
+let htmlText3 = [];
+let cssText3 = [];
+let jsText3 = [];
+
+
+
+let htmlText4 = [];
+//원스크롤 html
+htmlText4.push(`&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="title" content="seogaandcook"&gt;
+    &lt;meta name="author" content="zzekqls"&gt;
+    &lt;meta name="description" content="서가 앤쿡은 한국에 본사를 둔 S & S Company의 레스토랑 체인입니다."&gt;
+    &lt;meta name="keywords" content="레스토랑"&gt;
+    &lt;title&gt;서가앤쿡&lt;/title&gt;
+
+    &lt;!-- meta --&gt;
+    &lt;meta property="og:type" content="article"&gt;
+    &lt;meta property="og:title" content="서가앤쿡"&gt;
+    &lt;meta property="og:url" content="http://zzekqls.dothome.co.kr"&gt;
+    &lt;!-- &lt;meta property="og:url" content="http://www.seogaandcook.co.kr"&gt; --&gt;
+    &lt;meta property="og:site_name" content="서가앤쿡"&gt;
+    &lt;meta property="og:description" content="좋은 사람들과 함께하는 패밀리 레스토랑, 서가앤쿡입니다. "&gt;
+    &lt;meta name="description" content="좋은 사람들과 함께하는 패밀리 레스토랑, 서가앤쿡입니다. "&gt;
+    &lt;meta property="og:image" content="http://snsbrand.co.kr/sns/img/common/logo.png"&gt;
+    &lt;meta name="naver-site-verification" content="e555f3f31732700400ee5e564385487ec5a05768"/&gt;
+    &lt;meta name="keywords" content="BRAND STORY,MENU,스테이크샐러드(steak salad),파스타(pasta),필라프(pilaf),샐러드(salad),피자(pizza),STORE"&gt;
+
+    &lt;!-- style --&gt;
+    &lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+    &lt;link rel="stylesheet" href="assets/css/reset.css"&gt;
+    &lt;link rel="stylesheet" href="assets/css/swiper.css"&gt;
+
+    &lt;!-- 웹폰트 --&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;669;700;800;900&display=swap" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body style="overflow-y:hidden"&gt;
+&lt;!-- 헤더 팝업창 알림 --&gt;
+&lt;div id="submenuwrap"&gt;
+    &lt;ul class="submenu"&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;about us&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;about us&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;work&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;work&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;S&S story&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;s&s story&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;brand&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;all brand&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;서가앤쿡&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;소싯적&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;토끼정&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;숨쉬는 순두부&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;people&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;people&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;community&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;news&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;s&s timeline&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;event&lt;/a&gt;
+         &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="#" class="close"&gt;
+        &lt;svg viewBox="0 0 24 24"&gt;
+       &lt;path d="M14.1,12L22,4.1c0.6-0.6,0.6-1.5,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L12,9.9L4.1,2C3.5,1.4,2.5,1.4,2,2C1.4,2.5,1.4,3.5,2,4.1
+L9.9,12L2,19.9c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l7.9-7.9l7.9,7.9c0.3,0.3,0.7,0.4,1.1,0.4
+s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/&gt;
+        &lt;/svg&gt;
+     &lt;/a&gt;
+ &lt;/div&gt;
+    
+
+ &lt;!-- 사이드 메뉴 만들기 --&gt;
+ &lt;div id="slidemenu"&gt;
+     &lt;div class="slidemenu sidmenu"&gt;
+         &lt;a href="#banner" class="active1"&gt;&lt;/a&gt;
+         &lt;a href="#contentwrap"&gt;&lt;/a&gt;
+         &lt;a href="#contwrap2"&gt;&lt;/a&gt;
+         &lt;a href="#contwrap3"&gt;&lt;/a&gt;
+         &lt;a href="#joy"&gt;&lt;/a&gt;
+     &lt;/div&gt;
+ &lt;/div&gt;
+
+
+    &lt;div class="wrap"&gt;
+        &lt;div class="header bgs" style="position: fixed;"&gt;
+            &lt;div class="header area"&gt;
+                &lt;a href="#"&gt;
+                    &lt;img src="assets/icons/logo.png" alt="서가앤쿡 로고"&gt;
+                &lt;/a&gt;
+                &lt;div class="menus"&gt;
+                    &lt;a href="#" class="topmeau on"&gt;about us&lt;/a&gt;
+                    &lt;a href="#" class="topmeau"&gt;work&lt;/a&gt;
+                    &lt;a href="#" class="topmeau"&gt;S&S STORY&lt;/a&gt;
+                    &lt;a href="#" class="topmeau"&gt;BRAND&lt;/a&gt;
+                    &lt;a href="#" class="topmeau"&gt;PEOPLE&lt;/a&gt;
+                    &lt;a href="#" class="topmeau"&gt;COMMUNITY&lt;/a&gt;
+                &lt;/div&gt;
+                
+                &lt;div class="sidemenu"&gt;
+                    &lt;a href="#" class="side"&gt;
+                        &lt;img src="assets/icons/top_panel.png" alt="상단 메뉴"&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- //header --&gt;
+
+
+        &lt;section id="banner"&gt;
+            &lt;div class="swiper-container"&gt;
+                &lt;div class="swiper-wrapper"&gt;
+                    &lt;div class="swiper-slide"&gt;
+                        &lt;img src="assets/img/banner1" alt="음식"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="swiper-slide"&gt;
+                        &lt;img src="assets/img/banner2.jpg" alt="음식"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="swiper-slide"&gt;
+                        &lt;img src="assets/img/banner3.jpg" alt="음식"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="swiper-slide"&gt;
+                        &lt;img src="assets/img/banner4.jpg" alt="음식"&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+                &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+                &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="btn-quick"&gt;&lt;/div&gt;
+
+            &lt;div class="main_visual on"&gt;
+                &lt;div class="vamtitle vamt-align"&gt;
+                    &lt;div class="tit1 tit"&gt;where the&lt;/div&gt;
+                    &lt;div class="tit2 tit"&gt;tasty story begins&lt;/div&gt;
+                    &lt;div class="tit3 tit"&gt;맛있는 이야기가 시작되는 곳&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;a href="#contentwrap" class="marrow move"&gt;
+                    &lt;div class="con"&gt;
+                        &lt;img src="assets/icons/main_v_arrow.png" alt="마우스"&gt;
+                    &lt;/div&gt;
+                    &lt;div class="con1"&gt;
+                        &lt;img src="assets/icons/main_v_dot.png" alt="마우스"&gt;
+                    &lt;/div&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //banner --&gt;
+
+
+        &lt;section id="contentwrap"&gt;
+            &lt;div class="content-header"&gt;
+                &lt;div class="content-title"&gt;
+                    &lt;div class="en1"&gt;Create a person's story&lt;/div&gt;
+                    &lt;div class="en2"&gt; S&S는 사람과 공간이 함께 어울릴 수 있도록 더 풍요롭고 더 맛있는 기회와 가치를 제공합니다.&lt;/div&gt;
+                    &lt;div class="tabmenu"&gt;
+                        &lt;a href="#" class="t1 active"&gt;&lt;/a&gt;
+                        &lt;a href="#" class="t2"&gt;&lt;/a&gt;
+                        &lt;a href="#" class="t3"&gt;&lt;/a&gt;
+                        &lt;a href="#" class="t4"&gt;&lt;/a&gt;
+                    &lt;/div&gt;
+                    &lt;div class="story time5"&gt;
+                        &lt;div class="caroufredsel_wrapper"&gt;
+                            &lt;div class="sarea"&gt;
+                                &lt;div class="items" alt="토끼정" style="width: 1920px;"&gt;
+                                    &lt;div class="s1"&gt;
+                                        &lt;div class="zoomimg"&gt;
+                                            &lt;div class="align"&gt;
+                                                &lt;div class="ent1"&gt;brand&lt;/div&gt;
+                                                &lt;div class="ent2"&gt;토끼정 당신과 나의 마음이 함께 머무르는 곳&lt;/div&gt;
+                                            &lt;/div&gt;                                     
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="s2"&gt;
+                                        &lt;div class="zoomimg"&gt;
+                                            &lt;div class="align"&gt;
+                                                &lt;div class="ent3"&gt;MENU&lt;/div&gt;
+                                                &lt;div class="ent4"&gt;일식과 한식의조화로 한국인의 입맛을 재해석 하다&lt;/div&gt;
+                                            &lt;/div&gt;   
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                    &lt;div class="s3"&gt;
+                                        &lt;div class="zoomimg"&gt;
+                                            &lt;div class="align"&gt;
+                                                &lt;div class="ent5"&gt;CONCEPT&lt;/div&gt;
+                                                &lt;div class="ent6"&gt;아름다운 분위기에 맛을 더하다&lt;/div&gt;
+                                            &lt;/div&gt;   
+                                        &lt;/div&gt;
+                                    &lt;/div&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //contentwrap --&gt;
+
+        &lt;section id="contwrap2"&gt;
+            &lt;div class="title1"&gt;
+                &lt;div class="title2"&gt;
+                    &lt;div class="title3"&gt;
+                        &lt;div class="tit"&gt;
+                            &lt;div class="titimg"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="tit4"&gt;
+                            &lt;h2&gt;S&S STORY&lt;/h2&gt;
+                            &lt;p class="span"&gt;OUR TIME&lt;br&gt;IN THE SAME TIME&lt;/p&gt;
+                            &lt;p class="span1"&gt;우리는 그때 그곳에서처럼 당신을 기다립니다.&lt;br&gt;맛있는 음식,다정하게 내이름을 부르는 사람,마주보며 웃는 당신이 있는 곳&lt;br&gt;이곳은S&S입니다.&lt;/p&gt;
+                            &lt;a href="#"&gt;&lt;img src="assets/img/view_more.jpg" alt="버튼"&gt;&lt;/a&gt;
+                        &lt;/div&gt;
+                        &lt;div class="tit5"&gt;
+                            &lt;img src="assets/icons/main_ourbg_icn.png" alt="꽃"&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+        &lt;!-- //contwrap2 --&gt;
+
+
+        &lt;section id="contwrap3"&gt;
+            &lt;div class="title4"&gt;
+                &lt;div class="title5"&gt;
+                    &lt;div class="tltle6"&gt;
+                        &lt;div class="tit_1"&gt;
+                            &lt;div class="tit_img"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="tit6"&gt;
+                            &lt;h2&gt;PEOPLE&lt;/h2&gt;
+                            &lt;p class="span2"&gt;PEOPLE &&lt;br&gt;S&S&lt;/p&gt;
+                            &lt;p class="span3"&gt;경험과 열정, 문화와 음식,생각의 반전까지S&S는&lt;br&gt;맛있는 한 그릇,행복한 시간을 만들기 위해 열정을 다합니다.&lt;br&gt;경험과 문화 그 사이에 열정을 다하는 사람이 있습니다.&lt;/p&gt;
+                            &lt;a href="#"&gt;&lt;img src="assets/img/view_more.jpg" alt="버튼"&gt;&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+         &lt;!-- //contwrap3 --&gt;
+
+         &lt;section id="joy"&gt;
+             &lt;div class="joy1"&gt;
+                 &lt;div class="joybody"&gt;
+                    &lt;div class="joytitle"&gt;
+                        &lt;h2&gt;we&lt;br&gt;share&lt;br&gt;joy&lt;/h2&gt;
+                    &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle1"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle2"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle3"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle4"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle5"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle6"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle7"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle8"&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class="dddd"&gt;
+                            &lt;div class="ddd joytitle9"&gt;&lt;/div&gt;
+                        &lt;/div&gt;  
+                &lt;/div&gt;
+             &lt;/div&gt;
+         &lt;/section&gt;
+         &lt;!-- //joy --&gt;
+        &lt;/div&gt;
+        &lt;!-- //wrap --&gt;
+
+         &lt;footer id="footer"&gt;
+             &lt;div class="center1"&gt;
+                 &lt;ul class="footerhed"&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/icons/footer1.png" alt="연결고리"&gt; 브랜드 제휴 문의&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/icons/footer2.png" alt="연결고리"&gt; 가맹문의&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/icons/footer3.png" alt="연결고리"&gt; 고객문의&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+             &lt;/div&gt;
+             &lt;div class="center2"&gt;
+                 &lt;ul class="footerbot"&gt;
+                     &lt;li class="strong"&gt;이용약관 &lt;span&gt;&lt;/span&gt; 개인정보취급방침 &lt;span&gt;&lt;/span&gt; 식구채용&lt;/li&gt;
+                     &lt;li class="mid"&gt;(주)에스앤에스컴퍼니대구광역시수성구두산동280-3 2층 &lt;span&gt;&lt;/span&gt; 대표전화:070-4610-2580 &lt;span&gt;&lt;/span&gt; 대표자:이성민 &lt;span&gt;&lt;/span&gt; 고객정보책임 담당자: 김지호 &lt;span&gt;&lt;/span&gt; 사업자등록번호:502-86-10105&lt;/li&gt;
+                     &lt;li class="footerbottom"&gt;Copyright (c) &lt;span&gt;&lt;/span&gt; 2013 (주) 에스앤에스컴퍼니 All Rights reserved.&lt;/li&gt;
+                 &lt;/ul&gt;
+             &lt;/div&gt;
+         &lt;/footer&gt;
+         &lt;!-- //footer --&gt;
+     &lt;!-- script --&gt;
+     &lt;script src="assets/js/jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/swiper.min.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/custom.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/jquery-ui.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;`)
+//헤더 팝업창 html
+htmlText4.push(`&lt;!-- 헤더 팝업창 알림 --&gt;
+&lt;div id="submenuwrap"&gt;
+    &lt;ul class="submenu"&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;about us&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;about us&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;work&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;work&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;S&S story&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;s&s story&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;brand&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;all brand&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;서가앤쿡&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;소싯적&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;토끼정&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;숨쉬는 순두부&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;people&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;people&lt;/a&gt;
+         &lt;/li&gt;
+         &lt;li class="title"&gt;
+             &lt;a href="#"&gt;&lt;span&gt;community&lt;/span&gt;&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;news&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;s&s timeline&lt;/a&gt;
+             &lt;a href="#" class="sub"&gt;event&lt;/a&gt;
+         &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="#" class="close"&gt;
+        &lt;svg viewBox="0 0 24 24"&gt;
+       &lt;path d="M14.1,12L22,4.1c0.6-0.6,0.6-1.5,0-2.1c-0.6-0.6-1.5-0.6-2.1,0L12,9.9L4.1,2C3.5,1.4,2.5,1.4,2,2C1.4,2.5,1.4,3.5,2,
+       4.1L9.9,12L2,19.9c-0.6,0.6-0.6,1.5,0,2.1c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4l7.9-7.9l7.9,7.9c0.3,0.3,0.7,0.4,1.1,0.4
+s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L14.1,12z"/&gt;
+        &lt;/svg&gt;
+     &lt;/a&gt;
+ &lt;/div&gt;`)
+// 닷메뉴 html
+htmlText4.push(`&lt;!-- 사이드 닷 메뉴 만들기 --&gt;
+&lt;div id="slidemenu"&gt;
+   &lt;div class="slidemenu sidmenu"&gt;
+       &lt;a href="#banner" class="active1"&gt;&lt;/a&gt;
+       &lt;a href="#contentwrap"&gt;&lt;/a&gt;
+       &lt;a href="#contwrap2"&gt;&lt;/a&gt;
+       &lt;a href="#contwrap3"&gt;&lt;/a&gt;
+       &lt;a href="#joy"&gt;&lt;/a&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+`)
+// 스케일 html
+htmlText4.push(`&lt;!-- 스케일 들어간 부분 --&gt;
+&lt;section id="joy"&gt;
+&lt;div class="joy1"&gt;
+    &lt;div class="joybody"&gt;
+       &lt;div class="joytitle"&gt;
+           &lt;h2&gt;we&lt;br&gt;share&lt;br&gt;joy&lt;/h2&gt;
+       &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle1"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle2"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle3"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle4"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle5"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle6"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle7"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle8"&gt;&lt;/div&gt;
+           &lt;/div&gt;
+           &lt;div class="dddd"&gt;
+               &lt;div class="ddd joytitle9"&gt;&lt;/div&gt;
+           &lt;/div&gt;  
+   &lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- //joy --&gt;`)
+
+let cssText4 = [];
+// 원스크롤 css
+cssText4.push(`@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;669;700;800;900&display=swap');
+body {
+    font-family: 'Maven Pro', sans-serif;
+}
+/* 헤더 팝업 창 */
+#slidemenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    width: 32px;
+    height: 180px;
+    margin: auto;
+    font-size: 1.2em;
+    z-index: 10;
+    text-align: center;
+}
+#slidemenu .sidmenu {
+    width: 32px;
+    height: auto;
+    padding: 10px 0;
+    background-color: rgba(51,51,51,0.5);
+    border-radius: 20px;
+}
+.slidemenu {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#slidemenu a.active1 {
+    width: 10px;
+    height: 10px;
+    background: url(../icons/page_on.png) center center no-repeat;
+}
+#slidemenu a {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: url(../icons/page_off.png) center center no-repeat;
+}
+
+
+
+/* submenu */
+#submenuwrap {
+    width: 100%; 
+    height: 100vh;
+    border-top: 1px solid #333333;
+    position: absolute;
+    top: -150vh;
+    left: 0;
+    z-index: 300;
+}
+.submenu {
+    padding-top: 150px;
+    width: 100%; height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.9);
+    align-items: flex-start;
+    z-index: 300;
+}
+
+.submenu .title {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.submenu .title a {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.7;
+    padding: 20px;
+}
+.submenu .title span:hover {
+    border-bottom: 2px solid #fff;
+}
+.submenu .title .sub{
+    color: #999999;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 0;
+    text-transform: uppercase;
+}
+.submenu .title span{
+    color:#fff;
+}
+.submenu .content {
+
+}
+.submenu .content ul{
+    font-size: 18px;
+    color: #999;
+}
+#submenuwrap .close {
+    z-index: 300;
+    position: absolute; top: 25px; right: 35px;
+}
+#submenuwrap .close svg {
+    width: 40px; height: 40px; fill: #fff;
+    vertical-align: top;
+}
+
+
+
+
+
+/* 사이드 메뉴 만들기 */
+
+
+/* 헤더 */
+.wrap {
+}
+
+.header {
+    width: 100%; height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    min-width: 1100px;
+}
+.header .area {
+    width: 100%; 
+    height: 100%;
+    position: relative;
+    background-color: rgba(0,0,0,0.7);
+    animation: fadeInDown 3s ;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wrap .area img {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    width: 79px; height: 40px;
+}
+
+/* 탑 메뉴 */
+.header .area .menus {
+    width: 810px; height: 100px;
+    margin: auto;
+    padding-top: 31px;
+    position: relative;
+}
+.menus a .topmeau {
+    color: #fff;
+}
+.menus .on {
+    color: #fff;
+    /* text-decoration: underline; */
+}
+.menus .topmeau {
+
+/* position: absolute; top: 50%; left: 50%; */
+}
+.header .area .menus a {
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    font-family: 'Maven Pro';
+    text-transform: uppercase;
+    margin-right: 60px;
+}
+.header .area .menus a:last-child {
+    margin-right: 0;
+}
+
+
+
+/* sidemenu */
+.sidemenu {
+    
+}
+.side {
+}
+.sidemenu a {
+  
+}
+.area .side img{
+    position: absolute; left: 96%; top: 26px;
+    width: 40px; height: 30px;
+    
+}
+
+/* banner */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-wrapper {
+    width: 100%; height: 100vh;
+    transition: transform 1s cubic-bezier(1, 0.265, 0, 1.225) 0s;
+}
+.swiper-slide {}
+.swiper-slide img{
+    width: 100%; height: 100%;
+}
+
+
+/* 글씨 부분 */
+.main_visual {
+    transition-timing-function: ease;
+}
+.main_visual .on {
+    width: 100%;
+    height: 100%;
+}   
+.main_visual .vamtitle {
+    text-transform: uppercase;
+    text-align: center;
+    min-width: 1200px;
+}
+.vamt-align {
+    position: absolute; top: -100%; left: 17%;
+    top: 35%;
+    z-index: 1;
+}
+.vamtitle .tit1{
+    color: #fff;
+    font-size: 80px;
+    height: 100px;
+    font-weight: 400;
+    font-family: 'Maven Pro';
+}
+.vamtitle .tit2{
+    display: inline-block;
+    color: #fff;
+    font-size: 80px;
+    font-weight: 700;
+    margin-top: 20px;
+    font-family: 'Maven Pro';
+}
+.vamtitle .tit3{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 30px;
+}
+.tit {
+    animation: fadeInDown 3s ;
+    /* animation-name: fadeInDown; */
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 마우스 이미지 */
+.marrow {
+    z-index: 1;
+    position: absolute;
+    left: 50%; bottom: 12%;
+    animation: mainItem 2s ease-in-out infinite alternate;
+}
+.marrow .con {
+    position: relative;
+    height: 130px;
+}
+.con img {
+    vertical-align: middle;
+    width: 22px; height: 130px;
+}
+.con1 img {
+    position: absolute; left: 46%; top: 48%;
+    width: 2px; height: 4px;
+}
+@keyframes mainItem {
+    0% {
+        transform: translate(0,-10px);
+    }
+    90% {
+        transform: translate(0,125%);
+    }
+    100% {
+        transform: translate(0, 200%);
+        opacity: 0;
+    }
+}
+
+/* content-wrap */
+#contentwrap {
+    max-width: 100%;
+    overflow: hidden;
+    height: 100vh;
+    background: #fff;
+}
+.content-header{}
+.content-title{
+    text-transform: uppercase;
+    color: #222;
+    text-align: center;
+
+}
+.content-title .en1{
+    font-family: 'Maven Pro', sans-serif;
+    margin-top: 100px;
+    font-size: 50px;
+    font-weight: 400px;
+}
+.content-title .en2{
+    font-family: 'ygpstit', sans-serif;
+    font-size: 18px;
+    color: #888;
+    margin-top: 10px;
+    margin-bottom: 48px;
+    font-weight: 300;
+}
+
+/* content tabmenu */
+.tabmenu {
+    width: 100%; height: 90px;
+    border-top: 1px solid #e6e6e6;
+}
+.tabmenu a {
+    width: 300px;
+    display: inline-block;
+    height: 81px;
+    text-align: right;
+}
+.tabmenu .active {
+    border-top: 2px solid #000;
+}
+.tabmenu a::after {
+    content: '|';
+    color: #dfdfdf;
+    font-size: 20px;
+    line-height: 81px;
+    font-weight: 300px;
+}
+.tabmenu a:last-child::after {
+    content: '|';
+    color: #fff;
+    font-size: 20px;
+    line-height: 81px;
+    font-weight: 300px;
+}
+.tabmenu a:nth-child(1) {
+    background-image: url(../icons/m_tab01_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.tabmenu a:nth-child(2) {
+    background-image: url(../icons/m_tab02_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.tabmenu a:nth-child(3) {
+    background-image: url(../icons/m_tab03_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.tabmenu a:nth-child(4) {
+    background-image: url(../icons/m_tab04_on.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a:link, a:visited {
+    color: #000;
+}
+
+
+
+
+/* 이미지 부분 */
+.story {
+    min-width: 1200px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+
+}
+
+.caroufredsel_wrapper {
+    display: block;
+    text-align: start;
+    float: none;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: auto;
+    width: 1920px;
+    height: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.sarea {
+    text-align: left;
+    float: none;
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    margin: 0;
+    width: 17280px;
+    height: 600px;
+    z-index: auto;
+}
+
+.zoomimg {
+    position: relative;
+    transform: scale(1);
+}
+.s1 {
+    overflow: hidden;
+}
+.s2 {
+    overflow: hidden;
+}
+.s3 {
+    overflow: hidden;
+}
+.items .zoomimg:hover {
+    transform: scale(1.1);
+
+    transition: all 0.4s ease-in-out;
+}
+.zoomimg:hover .align {
+    width: 100%;
+    height: 3000px;
+    background-color: rgba(0,0,0,0.7);
+    transition: all 0.6s ease-in-out;
+}
+.story .sarea .items .s1 {  
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 600px;
+    overflow: hidden;
+    z-index: 11;
+}
+.s1 .zoomimg {
+    background-image: url(../icons/main_story_v0301.png);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+.story .sarea .items .s2 {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+}
+.s2 .zoomimg {
+    background-image: url(../icons/main_story_v0302.png);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+.story .sarea .items .s3 {
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 300px;
+    overflow: hidden;
+}
+.s3 .zoomimg {
+    background-image: url(../icons/main_story_v0303.png);
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+}
+
+
+#contentwrap .s4 {
+    height: 1vh;
+}
+.align {
+    height: 35px;
+}
+.ent1 {
+    position: absolute; left: 45%; top: 45%;
+    z-index: 10;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+.ent2 {
+    position: absolute; left: 32%; top: 51%;
+    font-family: 'ygpstit', sans-serif;
+    opacity: .8;
+    font-size: 18px;
+    margin-top: 13px;
+    color: #fff;
+}
+.align .ent3 {
+    position: absolute; left: 44%; top: 37%;
+    z-index: 10;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+.align .ent4 {
+    position: absolute; left: 27%; top: 51%;
+    font-family: 'ygpstit', sans-serif;
+    opacity: .8;
+    font-size: 18px;
+    margin-top: 13px;
+    color: #fff;
+}
+.align .ent5 {
+    position: absolute; left: 42%; top: 37%;
+    z-index: 10;
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+.align .ent6 {
+    position: absolute; left: 36%; top: 51%;
+    font-family: 'ygpstit', sans-serif;
+    opacity: .8;
+    font-size: 18px;
+    margin-top: 13px;
+    color: #fff;
+}
+
+/* contwrap2 */
+#contwrap2 {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100vh;
+}
+.title1 {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+}
+.title2 {
+    width: 100%;
+    min-width: 1200px;
+    height: 100%;
+    background-color: #f5f2ed;
+    position: relative;
+    padding-top: 1%;
+}
+
+.title3 {
+    width: 100%;
+    height: 570px;
+    min-width: 1200px;
+    max-width: 1680px;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tit {
+    padding-left: 100px;
+    overflow: hidden;
+}
+.titimg {
+    background-image: url(../icons/main_ourtime.png);
+    width: 740px;
+    height: 550px;
+}
+.tit4 {
+    z-index: 1;
+    padding-left: 100px;
+    position: absolute; top: 16%; left: 50%;
+    float: right;
+}
+.tit4 h2 {
+    font-size: 25px;
+    color: #222222;
+    font-weight: 400;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+.tit4 .span {
+    font-size: 50px;
+    margin-top: 20px;
+    color: #333333;
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: 'Maven Pro', sans-serif;
+
+}
+.tit4 .span1 {
+    font-size: 18px;
+    color: #888888;
+    margin-top: 30px;
+    line-height: 1.7;
+    font-weight: 300;
+}
+.tit4 img {
+    width: 170px;
+    height: 50px;
+    font-size: 13px;
+    background-color: #333333;
+    color: #fff;
+    margin-top: 35px;
+}
+.tit5 img {
+    position: absolute; top: 20%; left: 64%;
+    width: 700px;
+    height: 600px;
+}
+
+
+/* contwrap3 */
+#contwrap3 {
+    padding-top: 80px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+  .title4 {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+  }
+  .title5 {
+      width: 100%;
+      min-width: 1200px;
+      height: 100%;
+      background-image: url(../icons/main_pebg.png);
+      position: relative;
+  }
+  
+  .title6 {
+      width: 100%;
+      height: 570px;
+      min-width: 1200px;
+      max-width: 1680px;
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  .tit_1 {
+      display: flex;
+      padding-left: 100px;
+      overflow: hidden;
+  }
+  .tit_img {
+      position: absolute; top: 28%; left: 50%;
+      background-image: url(../icons/main_people.png);
+      width: 740px;
+      height: 540px;
+  }
+  .tit6 {
+      z-index: 1;
+      padding-left: 100px;
+      position: absolute; top:31%; left: 15%;  
+      float: left;
+  }
+  .tit6 h2 {
+      font-size: 25px;
+      color: #222222;
+      font-weight: 400;
+      font-family: 'Maven Pro', sans-serif;
+  
+  }
+  .tit6 .span2 {
+      font-size: 50px;
+      margin-top: 20px;
+      color: #000000;
+      line-height: 1.2;
+      font-weight: 500;
+      font-family: 'Maven Pro', sans-serif;
+  
+  }
+  .tit6 .span3 {
+      font-size: 18px;
+      color: #888888;
+      margin-top: 30px;
+      line-height: 1.7;
+      font-weight: 300;
+  }
+  .tit6 img {
+      width: 170px;
+      height: 50px;
+      font-size: 13px;
+      background-color: #333333;
+      color: #fff;
+      margin-top: 35px;
+  }
+
+    /* joy*/
+    #joy {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../icons/bg_joy.png);
+        background-repeat: no-repeat;
+        background-position: 270px 230px;
+        background-color: rgba(230,231,226);
+    }
+    .joy1 {
+        /* width: 100%;
+        height: 100%; */
+    }
+    .joybody {
+        display: grid;
+        grid-template-columns: repeat(5,328px);
+        grid-template-rows: repeat(2,328px);
+        justify-content: center;
+        width: 100%;
+        height: 800px;
+        padding-top: 110px;
+        position: relative;
+        overflow: hidden;
+    } 
+    .joytitle {
+    }
+    .joytitle h2 {
+        line-height: normal;
+        width: 328px; height: 210px;
+        font-size: 60px;
+        color: #333333;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .joytitle1 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../icons/thumb-31294850.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle2 {
+        width: 328px; height: 328px;;
+        background: #fff;
+        background-image: url(../icons/joyimg2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle3 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../icons/joyimg3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle4 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../icons/joyimg4.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle5 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../icons/joyimg5.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle6 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../img/joyjpg1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle7 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../icons/joyimg6.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle8 {
+        width: 328px; height: 328px;
+        background: #fff;
+        background-image: url(../icons/joyimg7.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .joytitle9 {
+        width: 328px; height: 328px;
+        background-image: url(../icons/joyimg8.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .dddd{
+        overflow: hidden;
+    }
+    .ddd {
+        position: relative;
+        transform: scale(1.0);
+    }
+    .ddd::before { 
+       content: "";
+       width: 328px;
+       height: 328px;
+       position: absolute;
+       top: 0px;
+       left: 0px;
+       background-color: rgba(0,0,0,0.7);
+       opacity: 0;
+    }
+    .ddd:hover::before {
+        cursor: pointer;
+        opacity: 1;
+        transition: all 0.6s ease-in-out;
+    }
+    .ddd:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease-in-out;
+    }
+    /* footer */
+    #footer {
+        font-family: 'Nanum Barun Gothic';
+        width: 100%; height: 250px;
+    }
+    .center1 {
+        width: 100%; height: 80px;
+        overflow: hidden;      
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #ededed;
+    }
+    .footerhed {
+        width: 600px;
+        margin: 0 auto;
+    }
+    .footerhed li {
+        float: left;
+    }
+    .footerhed li a {
+        padding-left: 50px;
+        font-size: 16px;
+        color: #666666;
+    }
+    .footerhed li img{
+        width: 25px; height: 25px;
+    }
+
+    .center2 {
+        position: relative;
+        width: 100%; height: 100px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .footerbot {
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .footerbot .strong {
+        font-size: 14px;
+        color: #666666;
+    }
+    .strong span::after {
+        content: '|';
+        padding-right: 8px;
+        padding-left: 8px;
+        color: #d9d9d9;
+        font-weight: 300;
+        font-size: 12px;
+    }
+    .footerbot .mid {
+        margin-top: 20px;
+        color: #999999;
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: -1px;
+    }
+    .mid span::after {
+        content: '|';
+        padding-right: 6px;
+        padding-left: 6px;
+        color: #d9d9d9;
+        font-weight: 300;
+        font-size: 12px;
+    }
+    .footerbot .footerbottom {
+        color: #cccccc;
+        font-size: 13px;
+        margin-top: 15px;
+        font-weight: 300;
+    }
+    .footerbottom span::after {
+        content: '|';
+        padding-right: 4px;
+        padding-left: 2px;
+        color: #d9d9d9;
+        font-weight: 300;
+        font-size: 12px;
+    }`)
+//헤더 팝업창 css
+cssText4.push(`/* 헤더 팝업창 */
+#submenuwrap {
+    width: 100%; 
+    height: 100vh;
+    border-top: 1px solid #333333;
+    position: absolute;
+    top: -150vh;
+    left: 0;
+    z-index: 300;
+}
+.submenu {
+    padding-top: 150px;
+    width: 100%; height: 100vh;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.9);
+    align-items: flex-start;
+    z-index: 300;
+}
+
+.submenu .title {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+.submenu .title a {
+    color: #fff;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.7;
+    padding: 20px;
+}
+.submenu .title span:hover {
+    border-bottom: 2px solid #fff;
+}
+.submenu .title .sub{
+    color: #999999;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.7;
+    padding: 0;
+    text-transform: uppercase;
+}
+.submenu .title span{
+    color:#fff;
+}
+.submenu .content {
+
+}
+.submenu .content ul{
+    font-size: 18px;
+    color: #999;
+}
+#submenuwrap .close {
+    z-index: 300;
+    position: absolute; top: 25px; right: 35px;
+}
+#submenuwrap .close svg {
+    width: 40px; height: 40px; fill: #fff;
+    vertical-align: top;
+}`)
+//닷 메뉴 css
+cssText4.push(`/* 사이드 닷 메뉴 */
+#slidemenu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 20px;
+    width: 32px;
+    height: 180px;
+    margin: auto;
+    font-size: 1.2em;
+    z-index: 10;
+    text-align: center;
+}
+#slidemenu .sidmenu {
+    width: 32px;
+    height: auto;
+    padding: 10px 0;
+    background-color: rgba(51,51,51,0.5);
+    border-radius: 20px;
+}
+.slidemenu {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#slidemenu a.active1 {
+    width: 10px;
+    height: 10px;
+    background: url(../icons/page_on.png) center center no-repeat;
+}
+#slidemenu a {
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: url(../icons/page_off.png) center center no-repeat;
+}`)
+//스케일 css
+cssText4.push(`/* 스케일 들어간 부분*/
+#joy {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../icons/bg_joy.png);
+    background-repeat: no-repeat;
+    background-position: 270px 230px;
+    background-color: rgba(230,231,226);
+}
+.joy1 {
+    /* width: 100%;
+    height: 100%; */
+}
+.joybody {
+    display: grid;
+    grid-template-columns: repeat(5,328px);
+    grid-template-rows: repeat(2,328px);
+    justify-content: center;
+    width: 100%;
+    height: 800px;
+    padding-top: 110px;
+    position: relative;
+    overflow: hidden;
+} 
+.joytitle {
+}
+.joytitle h2 {
+    line-height: normal;
+    width: 328px; height: 210px;
+    font-size: 60px;
+    color: #333333;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.joytitle1 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../icons/thumb-31294850.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle2 {
+    width: 328px; height: 328px;;
+    background: #fff;
+    background-image: url(../icons/joyimg2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle3 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../icons/joyimg3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle4 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../icons/joyimg4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle5 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../icons/joyimg5.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle6 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../img/joyjpg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle7 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../icons/joyimg6.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle8 {
+    width: 328px; height: 328px;
+    background: #fff;
+    background-image: url(../icons/joyimg7.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.joytitle9 {
+    width: 328px; height: 328px;
+    background-image: url(../icons/joyimg8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.dddd{
+    overflow: hidden;
+}
+.ddd {
+    position: relative;
+    transform: scale(1.0);
+}
+.ddd::before { 
+   content: "";
+   width: 328px;
+   height: 328px;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   background-color: rgba(0,0,0,0.7);
+   opacity: 0;
+}
+.ddd:hover::before {
+    cursor: pointer;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+}
+.ddd:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+}`)
+
+
+
+let jsText4 = [];
+// 원스크롤 js
+jsText4.push(`/*원스크롤 js*/
+(function($){
+    $.aniPage=function(e,type){
+        $("#section > div").height($(window).height());
+        if(e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0){
+            
+            $.subtr = $(window).scrollTop()-$(window).height();
+            if($(window).scrollTop() > 0){
+                if($(window).scrollTop() % $(window).height() > 0){
+                    $.subtr = $(window).scrollTop()-($(window).scrollTop() % $(window).height());
+                }
+            }
+            
+            $("body, html").animate({scrollTop:$.subtr},700,function(){$.aniOk = 0;
+            });
+        }else{				
+            
+            $.addit = $(window).scrollTop()+$(window).height();
+            if($(window).scrollTop() > 0){
+                if($(window).scrollTop() % $(window).height() > 0){
+                    $.addit = $(window).scrollTop()-($(window).scrollTop() % $(window).height())+$(window).height();
+                }
+            }
+            
+            $("body, html").animate({scrollTop:$.addit},700,function(){$.aniOk = 0;
+                // $("body, html").animte({})
+            });
+        }
+    };
+})(jQuery);
+$(function(){
+    $("#section > div").height($(window).height());
+    $.aniOk=0;
+    $(window).scrollTop(0);
+    $("#section > div").delay(30000)
+});
+$(document).on("mousewheel DOMMouseScroll",function(e){
+    e.preventDefault();
+    if($.aniOk == 0){
+        $.aniPage(e,e.type);
+        $.aniOk = 1;
+    }
+});
+</script>`)
+//헤더 팝업창 js
+jsText4.push(`/*헤더 팝업창 js*/
+$(".side img").click(function(){
+    $("#submenuwrap").delay(300).animate({top : "0vh"},1000,"easeInOutCirc")
+    $("#submenuwrap").css("z-index","3000")
+})
+$(".close").click(function(){
+    $("#submenuwrap").delay(300).animate({top : "-300vh"},1000,"easeInOutCirc")
+})`)
+//닷 메뉴 js
+jsText4.push(`/*닷 메뉴js*/
+let dot = $("#slidemenu > div > a")
+let cont = $(".wrap > section")
+
+dot.click(function(e){
+ e.preventDefault();
+ let target = $(this)
+ let index = target.index();
+ let section = cont.eq(index);
+ let ottset = section.offset().top;
+ 
+ $("html, body").delay(200).animate({scrollTop : ottset},1000,"swing")
+ });
+
+ $(window).scroll(function(){
+ let wScroll = $(this).scrollTop() + $(window).height()/2;
+ // let wScrolle = 
+ if(wScroll >= cont.eq(0).offset().top ){
+     dot.eq(0).addClass("active1").siblings().removeClass("active1");
+ }
+ 
+ if(wScroll >= cont.eq(1).offset().top){
+     dot.eq(1).addClass("active1").siblings().removeClass("active1");
+ }
+ 
+ if(wScroll >= cont.eq(2).offset().top){
+     dot.eq(2).addClass("active1").siblings().removeClass("active1");
+ }
+ 
+ if(wScroll >= cont.eq(3).offset().top){
+     dot.eq(3).addClass("active1").siblings().removeClass("active1");
+ }
+ 
+ if(wScroll >= cont.eq(4).offset().top){
+     dot.eq(4).addClass("active1").siblings().removeClass("active1");
+ }
+ show()
+});
+`)
+//스케일 js
+jsText4.push(`script.js가 사용되지 않았습니다.`)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 버튼 클릭시 코드 영역 변경해주기
 let tabBtn1 = $(".hover_wrap");
 let tabBtn2 = $(".hover_button");
 let tabBtn3 = $(".button1");
+let tabBtn4 = $(".button2");
 
 // 제목 바뀌게 해주기
 let tabInfo1 = $(".site-info > .site01");
 let tabInfo2 = $(".site-info > .site02");
 let tabInfo3 = $(".site-info > .site03");
 let tabInfo4 = $(".site-info > .site04");
+
+
 
 
 // 버튼 클릭시 글씨 바꿔주는 부분
@@ -644,7 +2333,14 @@ tabBtn3.click(function(){
     tabInfo3.siblings().css("display","none").css({opacity:'0'});
     tabInfo3.eq(index).show().animate({opacity:'1'},1000);
 })
-
+tabBtn4.click(function(){
+    let target = $(this);
+    let index= target.index();
+    tabBtn4.siblings().removeClass("active");
+    target.addClass("active");
+    tabInfo4.siblings().css("display","none").css({opacity:'0'});
+    tabInfo4.eq(index).show().animate({opacity:'1'},1000);
+})
 
 
         // 코드 영역 스크립트
@@ -669,7 +2365,7 @@ tabBtn3.click(function(){
             backgroudcolor();
     });
 
-
+    // numberswrap1
     $(".numberswrap.numberswrap1").hide().eq(0).show();
     // code.html1
     $("code.html2").html(htmlText2[0]);
@@ -691,5 +2387,53 @@ tabBtn3.click(function(){
         backgroudcolor();
 });
 
+    // numberswrap2
+    $(".numberswrap.numberswrap2").hide().eq(0).show();
+    // code.html1
+    $("code.html3").html(htmlText3[0]);
+    $("code.css3").html(cssText3[0]);
+    $("code.js3").html(jsText3[0]);
 
-    
+
+     // circle and code tapMenu
+     $(".hover03").click(function(e){
+        e.preventDefault();
+        // circle-Tap
+        $(this).addClass("active").siblings().removeClass("active");
+
+        // code-tap-content
+        // code.html1
+        $("code.html3").html(htmlText3[$(this).index()]);
+        $("code.css3").html(cssText3[$(this).index()]);
+        $("code.js3").html(jsText3[$(this).index()]);
+        backgroudcolor();
+});
+
+    $(".numberswrap.numberswrap3").hide().eq(0).show();
+    // code.html1
+    $("code.html4").html(htmlText4[0]);
+    $("code.css4").html(cssText4[0]);
+    $("code.js4").html(jsText4[0]);
+
+
+     // circle and code tapMenu
+     $(".hover04").click(function(e){
+        e.preventDefault();
+        // circle-Tap
+        $(this).addClass("active").siblings().removeClass("active");
+
+        // code-tap-content
+        // code.html1
+        $("code.html4").html(htmlText4[$(this).index()]);
+        $("code.css4").html(cssText4[$(this).index()]);
+        $("code.js4").html(jsText4[$(this).index()]);
+        backgroudcolor();
+});
+
+
+$(".hover_top").click(function(){
+    $(".site_html").show()
+})
+$(".hover-no").click(function(){
+    $(".site_html").hide()
+})

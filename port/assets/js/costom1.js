@@ -1,4 +1,17 @@
 backgroudcolor();
+   //skrollr
+   var s = skrollr.init({
+    edgeStrategy: 'set',
+    easing: 'linear'
+});
+
+window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+    document.querySelector(".scroll").textContent = pageYOffset;
+});
+
+
 
 // 코드 메뉴 클릭시 변경 index.html, css , js
  $(".menu li").click(function(e){
@@ -299,7 +312,7 @@ $(".next").click(function(){
 let htmlText2 = [];
 
 // 미디어 쿼리html
-htmlText2.push(`/* 미디어쿼리는 html을 지원하지 않습니다.*/`)
+htmlText2.push(``)
 //두줄효과 html
 htmlText2.push(`&lt;!-- 게시판2 --&gt;
 &lt;div class="notice2"&gt;
@@ -597,11 +610,764 @@ $('.slider').slick({
 jsText2.push(`script.js가 사용되지 않았습니다.`)
 
 
-
+// htmlText3
 let htmlText3 = [];
-let cssText3 = [];
-let jsText3 = [];
+//Swiper html
+htmlText3.push(`/*Swiper html*/
+&lt;section id="banner"&gt;
+&lt;div class="swiper-container"&gt;
+    &lt;div class="swiper-wrapper"&gt;
+        &lt;div class="swiper-slide"&gt;
+            &lt;img src="assets/img/banner01.jpg" alt="행복한 가치를 원합니다."&gt;
+            &lt;h2&gt;행복한 가치를 원합니다.&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;
+            &lt;img src="assets/img/banner02.jpg" alt="인생을 맛있게, 농심"&gt;
+            &lt;h2&gt;인생을 맛있게, 농심&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;
+            &lt;img src="assets/img/banner03.jpg" alt="Spice Up Your Life"&gt;
+            &lt;h2&gt;Spice Up Your Life &lt;br&gt; 인생을 맛있게, 농심&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class="swiper-slide"&gt;
+            &lt;img src="assets/img/banner04.jpg" alt="일상의 가치를 더합니다."&gt;
+            &lt;h2&gt;일상의 가치를 더합니다.&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+    &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="btn-quick"&gt;
+    &lt;a href="#"&gt;&lt;img src="assets/img/icon-arrow.svg" alt="다음 섹션 가기"&gt;&lt;/a&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- //banner --&gt;
 
+&lt;section id="news"&gt;
+    &lt;h2&gt;내일을 위한 새롭고 활기찬 농심 소식&lt;/h2&gt;
+    &lt;div class="notice"&gt;
+        &lt;div class="swiper-container"&gt;
+            &lt;div class="swiper-wrapper"&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner01.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 가벼운 한 끼 식사 ‘옥수수면’ 출시&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner02.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 칼국수 면발의 비빔면 ‘칼빔면’ 출시&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner03.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, ‘짜파구리’ 용기면으로 글로벌 시장&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner04.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 둥지냉면 광고모델로 음문석ㆍ김민아 발탁&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner05.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 효과 빠른 ‘라이필 더마 콜라겐’ 출시&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner01.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 가벼운 한 끼 식사 ‘옥수수면’ 출시&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner02.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 칼국수 면발의 비빔면 ‘칼빔면’ 출시&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner03.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, ‘짜파구리’ 용기면으로 글로벌 시장&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner04.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 둥지냉면 광고모델로 음문석ㆍ김민아 발탁&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;figure&gt;
+                        &lt;img src="assets/img/sbanner05.jpg" alt="농심1"&gt;
+                    &lt;/figure&gt;
+                    &lt;div class="info"&gt;
+                        &lt;h3&gt;농심, 효과 빠른 ‘라이필 더마 콜라겐’ 출시&lt;/h3&gt;
+                        &lt;time&gt;2020.02.20&lt;/time&gt;
+                        &lt;a href="#" class="more"&gt;more&lt;/a&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;a href="#" class="notice-btn"&gt;농심소식&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/section&gt;`)
+//fadein, fadeout html
+htmlText3.push(`&lt;!-- header2 html --&gt;
+&lt;div class="header2"&gt;
+    &lt;h1&gt;&lt;a href="../../nongshim/index.html"&gt;&lt;img src="../../nongshim/assets/img/logo.svg" alt=""&gt;&lt;/a&gt;&lt;/h1&gt;
+    &lt;ul class="h-menu"&gt;
+        &lt;li class="active2"&gt;&lt;span&gt;농심소개&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../yulchon/yulchon.html"&gt;&lt;span&gt;지속경영&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;홍보센터&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;투자정보&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;고객지원&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;N.LIVE&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class="h-side"&gt;
+        &lt;li&gt;&lt;span&gt;&lt;i class="fas fa-search"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;&lt;i class="far fa-user"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;&lt;i class="far fa-comment-alt"&gt;&lt;/i&gt;&lt;em&gt;Kr&lt;/em&gt;&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;&lt;i class="fas fa-bars"&gt;&lt;/i&gt;&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;!-- header4 html --&gt;
+&lt;div class="header4"&gt;
+    &lt;section class="header4-up"&gt;
+        &lt;div&gt;
+            &lt;ul&gt;
+                &lt;li&gt;OVERVIEW&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;span&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul&gt;
+                &lt;li&gt;경영이념&lt;/li&gt;
+                &lt;li&gt;경영이념&lt;/li&gt;
+                &lt;li&gt;농심WAY&lt;/li&gt;
+                &lt;span&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul&gt;
+                &lt;li&gt;연혁&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;span&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;ul&gt;
+                &lt;li&gt;세계속의 농심&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;span&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class="header4-down"&gt;
+        &lt;div class="h4d1"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;CI소개&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;/li&gt;
+                &lt;span&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;div class="h4d2"&gt;
+            &lt;p class="h4d2span"&gt;농심그룹&lt;/p&gt;
+            &lt;div&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;농심홀딩스&lt;/li&gt;
+                    &lt;li&gt;태경농산&lt;/li&gt;
+                    &lt;li&gt;농심기획&lt;/li&gt;
+                    &lt;li&gt;농심미분&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;율촌화학&lt;/li&gt;
+                    &lt;li&gt;농심엔지니어링&lt;/li&gt;
+                    &lt;li&gt;호텔농심&lt;/li&gt;
+                    &lt;li&gt;율촌재단&lt;/li&gt;
+                &lt;/ul&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;메가마트&lt;/li&gt;
+                    &lt;li&gt;엔디에스&lt;/li&gt;
+                    &lt;li&gt;농심개발&lt;/li&gt;                            
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;span&gt;&lt;i class="fas fa-chevron-right"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;/div&gt;
+        
+    &lt;/section&gt;
+&lt;/div&gt;`)
+//header1 html
+htmlText3.push(`/*header1 html*/
+&lt;div class="header1"&gt;
+    &lt;ul&gt;
+        &lt;li class="active1"&gt;&lt;span&gt;농심&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;브랜드&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;누들푸들&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;span&gt;농심채용&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+`)
+//z-index html
+htmlText3.push(`/*z-index html*/
+&lt;!-- contents5 --&gt;
+&lt;section class="contents5"&gt;
+   &lt;div class="cont5-wrap"&gt;
+       &lt;div class="cont5-box"&gt;&lt;img src="assets/img/imgslide1.jpg" alt="#"&gt;&lt;span&gt;OVERVIEW&lt;/span&gt;&lt;/div&gt;
+       &lt;div class="cont5-box"&gt;&lt;img src="assets/img/imgslide2.jpg" alt="#"&gt;&lt;span&gt;경영이념&lt;/span&gt;&lt;/div&gt;
+       &lt;div class="cont5-box"&gt;&lt;img src="assets/img/imgslide3.jpg" alt="#"&gt;&lt;span&gt;연혁&lt;/span&gt;&lt;/div&gt;
+       &lt;div class="cont5-box"&gt;&lt;img src="assets/img/imgslide4.jpg" alt="#"&gt;&lt;span&gt;세계속의 농심&lt;/span&gt;&lt;/div&gt;
+       &lt;div class="cont5-box"&gt;&lt;img src="assets/img/imgslide5.jpg" alt="#"&gt;&lt;span&gt;CI소개&lt;/span&gt;&lt;/div&gt;
+       &lt;div class="cont5-box"&gt;&lt;img src="assets/img/imgslide6.jpg" alt="#"&gt;&lt;span&gt;농심그룹&lt;/span&gt;&lt;/div&gt;
+   &lt;/div&gt;
+   &lt;div class="cont5-btn"&gt;&lt;/div&gt;
+   &lt;div class="cont5-slide"&gt;&lt;/div&gt;
+&lt;/section&gt;
+`)
+//header html
+htmlText3.push(`&lt;!-- header html --&gt;
+&lt;header id="header" class="white"&gt;
+&lt;div class="header"&gt;
+    &lt;h1&gt;
+    &lt;svg x="0px" y="0px" width="133.5px" height="42.66px" viewBox="0 0 133.5 42.66"&gt;
+        &lt;path class="tx" d="M122.1,20.287c0.016,1.912,1.549,3.463,3.461,3.463c1.914,0,3.463-1.55,3.463-3.463v-9.566
+            c0-1.913-1.549-3.463-3.463-3.463c-1.912,0-3.461,1.55-3.461,3.463l0.016,5.645c0,0-0.436,1.881-2.495,1.961
+            c-2.062,0.079-7.646-2.813-9.688-8.158c-0.73-1.786-1.748-2.495-3.326-2.495c-1.562,0-2.883,0.995-3.313,2.456
+            c-1.935,6.374-6.489,8.345-7.916,8.444c-1.11,0.109-1.862,0.833-1.862,1.812c0,0.98,0.752,1.624,1.902,1.624
+            c2.495,0,7.487-1.544,11.25-5.585C110.667,20.347,118.896,23.912,122.1,20.287" /&gt;
+        &lt;path class="tx"
+            d="M57.05,16.928c-1,0-1.81-0.81-1.81-1.81l0.011-4.872c0-1.912,1.55-3.463,3.463-3.463
+            c1.912,0,3.424,1.551,3.424,3.463v3.09h19.838c2.229,0,2.908-0.488,3.615-0.713c0.989-0.317,2.092-0.103,2.512,0.84
+            c0.42,0.943-0.072,1.885-0.875,2.404c-0.805,0.519-2.607,1.034-5.252,1.034h-7.575v1.902l13.726,0.032c1,0,1.81,0.81,1.81,1.81
+            c0,0.999-0.81,1.809-1.81,1.809H54.673c-0.999,0-1.809-0.81-1.809-1.809c0-1,0.81-1.81,1.809-1.81l12.954-0.032V16.9L57.05,16.928z" /&gt;
+        &lt;path class="tx" d="M54.529,30.211c0-3.925,7.487-7.108,16.723-7.108c9.234,0,16.722,3.183,16.722,7.108
+            s-7.487,7.107-16.722,7.107C62.017,37.318,54.529,34.136,54.529,30.211 M71.252,33.908c5.383,0,9.748-1.655,9.748-3.697
+            s-4.365-3.697-9.748-3.697c-5.385,0-9.749,1.655-9.749,3.697S65.867,33.908,71.252,33.908" /&gt;
+        &lt;path class="tx" d="M96.835,25.754c0-1,0.81-1.809,1.81-1.809h28.641c0.999,0,1.809,0.809,1.809,1.809v8.022
+            c0,0.999-0.81,1.81-1.809,1.81H98.645c-1,0-1.81-0.811-1.81-1.81V25.754z M103.695,31.994h18.42v-4.517h-18.42V31.994z" /&gt;
+        &lt;path fill="#FFFFFF" d="M25.378,42.66c13.35,0,24.171-9.229,24.171-20.609c0-11.383-10.821-20.61-24.171-20.61
+            c-13.349,0-24.171,9.227-24.171,20.61C1.207,33.432,12.029,42.66,25.378,42.66" /&gt;
+        &lt;path fill="#E50013" d="M2.938,22.051c0-10.568,10.047-19.134,22.44-19.134c12.394,0,22.44,8.566,22.44,19.134
+            c0,10.566-10.046,19.133-22.44,19.133C12.985,41.184,2.938,32.617,2.938,22.051 M25.378,25.294c3.937,0,7.128-4.593,7.128-10.259
+            c0-5.665-3.191-10.259-7.128-10.259s-7.127,4.594-7.127,10.259C18.251,20.701,21.441,25.294,25.378,25.294" /&gt;
+    &lt;/svg&gt;
+&lt;/h1&gt;
+
+&lt;nav id="nav" class="nav"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href="sub3/index.html"&gt;&lt;span&gt;농심소개&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="sub2/index.html"&gt;&lt;span&gt;지속가능경영&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../nongshim2/sub/sub1.html"&gt;&lt;span&gt;홍보센터&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="sub1/index.html"&gt;&lt;span&gt;투자정보&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="../nongshim2/sub/sub2.html"&gt;&lt;span&gt;고객지원&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="live"&gt;&lt;a href="sub/index.html"&gt;&lt;em&gt;N.LIVE&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;ul class="side-nav"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/img/icon-search.svg" alt="검색"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/img/icon-account.svg" alt="로그인"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/img/icon-language.svg" alt="언어"&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;img src="assets/img/icon-menu.svg" alt="전체메뉴"&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/header&gt;
+&lt;!-- //header --&gt;`)
+
+
+
+
+
+// cssText3
+let cssText3 = [];
+//Swiper css
+cssText3.push(`/*Swiper css*/
+/* 배너  */
+#banner {
+  position: relative;
+}
+
+#banner .swiper-slide h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 82px;
+  color: #fff;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+#banner .btn-quick a {
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  background: #96c11f;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+#banner .btn-quick a img {
+  width: 30px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  padding-top: 20px;
+}
+
+#banner .swiper-pagination .icon-pause {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: 80px;
+  width: 30px;
+}
+
+#banner .swiper-pagination .icon-play {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: 80px;
+  width: 30px;
+}
+
+/* 뉴스 */
+#news {
+  padding: 115px 0 150px 0;
+  text-align: center;
+}
+
+#news h2 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.notice .swiper-slide:nth-child(even) {
+  margin-top: 100px;
+}
+
+.notice .swiper-slide {
+  width: 458px;
+}
+
+.notice .swiper-slide .info {
+  position: relative;
+  text-align: left;
+  padding: 30px 40px;
+}
+
+.notice .swiper-slide .info h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.notice .swiper-slide .info time {
+  color: #999;
+  font-size: 14px;
+}
+
+.notice .swiper-slide .info a {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  text-transform: uppercase;
+  color: #999;
+  padding-right: 40px;
+  display: none;
+}
+
+.notice .swiper-slide .info a::before {
+  content: '';
+  width: 30px;
+  height: 2px;
+  background: #ca0202;
+  position: absolute;
+  right: 0;
+  top: 8px;
+}
+
+.notice .swiper-slide .info a::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ca0202;
+  position: absolute;
+  right: 0;
+  top: 6px;
+}
+
+.notice .swiper-slide:hover a {
+  display: block;
+}
+
+.notice .notice-btn {
+  font-size: 18px;
+  color: #ca0202;
+  border-radius: 30px;
+  border: 1px solid #ca0202;
+  padding: 10px 80px;
+  margin-top: 80px;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.notice .notice-btn:hover {
+  background: #ca0202;
+  color: #fff;
+}`)
+//fadein, fadeout css
+cssText3.push(`/*header2 css*/
+.header2 {
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+.header2 h1 {
+    padding: 25px 0 0 60px;
+}
+.header2 .h-menu {
+    padding: 25px 130px;
+}
+.header2 .h-menu li {
+    display: inline;
+    font-size: 19px;
+    padding: 3px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    box-sizing: border-box;    
+}
+.header2 .h-menu li span {
+    position: relative;    
+}
+.header2 .h-menu li span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px; left: 50%;
+    width: 0px;
+    height: 0;
+    border-top: 2px solid #d83832;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+.header2 .h-menu li:hover span::before {
+    width: 75px;
+}
+/* .header2 .h-menu li:hover {
+    border-bottom: 3px solid red;
+}
+.header2 .h-menu li.active2 {
+    border-bottom: 3px solid red;
+} */
+.header2 .h-menu li:last-child {
+    border: solid 1px;
+    border-radius: 20px;
+    padding: 4px 17px 5px 17px ;
+    position: relative;
+    z-index: 0;
+    background: #fff;
+    background-clip: padding-box;
+}
+.header2 .h-side {
+    margin-right: 60px;
+}
+.header2 .h-side li {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: 100;
+    padding: 24px 15px;
+    cursor: pointer;
+}
+.header2 .h-side li .far fa-comment-alt{
+    position: relative;
+}
+.header2 .h-side li em {
+    font-size: 13px;
+    position: absolute; top: 7px; left: 6px;
+}
+.header2 .h-side li span {
+    position: relative;    
+}
+.header2 .h-side li span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -3px; left: 50%;
+    width: 0px;
+    height: 0;
+    border-top: 2px solid #d83832;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+.header2 .h-side li:hover span::before {
+    width: 25px;
+}
+
+/*header4 css*/
+.header4 {
+    border-top: 1px solid #ccc;
+    padding: 0 350px;
+    background: #fff;
+    margin-top: -70px;
+    display: none;
+}
+.header4 .header4-up {
+    display: flex;
+}
+.header4 .header4-up div {
+    flex-grow: 1;
+    margin-left: 3%;
+    position: relative;
+}
+.header4 .header4-up div span {   
+    position: absolute; top: 48px; right: 0;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    font-size: 11px;
+    padding: 0 5px 2px 7px;
+}
+.header4 .header4-up div li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.header4 .header4-up div li:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin: 40px 0 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+.header4 .header4-down {
+    display: flex;
+}
+.header4 .header4-down .h4d1 {
+    flex-grow: 1;
+    margin-left: 3%;   
+    position: relative; 
+}
+.header4 .header4-down .h4d1 li:first-child {
+    width: 280px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin: 40px 0 15px 0;
+    border-bottom: 1px solid #ccc;
+    
+}
+.header4 .header4-down .h4d1 span {
+    position: absolute; top: 48px; left: 260px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    font-size: 11px;
+    padding: 0 5px 2px 7px;
+}
+.header4 .header4-down .h4d2 {
+    flex-grow: 2;
+    margin-left: -95px;
+    position: relative;
+}
+.header4 .header4-down .h4d2 p {
+    width: 510px;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 4px;
+    margin: 40px 0 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+.header4 .header4-down .h4d2 div {
+    display: flex;
+    margin-bottom: 80px;
+}
+.header4 .header4-down .h4d2 div ul {
+    margin-right: 100px;
+}
+.header4 .header4-down .h4d2 div ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.header4 .header4-down .h4d2 span {
+    position: absolute; top: 48px; left: 490px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    font-size: 11px;
+    padding: 0 5px 2px 7px;
+}
+`)
+//header1 css 
+cssText3.push(`/*header1 cursor:pointer css*/
+.header1 {
+    text-align: center;
+    background: #f4f4f4;    
+}
+.header1 ul li {
+    display: inline-block;
+    padding: 14px 70px ;
+    font-size: 15px;
+    font-weight: bold;
+    color: #999999;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+.header1 ul li span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px; left: 50%;
+    width: 0px;
+    height: 0;
+    border-top: 3px solid #96c11f;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+.header1 ul li:nth-child(2) span::before {
+    border-top:3px solid red;
+}
+.header1 ul li:nth-child(3) span::before {
+    border-top:3px solid orange;
+ }
+.header1 ul li:last-child span::before {
+    border-top:3px solid skyblue;
+ }
+
+.header1 ul li:hover span::before {
+    width: 150px;    
+}
+.header1 ul li:hover {
+    color: black;
+}
+`)
+//z-index css
+cssText3.push(`/*z-index css*/
+.contents5 .cont5-wrap .cont5-box span {    
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    /* position: absolute; top: 50%; left: 40%; */
+}
+`)
+//position:fixed css
+cssText3.push(`/*position:fixed css*/
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+`)
+
+
+//jsText3
+let jsText3 = [];
+//Swiper js
+jsText3.push(`/*Swiper js*/
+    var mySwiper = new Swiper ('#banner .swiper-container', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: 'true',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+        delay: 5000,
+      }
+  })
+
+  var mySwiper2 = new Swiper ('.notice .swiper-container', {
+    loop: true,
+    spaceBetween: 60,
+    slidesPerView: 'auto',
+    centeredSlides: true
+  })`)
+//fadein js
+jsText3.push(`/*fadeIn은 선택한 요소의 CSS opacity 속성값을 높여가며 요소를 나타지게 하고, 
+fadeOut는 선택한 요소의 CSS opacity 속성값을 높여가며 요소를 사라지게 함.
+*/
+// 헤더오버효과 
+    $(".header2 .h-menu .active2").hover(function(){
+        // $(".header4").css("margin-top","-70px");
+        $(".header4").fadeIn(300);
+    },
+    function(){
+        // $(".header4").css("margin-top","-700px");
+        $(".header4").fadeOut(300);
+    });
+    // 헤더4오버효과
+    $(".header4").hover(function(){
+        $(".header4").fadeIn(0);
+    },function(){
+        $(".header4").fadeOut(300);
+});   
+`)
+//header1 js
+jsText3.push(`script.js가 사용되지 않았습니다.`)
+//z-index js
+jsText3.push(`script.js가 사용되지 않았습니다.`)
+//position:fixed js
+jsText3.push(`script.js가 사용되지 않았습니다.`)
 
 
 let htmlText4 = [];
@@ -1009,6 +1775,8 @@ htmlText4.push(`&lt;!-- 스케일 들어간 부분 --&gt;
 &lt;/div&gt;
 &lt;/section&gt;
 &lt;!-- //joy --&gt;`)
+
+
 
 let cssText4 = [];
 // 원스크롤 css

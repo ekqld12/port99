@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/prism1.css">
+    <link rel="stylesheet" href="assets/css/prism1.css">
 </head>
 
 <body>
@@ -406,55 +406,55 @@
                                         <h4 class="site-h4">coding view</h4>
                                         <div class="site-info">
                                             <div class="site03">
-                                                <p class="site-desc2">농심 페이지에 서브메뉴 1번입니다.</p>
+                                                <p class="site-desc2">Swiper 제이쿼리 플러그인을 사용해<br> 이미지 슬라이드 효과를 주었습니다.  </p>
                                             </div>
                                             <div class="site03">
-                                                <p class="site-desc2">농심 페이지에 서브메뉴 2번입니다.</p>
+                                                <p class="site-desc2">FadeIn은 선택한 요소를 서서히<br> 나타나게 합니다.</p>
                                             </div>
                                             <div class="site03">
-                                                <p class="site-desc2">농심 페이지에 서브메뉴 3번입니다.</p>
+                                                <p class="site-desc2">마우스 오버시 나타낼 커서의<br> 속성을 정해줍니다.</p>
                                             </div>
                                             <div class="site03">
-                                                <p class="site-desc2">농심 페이지에 서브메뉴 4번입니다.</p>
+                                                <p class="site-desc2">z-index는 어느 객체가 앞으로 나오고, 뒤에 나올지 배치 순서를 결정하는<br> 속성입니다.</p>
                                             </div>
                                             <div class="site03">
-                                                <p class="site-desc2">농심 페이지에 서브메뉴 5번입니다. </p>
+                                                <p class="site-desc2">position을 fixed로 지정하면 해당<br> 요소의 위치를 사용자의 브라우저를<br>기준으로 설정할 수 있습니다.스크롤을 내려도 항상 같은 곳에 위치하는<br>상단바, 하단바, 광고 등이 이 속성을<br>이용하는 것입니다.</p>
                                             </div>
                                             <div class="site03">
-                                                <p class="site-desc2">농심 페이지에 서브메뉴 6번입니다.</p>
+                                                <p class="site-desc2">스크롤 탑값을 구하여 스크롤시<br> 헤더 메뉴가 올라갔다 내려가는<br> 메뉴를 만들었습니다.</p>
                                             </div>
                                         </div>
                                         <div class="main">
                                             <div class="hover_all">
                                                 <div class="hover button1 hover03 active">
-                                                    <button hover="서브메뉴1">
+                                                    <button hover="Swiper">
                                                         <span class="top">HOVER <span class="bold">ME</span></span>
                                                     </button>
                                                 </div>
 
                                                 <div class="hover button1 hover03">
-                                                <button hover="서브메뉴2">
+                                                <button hover="FadeIn">
                                                     <span class="left">HOVER <span class="bold">ME</span></span>
                                                 </button>
                                                 </div>
 
                                                 <div class="hover button1 hover03">
-                                                <button hover="서브메뉴3">
+                                                <button hover="cursor:pointer">
                                                     <span class="right">HOVER <span class="bold">ME</span></span>
                                                 </button>
                                                 </div>
                                                 <div class="hover button1 hover03">
-                                                    <button hover="서브메뉴4">
+                                                    <button hover="z-index">
                                                         <span class="right">HOVER <span class="bold">ME</span></span>
                                                     </button>
                                                 </div>
                                                 <div class="hover button1 hover03">
-                                                    <button hover="서브메뉴5">
+                                                    <button hover="position:fixed">
                                                         <span class="right">HOVER <span class="bold">ME</span></span>
                                                     </button>
                                                 </div>
                                                 <div class="hover button1 hover03">
-                                                    <button hover="서브메뉴6">
+                                                    <button hover="scrollTop">
                                                         <span class="right">HOVER <span class="bold">ME</span></span>
                                                     </button>
                                                 </div>
@@ -619,24 +619,9 @@
     
     <!-- script -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/prism.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
-    <script src="../assets/js/prism.js"></script>
-    <script src="assets/js/portjs.js"></script>
-
-    <script>
-        //skrollr
-        var s = skrollr.init({
-            edgeStrategy: 'set',
-            easing: 'linear'
-        });
-        
-        window.addEventListener("scroll", () => {
-            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-
-            document.querySelector(".scroll").textContent = pageYOffset;
-        });
-    </script>
-    
+    <script src="assets/js/costom1.js"></script>
 </body>
 </html>
 

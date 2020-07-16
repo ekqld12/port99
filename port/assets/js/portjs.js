@@ -1,4 +1,6 @@
- // 코드 메뉴 클릭시 변경 index.html, css , js
+backgroudcolor();
+
+// 코드 메뉴 클릭시 변경 index.html, css , js
  $(".menu li").click(function(e){
     e.preventDefault();
     $(this).addClass("active").find("div").show().parent().siblings().removeClass("active").find("div").hide();

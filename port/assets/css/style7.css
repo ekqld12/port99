@@ -303,7 +303,7 @@ body {
 
 /* site-wrap */
 .site-wrap {}
-.site {margin-bottom: 20vh;}
+.site {margin-bottom: 25vh;}
 .site .site-view {display: flex; position: relative;}
 .site .site-view .sv-left {width: 50%;}
 .site .site-view .sv-left figure {}
@@ -324,7 +324,7 @@ body {
 .side-wrap {
     width: 25vw;
     position: absolute;
-    top: 10vw;
+    top: 9.8vw;
     left: 17vw;
     transform: rotate(-90deg);
 }
@@ -436,15 +436,15 @@ body {
     background: #1AAB8A;
     border:none;
     position:relative;
-    height:60px;
+    /* height:60px; */
     font-size: 20px;
     font-weight: 300;
-    padding:0 2em;
+    padding: 10px 40px;
     cursor:pointer;
     transition:800ms ease all;
     outline:none;
     text-transform: uppercase;
-    margin-right: 5%;
+    margin-right:5px;
 }
 .site .site-btn button a {
     color:#fff;
@@ -479,9 +479,9 @@ transition:800ms ease all;
 
 
 /* 마우스 오버 효과 */
-.hover_all {
+/* .hover_all {
     display: inline-block;
-}
+} */
 .hover button{
     font-size: 18px; 
     font-family: 'S-CoreDream-2ExtraLight'; 
@@ -502,12 +502,12 @@ transition:800ms ease all;
     position:relative;
     transition: 1s;
 }
-.hover button span {
+/* .hover button span {
     opacity: 0.8;
-}
+} */
 .hover.active button span {
     font-weight: 800;
-    opacity: 1;
+    /* opacity: 1; */
 }
 .hover.active button {
     color: yellow;
@@ -530,6 +530,7 @@ transition:800ms ease all;
     text-align:center;
     transition:300ms top
 }
+
 .hover.active button:before {
     top: 25px;
 }
@@ -582,10 +583,10 @@ transition:800ms ease all;
  
 
 
-.site .site-list {
+/* .site .site-list {
     color: #fff;
     font-family: 'S-CoreDream-2ExtraLight'; 
-}
+} */
 
 /* site:nth-child(even) */
 .site:nth-child(even) .site-view {flex-direction: row-reverse;}
@@ -593,7 +594,7 @@ transition:800ms ease all;
 .site:nth-child(even) .site-view .sv-side {position: absolute; bottom: -6vw; left: 24vw;}
 .site:nth-child(even) .site-desc::before {content: ''; position: absolute; right: 0; left: auto; top: 0; width: 100px; height: 1px; background: #1AAB8A;}
 .site:nth-child(even) .site-view .sv-right {text-align: right;}
-.site:nth-child(even) .site-btn button {margin-left: 5%; margin-right: 0%;}
+.site:nth-child(even) .site-btn button {margin-left: 5px; margin-right: 0%;}
 .site:nth-child(even) .site-desc {font-size: 1.356vw;}
 .site:nth-child(even) .sc-wrap {flex-direction: row-reverse;}
 .site:nth-child(even) .site-desc2 {text-align: right;}

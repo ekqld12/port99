@@ -367,6 +367,7 @@ htmlText2.push(`&lt;!-- 이미지 슬라이드 --&gt;
 //박스새도우 html
 htmlText2.push(`/*박스섀도우는 html을 지원하지 않습니다.*/`)
 
+// cssText2
 let cssText2 = [];
 //미디어 쿼리 css
 cssText2.push(`/*  미디어 쿼리 */
@@ -547,13 +548,57 @@ cssText2.push(`/*박스 섀도우 */
     0% {box-shadow: 0 0 0 0 #2079a2;}
 }`)
 
-
+// jsText2
 let jsText2 = [];
 //미디어 쿼리 js
-jsText2.push(``)
+jsText2.push(`/*script.js가 사용되지 않았습니다.*/`)
+// 게시판2 두줄효과
+jsText2.push(`jscript.js가 사용되지 않았습니다.`)
+//마우스오버효과js
+jsText2.push(`script.js가 사용되지 않았습니다.`)
+//라이트 박스js
+jsText2.push(`// 라이트 박스
+    $(document).ready(function(){
+    $(".lightbox").lightGallery();
+
+    // 슬릭 이미지 슬라이드
+$('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    //fade: true,
+    //pauseOnDotsHover: false,
+    //slidesToShow: 3,
+    //slidesToScroll: 3
+});
+});`)
+//슬릭 이지미 슬라이드
+jsText2.push(`/*슬릭 이미지 슬라이드*/
+$(document).ready(function(){
+$('.slider').slick({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    //fade: true,
+    //pauseOnDotsHover: false,
+    //slidesToShow: 3,
+    //slidesToScroll: 3
+});
+});`)
+// 박스 새도우 js
+jsText2.push(`script.js가 사용되지 않았습니다.`)
+
 
 // 버튼 클릭시 코드 영역 변경해주기
-let tabBtn1 = $(".hover_button");
+let tabBtn1 = $(".hover_wrap");
+let tabBtn2 = $(".hover_button");
+let tabBtn3 = $(".button1");
 
 // 제목 바뀌게 해주기
 let tabInfo1 = $(".site-info > .site01");
@@ -572,6 +617,7 @@ tabInfo3.eq(0).css("display","block").animate({opacity:'1'},1000);
 tabInfo4.css("display","none").css({opacity:'0'});
 tabInfo4.eq(0).css("display","block").animate({opacity:'1'},1000);
 
+// tabBtn1
 tabBtn1.click(function(){
     let target = $(this);
     let index= target.index();
@@ -579,15 +625,27 @@ tabBtn1.click(function(){
     target.addClass("active");
     tabInfo1.siblings().css("display","none").css({opacity:'0'});
     tabInfo1.eq(index).show().animate({opacity:'1'},1000);
+})
+// tabBtn2
+tabBtn2.click(function(){
+    let target = $(this);
+    let index= target.index();
+    tabBtn2.siblings().removeClass("active");
+    target.addClass("active");
     tabInfo2.siblings().css("display","none").css({opacity:'0'});
     tabInfo2.eq(index).show().animate({opacity:'1'},1000);
+})
+// tabBtn3
+tabBtn3.click(function(){
+    let target = $(this);
+    let index= target.index();
+    tabBtn3.siblings().removeClass("active");
+    target.addClass("active");
     tabInfo3.siblings().css("display","none").css({opacity:'0'});
     tabInfo3.eq(index).show().animate({opacity:'1'},1000);
-    tabInfo4.siblings().css("display","none").css({opacity:'0'});
-    tabInfo4.eq(index).show().animate({opacity:'1'},1000);
-
-
 })
+
+
 
         // 코드 영역 스크립트
         $(".numberswrap").hide().eq(0).show();
@@ -598,7 +656,7 @@ tabBtn1.click(function(){
 
 
         // circle and code tapMenu
-        $(".hover").click(function(e){
+        $(".hover01").click(function(e){
             e.preventDefault();
             // circle-Tap
             $(this).addClass("active").siblings().removeClass("active");
@@ -610,5 +668,28 @@ tabBtn1.click(function(){
             $("code.js1").html(jsText[$(this).index()]);
             backgroudcolor();
     });
+
+
+    $(".numberswrap.numberswrap1").hide().eq(0).show();
+    // code.html1
+    $("code.html2").html(htmlText2[0]);
+    $("code.css2").html(cssText2[0]);
+    $("code.js2").html(jsText2[0]);
+
+
+     // circle and code tapMenu
+     $(".hover02").click(function(e){
+        e.preventDefault();
+        // circle-Tap
+        $(this).addClass("active").siblings().removeClass("active");
+
+        // code-tap-content
+        // code.html1
+        $("code.html2").html(htmlText2[$(this).index()]);
+        $("code.css2").html(cssText2[$(this).index()]);
+        $("code.js2").html(jsText2[$(this).index()]);
+        backgroudcolor();
+});
+
 
     

@@ -220,13 +220,13 @@ body {
 /* .section3-content */
 .section3-content {
     background: rgb(34, 37, 66);
-    margin-top: 10vw;
+    margin-top: 10vh;
     overflow: hidden;
     position: relative;
 }
 .section3-content .work-wrap {
     width: 100%;
-    height: 60vw;
+    height: 67vw;
 }
 .section3-content .work {
     width: 50vw;
@@ -308,7 +308,7 @@ body {
 .site .site-view .sv-left {width: 50%;}
 .site .site-view .sv-left figure {}
 .site .site-view .sv-right {
-    width: 50%; padding: 6vw 9vw 4vw 4vw;
+    width: 50%; padding: 6vw 5vw 4vw 4vw;
     box-sizing: border-box;
 }
 .site .site-view .sv-side {
@@ -419,6 +419,7 @@ body {
     padding-top: 2vw;
     margin-top: 2vw;
     margin-bottom: 3vw;
+    word-break: keep-all;
 }
 .site .site-desc2::before {
     content: '';
@@ -667,31 +668,123 @@ transition:800ms ease all;
 
 
 
-
+/* 미디어 쿼리  */
 @media (max-width:1400px){
+    #section1 {height: 2200px;}
+    #about {margin-top: 0;}
+    .section3-content .work h2 {font-size: 280px;}
+    .section3-content .work-pnt {width: 300px; position: absolute; top: -10vw; }
     .container {width: 100%;}
+    .site .site-h4 {margin-left: 0.5vw;}
+    .site:nth-child(even) .site-h4 {text-align: right; margin-right: 0.5vw;}
+    .site-info {margin-left: 0.5vw;}
+    .site:nth-child(even) .site-desc2 {margin-right: 0.5vw;}
     .row {padding: 0 3%;}
 
 }
-
-@media (max-width:700px){
+@media (max-width:1000px){
+    .row {padding: 0 5%;}
+    #section1 {height: 1650px;}
+    .section3-content {margin-top: 20vh;}
+    #section2 .sec2 {top: 11vh;}
+    #section2 .sec3 {left: 3vw; top: 16vh;}
+    #section2 .aboutimg1 {top: 10vh;}
+    #section2 .aboutimg2 {top: 18vh;}
+    .section3-content .work h2 {font-size: 180px;}
+    .section3-content .work-pnt {top: -4vw; width: 200px;}
+    .section3-content .work-titl .em {font-size: 20px;}
+    .section3-content .work-titl li {font-size: 20px;}
+    .sec4 {padding: 20vh 0;}
+    .site .site-btn button {padding: 10px 37px; font-size: 16px;}
+    .site .site-desc {font-size: 1.3vw;}
+    .site .site-desc2 {font-size: 1.2vw;}
+    .hover{width:100%;}
+    .site .site-coding .sc-wrap .sc-right {width: 60%;}
+    .site .site-coding .sc-wrap .sc-left {width: 39%;}
+}
+@media (max-width:800px){
     .row {padding: 0 20px;}
-}
+    .paint1 .sTitle {padding: 48vh 0 10vw 15vw;}
+    #section1 {height: 1000px;}
+    .paint1 .sImg h3 {font-size: 18vw; right: -20vw; top: 41vw;}
+    .paint1 .pntbg {right: 16vw; width: 25vw;}
+    .paint1 .sImg .figure1 {left: 39vw;}
+    .paint1 .sImg .figure2 {right: 9vw;}
+    .paint1 .sImg .figure3 {left: 39vw;}
+    .section3-content .work h2 {font-size: 140px;}
+    .section3-content .work {top: -4vw;}
+    .section3-content .work-pnt {top: -2vw; width: 150px;}
+    .section3-content .work-titl {top: 35%;}
+    .section3-content .work-titl .em {font-size: 16px;}
+    .section3-content .work-titl li {font-size: 16px;}
+    .site .site-view {display: block;}
+    .site .site-h3 {font-size: 50px;}
+    .site .site-view .sv-left {width: 90%; padding: 0 5%;}
+    .site .site-view .sv-right {width: 90%; padding: 5% 5%; box-sizing: unset;}
+    .site .site-desc {font-size: 22px;}
+    .site .site-coding .sc-wrap .sc-left {width: 100%;}
+    .site .site-coding .sc-wrap {display: block;}
+    .site .site-h4 {font-size: 50px; margin-left: auto;}
+    .site .site-desc2 {font-size: 2.2vw;}
+    .site .site-coding .sc-wrap .sc-right {width: 100%; margin-top: 35vh;}
+    .site .site-coding {margin-top: 10vh;}
+    .site .site-desc2 {font-size: 22px;}
+    .site:nth-child(even) .site-view .sv-left h3 {font-size: 50px;}
+    .site:nth-child(even) .site-desc {font-size: 22px;}
+    .site:nth-child(even) .site-btn button {padding: 10px 30px; font-size: 22px;}
+    .hover button {margin-right: 2%; margin-left: auto;}
+    .site:nth-child(even) .site-coding .sc-wrap .sc-right {margin-top: 35vh;}
 
 
-/* 마우스 오버 효과 반응형 */
-@media (max-width:998px){
-    .hover{
-      width:100%;
-    }
-    .hover_all{
-      width:90%;
-      margin:auto;
-    }
-    .hover button{
-      width:100%;
-      margin:0;
-      margin-top:10px;
-      margin-bottom:5px;
-    }
+    .site .site-view .sv-side {display: none;}
+    .site .site-view .sv-side1 {display: none;}
+
+    .sec4 {padding: 10vh 0;}
+    .site .site-btn button {padding: 10px 30px; font-size: 22px}
 }
+
+@media (max-width: 500px) {
+    #header h1 {top: 6vw; width: 70px;}
+    #section1 {height: 500px;}
+    .paint1 .sTitle {padding: 35vh 0 10vw 15vw;}
+    #section2 h3 {height: 50vw;}
+    #section2 h3 strong {font-size: 10px; line-height: 15px;}
+    #section2 h3 strong a {font-size: 10px; top: 0.8vw;}
+    #section2 .sec3 {display: none;}
+    #section2 .aboutimg2 {top: 15vh;}
+    .section3-content .work {top: -31vw}
+    .section3-content .work-titl ul:first-child::after {width: 3.8vw;}
+    .section3-content .work h2 {font-size:70px}
+    .section3-content .work-titl .em {font-size: 12px; line-height: 15px;}
+    .section3-content .work-titl li {font-size: 12px; line-height: 15px;}
+    .section3-content .work-titl {top: 38%;}
+    .section3-content .work-pnt {top: -9vw; width: 80px;}
+    .sec4 {padding: 5vh 0;}
+    .site .site-h3 {font-size: 35px;}
+    .site .site-desc {font-size: 16px;}
+    .site .site-btn button {font-size: 12px; height: 45px; padding: 10px 40px;}
+    .site .site-h4 {font-size: 30px; margin-left: auto;}
+    .site .site-desc2 {font-size: 14px;}
+    .hover button {font-size: 12px; height: 45px;}
+    .hover.active button:before { top: 15px;}
+    .site .site-coding .sc-wrap .sc-right {margin-top: 20vh;}
+    .site .site-btn {padding-top: 5vw;}
+    .site .site-coding {margin-top: 5vh;}
+    .site .editor .editor-tab .menu li a {padding: 11px 12px; font-size: 10px;}
+
+    .site:nth-child(even) .site-desc {font-size: 16px;}
+    .site:nth-child(even) .site-h4 {font-size: 30px; margin-left: auto;}
+    .site:nth-child(even) .site-desc2 {font-size: 14px; word-break: keep-all;}
+    .hover .buttonwrap {margin-right: 2%; margin-left: auto;}
+    .hover button {margin-left: 2%; margin-right: auto;}
+    .site_html {height: 3000px;}
+    .site:nth-child(even) .site-coding .sc-wrap .sc-right {margin-top: 28vh;}
+    .site {margin-bottom: 15vh;}
+    .site .site-coding .sc-wrap .sc-rightwrap {margin-top: 30vh;}
+
+
+    /* 서가앤쿡 제목  잠시만*/
+    .site:nth-child(even) .site-view .sv-left h3 {font-size: 35px;}
+    .site:nth-child(even) .site-btn button {font-size: 12px; height: 45px; padding: 10px 40px;}
+}
+

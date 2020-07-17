@@ -1,15 +1,15 @@
 backgroudcolor();
    //skrollr
-   var s = skrollr.init({
-    edgeStrategy: 'set',
-    easing: 'linear'
-});
+//    var s = skrollr.init({
+//     edgeStrategy: 'set',
+//     easing: 'linear'
+// });
 
-window.addEventListener("scroll", () => {
-    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+// window.addEventListener("scroll", () => {
+//     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
-    document.querySelector(".scroll").textContent = pageYOffset;
-});
+//     document.querySelector(".scroll").textContent = pageYOffset;
+// });
 
 
 
@@ -920,7 +920,39 @@ htmlText3.push(`&lt;!-- header html --&gt;
 &lt;/div&gt;
 &lt;/header&gt;
 &lt;!-- //header --&gt;`)
-
+//scroll Top html
+htmlText3.push(`/*Scroll Top html*/
+&lt;main id="contents"&gt;
+    &lt;section id="banner"&gt;
+        &lt;div class="swiper-container"&gt;
+            &lt;div class="swiper-wrapper"&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;img src="assets/img/banner01.jpg" alt="행복한 가치를 원합니다."&gt;
+                    &lt;h2&gt;행복한 가치를 원합니다.&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;img src="assets/img/banner02.jpg" alt="인생을 맛있게, 농심"&gt;
+                    &lt;h2&gt;인생을 맛있게, 농심&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;img src="assets/img/banner03.jpg" alt="Spice Up Your Life"&gt;
+                    &lt;h2&gt;Spice Up Your Life &lt;br&gt; 인생을 맛있게, 농심&lt;/h2&gt;
+                &lt;/div&gt;
+                &lt;div class="swiper-slide"&gt;
+                    &lt;img src="assets/img/banner04.jpg" alt="일상의 가치를 더합니다."&gt;
+                    &lt;h2&gt;일상의 가치를 더합니다.&lt;/h2&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+            &lt;div class="swiper-button-prev"&gt;&lt;/div&gt;
+            &lt;div class="swiper-button-next"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="btn-quick"&gt;
+            &lt;a href="#"&gt;&lt;img src="assets/img/icon-arrow.svg" alt="다음 섹션 가기"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+`)
 
 
 
@@ -1310,7 +1342,8 @@ cssText3.push(`/*position:fixed css*/
     width: 100%;
   }
 `)
-
+//scrollTop css
+cssText3.push(`위에 CSS와 겹치는 내용이여서 생략 하겠습니다.`)
 
 //jsText3
 let jsText3 = [];
@@ -1368,7 +1401,20 @@ jsText3.push(`script.js가 사용되지 않았습니다.`)
 jsText3.push(`script.js가 사용되지 않았습니다.`)
 //position:fixed js
 jsText3.push(`script.js가 사용되지 않았습니다.`)
+//scroll Top js
+jsText3.push(`/*scrollTop js*/
+$(document).ready(function(){
 
+    $(window).scroll(function(){
+        const scrollTop = $(window).scrollTop() + $(window).height()/2;
+
+        $("#contents > section").each(function(){
+            if(scrollTop > $(this).offset().top){
+                $(this).addClass("show");
+            }
+        });
+    })
+`)
 
 let htmlText4 = [];
 //원스크롤 html

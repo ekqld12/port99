@@ -127,7 +127,7 @@ code[class*="language-"],
 pre[class*="language-"] {
    color: #ccc;
    background: none;
-   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+   font-family: "Poppins", sans-serif;
    font-size: 1em;
    text-align: left;
    white-space: pre;

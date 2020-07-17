@@ -781,6 +781,8 @@ transition:800ms ease all;
     .site:nth-child(even) .site-coding .sc-wrap .sc-right {margin-top: 28vh;}
     .site {margin-bottom: 15vh;}
     .site .site-coding .sc-wrap .sc-rightwrap {margin-top: 30vh;}
+    .site .editor .numberswrap {height: 350px;}
+    .site .editor .editor-code {height: 350px;}
 
 
     /* 서가앤쿡 제목  잠시만*/

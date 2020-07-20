@@ -588,7 +588,119 @@
     </section>
      <!-- //section3 -->
         
-     <section id="section4"></section><!-- //section1 -->
+    <section id="section4">
+        <div class="sec5">
+            <div class="divbox1">
+                <div class="box1title">
+                    <h4>script</h4>
+                </div>
+                <div class="boxbg">
+                    <img src="assets/img/paint-v.png" alt="페인트">
+                </div>
+                <div class="box1tit">
+                    <ul>
+                        <li class="titem">jquery &</li>
+                        <li class="titem">javascript</li>
+                        <li>parallax</li>
+                        <li>image slider</li>
+                        <li>mouse effect</li>
+                        <li>Game</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="divbox2">
+                <div class="script-view">
+                    <div class="sp-left">
+                        <div class="spimg">
+                            <iframe src="http://zzekqls.dothome.co.kr/Parallax/Parallax01.html" frameborder="0"></iframe>
+                        </div>
+                        <div class="sp-bt">
+                            <a href="https://ekqld12.github.io/port99/Parallax/Parallax01.html" target="_blank">site view</a>
+                          </div>
+                    </div>
+                    <div class="sp-right">
+                        <div class="sp-rightwrap">
+                            <ul>
+                                <li>jquery& javascript</li>
+                                <li>PARALLAX</li>
+                            </ul>
+                            <p>물체의 위치와 방향의 차이로 사용자에게 평면적인 웹사이트가 아니라 마치 살아 숨쉬는 듯한 느낌의 웹사이트를 제공할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divbox3">
+                <div class="script-view2">
+                    <div class="sp-left2">
+                        <div class="sp-bt2">
+                            <a href="https://ekqld12.github.io/port99/Parallax/Parallax01.html" target="_blank">site view</a>
+                            <a href="#">figma view</a>
+                          </div>
+                        <div class="spimg2">
+                            <iframe src="https://ekqld12.github.io/port99/slider/slider01.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="sp-right2">
+                        <div class="sp-rightwrap2">
+                            <ul>
+                                <li>jquery& javascript</li>
+                                <li>IMAGE SLIDER</li>
+                            </ul>
+                            <p>좌우 슬라이드, 상하 슬라이드, 닷버튼 메뉴, 오토플레이 등 다양한 형태로 슬라이드 형식을 만들 수 있다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divbox4">
+                <div class="script-view">
+                    <div class="sp-left">
+                        <div class="spimg">
+                            <iframe src="https://ekqld12.github.io/port99/mouse/mouse01.html" frameborder="0"></iframe>
+                        </div>
+                        <div class="sp-bt">
+                            <a href="https://ekqld12.github.io/port99/mouse/mouse01.html" target="_blank">site view</a>
+                            <a href="#">figma view</a>
+                            </div>
+                    </div>
+                    <div class="sp-right">
+                        <div class="sp-rightwrap">
+                            <ul>
+                                <li>jquery& javascript</li>
+                                <li>MOUSE EFFECT</li>
+                            </ul>
+                            <p>jQuery 및 JavaScript를 이용해 마우스 Effect 효과를 주어 더욱 효과적인 사이트를 만들수 있다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="divbox5">
+                <div class="script-view2">
+                    <div class="sp-left2">
+                        <div class="sp-bt2">
+                            <a href="" target="_blank">site view</a>
+                            <a href="#">figma view</a>
+                          </div>
+                        <div class="spimg2">
+                            <iframe src="../game/index.html" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                    <div class="sp-right2">
+                        <div class="sp-rightwrap2">
+                            <ul>
+                                <li>jquery& javascript</li>
+                                <li>GAME</li>
+                            </ul>
+                            <p>자바스크립트와 제이쿼리 두 가지 방식으로 스크립트를 표현해 간단한 카드 게임을 만들었습니다. 쉬는타임 한번 갖는거 어렵지 않으시죠?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- //section4 -->
      <section id="section5"></section><!-- //section1 -->
      <section id="section6"></section><!-- //section1 -->
      <section id="section7"></section><!-- //section1 -->
@@ -607,6 +719,7 @@
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/costom1.js"></script>
 
 </body>
@@ -615,3 +728,29 @@
     
      
       <!-- https://www.willrust.co/ -->  
+
+      <!-- //skrollr
+      var s = skrollr.init({
+          edgeStrategy: 'set',
+          easing: 'linear'
+      });
+      
+      window.addEventListener("scroll", () => {
+          let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+          let sec3 = document.querySelector("#section3").offsetTop;
+          
+          
+          document.querySelector(".scroll").textContent = pageYOffset;
+          
+          
+          if(pageYOffset > sec3){
+              document.querySelector(".sec3").classList.add("show");
+          } else {
+              document.querySelector(".sec3").classList.remove("show");
+          }
+          
+          let offset = (pageYOffset - sec3) * 0.8;
+          
+          gsap.to(".sec3", {left: -offset, duration:0});
+          
+      }); -->

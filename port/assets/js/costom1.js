@@ -1,16 +1,29 @@
 backgroudcolor();
-   //skrollr
-//    var s = skrollr.init({
-//     edgeStrategy: 'set',
-//     easing: 'linear'
-// });
+  //skrollr
+  var s = skrollr.init({
+    edgeStrategy: 'set',
+    easing: 'linear'
+});
 
-// window.addEventListener("scroll", () => {
-//     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-
-//     document.querySelector(".scroll").textContent = pageYOffset;
-// });
-
+window.addEventListener("scroll", () => {
+    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+    let sec5 = document.querySelector("#section4").offsetTop;
+    
+    
+    document.querySelector(".scroll").textContent = pageYOffset;
+    
+    
+    if(pageYOffset > sec5){
+        document.querySelector(".sec5").classList.add("show");
+    } else {
+        document.querySelector(".sec5").classList.remove("show");
+    }
+    
+    let offset = (pageYOffset - sec5) * 1.5;
+    
+    gsap.to(".sec5",{left: -offset, duration:0});
+    
+});
 
 
 // 코드 메뉴 클릭시 변경 index.html, css , js

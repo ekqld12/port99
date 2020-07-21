@@ -5,25 +5,30 @@ backgroudcolor();
     easing: 'linear'
 });
 
+
 window.addEventListener("scroll", () => {
     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-    let sec5 = document.querySelector("#section4").offsetTop;
-    
-    
+
     document.querySelector(".scroll").textContent = pageYOffset;
-    
+    let sec5 = document.querySelector("#section4").offsetTop + 400;
+    let offset = (pageYOffset - sec5) * 1.5;
     
     if(pageYOffset > sec5){
         document.querySelector(".sec5").classList.add("show");
+        gsap.to(".sec5", {left: -offset, duration:3, ease: "power4.out"});
     } else {
         document.querySelector(".sec5").classList.remove("show");
     }
+
     
-    let offset = (pageYOffset - sec5) * 1.5;
-    
-    gsap.to(".sec5",{left: -offset, duration:0});
+
     
 });
+
+
+
+
+
 
 
 // 코드 메뉴 클릭시 변경 index.html, css , js
@@ -3121,6 +3126,7 @@ let tabInfo1 = $(".site-info > .site01");
 let tabInfo2 = $(".site-info > .site02");
 let tabInfo3 = $(".site-info > .site03");
 let tabInfo4 = $(".site-info > .site04");
+let tabInfo5 = $(".sp-rightwrap > site05");
 
 
 
@@ -3134,6 +3140,8 @@ tabInfo3.css("display","none").css({opacity:'0'});
 tabInfo3.eq(0).css("display","block").animate({opacity:'1'},1000);
 tabInfo4.css("display","none").css({opacity:'0'});
 tabInfo4.eq(0).css("display","block").animate({opacity:'1'},1000);
+tabInfo5.css("display","none").css({opacity:'0'});
+tabInfo5.eq(0).css("display","block").animate({opacity:'1'},1000);
 
 // tabBtn1
 tabBtn1.click(function(){

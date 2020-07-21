@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -161,10 +162,66 @@
         </section>
         <!-- //section2 -->
         
-        <section id="section3"></section><!-- //section1 -->
-        <section id="section4"></section><!-- //section1 -->
-        <section id="section5"></section><!-- //section1 -->
-        <section id="section6"></section><!-- //section1 -->
+        <section id="section3">
+            <div class="sec3">
+                <div class="script-wrap">
+                    <div class="title">
+                        <h2>SCRIPT</h2>
+                        <div class="sTitle">
+                            <h3>
+                                <strong>Javascript &amp; jquery</strong> 
+                                <strong>PARALLAX</strong>
+                                <strong>IMAGE SLIDER</strong>
+                                <strong>MOUSE EFFECT</strong>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="script">
+                        <div class="view">
+                            <div class="box"></div>
+                        </div>
+                        <div class="desc">
+                            <div class="arrow">
+                                <a href="#" class="active">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <a href="#">4</a>
+                                <a href="#">5</a>
+                                <a href="#">6</a>
+                            </div>
+                            
+                            <h4>Javascript</h4>
+                            <p>자바스크립트와 제이쿼리 두 가지 방식으로 스크립트를 표현했습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script">
+                        <div class="view">
+                            <div class="box"></div>
+                        </div>
+                        <div class="desc">
+                            <h4>Javascript</h4>
+                            <p>자바스크립트와 제이쿼리 두 가지 방식으로 스크립트를 표현했습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="script">
+                        <div class="view">
+                            <div class="box"></div>
+                        </div>
+                        <div class="desc">
+                            <h4>Javascript</h4>
+                            <p>자바스크립트와 제이쿼리 두 가지 방식으로 스크립트를 표현했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+        
+        <section id="section4"></section><!-- //section4 -->
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
     </div>
     <!-- //contents -->
     
@@ -172,6 +229,7 @@
     <!-- script -->
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/skrollr.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
     <script>
         //skrollr
         var s = skrollr.init({
@@ -183,12 +241,34 @@
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
             document.querySelector(".scroll").textContent = pageYOffset;
+            let sec3 = document.querySelector("#section3").offsetTop + 400;
+            let offset = (pageYOffset - sec3) * 1.5;
+            
+            if(pageYOffset > sec3){
+                document.querySelector(".sec3").classList.add("show");
+                gsap.to(".sec3", {left: -offset, duration:3, ease: "power4.out"});
+            } else {
+                document.querySelector(".sec3").classList.remove("show");
+            }
+
+            
+
+            
         });
+        
+        
     </script>
 
 </body>
 </html>
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
   
    

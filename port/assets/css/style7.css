@@ -9,8 +9,8 @@ body {
 /* layout */
 #contents {}
 #main{position: relative; z-index: 4000;}
-#section1 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png); height: 2500px; width: 100%; overflow: hidden;}
-#about{position: relative; z-index: 4000;padding: 30vw 0 10vh; background: #eaeaea url(../img/main.png);}
+#section1 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png); height: 3500px; width: 100%; overflow: hidden;}
+#about{position: relative; z-index: 4000; padding: 30vh 0 10vh; background: #eaeaea url(../img/main.png);}
 #section2 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png);  width: 100%;   height: 100%;  }
 #section3 {position: relative; z-index: 4000; height: 8800px;  background: rgb(34, 37, 66); }
 #section4 {background: #eaeaea url(../img/main.png); height: 6000px; }
@@ -192,7 +192,6 @@ body {
     bottom: auto;
     z-index: 14;
     width: 45vw;
-    opacity: 0.85;
 }
 #section2 .sec3 {
     position: absolute;
@@ -482,11 +481,6 @@ width:100%;
 transition:800ms ease all;
 }
 
-
-/* 마우스 오버 효과 */
-/* .hover_all {
-    display: inline-block;
-} */
 .hover button{
     font-size: 18px; 
     font-family: 'S-CoreDream-2ExtraLight'; 
@@ -507,12 +501,9 @@ transition:800ms ease all;
     position:relative;
     transition: 1s;
 }
-/* .hover button span {
-    opacity: 0.8;
-} */
+
 .hover.active button span {
     font-weight: 800;
-    /* opacity: 1; */
 }
 
 .hover.active button {
@@ -546,7 +537,7 @@ transition:800ms ease all;
     transition:300ms top
 }
 .hover.active button:before {
-    top: 25px;
+    top: 22px;
 }
   .hover button:hover:before{
     top:25px;
@@ -668,6 +659,15 @@ transition:800ms ease all;
 .script-wrap > div {width: 100vw; height: 100vh; float: left;}
 
 .script-wrap .title {position: relative;}
+.script-wrap .title .titlebg {
+    position: absolute;
+    top: -44%; left: 14%;
+    transform: rotate(90deg);
+    z-index: -10;
+}
+.script-wrap .title .titlebg img {
+    width: 400px;
+}
 .script-wrap .title h2 {
     color: #222542;
     font-family: 'Montserrat', sans-serif;
@@ -675,33 +675,28 @@ transition:800ms ease all;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 22vw;
-    padding: 3vw 10vw 10vw 20vw;
+    padding: 0vw 10vw 10vw 16vw;
+
 }
 .script-wrap .title .sTitle {
-    position: absolute; right: 25vw; bottom: 10vw;
+    position: absolute; right: 50vw; bottom: 4vw;
 }
 .script-wrap .title .sTitle strong {
     display: block;
     color: #222534;
     font-size: 1.6vw;
-    line-height: 2.2vw;
-    font-weight: 200;
+    line-height: 2.4vw;
+    font-weight: 300;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }
-.script-wrap .title .sTitle strong:first-child {
+.script-wrap .title .sTitle .sTitlestart {
     font-weight: 900;
     position: relative;
 }
-.script-wrap .title .sTitle strong:last-child::after {
-    content: '';
-    width: 5vw; height: 1px;
-    background: #222534;
-    position: absolute; 
-    bottom: -1.5vw; left: 0;
-}
+
 
 
 .script-wrap .script {
@@ -711,6 +706,7 @@ transition:800ms ease all;
 }
 .script-wrap .script .view {width: 70%;}
 .script-wrap .script .view .box {width: 100%; height: 100%; background: #000;}
+.script-wrap .script .view .box iframe {width: 100%; height: 100%;}
 .script-wrap .script .view .btn {
     color: #222534;
     font-size: 32px;
@@ -779,8 +775,9 @@ transition:800ms ease all;
 
 /* 미디어 쿼리  */
 @media (max-width:1400px){
-    #section1 {height: 2200px;}
-    #about {margin-top: 0;}
+    #section1 {height: 2200px; padding-bottom: 8vh;}
+    #about {padding: 0vh 0 10vh; background: #eaeaea url(../img/main.png);}
+    .paint1 .sImg h3 {top: 51vw;}
     .section3-content .work h2 {font-size: 280px;}
     .section3-content .work-pnt {width: 300px; position: absolute; top: -10vw; }
     .container {width: 100%;}
@@ -788,13 +785,14 @@ transition:800ms ease all;
     .site:nth-child(even) .site-h4 {text-align: right; margin-right: 0.5vw;}
     .site-info {margin-left: 0.5vw;}
     .site:nth-child(even) .site-desc2 {margin-right: 0.5vw;}
+    #section3 {height: 7500px;}
     .row {padding: 0 3%;}
 
 }
 @media (max-width:1000px){
     .row {padding: 0 5%;}
-    #section1 {height: 1650px;}
-    .section3-content {margin-top: 20vh;}
+    #section1 {height: 1650px; padding-bottom: 0vh;}
+    #about {padding: 0vh 0 10vh;}
     #section2 .sec2 {top: 11vh;}
     #section2 .sec3 {left: 3vw; top: 16vh;}
     #section2 .aboutimg1 {top: 10vh;}
@@ -810,6 +808,7 @@ transition:800ms ease all;
     .hover{width:100%;}
     .site .site-coding .sc-wrap .sc-right {width: 60%;}
     .site .site-coding .sc-wrap .sc-left {width: 39%;}
+    #section3 {height: 6500px;}
 }
 @media (max-width:800px){
     .row {padding: 0 20px;}
@@ -833,15 +832,14 @@ transition:800ms ease all;
     .site .site-desc {font-size: 22px;}
     .site .site-coding .sc-wrap .sc-left {width: 100%;}
     .site .site-coding .sc-wrap {display: block;}
-    .site .site-h4 {font-size: 50px; margin-left: auto;}
+    .site .site-h4 {font-size: 50px; margin-left: 1.5vw;}
     .site .site-desc2 {font-size: 2.2vw;}
     .site .site-coding .sc-wrap .sc-right {width: 100%; margin-top: 35vh;}
     .site .site-coding {margin-top: 10vh;}
-    .site .site-desc2 {font-size: 22px;}
+    .site .site-desc2 {font-size: 22px; margin-left: 1.5vw;}
     .site:nth-child(even) .site-view .sv-left h3 {font-size: 50px;}
     .site:nth-child(even) .site-desc {font-size: 22px;}
     .site:nth-child(even) .site-btn button {padding: 10px 30px; font-size: 22px;}
-    .hover button {margin-right: 2%; margin-left: auto;}
     .site:nth-child(even) .site-coding .sc-wrap .sc-right {margin-top: 35vh;}
 
 
@@ -850,12 +848,16 @@ transition:800ms ease all;
 
     .sec4 {padding: 10vh 0;}
     .site .site-btn button {padding: 10px 30px; font-size: 22px}
+    #section3 {height: 9500px;}
+    #hover-no {margin-left: 2%; margin-right: auto;}
+    .site:nth-child(even) .site-desc2 {margin-right: 1.5vw;}
+    .site:nth-child(even) .site-h4 {margin-right: 1.5vw;}
 }
 
 @media (max-width: 500px) {
     #section3 {height: 5800px;}
     #header h1 {top: 6vw; width: 70px;}
-    #section1 {height: 500px;}
+    #section1 {height: 550px;}
     .paint1 .sTitle {padding: 35vh 0 10vw 15vw;}
     #section2 h3 {height: 50vw;}
     #section2 h3 strong {font-size: 10px; line-height: 15px;}

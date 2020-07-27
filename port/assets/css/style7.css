@@ -742,6 +742,7 @@ transition:800ms ease all;
 }
 .script-wrap .script .desc .arrow a:first-child {margin-top: 0;}
 .script-wrap .script .desc .arrow a.active {
+    background-image: url(../img/icon.png);
     background: #222534;
     color: #fff;
 }

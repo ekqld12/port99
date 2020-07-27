@@ -3120,13 +3120,14 @@ let tabBtn1 = $(".hover_wrap");
 let tabBtn2 = $(".hover_button");
 let tabBtn3 = $(".button1");
 let tabBtn4 = $(".button2");
+let tabBtn5 = $(".arrow a");
 
 // 제목 바뀌게 해주기
 let tabInfo1 = $(".site-info > .site01");
 let tabInfo2 = $(".site-info > .site02");
 let tabInfo3 = $(".site-info > .site03");
 let tabInfo4 = $(".site-info > .site04");
-let tabInfo5 = $(".sp-rightwrap > site05");
+let tabInfo5 = $(".desc_wrap > .desc-text");
 
 
 
@@ -3178,7 +3179,15 @@ tabBtn4.click(function(){
     tabInfo4.siblings().css("display","none").css({opacity:'0'});
     tabInfo4.eq(index).show().animate({opacity:'1'},1000);
 })
-
+tabBtn5.click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index= target.index();
+    tabBtn5.siblings().removeClass("active");
+    target.addClass("active");
+    tabInfo5.siblings().css("display","none").css({opacity:'0'});
+    tabInfo5.eq(index).show().animate({opacity:'1'},1000);
+})
 
         // 코드 영역 스크립트
         $(".numberswrap").hide().eq(0).show();
@@ -3271,6 +3280,6 @@ tabBtn4.click(function(){
 $(".hover_top").click(function(){
     $(".site_html").show()
 })
-$(".hover-no").click(function(){
+$("#hover-no").click(function(){
     $(".site_html").hide()
 })

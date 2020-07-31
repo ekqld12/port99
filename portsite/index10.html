@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider05</title>
+
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+        @font-face { 
+            font-family: 'GmarketSansMedium'; 
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff'); 
+            font-weight: normal; 
+            font-style: normal; 
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        a {text-decoration: none; color: #fff;}
+        img {width: 100%; vertical-align: top;}
+        /* ul {padding: 10px 20px;} */
+        body {
+            background: url(img/so01.jpg) no-repeat center center;
+            background-size: cover;
+            font-family: 'Abel', 'GmarketSansMedium';
+            color: #fff;
+            height: 100vh;
+        }
+        body::-webkit-scrollbar {
+                width: 10px;
+                background: #000;
+        }
+        body::before {
+            content: '';
+            position: absolute; left: 0; top: 0;
+            width: 100%; height: 100vh;
+            background: rgba(8, 13, 61, 0.5);
+            z-index: -1;
+        }
+        .info {
+            position: absolute; left: 0; top: 0; z-index: 1000;
+            padding: 20px;
+        }
+        .info h1 {
+            margin-bottom: 10px;
+        }
+        .info2 {
+            position: absolute; right: 0; top: 0; z-index: 1000;
+            padding: 20px;
+        }
+        .info2 li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+        .info2 li.active a {
+            border-bottom: 1px dashed #fff;
+        }
+
+        /* slider */
+        .slider-wrap {
+            width: 600px;
+            height: 360px;
+            overflow: hidden;
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+        }
+        .slider-img {
+            position: relative;
+            width: 600px;
+            height: 2000px;
+            overflow: hidden;
+        }
+
+        .slider-img .slides {
+            /* height: 100%;
+            width: 100%; */
+        }
+    </style>
+
+    <!-- modal style -->
+    <style>
+        .infor2 {
+            position: fixed;
+            left: 0; 
+            bottom: 0; z-index: 1000; 
+            padding: 20px;}
+        .infor2 a {color: #fff; border: 1px solid #fff; border-radius: 30px; padding: 5px 30px; margin-right: 10px;}
+        .infor2 .modal {
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 100%;
+            left: 0;
+            transition: all 600ms cubic-bezier(0.86, 0, 0.07, 1);
+        }
+        .infor2 .modal.show {
+            top: 0;
+        }
+        .infor2 .modal .close {
+            cursor: pointer;
+            position: absolute; right: 10px;top: 4px;
+        }
+    </style>
+    <link rel="stylesheet" href="../portsite/css/style.css">
+    <link rel="stylesheet" href="../portsite/css/style1.css">
+</head>
+<body>
+    <!-- slider -->
+    <div class="slider-wrap">
+        <div class="slider-img">
+            <div class="slides"><img src="img/so01.jpg" alt="sadfa"></div>
+            <div class="slides"><img src="img/so02.jpg" alt="sadfa"></div>
+            <div class="slides"><img src="img/so03.jpg" alt="sadfa"></div>
+            <div class="slides"><img src="img/so04.jpg" alt="sadfa"></div>
+            <div class="slides"><img src="img/so05.jpg" alt="sadfa"></div>
+        </div>    
+    </div>
+    
+    <div class="infor2">
+        <a href="#" class="view">코드 보기</a>
+        <a href="../slider/slider03.html" target="_blank">SITE VIEW</a>
+        <!-- modal -->
+        <div class="modal">
+            <div class="editor">
+                <div class="editor-tab">
+                    <div class="dot"><span></span></div>
+                    <ul class="menu">
+                        <li class="active">
+                            <a href="#">index.js</a>
+                            <div class="numberswrap">
+<pre class="line-numbers"><code class="language-js">const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slides = $(".slides");
+
+let currentIndex = 0;       //현재 보이는 이미지
+
+setInterval(function(){
+
+//만약에 4이상이 되면 = 0으로
+// if(currentIndex < 4) {
+//     currentIndex++
+// } else {
+//     currentIndex = 0;
+// }
+//위에 if문 한번에 쓰기
+currentIndex < 4 ? currentIndex++ : currentIndex = 0;       //삼항 연산자
+
+sliderImg.animate({ top : "-340px"}, 400,function(){
+$(".slides:first-child").appendTo(sliderImg);
+sliderImg.css("top","")
+})
+
+}, 5000)
+</code></pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="close">Close</a>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/prism.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slides = $(".slides");
+
+        let currentIndex = 0;       //현재 보이는 이미지
+        
+        setInterval(function(){
+            
+            //만약에 4이상이 되면 = 0으로
+            // if(currentIndex < 4) {
+            //     currentIndex++
+            // } else {
+            //     currentIndex = 0;
+            // }
+            //위에 if문 한번에 쓰기
+            currentIndex < 4 ? currentIndex++ : currentIndex = 0;       //삼항 연산자
+
+            sliderImg.animate({ top : "-340px"}, 400,function(){
+                $(".slides:first-child").appendTo(sliderImg);
+                sliderImg.css("top","")
+            })
+
+        }, 5000)
+    </script>
+
+     <!-- modal -->
+     <script>
+        // 모달
+        $(".infor2 .view").click(function(e){
+            e.preventDefault();
+           $(".infor2 .modal").addClass("show");
+       });
+       $(".infor2 .close").click(function(e){
+        e.preventDefault();
+           $(".infor2 .modal").removeClass("show");
+       });
+   </script>    
+</body>
+</html>

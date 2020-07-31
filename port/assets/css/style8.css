@@ -1,12 +1,8 @@
-@font-face { 
-    font-family: 'S-CoreDream-3Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); font-weight: normal; font-style: normal; }
-
 @font-face { font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal; }
 body {
     position: relative;
     font-family: 'Poppins', sans-serif;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Roboto', sans-serif;
     background-image: url(../img/main.png);
     background-color: #eaeaea;
 }
@@ -18,7 +14,7 @@ body {
 #section2 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png);  width: 100%; height: 100%;  }
 #section3 {position: relative; z-index: 4000; height: 8800px;  background: rgb(34, 37, 66); }
 #section4 {background: #eaeaea url(../img/main.png); height: 7500px; z-index: 3000; position: relative; }
-#section5 {background: rgb(34, 37, 66) url(../img/main.png); height: 2810px;}
+#section5 {background: rgb(34, 37, 66) url(../img/main.png); height: 6000px;}
 #section6 {}
 
 
@@ -831,178 +827,51 @@ transition:800ms ease all;
 .script-wrap > div:nth-child(4) {}
 
 /* section5 */
-.sec6 {width: 100%; height: 100%;}
-.sec6 .sec6_tit {
-    z-index: 10;
-    position: relative;
-    overflow: hidden;
-    padding: 20vw 0vw 0vw 21vw;
-}
-.sec6 .sec6_tit .sec6_bg {
-    z-index: -1;
+.sec6 {position: fixed; right: 0; top: 0;}
+.sec6.show{}
+.animation-wrap {overflow: hidden; width: 450vw; position: relative; }
+.animation-wrap > div {width: 100vw; height: 100vh; float: left;}
+.animation-wrap .antitle {position: relative;}
+.animation-wrap .antitle .antitlebg {
     position: absolute;
-    top: -10vw;
-    left: 60vw;
+    top: -48%; left: 14%;
     transform: rotate(90deg);
+    z-index: -10;
 }
-.sec6 .sec6_tit .sec6_bg img {
-    width: 22vw;
+.animation-wrap .antitle .antitlebg img {
+    width: 380px;
 }
-.sec6 .sec6_tit h3{
+.animation-wrap .antitle h2 {
     color: #fff;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: bold;
     text-transform: uppercase;
-    font-size: 21vw;
-    line-height: 21vw;
+    font-size: 14vw;
+    padding: 2vw 10vw 10vw 8vw;
 }
-.sec6 .sec6_tit p {
-    margin-top: 15vh;
-    text-align: left;
-    color: #ccc;
-    font-family: 'S-CoreDream-3Light';
-    font-style: normal;
+.animation-wrap .antitle .asTitle {
+    position: absolute; right: 4vw; bottom: 4vw;
+}
+.animation-wrap .antitle .asTitle strong {
+    display: block;
+    color: #fff;
+    font-size: 1.6vw;
+    line-height: 2.4vw;
     font-weight: 200;
-    font-size: 20px;
-    line-height: 2.2vw;
-    word-break: keep-all;
-}
-.sec6_Post{
-    margin-top: 150px;
-}
-.sec6_Post input {
-    width: 100%;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 100px;
-    background: rgba(0,0,0,0);
-    border: 0;
-    outline: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 96px;
-    white-space: normal;
-    border-bottom: 1px solid #cccccc;
-    border-color: #000 #000 hsla(0, 0%, 100%, 0.5);
-    color: #fff;
-    word-break: keep-all;
-}
-.input_wrap {
-    margin-bottom: 50px;
-}
-
-.sec6_Post input::placeholder {
-    color: #ccc;
-    text-transform: capitalize ;
-}
-.sec6_Post button {
-    cursor: pointer;
-    width: 120px;
-    height: 120px;
-    margin-top: 30px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #8cff00;
-    border-radius: 50%;
-    background-color: transparent;
-    font-family: 'Poppins', sans-serif;
-    color: #8cff00;
-    font-weight: 600;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
 }
-
-.sec6 .footer {
-    padding-top: 200px;
+.animation-wrap .antitle .asTitle .asTitlestart {
+    font-weight: 900;
     position: relative;
-    display: flex;
-    overflow: hidden;
-    height: 390px;
-    justify-content: center;
-    align-items: flex-end;
 }
-.sec6 .footer img {
-    width: 120px;
-    margin-bottom: -10px;
-}
-.sec6 .footer .footer_wrap {
-    position: absolute;
-    left: 15vw;
-    top: auto;
-    right: auto;
-    bottom: 0%;
-    display: flex;
-    width: 20px;
-    height: 290px;
-    justify-content: center;
-}
-.footer_wrap .footerline {
-    width: 2px;
-    height: 290px;
-    background-color: #8cff00;
-}
-.sec6 .footer .footera1 {
-    position: absolute;
-    top: 20px;
-    transform: rotate(-90deg);
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.sec6 .footer .footera2 {
-    position: absolute;
-    top: 60px;
-    transform: rotate(-90deg);
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.sec6 .footer .footera3 {
-    position: absolute;
-    top: 100px;
-    transform: rotate(-90deg);
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.sec6 .footer .footera4 {
-    position: absolute;
-    top: 140px;
-    transform: rotate(-90deg);
-    font-family: 'Poppins', sans-serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.sec6 .sec6_Post textarea {
-    width: 100%;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 100px;
-    background: rgba(0,0,0,0);
-    border: 0;
-    outline: none;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 80px;
-    line-height: 96px;
-    white-space: normal;
-    border-bottom: 1px solid #cccccc;
-    border-color: #000 #000 hsla(0, 0%, 100%, 0.5);
-    color: #fff;
-    word-break: keep-all;
-}
+
+
+
+
 /* 미디어 쿼리  */
 @media (max-width:1400px){
     #section1 {height: 2200px; padding-bottom: 8vh;}

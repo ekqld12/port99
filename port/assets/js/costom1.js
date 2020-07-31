@@ -11,7 +11,9 @@ window.addEventListener("scroll", () => {
 
     document.querySelector(".scroll").textContent = pageYOffset;
     let sec5 = document.querySelector("#section4").offsetTop + 400;
+    let sec6 = document.querySelector("#section5").offsetTop + 400;
     let offset = (pageYOffset - sec5) * 1.5;
+    // let offset1 = (pageYOffset - sec6) * 1.5;
     
     if(pageYOffset > sec5){
         document.querySelector(".sec5").classList.add("show");
@@ -20,6 +22,12 @@ window.addEventListener("scroll", () => {
         document.querySelector(".sec5").classList.remove("show");
     }
 
+    // if(pageYOffset > sec6){
+    //     document.querySelector(".sec6").classList.add("show");
+    //     gsap.to(".sec6", {right: -offset1, duration:3, ease: "power4.out"});
+    // } else {
+    //     document.querySelector(".sec6").classList.remove("show");
+    // }
     
 
     
@@ -3121,6 +3129,8 @@ let tabBtn2 = $(".hover_button");
 let tabBtn3 = $(".button1");
 let tabBtn4 = $(".button2");
 let tabBtn5 = $(".arrow a");
+let tabBtn6 = $(".arrow1 a");
+let tabBtn7 = $(".arrow2 a");
 
 // 제목 바뀌게 해주기
 let tabInfo1 = $(".site-info > .site01");
@@ -3128,6 +3138,12 @@ let tabInfo2 = $(".site-info > .site02");
 let tabInfo3 = $(".site-info > .site03");
 let tabInfo4 = $(".site-info > .site04");
 let tabInfo5 = $(".desc_wrap > .desc-text");
+let tabInfo6 = $(".box > #scripv_view")
+let tabInfo7 = $(".view_box > #scripv_view1")
+let tabInfo8 = $(".desc_wrap1 > .desc-text")
+
+let tabInfo9 = $(".view_box1 > #scripv_view2")
+let tabInfo10 = $(".desc_wrap2 > .desc-text")
 
 
 
@@ -3143,6 +3159,16 @@ tabInfo4.css("display","none").css({opacity:'0'});
 tabInfo4.eq(0).css("display","block").animate({opacity:'1'},1000);
 tabInfo5.css("display","none").css({opacity:'0'});
 tabInfo5.eq(0).css("display","block").animate({opacity:'1'},1000);
+tabInfo6.css("display","none").css({opacity:'0'});
+tabInfo6.eq(0).css("display","block").animate({opacity:'1'},1000);
+tabInfo7.css("display","none").css({opacity:'0'});
+tabInfo7.eq(0).css("display","block").animate({opacity:'1'},1000);
+tabInfo8.css("display","none").css({opacity:'0'});
+tabInfo8.eq(0).css("display","block").animate({opacity:'1'},1000);
+tabInfo9.css("display","none").css({opacity:'0'});
+tabInfo9.eq(0).css("display","block").animate({opacity:'1'},1000);
+tabInfo10.css("display","none").css({opacity:'0'});
+tabInfo10.eq(0).css("display","block").animate({opacity:'1'},1000);
 
 // tabBtn1
 tabBtn1.click(function(){
@@ -3187,8 +3213,31 @@ tabBtn5.click(function(e){
     target.addClass("active");
     tabInfo5.siblings().css("display","none").css({opacity:'0'});
     tabInfo5.eq(index).show().animate({opacity:'1'},1000);
+    tabInfo6.siblings().css("display","none").css({opacity:'0'});
+    tabInfo6.eq(index).show().animate({opacity:'1'},1000);
 })
-
+tabBtn6.click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index= target.index();
+    tabBtn6.siblings().removeClass("active");
+    target.addClass("active");
+    tabInfo7.siblings().css("display","none").css({opacity:'0'});
+    tabInfo7.eq(index).show().animate({opacity:'1'},1000);  
+    tabInfo8.siblings().css("display","none").css({opacity:'0'});
+    tabInfo8.eq(index).show().animate({opacity:'1'},1000); 
+})
+tabBtn7.click(function(e){
+    e.preventDefault();
+    let target = $(this);
+    let index= target.index();
+    tabBtn7.siblings().removeClass("active");
+    target.addClass("active");
+    tabInfo9.siblings().css("display","none").css({opacity:'0'});
+    tabInfo9.eq(index).show().animate({opacity:'1'},1000);  
+    tabInfo10.siblings().css("display","none").css({opacity:'0'});
+    tabInfo10.eq(index).show().animate({opacity:'1'},1000); 
+})
         // 코드 영역 스크립트
         $(".numberswrap").hide().eq(0).show();
         // code.html1

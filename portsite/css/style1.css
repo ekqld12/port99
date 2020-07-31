@@ -1,0 +1,51 @@
+.editor {
+    position: relative;
+    background: #35363A;
+    border-radius: 5%;
+}
+.editor .editor-tab {
+    height: 40px; background: #21252B; 
+    border-top-left-radius: 5px; 
+    border-top-right-radius: 5px;
+    display: flex;
+}
+.editor .editor-tab .dot {padding: 14px 55px 14px 14px;}
+.editor .editor-tab .dot span {
+    display: block;
+    background: #FFB83D; width: 12px; height: 12px; border-radius: 50%;
+    position: relative;
+}
+.editor .editor-tab .dot span::before {
+    content: '';
+    background: #FF4A4A; width: 12px; height: 12px; border-radius: 50%;
+    position: absolute; left: 20px;
+}
+.editor .editor-tab .dot span::after {
+    content: ''; 
+    background: #00C543; width: 12px; height: 12px; border-radius: 50%;
+    position: absolute; left: 40px;
+}
+.editor .editor-tab .menu {overflow: hidden;}
+.editor .editor-tab .menu li {float: left; padding-top: 4px;}
+.editor .editor-tab .menu li a {
+    display: block; background: #21252B; color: #8E9093; padding: 4px 14px;
+    font-family: "Poppins", sans-serif;
+}
+.editor .editor-tab .menu li.active a {color: #fff;}
+.editor .editor-tab .theme {
+    color: #8E9093; margin-left: auto;
+    padding: 11px 32px;
+}
+.editor .editor-code {
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px;
+    height: 500px; 
+    background: #282C34;
+    overflow: auto;
+}
+.editor .numberswrap {
+    position: absolute;
+    top: 39px; left: 0;
+    width: 100%; height: 500px;
+    overflow: auto;
+}

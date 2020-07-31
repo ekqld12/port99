@@ -219,11 +219,12 @@
 
         /* info */
         .info {
+            opacity: 0;
             position: fixed; right: 20px; bottom: 20px;
-            background: rgba(255,255,255,0.4);
-            color: #000;
-            padding: 10px;
-            font-size: 14px;
+            /* background: rgba(255,255,255,0.4); */
+            color: #fff;
+            padding: 8px;
+            font-size: 10px;
             font-weight: 300;
             z-index: 10000;
             font-style: normal;
@@ -259,245 +260,15 @@
             top: 0;
         }
         .infor2 .modal .close {
-            position: absolute; right: 10px; top: 20px;
+            cursor: pointer;
+            position: absolute; right: 10px;top: 4px;
         }
     </style>
 
-    <!-- PrismJS -->
-    <style>
-        /* PrismJS 1.20.0
-        https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript&plugins=line-numbers */
-        /**
-        * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
-        * Based on https://github.com/chriskempson/tomorrow-theme
-        * @author Rose Pritchard
-        */
+   
 
-
-        .code-editor:before,
-        .code-editor:after,
-        .code-editor span.control:before,
-        .code-editor span.after:after {
-            box-sizing: border-box;
-            content: '';
-            position: absolute;
-            z-index: 1;
-            transition: all .5s ease-in-out;
-        }
-        
-        .code-editor {
-            box-sizing: border-box;
-            width: 60vw; 
-            text-align: left;
-            background-color: #2d2d2d;
-            border-radius: 0 0 5px 5px;
-            transition: all .5s ease-in-out;
-            position: absolute; left: 50%; top: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .code-editor h3 {
-            color: #222;
-            padding-top: 6px; 
-            text-align: center;
-            top: 0px;
-            width: 100%;
-            height: 30px;
-            background-color: #fafafa;
-            border-radius: 5px 5px 0 0;
-            position: sticky;
-            left: 0;
-            font-size: 14px;
-        }
-        
-        .code-editor span.control:before {
-            content: '';
-            top: 9px;
-            left: 0;
-            z-index: 2;
-            padding: 6px;
-            border-radius: 20px;
-            -moz-border-radius: 20px;
-            -o-border-radius: 20px;
-            -webkit-border-radius: 20px;
-        }
-        
-        .code-editor span.control:nth-child(1):before {
-            margin-left: 15px;
-            background-color: #df6963;
-            
-        }
-        
-        .code-editor span.control:nth-child(2):before {
-            margin-left: 35px;
-            background-color: #f5e18a;
-        }
-        .code-editor span.control:nth-child(3):before {
-            margin-left: 55px;
-            background-color: #97c38a;
-        }
-        .code-editor .code {
-            height: 60vh;
-            overflow: auto;
-        }
-
-        code[class*="language-"],
-        pre[class*="language-"] {
-        color: #ccc;
-        background: none;
-        font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-        font-size: 1em;
-        text-align: left;
-        white-space: pre;
-        word-spacing: normal;
-        word-break: normal;
-        word-wrap: normal;
-        line-height: 1.5;
-
-        -moz-tab-size: 4;
-        -o-tab-size: 4;
-        tab-size: 4;
-
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hyphens: none;
-        hyphens: none;
-
-        }
-
-        /* Code blocks */
-        pre[class*="language-"] {
-            padding: 1em;
-        }
-
-        :not(pre) > code[class*="language-"],
-        pre[class*="language-"] {
-        background: #2d2d2d;
-        }
-
-        /* Inline code */
-        :not(pre) > code[class*="language-"] {
-        padding: .1em;
-        border-radius: .3em;
-        white-space: normal;
-        }
-
-        .token.comment,
-        .token.block-comment,
-        .token.prolog,
-        .token.doctype,
-        .token.cdata {
-        color: #999;
-        }
-
-        .token.punctuation {
-        color: #ccc;
-        }
-
-        .token.tag,
-        .token.attr-name,
-        .token.namespace,
-        .token.deleted {
-        color: #e2777a;
-        }
-
-        .token.function-name {
-        color: #6196cc;
-        }
-
-        .token.boolean,
-        .token.number,
-        .token.function {
-        color: #f08d49;
-        }
-
-        .token.property,
-        .token.class-name,
-        .token.constant,
-        .token.symbol {
-        color: #f8c555;
-        }
-
-        .token.selector,
-        .token.important,
-        .token.atrule,
-        .token.keyword,
-        .token.builtin {
-        color: #cc99cd;
-        }
-
-        .token.string,
-        .token.char,
-        .token.attr-value,
-        .token.regex,
-        .token.variable {
-        color: #7ec699;
-        }
-
-        .token.operator,
-        .token.entity,
-        .token.url {
-        color: #67cdcc;
-        }
-
-        .token.important,
-        .token.bold {
-        font-weight: bold;
-        }
-        .token.italic {
-        font-style: italic;
-        }
-
-        .token.entity {
-        cursor: help;
-        }
-
-        .token.inserted {
-        color: green;
-        }
-
-        pre[class*="language-"].line-numbers {
-        position: relative;
-        padding-left: 3.8em;
-        counter-reset: linenumber;
-        }
-
-        pre[class*="language-"].line-numbers > code {
-        position: relative;
-        white-space: inherit;
-        }
-
-        .line-numbers .line-numbers-rows {
-        position: absolute;
-        pointer-events: none;
-        top: 0;
-        font-size: 100%;
-        left: -3.8em;
-        width: 3em; /* works for line-numbers below 1000 lines */
-        letter-spacing: -1px;
-        border-right: 1px solid #999;
-
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-
-        }
-
-        .line-numbers-rows > span {
-            display: block;
-            counter-increment: linenumber;
-        }
-
-            .line-numbers-rows > span:before {
-                content: counter(linenumber);
-                color: #999;
-                display: block;
-                padding-right: 0.8em;
-                text-align: right;
-            }
-    </style>
-
-    <link rel="stylesheet" href="../assets/js/prism.js">
+<link rel="stylesheet" href="../portsite/css/style.css">
+<link rel="stylesheet" href="../portsite/css/style1.css">
 </head>
 
 <body>
@@ -614,16 +385,17 @@
 
             <div class="infor2">
                 <a href="#" class="view">코드 보기</a>
+                <a href="../Parallax/parallax04.html" target="_blank">SITE VIEW</a>
                 <!-- modal -->
                 <div class="modal">
-                    <div class="code-editor">
-                        <h3>Script Editor
-                            <span class="control"></span>
-                            <span class="control"></span>
-                            <span class="control"></span>
-                        </h3>
-                        <div class="code">
-<pre class="line-numbers"><code class="language-js">// $(window).scroll(function(){});
+                    <div class="editor">
+                        <div class="editor-tab">
+                            <div class="dot"><span></span></div>
+                            <ul class="menu">
+                                <li class="active">
+                                    <a href="#">index.js</a>
+                                    <div class="numberswrap">
+<pre class="line-numbers"><code class="language-js"> // $(window).scroll(function(){});
 // $(window).on("scroll",function(){}) 제이쿼리
 // window.addEventListener("scroll",function(){})
 // window.addEventListener("scroll",() =>{ })
@@ -646,7 +418,7 @@ console.log("3:"+window.pageYOffset)
 
 
 document.querySelector(".pageYOffset").textContent = pageYOffset
-    // $(".s1OT").text( parseInt($("#section1").offset().top)) 제이쿼리 방식 밑에 자바스크립 방식으로 바꿔주기
+// $(".s1OT").text( parseInt($("#section1").offset().top)) 제이쿼리 방식 밑에 자바스크립 방식으로 바꿔주기
 //  document.querySelector(".s1OT").textContent = document.getElementById("section1").offsetTop;
 //  document.querySelector(".s2OT").textContent = document.getElementById("section2").offsetTop;
 //  document.querySelector(".s3OT").textContent = document.getElementById("section3").offsetTop;
@@ -658,16 +430,16 @@ document.querySelector(".pageYOffset").textContent = pageYOffset
 //  document.querySelector(".s9OT").textContent = document.getElementById("section9").offsetTop;
 
 //for문을 이용해 한번에 작업하기
-    for(let i=1; i<=9; i++){
-    // console.log(i)
-    document.querySelector(".s"+i+"OT").textContent = document.getElementById("section"+i).offsetTop;
-    if( pageYOffset > document.getElementById("section"+i).offsetTop){
-    document.querySelector(".s"+i+"OT").style.color = "red";
-    } else {
-        document.querySelector(".s"+i+"OT").style.color ="black"
-    }
+for(let i=1; i<=9; i++){
+// console.log(i)
+document.querySelector(".s"+i+"OT").textContent = document.getElementById("section"+i).offsetTop;
+if( pageYOffset > document.getElementById("section"+i).offsetTop){
+document.querySelector(".s"+i+"OT").style.color = "red";
+} else {
+document.querySelector(".s"+i+"OT").style.color ="black"
 }
-    
+}
+
 
 //  if( scrollTop > parseInt ( $("#section1").offset().top)){
 //     $(".s1OT").css("color", "red")
@@ -768,7 +540,7 @@ document.querySelector(".pageYOffset").textContent = pageYOffset
 //     document.getElementById("section9").classList.remove("show")
 // }
 
-    //한번에 작업하기
+//한번에 작업하기
 //  $(".content-item").each(function(){
 //     if(scrollTop > $(this).offset().top){
 //         $(this).addClass("show");
@@ -778,18 +550,20 @@ document.querySelector(".pageYOffset").textContent = pageYOffset
 //한번에 작업하기 javascript
 //forEach(속성, 인덱스, 배열)
 document.querySelectorAll(".content-item").forEach(elem => { 
-    console.log(elem.offsetTop)
-    if (pageYOffset > elem.offsetTop){
-        elem.classList.add("show");
-    } else {
-        elem.classList.remove("show")
-    }
+console.log(elem.offsetTop)
+if (pageYOffset > elem.offsetTop){
+elem.classList.add("show");
+} else {
+elem.classList.remove("show")
+}
 });
 
 });
 </code></pre>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-        
                     </div>
                     <a class="close">Close</a>
                 </div>
@@ -800,6 +574,7 @@ document.querySelectorAll(".content-item").forEach(elem => {
 
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <script src="js/prism.js"></script>
     <script>
         // $(window).scroll(function(){});
         // $(window).on("scroll",function(){}) 제이쿼리
@@ -972,10 +747,12 @@ document.querySelectorAll(".content-item").forEach(elem => {
     <!-- modal -->
     <script>
         // 모달
-        $(".infor2 a").click(function(){
+        $(".infor2 .view").click(function(e){
+            e.preventDefault();
            $(".infor2 .modal").addClass("show");
        });
-       $(".infor2 .close").click(function(){
+       $(".infor2 .close").click(function(e){
+        e.preventDefault();
            $(".infor2 .modal").removeClass("show");
        });
    </script>     

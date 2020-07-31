@@ -1017,6 +1017,9 @@ transition:800ms ease all;
     .site:nth-child(even) .site-desc2 {margin-right: 0.5vw;}
     #section3 {height: 7500px;}
     .row {padding: 0 3%;}
+    .sec5 {
+        
+    }
 
 }
 @media (max-width:1000px){

@@ -13,7 +13,7 @@ body {
 /* layout */
 #contents {}
 #main{position: relative; z-index: 4000;}
-#section1 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png); height: 3500px; width: 100%; overflow: hidden;}
+#section1 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png); height: 2500px; width: 100%; overflow: hidden;}
 #about{position: relative; z-index: 4000; padding: 30vh 0 10vh; background: #eaeaea url(../img/main.png);}
 #section2 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png);  width: 100%; height: 100%;  }
 #section3 {position: relative; z-index: 4000; height: 8800px;  background: rgb(34, 37, 66); }

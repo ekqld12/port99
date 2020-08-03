@@ -1,33 +1,5 @@
 backgroudcolor();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 window.addEventListener("scroll", () => {
     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
@@ -57,12 +29,17 @@ window.addEventListener("scroll", () => {
 $(window).scroll(function(){
     let scroll = $(window).scrollTop();
     let zz = Math.max(-30)
-    console.log(zz)
+    let zzz = Math.max(30)
+    let zzzz = Math.max(-30)
+    
+    // console.log(zz)
     
     let offset = scroll * 0.06 
-    console.log(offset)
-    // $(".figure1").css({transform:"rotate("+offset+"deg)"});
+
+    gsap.to(".sImg h3", 1, {x: 0})
     gsap.to(".figure1", 1, {rotation:offset + zz })
+    gsap.to(".figure2", 1, {rotation: -offset + zzz })
+    gsap.to(".figure3", 1, {rotation:offset + zzzz })
     
     // if( $(".s1").offset().top < scroll + $(window).height()/2 ){
     //     gsap.to(".site .site-h3",1,{opacity:1, x:0})

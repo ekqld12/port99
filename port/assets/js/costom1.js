@@ -1,5 +1,6 @@
 backgroudcolor();
 
+
 window.addEventListener("scroll", () => {
     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
@@ -26,26 +27,26 @@ window.addEventListener("scroll", () => {
     // }
 });
 
-$(window).scroll(function(){
-    let scroll = $(window).scrollTop();
-    let zz = Math.max(-30)
-    let zzz = Math.max(30)
-    let zzzz = Math.max(-30)
+// $(window).scroll(function(){
+//     let scroll = $(window).scrollTop();
+//     let zz = Math.max(-30)
+//     let zzz = Math.max(30)
+//     let zzzz = Math.max(-30)
     
-    // console.log(zz)
+//     // console.log(zz)
     
-    let offset = scroll * 0.06 
+//     let offset = scroll * 0.06 
 
-    gsap.to(".sImg h3", 1, {x: 0})
-    gsap.to(".figure1", 1, {rotation:offset + zz })
-    gsap.to(".figure2", 1, {rotation: -offset + zzz })
-    gsap.to(".figure3", 1, {rotation:offset + zzzz })
+//     gsap.to(".sImg h3", 1, {x: 0})
+//     gsap.to(".figure1", 1, {rotation:offset + zz })
+//     gsap.to(".figure2", 1, {rotation: -offset + zzz })
+//     gsap.to(".figure3", 1, {rotation:offset + zzzz })
     
-    // if( $(".s1").offset().top < scroll + $(window).height()/2 ){
-    //     gsap.to(".site .site-h3",1,{opacity:1, x:0})
-    // }
+//     // if( $(".s1").offset().top < scroll + $(window).height()/2 ){
+//     //     gsap.to(".site .site-h3",1,{opacity:1, x:0})
+//     // }
     
-});
+// });
 
 
 

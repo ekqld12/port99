@@ -13,7 +13,7 @@ body {
 /* layout */
 #contents {}
 #main{position: relative; z-index: 4000;}
-#section1 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png); height: 2500px; width: 100%; overflow: hidden;}
+#section1 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png); height: 3200px; width: 100%; overflow: hidden;}
 #about{position: relative; z-index: 4000; padding: 30vh 0 10vh; background: #eaeaea url(../img/main.png);}
 #section2 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png);  width: 100%; height: 100%;  }
 #section3 {position: relative; z-index: 4000; height: 8800px;  background: rgb(34, 37, 66); }
@@ -40,8 +40,17 @@ body {
 
 /* header */
 #header {
-    position: relative;
+    position: fixed;
+    left: 0; top: 0;
+    transition: top 0.5s ease-in-out;
     z-index: 4100;
+}
+#header.on {
+    top: -20vw;
+}
+#header .header {
+    position: relative;
+    width: 100vw;
 }
 #header h1 {
     position: absolute;
@@ -71,19 +80,19 @@ body {
 
 
 /* paint1 */
-.paint1 .pntbg {
+#main #section1 .paint1 .pntbg {
     position: absolute; 
     top: -10vw; right: 12vw;
     width: 30vw;
 } 
 
-.paint1 .sTitle {
+#main #section1 .paint1 .sTitle {
     padding: 60vh 0 10vw 15vw;
     position: relative;
     display: inline-block;
 }
 
-.paint1 .sTitle strong{
+#main #section1 .paint1 .sTitle strong{
     display: block;
     font-family: "Poppins", sans-serif;
     color: #222534;
@@ -94,11 +103,11 @@ body {
     text-transform: uppercase;
     font-style: normal;
 }
-.paint1 .sTitle strong:last-child {
+#main #section1 .paint1 .sTitle strong:last-child {
     font-weight: 200;
     position: relative;
 }
-.paint1 .sTitle strong:last-child::after {
+#main #section1 .paint1 .sTitle strong:last-child::after {
     content: '';
     width: 5vw; height: 1px;
     background: #222534;
@@ -107,7 +116,7 @@ body {
 }
 
 
-.paint1 .sImg h3{
+#main #section1 .paint1 .sImg h3{
     font-size: 28vw;
     font-family: 'Montserrat', sans-serif;
     color: #222542;
@@ -118,7 +127,58 @@ body {
     top: 53vw; right: -50vw;
     z-index: 100;
 }
-
+#main #section1 .sImg h3{
+    animation: fadeInDown 3s ;   
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) rotate(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(90deg);
+    }
+}
+#main #section1 .sImg .figure1 {
+    animation: fadeIndown 3s ;   
+}
+@keyframes fadeIndown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) rotate(-30deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(-30deg);
+    }
+}
+#main #section1 .sImg .figure2 {
+    animation: fadeIndOwn 3s ;   
+}
+@keyframes fadeIndOwn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) rotate(30deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(30deg);
+    }
+}
+#main #section1 .sImg .figure3 {
+    animation: fadeIndoWn 3s ;   
+}
+@keyframes fadeIndoWn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px) rotate(-30deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) rotate(-30deg);
+    }
+}
 
 .paint1 .sImg figure {
     /* max-width: 100%; */
@@ -128,7 +188,6 @@ body {
 .paint1 .sImg .figure1 {left: 40vw; top: 22vw; z-index: 110; transform: rotate(-30deg);}
 .paint1 .sImg .figure2 {right: 7vw; top: 50vw; z-index: 90; transform: rotate(30deg);}
 .paint1 .sImg .figure3 {left: 40vw; top: 75vw; z-index: 90; transform: rotate(-30deg);}
-
 
 /* about */
 #about {

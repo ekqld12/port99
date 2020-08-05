@@ -283,3 +283,38 @@ left: 0; top: 0;
     transform: rotate(20deg);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 미디어 쿼리  */
+@media (max-width:1400px){
+    #section1 {height: 2200px; padding-bottom: 8vh;}
+    #about {padding: 0vh 0 10vh; background: #eaeaea url(../img/main.png);}
+    .paint1 .sImg h3 {top: 51vw;}
+    .section3-content .work h2 {font-size: 280px;}
+    .section3-content .work-pnt {width: 300px; position: absolute; top: -10vw; }
+    .container {width: 100%;}
+    .site .site-h4 {margin-left: 0.5vw;}
+    .site:nth-child(even) .site-h4 {text-align: right; margin-right: 0.5vw;}
+    .site-info {margin-left: 0.5vw;}
+    .site:nth-child(even) .site-desc2 {margin-right: 0.5vw;}
+    #section3 {height: 7500px;}
+    .row {padding: 0 3%;}
+    .sec5 {
+        
+    }
+
+}
+

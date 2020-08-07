@@ -1,10 +1,4 @@
 backgroudcolor();
-
-
-window.addEventListener("scroll", () => {
-    let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-
-    document.querySelector(".scroll").textContent = pageYOffset;
     // let sec5 = document.querySelector("#section4").offsetTop + 400;
     
     // let offset = (pageYOffset - sec5) * 1.5;
@@ -25,7 +19,7 @@ window.addEventListener("scroll", () => {
     // } else {
     //     document.querySelector(".sec6").classList.remove("show");
     // }
-});
+// });
 
 // $(window).scroll(function(){
 //     let scroll = $(window).scrollTop();

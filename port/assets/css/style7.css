@@ -1149,10 +1149,10 @@ transition:800ms ease all;
 @media (max-width: 500px) {
     #section3 {height: 5800px;}
     #header h1 {top: 6vw; width: 70px;}
-    #section1 {height: 550px;}
+    #section1 {height: 800px;}
     .paint1 .sTitle {padding: 35vh 0 10vw 15vw;}
     #section2 h3 {height: 50vw;}
-    #section2 h3 strong {font-size: 10px; line-height: 15px;}
+    #section2 h3 strong {font-size: 8px; line-height: 15px;}
     #section2 h3 strong a {font-size: 10px; top: 0.8vw;}
     #section2 .sec3 {display: none;}
     #section2 .aboutimg2 {top: 15vh;}

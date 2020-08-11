@@ -18,7 +18,7 @@ body {
 #section2 {position: relative; z-index: 4000;background: #eaeaea url(../img/main.png);  width: 100%; height: 100%;  }
 #section3 {position: relative; z-index: 4000; height: 8800px;  background: #222534; }
 #section4 {background: #eaeaea url(../img/main.png); height: 7500px; z-index: 3000; position: relative; }
-#section4-1 {background: #222534 url(../img/main.png); height: 5000px; position: relative;}
+#section4-1 {background: #222534 url(../img/main.png); height: 6000px; position: relative;}
 #section5 {background: #222534 url(../img/main.png); height: 2826px;}
 #section6 {}
 
@@ -998,7 +998,7 @@ transition:800ms ease all;
 
 .animo_text_wrap {
     position: absolute;
-    left: 66vw;
+    left: 64vw;
     top: auto;
     right: auto;
     bottom: 202px;
@@ -1019,12 +1019,76 @@ transition:800ms ease all;
     color: #fff;
     font-weight: 300;
 }
-.animo_text .ain_p1 {
-    
-}
+.animo_text .ain_p1 {}
 .animo_text .ain_p2 {}
-
-
+.animo_work {
+    margin-bottom: 200px;
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+.animo_header p{
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.animo_list {
+    display: flex;
+    margin-top: 60px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.animo_list a{
+    font-size: 14px;
+    min-width: 20vw;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    line-height: 40px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.animo_intro1 {
+    position: relative;
+    display: flex;
+    margin-bottom: 200px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.animo_box1 {
+    overflow: hidden;
+    width: 75vw;
+    height: 50vw;
+    background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
+    font-family: "Fjalla One";
+    font-weight: bold;
+}
+.animo_text_wrap2 {
+    position: absolute;
+    left: auto;
+    top: auto;
+    right: 64vw;
+    bottom: 204px;
+    display: flex;
+    width: 450px;
+    max-width: 450px;
+    justify-content: flex-start;
+    transform: rotate(-90deg);
+}
+.animo_text_line2 {
+    width: 2px;
+    height: 40px;
+    margin-right: 20px;
+    background-color: #1AAB8A;
+}
+.animo_text2 {
+    font-family: 'S-CoreDream-3Light';
+    color: #fff;
+    font-weight: 300;
+}
 
 /* section5 */
 .sec6 {width: 100%; height: 100%;}

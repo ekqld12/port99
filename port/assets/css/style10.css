@@ -716,3 +716,62 @@
     text-decoration: none;
     text-transform: capitalize;
   }
+
+
+
+
+
+
+
+  @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+  /* $background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
+  $red: #e55643;
+  $green: #2b9f5e;
+  $yellow: #f1c83c;
+  $shadow: #533d4a; */
+
+  .container {
+    position: absolute;
+    left: 65%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    max-width: 225px;
+  }
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 42px;
+    line-height: 47px;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+  
+  .title111 {
+    transform: translatex(-50%) rotate(-10deg);
+    display: block;
+    float: left;
+    left: 50%;
+    position: relative;
+  }
+  .title111:nth-child(1) {
+    color: #e55643;
+  }
+  .title111:nth-child(2) {
+    color: #2b9f5e;
+  }
+  .title111:nth-child(3) {
+    color: #f1c83c;
+  }
+  .title111 span {
+    transform: skew(-10deg);
+    display: block;
+    float: left;
+    text-shadow: #533d4a 1px 1px, #533d4a 2px 2px, #533d4a 3px 3px,
+    #533d4a 4px 4px;
+    min-width: 10px;
+    min-height: 10px;
+    position: relative;
+  }
+  

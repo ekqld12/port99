@@ -930,6 +930,54 @@
                     </div>
                 </div>
             </div>
+            <div class="animo_work">
+                <div class="animo_header">
+                    <p>Let me </p>
+                    <p>introduce my </p>
+                    <p>site.</p>
+                </div>
+                <div class="animo_list">
+                    <a href="https://ekqld12.github.io/port99/html/index.html" target="_blank">HTML</a>
+                    <a href="https://ekqld12.github.io/port99/css/index.html" target="_blank">CSS</a>
+                    <a href="https://ekqld12.github.io/port99/layout/index.html" target="_blank">LAYOUT</a>
+                    <a href="https://ekqld12.github.io/port99/flexGrid/index.html" target="_blank">FlexGrid</a>
+                    <a href="https://ekqld12.github.io/port99/photoshop/index.html" target="_blank">photoshop</a>
+                    <a href="https://ekqld12.github.io/port99/illustrator/index.html" target="_blank">Illustrator</a>
+                    <a href="https://ekqld12.github.io/port99/script/javascript/index.html" target="_blank">JAVASCRIPT</a>
+                    <a href="https://ekqld12.github.io/port99/script/jquery/index.html" target="_blank">JQUERY</a>
+                    <a href="https://ekqld12.github.io/port99/css3/box%20-shadow/index.html" target="_blank">box-shadow</a>
+                    <a href="https://ekqld12.github.io/port99/css3/border-radius/index.html" target="_blank">border-radius</a>
+                    <a href="https://ekqld12.github.io/port99/css3/transform/index.html" target="_blank">transform</a>
+                    <a href="https://ekqld12.github.io/port99/css3/hover-effect/index.html" target="_blank">Hover-effect</a>
+                    <a href="https://ekqld12.github.io/port99/css3/background/index.html" target="_blank">background</a>
+                    <a href="https://ekqld12.github.io/port99/animation/cssA/index.html" target="_blank">css animation</a>
+                    <a href="https://ekqld12.github.io/port99/animation/gsapA/index.html" target="_blank">gsap animation</a>
+                    <a href="https://ekqld12.github.io/port99/animation/jqueryA/index.html" target="_blank">jquery animation</a>
+                    <a href="https://ekqld12.github.io/port99/animation/svgA/index.html" target="_blank">svg animation</a>
+                    <a href="https://ekqld12.github.io/port99/mysql/index.html" target="_blank">MYSOL</a>
+                    <a href="https://ekqld12.github.io/port99/php/index.html" target="_blank">PHP</a>
+                </div>
+            </div>
+            <div class="animo_intro1">
+                <div class="animo_box1">
+                    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+                    <section class="container">
+                    <h1>
+                        <span class="title111">This is</span>
+                        <span class="title111">My Web</span>
+                        <span class="title111">Portfolio</span>
+                    </h1>
+                    </section>
+                </div>  
+                <div class="animo_text_wrap2">
+                    <div class="animo_text_line2"></div>
+                    <div class="animo_text2">
+                        <p class="ain_p1">lettering 플러그인을 이용하여 span으로 글자를 각각 분할한뒤 </p>
+                        <p class="ain_p2">애니메이션을 주고, 웹 접근성을 위하여 aria태그를 사용하였습니다.</p>
+                    </div>
+                </div>
+            </div>
         </div>   
     </section>
 
@@ -983,13 +1031,34 @@
 
     
     <!-- script -->
+     <script src="assets/js/TweenMax.min.js"></script>
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/gsap.min.js"></script>
     <script src="assets/js/costom1.js"></script>
     <script src="assets/js/jquery.min3.js"></script>
-    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/jquery.lettering.min.js"></script>
+   
     <!-- 헤더 메뉴  -->
+
+
+    <script>
+        $(document).ready(function() {
+        $(".title111").lettering();
+        animation();
+        });
+        function animation(){
+        let title = new TimelineMax();    //TimelineMax는 애니메이션을 순서대로 진행하기 위해
+        //   title.staggerFromTo(".title span", 0.5, 
+        //     {ease: Back.easeOut.config(1.7), opacity: 0, bottom: -80},
+        //     {ease: Back.easeOut.config(1.7), opacity: 1, bottom: 0, repeat: -1, yoyo : true}, 0.05);
+        // } 2버전 
+        gsap.fromTo(".title111 span", 0.5,
+            {ease: Back.easeOut.config(1.7), opacoty:0, bottom: -80},
+            {ease: Back.easeOut.config(1.7), opacity:1, bottom: 0, repeat: -1, yoyo: true, stagger: 0.05});
+        }
+        //3버전 
+    </script>
 
     <script>
         $(".btnStart").click(function(){

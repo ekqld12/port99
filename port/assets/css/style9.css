@@ -998,7 +998,7 @@ transition:800ms ease all;
 
 .animo_text_wrap {
     position: absolute;
-    left: 64vw;
+    left: 68vw;
     top: auto;
     right: auto;
     bottom: 202px;
@@ -1070,7 +1070,7 @@ transition:800ms ease all;
     position: absolute;
     left: auto;
     top: auto;
-    right: 64vw;
+    right: 68vw;
     bottom: 204px;
     display: flex;
     width: 450px;

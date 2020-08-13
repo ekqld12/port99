@@ -19,7 +19,7 @@ body {
 #section3 {position: relative; z-index: 4000; height: 8800px;  background: #222534; }
 #section4 {background: #eaeaea url(../img/main.png); height: 7500px; z-index: 3000; position: relative; }
 #section4-1 {background: #222534 url(../img/main.png); height: 6000px; position: relative;}
-#section5 {background: #222534 url(../img/main.png); height: 2826px;}
+#section5 {background: #222534 url(../img/main.png); height: 2536px;}
 #section6 {}
 
 
@@ -718,7 +718,7 @@ transition:800ms ease all;
 
 /* sec5 */
 .sec5 {position: fixed; left: 0; top: 0;}
-.sec5.show { }
+.sec5.show { width: 100%; height: 100%; }
 .script-wrap {overflow: hidden; width: 450vw; position: relative; }
 .script-wrap > div {width: 100vw; height: 100vh; float: left;}
 
@@ -904,14 +904,14 @@ transition:800ms ease all;
 }
 .animation_banner img {
     width: 55px;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .animation_tit {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     font-weight: 800;
     color: #fff;
-    font-size: 80px;
+    font-size: 120px;
     line-height: 80px;
 }
 .animation_title {
@@ -919,18 +919,8 @@ transition:800ms ease all;
     height: 50vw;
     margin-top: 30vh;
 }
-.animst_p {
-    position: absolute;
-    top: -7%;
-    left: 4%;
-}
-.animst_p .anit_1 a{
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    color: #fff;
-    text-transform: uppercase;
 
-}
+
 .animation_intro {
     display: flex;
     margin-top: 120px;
@@ -940,16 +930,19 @@ transition:800ms ease all;
 }
 .animation_intro_title {
     display: block;
-    width: 50vw;
+    width: 46vw;
     flex-direction: column;
     align-items: flex-start;
 }
 .anim_intro_tlt p {
-    font-family: 'Poppins', sans-serif;
     color: #fff;
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    padding-bottom: 5px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
     text-transform: capitalize;
 }
 .animation_intro_title2 {
@@ -969,10 +962,9 @@ transition:800ms ease all;
 .intro_title_tlt {
     max-width: 420px;
     font-family: 'S-CoreDream-3Light';
-    color: #fff;
-    font-size: 16px;
-    line-height: 30px;
-    font-weight: 300;
+    font-size: 20px;
+    color: #ccc;
+    word-break: keep-all;
     text-align: left;
 }
 .animo_intro {
@@ -985,8 +977,6 @@ transition:800ms ease all;
     overflow: hidden;
     width: 75vw;
     height: 50vw;
-    background: #dcf4fc;
-    /* height: 100vh; */
 }
 .animo_intro .intro_b_p {
     text-align: right;
@@ -998,10 +988,10 @@ transition:800ms ease all;
 
 .animo_text_wrap {
     position: absolute;
-    left: 68vw;
+    left: 40vw;
     top: auto;
     right: auto;
-    bottom: 202px;
+    bottom: 13.4vw;
     display: flex;
     width: 450px;
     max-width: 450px;
@@ -1015,10 +1005,12 @@ transition:800ms ease all;
     background-color: #1AAB8A;
 }
 .animo_text {
-    font-family: 'S-CoreDream-3Light';
+    font-family: 'S-CoreDream-2ExtraLight';
+    font-style: normal;
     color: #fff;
     font-weight: 300;
 }
+
 .animo_text .ain_p1 {}
 .animo_text .ain_p2 {}
 .animo_work {
@@ -1027,12 +1019,14 @@ transition:800ms ease all;
     padding-left: 10vw;
 }
 .animo_header p{
-    font-family: "Poppins", sans-serif;
     color: #fff;
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 700;
+    font-size: 32px;
+    line-height: 1;
+    padding-bottom: 5px;
+    font-weight: 900;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
 }
 .animo_list {
     display: flex;
@@ -1042,15 +1036,15 @@ transition:800ms ease all;
     align-items: flex-start;
 }
 .animo_list a{
-    font-size: 14px;
     min-width: 20vw;
-    font-family: "Poppins", sans-serif;
+    font-family: 'S-CoreDream-3Light';
     color: #fff;
     line-height: 40px;
-    font-weight: 600;
+    font-weight: 300;
     text-decoration: none;
     text-transform: uppercase;
 }
+
 .animo_intro1 {
     position: relative;
     display: flex;
@@ -1059,9 +1053,10 @@ transition:800ms ease all;
     align-items: flex-end;
 }
 .animo_box1 {
+    position: relative;
     overflow: hidden;
-    width: 75vw;
-    height: 50vw;
+    width: 50vw;
+    height: 40vw;
     background: linear-gradient(to bottom, #405166 0%, #656f6f 100%);
     font-family: "Fjalla One";
     font-weight: bold;
@@ -1070,7 +1065,7 @@ transition:800ms ease all;
     position: absolute;
     left: auto;
     top: auto;
-    right: 68vw;
+    right: 40vw;
     bottom: 204px;
     display: flex;
     width: 450px;
@@ -1085,7 +1080,8 @@ transition:800ms ease all;
     background-color: #1AAB8A;
 }
 .animo_text2 {
-    font-family: 'S-CoreDream-3Light';
+    font-family: 'S-CoreDream-2ExtraLight';
+    font-style: normal;
     color: #fff;
     font-weight: 300;
 }

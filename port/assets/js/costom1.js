@@ -13,7 +13,7 @@ window.addEventListener("scroll", () => {
     if(pageYOffset > sec5){
         document.querySelector(".sec5").classList.add("show");
         gsap.to(".sec5", {left: -offset, duration:3, ease: "power4.out"});
-    } else {
+    } else if(pageYOffset > sec5 + document.querySelector("#section4").clientHeight){
         document.querySelector(".sec5").classList.remove("show");
     }
 

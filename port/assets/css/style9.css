@@ -939,11 +939,10 @@ transition:800ms ease all;
     font-size: 32px;
     line-height: 1;
     padding-bottom: 5px;
-    font-weight: 900;
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-family: "Poppins", sans-serif;
-    text-transform: capitalize;
 }
 .animation_intro_title2 {
     display: flex;
@@ -1259,6 +1258,10 @@ transition:800ms ease all;
     color: #fff;
     word-break: keep-all;
 }
+
+
+
+
 /* 미디어 쿼리  */
 @media (max-width:1400px){
     #section1 {height: 2200px; padding-bottom: 8vh;}
